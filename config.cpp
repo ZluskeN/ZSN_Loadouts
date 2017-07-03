@@ -4756,6 +4756,15 @@ class CfgVehicles
 	};
 	class MRAP_03_base_F : Car_F
 	{
+		class TransportWeapons 
+		{
+			delete _xx_arifle_Mk20_F;
+			class _xx_arifle_Mk20_plain_F
+			{
+				count = 2;
+				weapon = "arifle_Mk20_plain_F";
+			};
+		};
 		class TransportMagazines
 		{
 			delete _xx_9Rnd_45ACP_Mag;
@@ -4903,6 +4912,15 @@ class CfgVehicles
 	};
 	class APC_Wheeled_03_base_F : Wheeled_APC_F
 	{
+		class TransportWeapons
+		{
+			delete _xx_arifle_Mk20_F;
+			class _xx_arifle_Mk20_plain_F
+			{
+				count = 2;
+				weapon = "arifle_Mk20_plain_F";
+			};
+		};
 		class TransportMagazines
 		{
 			delete _xx_200Rnd_65x39_cased_Box;
@@ -5347,6 +5365,12 @@ class CfgVehicles
 	{
 		class transportweapons
 		{
+			delete _xx_arifle_Mk20_F;
+			class _xx_arifle_Mk20_plain_F
+			{
+				count = 2;
+				weapon = "arifle_Mk20_plain_F";
+			};
 			delete _xx_LMG_Mk200_F;
 			class _xx_LMG_03_F
 			{
@@ -5509,6 +5533,18 @@ class CfgVehicles
 			};
 		};
 	};
+	class MBT_03_base_F : Tank_F
+	{
+		class transportweapons
+		{
+			delete _xx_arifle_Mk20C_F;
+			class _xx_arifle_Mk20C_plain_F
+			{
+				weapon = "arifle_Mk20C_plain_F";
+				count = 2;
+			};
+		};
+	};
 	class Air;
 	class Helicopter;
 	class Helicopter_Base_F;
@@ -5605,6 +5641,30 @@ class CfgVehicles
 	class O_Heli_Attack_02_black_F: Heli_Attack_02_base_F
 	{
 		crew = "ZSN_O_Urban_helipilot_F";
+	}; 
+	class Heli_Transport_02_base_F : Helicopter_Base_H
+	{
+		class transportweapons
+		{
+			delete _xx_arifle_Mk20C_F;
+			class _xx_arifle_Mk20C_plain_F
+			{
+				weapon = "arifle_Mk20C_plain_F";
+				count = 2;
+			};
+		};
+	};
+	class Heli_light_03_base_F : Helicopter_Base_F
+	{
+		class transportweapons
+		{
+			delete _xx_arifle_Mk20C_F;
+			class _xx_arifle_Mk20C_plain_F
+			{
+				weapon = "arifle_Mk20C_plain_F";
+				count = 2;
+			};
+		};
 	};
 };
 class cfggroups
