@@ -1587,6 +1587,7 @@ class CfgVehicles
 				weapon = "srifle_DMR_05_blk_F";
 				count = 1;
 			};
+		};
 	};
 	class Box_East_Ammo_F : EAST_Box_Base
 	{
