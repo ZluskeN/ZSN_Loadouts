@@ -1430,10 +1430,25 @@ class CfgVehicles
 		class TransportWeapons
 		{
 			delete _xx_arifle_MXM_F;
-			class _xx_arifle_MXM_Black_F
+			class _xx_arifle_SPAR_03_blk_F
 			{
-				weapon = "arifle_MXM_Black_F";
+				weapon = "arifle_SPAR_03_blk_F";
 				count = 1;
+			};
+			delete _xx_srifle_DMR_03_F;
+			class _xx_srifle_EBR_F
+			{
+				weapon = "srifle_EBR_F";
+				count = 1;
+			};
+		};
+		class TransportMagazines
+		{
+			delete _xx_30Rnd_65x39_caseless_mag;
+			class _xx_20Rnd_762x51_Mag
+			{
+				magazine = "20Rnd_762x51_Mag";
+				count = 12;	
 			};
 		};
 	};
@@ -1454,9 +1469,9 @@ class CfgVehicles
 				count = 1;
 			};
 			delete _xx_srifle_DMR_03_woodland_F;
-			class _xx_srifle_DMR_03_F
+			class _xx_srifle_EBR_F
 			{
-				weapon = "srifle_DMR_03_F";
+				weapon = "srifle_EBR_F";
 				count = 1;
 			};
 			delete _xx_srifle_DMR_02_camo_F;
@@ -1464,6 +1479,19 @@ class CfgVehicles
 			{
 				weapon = "srifle_DMR_02_F";
 				count = 1;
+			};
+			class _xx_arifle_SPAR_03_blk_F
+			{
+				weapon = "arifle_SPAR_03_blk_F";
+				count = 1;
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_20Rnd_762x51_Mag
+			{
+				magazine = "20Rnd_762x51_Mag";
+				count = 12;	
 			};
 		};
 	};
@@ -1559,12 +1587,6 @@ class CfgVehicles
 				weapon = "srifle_DMR_05_blk_F";
 				count = 1;
 			};
-			delete _xx_MMG_01_hex_F;
-		};
-		class TransportMagazines
-		{
-			delete _xx_150Rnd_93x64_Mag;
-		};
 	};
 	class Box_East_Ammo_F : EAST_Box_Base
 	{
