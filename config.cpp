@@ -876,7 +876,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_AMS_khk";
+				item = "optic_DMS";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
