@@ -1299,7 +1299,7 @@ class CfgVehicles
 			class _xx_150Rnd_556x45_Drum_Mag_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_F";
-				count = 4;
+				count = 6;
 			};
 			delete _xx_30Rnd_45ACP_Mag_SMG_01;
 			class _xx_30Rnd_9x21_Mag
@@ -1338,7 +1338,7 @@ class CfgVehicles
 			class _xx_200Rnd_65x39_cased_Box
 			{
 				magazine = "200Rnd_65x39_cased_Box";
-				count = 3;
+				count = 4;
 			};
 		};
 		class TransportWeapons
@@ -1399,7 +1399,7 @@ class CfgVehicles
 			class _xx_150Rnd_762x54_Box
 			{
 				magazine = "150Rnd_762x54_Box";
-				count = 10;	
+				count = 8;	
 			};
 		};
 		class TransportWeapons
@@ -1420,7 +1420,7 @@ class CfgVehicles
 			class _xx_150Rnd_762x54_Box
 			{
 				magazine = "150Rnd_762x54_Box";
-				count = 10;	
+				count = 8;	
 			};
 		};
 	};
@@ -1521,7 +1521,7 @@ class CfgVehicles
 			class _xx_150Rnd_556x45_Drum_Mag_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_F";
-				count = 4;
+				count = 6;
 			};
 			class _xx_1Rnd_HE_Grenade_shell
 			{
@@ -1597,7 +1597,7 @@ class CfgVehicles
 			class _xx_200Rnd_65x39_cased_Box
 			{
 				magazine = "200Rnd_65x39_cased_Box";
-				count = 3;
+				count = 4;
 			};
 		};
 	};
@@ -1711,11 +1711,6 @@ class CfgVehicles
 				magazine = "200Rnd_65x39_cased_Box";
 				count = 4;	
 			};
-			class _xx_30Rnd_9x21_Mag
-			{
-				magazine = "30Rnd_9x21_Mag";
-				count = 6;	
-			};
 		};
 	};
 	class Box_Syndicate_Wps_F : ReammoBox_F
@@ -1728,11 +1723,6 @@ class CfgVehicles
 				magazine = "200Rnd_65x39_cased_Box";
 				count = 2;	
 			};
-			class _xx_30Rnd_9x21_Mag
-			{
-				magazine = "30Rnd_9x21_Mag";
-				count = 2;	
-			};
 		};
 		class TransportWeapons
 		{
@@ -1740,11 +1730,6 @@ class CfgVehicles
 			class _xx_ZSN_LMG_Mk200_BI_F
 			{
 				weapon = "ZSN_LMG_Mk200_BI_F";
-				count = 2;
-			};
-			class _xx_hgun_PDW2000_snds_F
-			{
-				weapon = "hgun_PDW2000_snds_F";
 				count = 2;
 			};
 		};
@@ -1885,7 +1870,7 @@ class CfgVehicles
 			class _xx_150Rnd_762x54_Box
 			{
 				magazine = "150Rnd_762x54_Box";
-				count = 8;	
+				count = 6;	
 			};
 		};
 		class TransportWeapons
@@ -1910,13 +1895,13 @@ class CfgVehicles
 			class _xx_30Rnd_65x39_caseless_mag
 			{
 				magazine = "30Rnd_65x39_caseless_mag";
-				count = 30;	
+				count = 32;	
 			};
 			delete _xx_150Rnd_556x45_Drum_Mag_F;
 			class _xx_100Rnd_65x39_caseless_mag
 			{
 				magazine = "100Rnd_65x39_caseless_mag";
-				count = 9;
+				count = 6;
 			};
 			delete _xx_20Rnd_762x51_Mag;
 		};
@@ -1964,7 +1949,7 @@ class CfgVehicles
 			class _xx_muzzle_snds_H_MG_blk_F
 			{
 				name = "muzzle_snds_H_MG_blk_F";
-				count = 5;
+				count = 2;
 			};
 		};
 	};
@@ -2034,13 +2019,13 @@ class CfgVehicles
 			class _xx_150Rnd_556x45_Drum_Mag_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_F";
-				count = 3;
+				count = 6;
 			};
 			delete _xx_100Rnd_65x39_caseless_mag_Tracer;
 			class _xx_150Rnd_556x45_Drum_Mag_Tracer_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_Tracer_F";
-				count = 3;
+				count = 4;
 			};
 		};
 	};
@@ -2065,7 +2050,7 @@ class CfgVehicles
 			class _xx_30Rnd_556x45_Stanag
 			{
 				magazine = "30Rnd_556x45_Stanag";
-				count = 4;
+				count = 6;
 			};
 			delete _xx_100Rnd_65x39_caseless_mag;
 			class _xx_150Rnd_556x45_Drum_Mag_F
@@ -2143,7 +2128,7 @@ class CfgVehicles
 			class _xx_150Rnd_556x45_Drum_Mag_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_F";
-				count = 1;
+				count = 2;
 			};
 			delete _xx_100Rnd_65x39_caseless_mag_Tracer;
 			class _xx_150Rnd_556x45_Drum_Mag_Tracer_F
@@ -2177,7 +2162,7 @@ class CfgVehicles
 			class _xx_200Rnd_65x39_cased_Box
 			{
 				magazine = "200Rnd_65x39_cased_Box";
-				count = 2;
+				count = 4;
 			};
 			delete _xx_150Rnd_762x54_Box_Tracer;
 			class _xx_200Rnd_65x39_cased_Box_Tracer
@@ -2196,13 +2181,13 @@ class CfgVehicles
 			class _xx_200Rnd_65x39_cased_Box
 			{
 				magazine = "200Rnd_65x39_cased_Box";
-				count = 2;
+				count = 1;
 			};
 			delete _xx_150Rnd_762x54_Box_Tracer;
 			class _xx_200Rnd_65x39_cased_Box_Tracer
 			{
 				magazine = "200Rnd_65x39_cased_Box_Tracer";
-				count = 2;
+				count = 1;
 			};
 		};
 	};
@@ -2258,7 +2243,7 @@ class CfgVehicles
 			class _xx_200Rnd_65x39_cased_Box
 			{
 				magazine = "200Rnd_65x39_cased_Box";
-				count = 2;
+				count = 1;
 			};
 			delete _xx_150Rnd_762x54_Box_Tracer;
 			class _xx_200Rnd_65x39_cased_Box_Tracer
@@ -2303,7 +2288,7 @@ class CfgVehicles
 			class _xx_30Rnd_556x45_Stanag
 			{
 				magazine = "30Rnd_556x45_Stanag";
-				count = 4;
+				count = 6;
 			};
 			delete _xx_100Rnd_65x39_caseless_mag;
 			class _xx_150Rnd_556x45_Drum_Mag_F
@@ -2383,7 +2368,7 @@ class CfgVehicles
 			class _xx_SmokeShellGreen 
 			{
 				count = 1;
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 			};
 		};
 	};
@@ -2427,35 +2412,27 @@ class CfgVehicles
 		};
 	};
 	class B_Kitbag_mcamo;
-	class ZSN_B_Patrol_Supply_bag_F: B_Kitbag_mcamo
+	class B_Patrol_Supply_bag_F: B_Kitbag_mcamo
 	{
-		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_30Rnd_556x45_Stanag
-			{
-				magazine = "30Rnd_556x45_Stanag";
-				count = 6;
-			};
+			delete _xx_100Rnd_65x39_caseless_mag;
 			class _xx_150Rnd_556x45_Drum_Mag_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_F";
 				count = 2;
 			};
+			delete _xx_200Rnd_65x39_cased_Box;
 			class _xx_200Rnd_556x45_Box_F
 			{
 				magazine = "200Rnd_556x45_Box_F";
 				count = 1;
 			};
-			class _xx_150Rnd_762x54_Box
+			delete _xx_30Rnd_65x39_caseless_mag;
+			class _xx_30Rnd_556x45_Stanag
 			{
-				magazine = "150Rnd_762x54_Box";
-				count = 1;
-			};
-			class _xx_Titan_AP
-			{
-				magazine = "Titan_AP";
-				count = 1;
+				magazine = "30Rnd_556x45_Stanag";
+				count = 6;
 			};
 		};
 	};
@@ -3081,7 +3058,6 @@ class CfgVehicles
 	};
 	class B_Patrol_Soldier_A_F: B_Soldier_A_F
 	{
-		backpack = "ZSN_B_Patrol_supply_bag_F";
 		weapons[] = {"ZSN_B_Patrol_Soldier_Carrier_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Rangefinder"};
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Carrier_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
