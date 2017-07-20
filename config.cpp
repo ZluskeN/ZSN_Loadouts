@@ -1727,9 +1727,9 @@ class CfgVehicles
 		class TransportWeapons
 		{
 			delete _xx_LMG_03_F;
-			class _xx_ZSN_LMG_Mk200_BI_F
+			class _xx_LMG_Mk200_F
 			{
-				weapon = "ZSN_LMG_Mk200_BI_F";
+				weapon = "LMG_Mk200_F";
 				count = 2;
 			};
 		};
@@ -3447,15 +3447,15 @@ class CfgVehicles
 	class I_C_Soldier_base_F : I_G_Soldier_base_F{};
 	class I_C_Soldier_Para_4_F : I_C_Soldier_base_F
 	{
-		weapons[] = {"ZSN_LMG_Mk200_BI_F","hgun_Pistol_01_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_LMG_Mk200_BI_F","hgun_Pistol_01_F","Throw","Put"};
+		weapons[] = {"LMG_Mk200_F","hgun_Pistol_01_F","Throw","Put"};
+		respawnWeapons[] = {"LMG_Mk200_F","hgun_Pistol_01_F","Throw","Put"};
 		magazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 		respawnMagazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 	};
 	class I_C_Soldier_Bandit_3_F : I_C_Soldier_base_F
 	{
-		weapons[] = {"ZSN_LMG_Mk200_BI_F","hgun_Pistol_01_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_LMG_Mk200_BI_F","hgun_Pistol_01_F","Throw","Put"};
+		weapons[] = {"LMG_Mk200_F","hgun_Pistol_01_F","Throw","Put"};
+		respawnWeapons[] = {"LMG_Mk200_F","hgun_Pistol_01_F","Throw","Put"};
 		magazines[] = {"200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 		respawnMagazines[] = {"200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 	};
