@@ -570,6 +570,11 @@ class cfgWeapons
 				item = "acc_flashlight";
 				slot = "PointerSlot";
 			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_B_blk_F";
+				slot = "MuzzleSlot";
+			};
 		};
 	};
 	class ZSN_arifle_SPAR_01_blk_pointer_F: arifle_SPAR_01_blk_F
@@ -2243,6 +2248,12 @@ class CfgVehicles
 			class _xx_optic_Holosight_blk_F
 			{
 				name = "optic_Holosight_blk_F";
+				count = 2;
+			};
+			delete _xx_muzzle_snds_L;
+			class _xx_muzzle_snds_B_blk_F
+			{
+				name = "muzzle_snds_B_blk_F";
 				count = 2;
 			};
 		};
