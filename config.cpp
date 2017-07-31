@@ -14,7 +14,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","tmr_rpg42"};
+		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol"};
 	};
 };
 class cfgWeapons
@@ -1280,11 +1280,6 @@ class cfgWeapons
 				item = "muzzle_snds_m_khk_F";
 			};
 		};
-	};
-	class launch_RPG32_F;
-	class launch_RPG32_ghex_F : launch_RPG32_F
-	{
-		magazines[] = {"RPG32_F","RPG32_HE_F","TMR_RPG32_Smoke_F","TMR_RPG32_TB_F"};
 	};
 };
 class CfgVehicles
