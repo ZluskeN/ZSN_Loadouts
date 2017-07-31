@@ -1055,15 +1055,15 @@ class CfgVehicles
 		class TransportWeapons
 		{
 			delete _xx_arifle_MX_F;
-			class arifle_SPAR_01_snd_F
+			class arifle_SPAR_01_khk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_khk_F";
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_F;
-			class arifle_SPAR_02_snd_F
+			class arifle_SPAR_02_khk_F
 			{
-				weapon = "arifle_SPAR_02_snd_F";
+				weapon = "arifle_SPAR_02_khk_F";
 				count = 1;
 			};
 		};
@@ -3692,9 +3692,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_F;
-			class _xx_arifle_SPAR_01_snd_F
+			class _xx_arifle_SPAR_01_khk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_khk_F";
 				count = 2;
 			};
 		};
@@ -4153,9 +4153,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_01_snd_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_01_snd_F";
 				count = 2;
 			};
 		};
@@ -4328,9 +4328,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_01_snd_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_01_snd_F";
 				count = 2;
 			};
 		};
@@ -4530,9 +4530,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_F;
-			class _xx_arifle_SPAR_01_snd_F
+			class _xx_arifle_SPAR_01_khk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_khk_F";
 				count = 2;
 			};
 		};
@@ -4680,15 +4680,15 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_F;
-			class _xx_arifle_SPAR_01_snd_F
+			class _xx_arifle_SPAR_01_khk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_khk_F";
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_F;
-			class _xx_arifle_SPAR_02_snd_F
+			class _xx_arifle_SPAR_02_khk_F
 			{
-				weapon = "arifle_SPAR_02_snd_F";
+				weapon = "arifle_SPAR_02_khk_F";
 				count = 1;
 			};
 		};
@@ -5136,9 +5136,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_F;
-			class _xx_arifle_SPAR_01_snd_F
+			class _xx_arifle_SPAR_01_khk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_khk_F";
 				count = 2;
 			};
 		};
@@ -5297,10 +5297,19 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_F;
-			class _xx_arifle_MXC_Black_F
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "arifle_MXC_Black_F";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
+			};
+		};
+		class TransportMagazines
+		{
+			delete _xx_30Rnd_65x39_caseless_mag;
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "30Rnd_556x45_Stanag";
+				count = 4;
 			};
 		};
 	};
@@ -5309,10 +5318,19 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_F;
-			class _xx_arifle_MXC_Black_F
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "arifle_MXC_Black_F";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
+			};
+		};
+		class TransportMagazines
+		{
+			delete _xx_30Rnd_65x39_caseless_mag;
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "30Rnd_556x45_Stanag";
+				count = 4;
 			};
 		};
 	};
@@ -5321,10 +5339,19 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_F;
-			class _xx_arifle_MXC_Black_F
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "arifle_MXC_Black_F";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
+			};
+		};
+		class TransportMagazines
+		{
+			delete _xx_30Rnd_65x39_caseless_mag;
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "30Rnd_556x45_Stanag";
+				count = 4;
 			};
 		};
 	};
