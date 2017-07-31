@@ -194,17 +194,6 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_arifle_SPAR_01_khk_Holo_F: arifle_SPAR_01_khk_F
-	{
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item = "optic_Holosight_khk_F";
-				slot = "CowsSlot";
-			};
-		};
-	};
 	class ZSN_arifle_SPAR_01_khk_Holo_pointer_F: arifle_SPAR_01_khk_F
 	{
 		class LinkedItems
@@ -294,6 +283,17 @@ class cfgWeapons
 		};
 	};
 	class arifle_SPAR_01_blk_F;
+	class ZSN_arifle_SPAR_01_blk_Holo_F: arifle_SPAR_01_khk_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_Holosight_blk_F";
+				slot = "CowsSlot";
+			};
+		};
+	};
 	class ZSN_arifle_SPAR_01_blk_gend_F: arifle_SPAR_01_blk_F
 	{
 		class LinkedItems
