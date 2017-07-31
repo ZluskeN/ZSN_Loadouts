@@ -70,7 +70,7 @@ class cfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_M";
+				item = "muzzle_snds_m_khk_F";
 				slot = "MuzzleSlot";
 			};
 		};
@@ -118,7 +118,7 @@ class cfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_M";
+				item = "muzzle_snds_m_khk_F";
 				slot = "MuzzleSlot";
 			};
 		};
@@ -129,7 +129,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "optic_Hamr_khk_F";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -139,7 +139,7 @@ class cfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_M";
+				item = "muzzle_snds_m_khk_F";
 				slot = "MuzzleSlot";
 			};
 		};
@@ -177,7 +177,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "optic_Hamr_khk_f";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -205,7 +205,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "optic_Hamr_khk_f";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -231,7 +231,7 @@ class cfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_M";
+				item = "muzzle_snds_m_khk_F";
 				slot = "MuzzleSlot";
 			};
 		};
@@ -260,7 +260,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "optic_Hamr_khk_f";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -281,7 +281,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_SOS";
+				item = "optic_SOS_khk_f";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -296,7 +296,7 @@ class cfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_B";
+				item = "muzzle_snds_b_khk_F";
 				slot = "MuzzleSlot";
 			};
 		};
