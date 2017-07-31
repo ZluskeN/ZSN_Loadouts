@@ -64,22 +64,6 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_arifle_SPAR_01_snd_pointer_snds_F: arifle_SPAR_01_snd_F
-	{
-		class LinkedItems
-		{
-			class LinkedItemsAcc
-			{
-				item = "acc_pointer_IR";
-				slot = "PointerSlot";
-			};
-			class LinkedItemsMuzzle
-			{
-				item = "muzzle_snds_m_khk_F";
-				slot = "MuzzleSlot";
-			};
-		};
-	};
 	class ZSN_arifle_SPAR_01_snd_ACO_pointer_snds_F: arifle_SPAR_01_snd_F
 	{
 		class LinkedItems
