@@ -6,7 +6,6 @@
 
 #define _ARMA_
 
-//Class bsl_marksmen : config.bin{
 class CfgPatches
 {
 	class ZSN_Loadouts
@@ -5632,4 +5631,3 @@ class cfggroups
 		};
 	};
 };
-//};
