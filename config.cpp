@@ -216,7 +216,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr_khk_F";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -233,7 +233,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr_khk_F";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -267,7 +267,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr_khk_F";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
