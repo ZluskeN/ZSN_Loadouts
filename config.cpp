@@ -200,7 +200,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Holosight_khk_F";
+				item = "optic_Holosight";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
