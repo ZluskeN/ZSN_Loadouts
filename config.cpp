@@ -226,6 +226,17 @@ class cfgWeapons
 		};
 	};
 	class arifle_SPAR_01_GL_khk_F;
+	class ZSN_arifle_SPAR_01_GL_khk_ACO_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_aco";
+				slot = "CowsSlot";
+			};
+		};
+	};
 	class ZSN_arifle_SPAR_01_GL_khk_Hamr_pointer_F: arifle_SPAR_01_GL_khk_F
 	{
 		class LinkedItems
