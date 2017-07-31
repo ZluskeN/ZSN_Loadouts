@@ -572,7 +572,7 @@ class cfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_B_blk_F";
+				item = "muzzle_snds_m";
 				slot = "MuzzleSlot";
 			};
 		};
@@ -2251,9 +2251,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_muzzle_snds_L;
-			class _xx_muzzle_snds_B_blk_F
+			class _xx_muzzle_snds_m
 			{
-				name = "muzzle_snds_B_blk_F";
+				name = "muzzle_snds_m";
 				count = 2;
 			};
 		};
