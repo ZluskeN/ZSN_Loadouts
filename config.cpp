@@ -112,7 +112,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Holosight";
+				item = "optic_Holosight_khk_F";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -199,7 +199,7 @@ class cfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Holosight";
+				item = "optic_Holosight_khk_F";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -851,7 +851,7 @@ class cfgWeapons
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "optic_Holosight_khk_F";
+				item = "optic_Holosight";
 			};
 			class LinkedItemsMuzzle
 			{
@@ -914,7 +914,7 @@ class cfgWeapons
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "optic_Holosight_khk_F";
+				item = "optic_Holosight";
 			};
 			class LinkedItemsMuzzle
 			{
@@ -956,7 +956,7 @@ class cfgWeapons
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "optic_Holosight_khk_F";
+				item = "optic_Holosight";
 			};
 			class LinkedItemsMuzzle
 			{
@@ -978,7 +978,7 @@ class cfgWeapons
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "optic_Holosight_khk_F";
+				item = "optic_Holosight";
 			};
 		};
 	};
