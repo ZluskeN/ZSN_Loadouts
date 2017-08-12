@@ -538,7 +538,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_arifle_Mk20_GL_MRCO_pointer_plain_F: arifle_Mk20_plain_F
+	class ZSN_arifle_Mk20_GL_MRCO_pointer_plain_F: arifle_Mk20_GL_plain_F
 	{
 		class LinkedItems
 		{
