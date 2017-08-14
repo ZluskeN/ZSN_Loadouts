@@ -3747,11 +3747,6 @@ class CfgVehicles
  		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
  		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
  	};
-	class O_V_Soldier_Medic_hex_F : O_V_Soldier_base_F
- 	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
- 	};
 	class O_V_Soldier_M_hex_F : O_V_Soldier_base_F
  	{
  		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
