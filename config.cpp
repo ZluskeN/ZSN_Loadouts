@@ -2621,6 +2621,8 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_arifle_MX_Black_ERCO_pointer_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
 	};
 	class B_CTRG_Soldier_F;
 	class B_CTRG_Soldier_TL_tna_F : B_CTRG_Soldier_F
@@ -3730,6 +3732,41 @@ class CfgVehicles
 		magazines[] = {"150Rnd_93x64_Mag","150Rnd_93x64_Mag","150Rnd_93x64_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"150Rnd_93x64_Mag","150Rnd_93x64_Mag","150Rnd_93x64_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 	};
+ 	class O_V_Soldier_base_F : O_Soldier_base_F
+ 	{
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 	};
+	class O_V_Soldier_Exp_hex_F : O_V_Soldier_base_F
+ 	{
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 	};
+	class O_V_Soldier_Medic_hex_F : O_V_Soldier_base_F
+ 	{
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 	};
+	class O_V_Soldier_Medic_hex_F : O_V_Soldier_base_F
+ 	{
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 	};
+	class O_V_Soldier_M_hex_F : O_V_Soldier_base_F
+ 	{
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 	};
+	class O_V_Soldier_LAT_hex_F : O_V_Soldier_base_F
+ 	{
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 	};
+	class O_V_Soldier_JTAC_hex_F : O_V_Soldier_base_F
+ 	{
+ 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield"};
+ 	};
 	class Car_F;
 	class MRAP_01_base_F : Car_F
 	{
