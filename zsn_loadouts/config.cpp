@@ -2819,8 +2819,8 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Medic_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Soldier_AR_F: B_soldier_AR_F
 	{
