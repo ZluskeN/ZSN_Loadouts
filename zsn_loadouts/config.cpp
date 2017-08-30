@@ -839,7 +839,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_B_Patrol_Soldier_Leader_weapon_F: arifle_SPAR_01_GL_khk_F
+	class ZSN_B_Patrol_Soldier_Leader_weapon_F: arifle_SPAR_01_GL_snd_F
 	{
 		class LinkedItems
 		{
@@ -860,7 +860,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_B_Patrol_Soldier_Operator_weapon_F: arifle_SPAR_01_khk_F
+	class ZSN_B_Patrol_Soldier_Operator_weapon_F: arifle_SPAR_01_snd_F
 	{
 		class LinkedItems
 		{
@@ -902,7 +902,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_B_Patrol_Soldier_Medic_weapon_F: arifle_SPAR_01_khk_F
+	class ZSN_B_Patrol_Soldier_Medic_weapon_F: arifle_SPAR_01_snd_F
 	{
 		class LinkedItems
 		{
@@ -923,7 +923,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_B_Patrol_Soldier_Autorifleman_weapon_F: arifle_SPAR_02_khk_F
+	class ZSN_B_Patrol_Soldier_Autorifleman_weapon_F: arifle_SPAR_02_snd_F
 	{
 		class LinkedItems
 		{
@@ -961,7 +961,7 @@ class cfgWeapons
 			class LinkedItemsMuzzle
 			{
 				slot = "MuzzleSlot";
-				item = "muzzle_snds_H_MG_khk_F";
+				item = "muzzle_snds_H_MG_blk_F";
 			};
 		};
 	};
@@ -982,7 +982,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_B_Patrol_Soldier_Carrier_weapon_F: arifle_SPAR_01_khk_F
+	class ZSN_B_Patrol_Soldier_Carrier_weapon_F: arifle_SPAR_01_snd_F
 	{
 		class LinkedItems
 		{
@@ -1025,7 +1025,7 @@ class cfgWeapons
 			class LinkedItemsMuzzle
 			{
 				slot = "MuzzleSlot";
-				item = "muzzle_snds_m_khk_F";
+				item = "muzzle_snds_m";
 			};
 		};
 	};
