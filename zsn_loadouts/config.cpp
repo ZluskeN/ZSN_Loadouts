@@ -923,6 +923,7 @@ class cfgWeapons
 			};
 		};
 	};
+	class arifle_SPAR_02_snd_F;
 	class ZSN_B_Patrol_Soldier_Autorifleman_weapon_F: arifle_SPAR_02_snd_F
 	{
 		class LinkedItems
