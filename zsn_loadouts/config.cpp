@@ -3290,7 +3290,11 @@ class CfgVehicles
 		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
-	class O_support_AMort_F : O_Soldier_support_base_F{};
+	class O_support_AMort_F : O_Soldier_support_base_F
+	{
+		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+ 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+	};
 	class O_T_Support_AMort_F : O_support_AMort_F
 	{
 		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
@@ -3391,11 +3395,6 @@ class CfgVehicles
 	{
 		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_support_AMort_F : O_Soldier_support_base_F
-	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
 	};
 	class O_Soldier_02_F: O_Soldier_base_F{};
 	class O_helipilot_F: O_Soldier_02_F
