@@ -31,6 +31,11 @@ if defined DSSIGNFILEPATH (
 		"%DSSIGNFILEPATH%\DSSignFile.exe" "%%k" "@zsn_loadouts\Addons\zsn_gear.pbo"
 	)
 
+	for %%k in (Keys\*.biprivatekey) do (
+		echo Signing @zsn_loadouts\Addons with %%~nxk
+		"%DSSIGNFILEPATH%\DSSignFile.exe" "%%k" "@zsn_loadouts\Addons\zsn_ace_gear.pbo"
+	)
+
 	for %%k in (Keys\*.bikey) do (
 		echo Copying %%~nxk to @zsn_loadouts\Keys
 		copy "%%k" "@zsn_loadouts\Keys" > nul
