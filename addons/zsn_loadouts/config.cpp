@@ -2215,8 +2215,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Soldier_02_f: B_Soldier_base_F{};
 	class B_Soldier_03_f: B_Soldier_base_F{};
@@ -2423,15 +2421,11 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_SPAR_01_khk_F","hgun_P07_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_I","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-		respawnLinkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_I","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 	};
 	class B_T_Crew_F: B_crew_F
 	{
 		weapons[] = {"arifle_SPAR_01_khk_F","hgun_P07_khk_F","Throw","Put"};
 		respawnWeapons[] = {"arifle_SPAR_01_khk_F","hgun_P07_khk_F","Throw","Put"};
-		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_I","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
-		respawnLinkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_I","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
 	};
 	class B_Officer_F: B_Soldier_base_F
 	{
@@ -2452,16 +2446,6 @@ class CfgVehicles
 		magazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
-	class B_Deck_Crew_F:  B_Helipilot_F
-	{
-		linkedItems[] = {"V_DeckCrew_yellow_F","H_HelmetCrew_I","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
-		respawnLinkedItems[] = {"V_DeckCrew_yellow_F","H_HelmetCrew_I","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
-	};
-	class B_T_Helipilot_F: B_Helipilot_F
-	{
-		linkedItems[] = {"V_TacVest_oli","H_PilotHelmetHeli_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
-		respawnLinkedItems[] = {"V_TacVest_oli","H_PilotHelmetHeli_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
-	};
 	class B_Helicrew_F: B_Helipilot_F
 	{
 		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_F","Throw","Put"};
@@ -2473,8 +2457,6 @@ class CfgVehicles
 	{
 		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_F","Throw","Put"};
 		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_F","Throw","Put"};
-		linkedItems[] = {"V_TacVest_oli","H_CrewHelmetHeli_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
-		respawnLinkedItems[] = {"V_TacVest_oli","H_CrewHelmetHeli_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
 	};
 	class B_Soldier_recon_base: B_Soldier_base_F{};
 	class B_recon_F: B_Soldier_recon_base
@@ -2609,8 +2591,6 @@ class CfgVehicles
 		respawnweapons[] = {"ZSN_arifle_SPAR_01_GL_khk_Hamr_pointer_F","hgun_P07_snds_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","Chemlight_green","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell"};
 		respawnmagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","Chemlight_green","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_CTRG_soldier_AR_A_F: B_Soldier_base_F
 	{
@@ -2622,9 +2602,7 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_arifle_MX_Black_ERCO_pointer_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-	};
+ 	};
 	class B_CTRG_Soldier_F;
 	class B_CTRG_Soldier_TL_tna_F : B_CTRG_Soldier_F
 	{
@@ -2721,8 +2699,6 @@ class CfgVehicles
 	{
 		weapons[] = {"ZSN_arifle_SPAR_01_khk_Holo_pointer_F","hgun_P07_F","Throw","Put"};
 		respawnweapons[] = {"ZSN_arifle_SPAR_01_khk_Holo_pointer_F","hgun_P07_F","Throw","Put"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
 	};
 	class B_T_support_Mort_F: B_support_Mort_F
 	{
@@ -2749,8 +2725,6 @@ class CfgVehicles
 	{
 		weapons[] = {"ZSN_arifle_SPAR_01_khk_Holo_pointer_F","hgun_P07_F","Throw","Put"};
 		respawnweapons[] = {"ZSN_arifle_SPAR_01_khk_Holo_pointer_F","hgun_P07_F","Throw","Put"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
 	};
 	class B_T_support_AMort_F: B_support_AMort_F
 	{
@@ -2792,8 +2766,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Leader_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","SmokeShellBlue","SmokeShellBlue"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","SmokeShellBlue","SmokeShellBlue"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Soldier_UAV_F: B_soldier_UAV_F
 	{
@@ -2801,8 +2773,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Operator_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Soldier_M_F: B_soldier_M_F
 	{
@@ -2810,8 +2780,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Marksman_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Medic_F: B_medic_F
 	{
@@ -2819,8 +2787,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Medic_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade"};
-		Items[] = {"ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Soldier_AR_F: B_soldier_AR_F
 	{
@@ -2828,8 +2794,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Autorifleman_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_Tracer_F","150Rnd_556x45_Drum_Mag_Tracer_F","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_Tracer_F","150Rnd_556x45_Drum_Mag_Tracer_F","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Soldier_MG_F: B_soldier_AR_F
 	{
@@ -2837,8 +2801,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_MachineGunner_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_Tracer_Red_F","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"200Rnd_556x45_Box_F","200Rnd_556x45_Box_F","200Rnd_556x45_Box_Tracer_Red_F","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_HeavyGunner_F;
 	class B_Patrol_HeavyGunner_F: B_HeavyGunner_F
@@ -2847,8 +2809,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_HeavyGunner_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"150Rnd_762x54_Box","150Rnd_762x54_Box","150Rnd_762x54_Box","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"150Rnd_762x54_Box","150Rnd_762x54_Box","150Rnd_762x54_Box","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Soldier_A_F: B_Soldier_A_F
 	{
@@ -2856,8 +2816,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Carrier_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Soldier_AT_F: B_soldier_AT_F
 	{
@@ -2865,8 +2823,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Specialist_weapon_F","hgun_ACPC2_snds_F","launch_B_Titan_short_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","Titan_AP","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","Titan_AP","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Patrol_Engineer_F: B_engineer_F
 	{
@@ -2874,8 +2830,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Specialist_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class I_Soldier_base_F: SoldierGB
 	{
@@ -2883,8 +2837,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_arifle_Mk20_ACO_pointer_plain_F","hgun_Pistol_heavy_01_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class I_Soldier_02_F : I_Soldier_base_F{};
 	class I_Soldier_03_F : I_Soldier_base_F{};
@@ -3032,8 +2984,6 @@ class CfgVehicles
 	};
 	class I_Story_Officer_01_F: I_Officer_F
 	{
-		Items[] = {"FirstAidKit","ACE_EarPlugs"};
-		respawnItems[] = {"FirstAidKit","ACE_EarPlugs"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","APERSMineDispenser_Mag","APERSMineDispenser_Mag","APERSMineDispenser_Mag","SmokeShell"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","APERSMineDispenser_Mag","APERSMineDispenser_Mag","APERSMineDispenser_Mag","SmokeShell"};
 		weapons[] = {"arifle_Mk20_plain_F","hgun_Pistol_heavy_01_F"};
@@ -3085,8 +3035,6 @@ class CfgVehicles
 	{
 		weapons[] = {"zsn_arifle_Mk20C_ACO_pointer_plain_F","hgun_Pistol_heavy_01_F","Throw","Put"};
 		respawnweapons[] = {"zsn_arifle_Mk20C_ACO_pointer_plain_F","hgun_Pistol_heavy_01_F","Throw","Put"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
 	};
 	class I_support_AMG_F: I_Soldier_support_base_F
 	{
@@ -3097,8 +3045,6 @@ class CfgVehicles
 	{
 		weapons[] = {"zsn_arifle_Mk20C_ACO_pointer_plain_F","hgun_Pistol_heavy_01_F","Throw","Put"};
 		respawnweapons[] = {"zsn_arifle_Mk20C_ACO_pointer_plain_F","hgun_Pistol_heavy_01_F","Throw","Put"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
 	};
 	class ZSN_I_Soldier_recon_base: I_Soldier_base_F
 	{
@@ -3243,11 +3189,7 @@ class CfgVehicles
 		magazines[] = {"10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","MiniGrenade","MiniGrenade","MiniGrenade","Laserbatteries"};
 		respawnMagazines[] = {"10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","10Rnd_127x54_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","MiniGrenade","MiniGrenade","MiniGrenade","Laserbatteries"};
 	};
-	class I_G_Soldier_base_F: SoldierGB
-	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-	};
+	class I_G_Soldier_base_F: SoldierGB{};
 	class I_G_Soldier_F: I_G_Soldier_base_F{};
 	class I_G_Soldier_AR_F: I_G_Soldier_base_F
 	{
@@ -3262,12 +3204,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_srifle_DMR_06_olive_MRCO_F","Throw","Put","Binocular"};
 		magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","HandGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_blue","Chemlight_blue"};
 		respawnMagazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","HandGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_blue","Chemlight_blue"};
-	};
-	class B_G_Soldier_F : I_G_Soldier_F{};
-	class I_G_Story_Protagonist_F : B_G_Soldier_F
-	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class I_C_Soldier_base_F : I_G_Soldier_base_F{};
 	class I_C_Soldier_Para_4_F : I_C_Soldier_base_F
@@ -3284,324 +3220,19 @@ class CfgVehicles
 		magazines[] = {"200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 		respawnMagazines[] = {"200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 	};
-	class O_Soldier_base_F: SoldierEB
-	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-	};
-	class O_Soldier_A_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_A_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_support_base_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_Chestrig_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_Chestrig_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_Soldier_AAR_F : O_Soldier_support_base_F{};
-	class O_T_Soldier_AAR_F : O_Soldier_AAR_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_support_AMG_F : O_Soldier_support_base_F{};
-	class O_T_Support_AMG_F : O_support_AMG_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_support_AMort_F : O_Soldier_support_base_F
-	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
-	};
-	class O_T_Support_AMort_F : O_support_AMort_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_AAT_F : O_Soldier_support_base_F{};
-	class O_T_Soldier_AAT_F : O_Soldier_AAT_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_AAA_F : O_Soldier_AAT_F{};
-	class O_T_Soldier_AAA_F : O_Soldier_AAA_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
+	class O_Soldier_base_F: SoldierEB{};
 	class O_Soldier_AR_F: O_Soldier_base_F
 	{
 		weapons[] = {"ZSN_LMG_Mk200_LP_BI_F","hgun_Rook40_F","Throw","Put"};
 		respawnWeapons[] = {"ZSN_LMG_Mk200_LP_BI_F","hgun_Rook40_F","Throw","Put"};
 		magazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_AR_F : O_Soldier_AR_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_medic_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_medic_F: O_medic_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_crew_F: O_Soldier_base_F
-	{
-		uniformClass = "U_O_SpecopsUniform_blk";
-		linkedItems[] = {"V_BandollierB_khk","H_HelmetSpecO_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_BandollierB_khk","H_HelmetSpecO_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_crew_F: O_crew_F
-	{
-		uniformClass = "U_O_SpecopsUniform_blk";
-		linkedItems[] = {"V_BandollierB_ghex_F","H_HelmetSpecO_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"V_BandollierB_ghex_F","H_HelmetSpecO_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_engineer_F : O_Soldier_base_F{};
-	class O_T_Engineer_F : O_engineer_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_soldier_exp_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_Exp_F : O_soldier_exp_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_GL_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_HarnessOGL_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_GL_F : O_Soldier_GL_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessOGL_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessOGL_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_support_GMG_F : O_Soldier_support_base_F{};
-	class O_T_Support_GMG_F : O_support_GMG_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_support_MG_F : O_Soldier_support_base_F{};
-	class O_T_Support_MG_F : O_support_MG_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_support_Mort_F : O_Soldier_support_base_F
-	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
-	};
-	class O_T_Support_Mort_F : O_support_Mort_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacChestrig_oli_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_02_F: O_Soldier_base_F{};
-	class O_helipilot_F: O_Soldier_02_F
-	{
-		uniformClass = "U_O_CombatUniform_ocamo";
-		linkedItems[] = {"H_HelmetLeaderO_ocamo","V_TacVest_khk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"H_HelmetLeaderO_ocamo","V_TacVest_khk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_helipilot_F: O_helipilot_F
-	{
-		uniformClass = "U_O_T_Soldier_F";
-		linkedItems[] = {"H_HelmetLeaderO_ghex_F","V_TacVest_brn","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetLeaderO_ghex_F","V_TacVest_brn","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_helicrew_F: O_helipilot_F
-	{
-		uniformClass = "U_O_CombatUniform_ocamo";
-		linkedItems[] = {"V_TacVest_khk","H_HelmetO_ocamo","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetO_ocamo","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_helicrew_F: O_helicrew_F
-	{
-		uniformClass = "U_O_T_Soldier_F";
-		linkedItems[] = {"V_TacVest_brn","H_HelmetO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"V_TacVest_brn","H_HelmetO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_pilot_F: O_helipilot_F
-	{
-		uniformClass = "U_O_PilotCoveralls";
-	};
-	class O_soldier_UAV_F : O_Soldier_base_F
-	{
-		linkedItems[] = {"V_TacVest_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_UavTerminal","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_UavTerminal","NVGoggles_OPFOR"};
-	};
-	class O_soldier_M_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_M_F : O_soldier_M_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_AA_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_AA_F: O_Soldier_AA_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_AT_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_AT_F: O_Soldier_AT_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
 	class O_Officer_F: O_Soldier_base_F{};
 	class O_T_Officer_F: O_Officer_F
 	{
 		weapons[] = {"arifle_CTAR_blk_ACO_F","hgun_Pistol_heavy_02_F","Throw","Put"};
 		respawnWeapons[] = {"arifle_CTAR_blk_ACO_F","hgun_Pistol_heavy_02_F","Throw","Put"};
-	};
-	class O_soldier_PG_F : O_Soldier_base_F{};
-	class O_T_Soldier_PG_F : O_soldier_PG_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_soldier_repair_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_Repair_F : O_soldier_repair_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_F: O_Soldier_base_F{};
-	class O_Soldier_unarmed_F : O_Soldier_F
-	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-	};
-	class O_T_Soldier_F: O_Soldier_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_T_Soldier_unarmed_F : O_T_Soldier_F
-	{
-		linkedItems[] = {"V_HarnessO_ghex_F","H_HelmetCrew_O_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-		respawnLinkedItems[] = {"V_HarnessO_ghex_F","H_HelmetCrew_O_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-	};
-	class O_Soldier_LAT_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_LAT_F : O_Soldier_LAT_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_SL_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetCrew_O","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_SL_F : O_Soldier_SL_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_Soldier_TL_F: O_Soldier_base_F
-	{
-		linkedItems[] = {"V_HarnessOGL_brn","H_HelmetCrew_O","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_HelmetCrew_O","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_Soldier_TL_F : O_Soldier_TL_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-	};
-	class O_T_Soldier_UAV_F : O_soldier_UAV_F
-	{
-		linkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_UavTerminal","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetCrew_O_ghex_F","V_TacVest_oli","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_UavTerminal","O_NVGoggles_ghex_F"};
-	};
-	class ZSN_O_Urban_helipilot_F: O_helipilot_F
-	{
-		author = "ZluskeN";
-		scope = 1;
-		uniformClass = "U_O_CombatUniform_oucamo";
-		linkedItems[] = {"H_HelmetLeaderO_oucamo","V_TacVest_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"H_HelmetLeaderO_oucamo","V_TacVest_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class ZSN_O_Urban_helicrew_F: O_helicrew_F
-	{
-		author = "ZluskeN";
-		scope = 1;
-		uniformClass = "U_O_CombatUniform_oucamo";
-		linkedItems[] = {"V_TacVest_blk","H_HelmetO_oucamo","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_blk","H_HelmetO_oucamo","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_Soldier_recon_base: O_Soldier_base_F{};
-	class O_recon_M_F: O_Soldier_recon_base
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_recon_LAT_F: O_Soldier_recon_base
-	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_recon_JTAC_F: O_Soldier_recon_base
-	{
-		linkedItems[] = {"V_HarnessOGL_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_recon_TL_F: O_Soldier_recon_base
-	{
-		linkedItems[] = {"V_HarnessOGL_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_T_recon_TL_F: O_recon_TL_F
-	{
-		linkedItems[] = {"H_HelmetSpecO_ghex_F","V_HarnessOGL_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
-		respawnLinkedItems[] = {"H_HelmetSpecO_ghex_F","V_HarnessOGL_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
 	class O_Sharpshooter_F: O_Soldier_base_F
 	{
@@ -3612,6 +3243,7 @@ class CfgVehicles
 		linkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetCrew_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
+	class O_Soldier_recon_base: O_Soldier_base_F{};
 	class O_Pathfinder_F: O_Soldier_recon_base
 	{
 		linkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
@@ -3630,8 +3262,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_ACO_pointer_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_soldierU_AR_F: O_Soldier_Urban_base
 	{
@@ -3651,8 +3281,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_ACO_pointer_F","launch_RPG32_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","RPG32_F","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","RPG32_F","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_soldierU_AT_F: O_Soldier_Urban_base
 	{
@@ -3660,8 +3288,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_ACO_pointer_F","launch_O_Titan_short_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","Titan_AT","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","Titan_AT","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_soldierU_AAT_F: O_Soldier_Urban_base
 	{
@@ -3674,8 +3300,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_ACO_pointer_F","launch_O_Titan_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","Titan_AA","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","Titan_AA","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_soldierU_AAA_F: O_Soldier_Urban_base
 	{
@@ -3688,8 +3312,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_GL_ARCO_pointer_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer","30Rnd_65x39_caseless_green_mag_Tracer","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","MiniGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","SmokeShell","SmokeShellRed","SmokeShellOrange","SmokeShellYellow","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer","30Rnd_65x39_caseless_green_mag_Tracer","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","MiniGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","SmokeShell","SmokeShellRed","SmokeShellOrange","SmokeShellYellow","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_HarnessOGL_gry","H_HelmetCrew_B","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessOGL_gry","H_HelmetCrew_B","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_soldierU_medic_F : O_Soldier_Urban_base
 	{
@@ -3704,8 +3326,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_ARCO_pointer_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer","30Rnd_65x39_caseless_green_mag_Tracer","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","O_IR_Grenade","O_IR_Grenade","SmokeShell","SmokeShellRed","SmokeShellOrange","SmokeShellYellow","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer","30Rnd_65x39_caseless_green_mag_Tracer","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","O_IR_Grenade","O_IR_Grenade","SmokeShell","SmokeShellRed","SmokeShellOrange","SmokeShellYellow","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_soldierU_repair_F : O_Soldier_Urban_base
 	{
@@ -3720,8 +3340,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_C_ACO_pointer_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_engineer_U_F : O_Soldier_Urban_base
 	{
@@ -3736,8 +3354,6 @@ class CfgVehicles
 		respawnWeapons[] = {"srifle_DMR_01_DMS_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put","Rangefinder"};
 		magazines[] = {"10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_TacVest_blk","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_soldierU_A_F : O_Soldier_Urban_base
 	{
@@ -3752,14 +3368,6 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_GL_ACO_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","MiniGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","MiniGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
-		linkedItems[] = {"V_HarnessOGL_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessOGL_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-	};
-	class O_soldierU_F;
-	class O_SoldierU_Unarmed_F: O_soldierU_F
-	{
-		linkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-		respawnLinkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 	class O_Urban_Sharpshooter_F: O_Soldier_Urban_base
 	{
@@ -3767,8 +3375,6 @@ class CfgVehicles
 		respawnWeapons[] = {"ZSN_srifle_DMR_05_tan_KHS_LP_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put","Binocular"};
 		magazines[] = {"10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red","HandGrenade","HandGrenade"};
-		linkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class O_Urban_HeavyGunner_F: O_Soldier_Urban_base
 	{
@@ -3777,36 +3383,6 @@ class CfgVehicles
 		magazines[] = {"150Rnd_93x64_Mag","150Rnd_93x64_Mag","150Rnd_93x64_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"150Rnd_93x64_Mag","150Rnd_93x64_Mag","150Rnd_93x64_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 	};
- 	class O_V_Soldier_base_F : O_Soldier_base_F
- 	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 	};
-	class O_V_Soldier_Exp_hex_F : O_V_Soldier_base_F
- 	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 	};
-	class O_V_Soldier_Medic_hex_F : O_V_Soldier_base_F
- 	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 	};
-	class O_V_Soldier_M_hex_F : O_V_Soldier_base_F
- 	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 	};
-	class O_V_Soldier_LAT_hex_F : O_V_Soldier_base_F
- 	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 	};
-	class O_V_Soldier_JTAC_hex_F : O_V_Soldier_base_F
- 	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 	};
 	class Car_F;
 	class MRAP_01_base_F : Car_F
 	{
@@ -5518,21 +5094,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class Heli_Light_02_base_F;
-	class O_Heli_Light_02_v2_F: Heli_Light_02_base_F
-	{
-		crew = "ZSN_O_Urban_helipilot_F";
-	};
-	class Heli_Light_02_unarmed_base_F;
-	class O_Heli_Light_02_unarmed_F: Heli_Light_02_unarmed_base_F
-	{
-		crew = "ZSN_O_Urban_helipilot_F";
-	};
-	class Heli_Attack_02_base_F;
-	class O_Heli_Attack_02_black_F: Heli_Attack_02_base_F
-	{
-		crew = "ZSN_O_Urban_helipilot_F";
-	}; 
 	class Heli_Transport_02_base_F : Helicopter_Base_H
 	{
 		class transportweapons
