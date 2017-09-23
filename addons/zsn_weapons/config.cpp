@@ -3669,6 +3669,18 @@ class CfgVehicles
 			};
 		};
 	};
+	class MRAP_02_base_F : Car_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_150Rnd_762x54_Box;
+			class _xx_200Rnd_65x39_cased_Box
+			{
+				magazine = "200Rnd_65x39_cased_Box";
+				count = 4;
+			};
+		};
+	};
 	class LSV_01_base_F : Car_F
 	{
 		class transportweapons
@@ -4194,6 +4206,18 @@ class CfgVehicles
 			};
 		};
 	};
+	class LSV_02_base_F : Car_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_150Rnd_762x54_Box;
+			class _xx_200Rnd_65x39_cased_Box
+			{
+				magazine = "200Rnd_65x39_cased_Box";
+				count = 4;
+			};
+		};
+	};
 	class MRAP_03_base_F : Car_F
 	{
 		class TransportWeapons 
@@ -4347,6 +4371,18 @@ class CfgVehicles
 			{
 				magazine = "Titan_AA";
 				count = 2;
+			};
+		};
+	};
+	class APC_Wheeled_02_base_F : Wheeled_APC_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_150Rnd_762x54_Box;
+			class _xx_200Rnd_65x39_cased_Box
+			{
+				magazine = "200Rnd_65x39_cased_Box";
+				count = 4;
 			};
 		};
 	};
@@ -4801,6 +4837,27 @@ class CfgVehicles
 			};
 		};
 	};
+	class APC_Tracked_02_base_F : Tank_F
+	{
+		class transportweapons
+		{
+			delete _xx_LMG_Zafir_F;
+			class _xx_ZSN_LMG_Mk200_BI_F
+			{
+				weapon = "ZSN_LMG_Mk200_BI_F";
+				count = 1;
+			};
+		};
+		class TransportMagazines
+		{
+			delete _xx_150Rnd_762x54_Box;
+			class _xx_200Rnd_65x39_cased_Box
+			{
+				magazine = "200Rnd_65x39_cased_Box";
+				count = 8;
+			};
+		};
+	};
 	class APC_Tracked_03_base_F : Tank_F
 	{
 		class transportweapons
@@ -4808,8 +4865,8 @@ class CfgVehicles
 			delete _xx_arifle_Mk20_F;
 			class _xx_arifle_Mk20_plain_F
 			{
-				count = 2;
 				weapon = "arifle_Mk20_plain_F";
+				count = 2;
 			};
 			delete _xx_LMG_Mk200_F;
 			class _xx_LMG_03_F
@@ -5115,6 +5172,28 @@ class CfgVehicles
 			{
 				weapon = "arifle_Mk20C_plain_F";
 				count = 2;
+			};
+		};
+	};
+	class  Heli_Transport_04_base_F;
+	class O_Heli_Transport_04_box_F : Heli_Transport_04_base_F
+	{
+		class transportweapons
+		{
+			delete _xx_LMG_Zafir_F;
+			class _xx_ZSN_LMG_Mk200_BI_F
+			{
+				weapon = "ZSN_LMG_Mk200_BI_F";
+				count = 2;
+			};
+		};
+		class TransportMagazines
+		{
+			delete _xx_150Rnd_762x54_Box;
+			class _xx_200Rnd_65x39_cased_Box
+			{
+				magazine = "200Rnd_65x39_cased_Box";
+				count = 8;
 			};
 		};
 	};
