@@ -22,18 +22,10 @@ if defined DSSIGNFILEPATH (
 	mkdir @zsn_loadouts\Keys > nul 2> nul
 
 	for %%k in (Keys\*.biprivatekey) do (
-		echo Signing @zsn_loadouts\Addons with %%~nxk
-		"%DSSIGNFILEPATH%\DSSignFile.exe" "%%k" "@zsn_loadouts\Addons\zsn_weapons.pbo"
-	)
-
-	for %%k in (Keys\*.biprivatekey) do (
-		echo Signing @zsn_loadouts\Addons with %%~nxk
-		"%DSSIGNFILEPATH%\DSSignFile.exe" "%%k" "@zsn_loadouts\Addons\zsn_gear.pbo"
-	)
-
-	for %%k in (Keys\*.biprivatekey) do (
-		echo Signing @zsn_loadouts\Addons with %%~nxk
-		"%DSSIGNFILEPATH%\DSSignFile.exe" "%%k" "@zsn_loadouts\Addons\zsn_ace.pbo"
+		for %%f in (@zsn_loadouts\Addons\*.pbo) do (
+			echo Signing @zsn_loadouts\Addons\%%~nxf with %%~nxk
+			"%DSSIGNFILEPATH%\DSSignFile.exe" "%%k" "@zsn_loadouts\Addons\%%~nxf"
+		)
 	)
 
 	for %%k in (Keys\*.bikey) do (
