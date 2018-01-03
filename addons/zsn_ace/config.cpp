@@ -23,30 +23,30 @@ class CfgVehicles
 	class SoldierGB;
 	class B_Soldier_base_F: SoldierWB
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Soldier_02_f: B_Soldier_base_F{};
 	class B_Story_Protagonist_F : B_Soldier_02_f
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_CTRG_Soldier_base_F: B_Soldier_base_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Soldier_support_base_F: B_Soldier_base_F{};
 	class B_support_Mort_F: B_Soldier_support_base_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
 	};
 	class B_support_AMort_F: B_Soldier_support_base_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
 	};
 	class B_Soldier_03_f: B_Soldier_base_F{};
 	class B_Soldier_TL_F: B_Soldier_03_f{};
@@ -110,82 +110,82 @@ class CfgVehicles
 	};
 	class I_Soldier_base_F: SoldierGB
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class I_officer_F: I_Soldier_base_F{};
 	class I_Story_Officer_01_F: I_Officer_F
 	{
-		Items[] = {"FirstAidKit","ACE_EarPlugs"};
-		respawnItems[] = {"FirstAidKit","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_EarPlugs"};
+		respawnItems[] = {"FirstAidKit","FirstAidKit","ACE_EarPlugs"};
 	};
 	class I_Soldier_support_base_F: I_Soldier_base_F{};
 	class I_support_Mort_F: I_Soldier_support_base_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
 	};
 	class I_support_AMort_F: I_Soldier_support_base_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
 	};
 	class I_G_Soldier_base_F: SoldierGB
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class I_G_Soldier_F: I_G_Soldier_base_F{};
 	class B_G_Soldier_F : I_G_Soldier_F{};
 	class I_G_Story_Protagonist_F : B_G_Soldier_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class O_Soldier_base_F: SoldierEB
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class O_Soldier_support_base_F: O_Soldier_base_F{};
 	class O_support_Mort_F : O_Soldier_support_base_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_MapTools"};
 	};
 	class O_support_AMort_F : O_Soldier_support_base_F
 	{
-		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_RangeTable_82mm"};
 	};
  	class O_V_Soldier_base_F : O_Soldier_base_F
  	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
  	};
 	class O_V_Soldier_Exp_hex_F : O_V_Soldier_base_F
  	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
  	};
 	class O_V_Soldier_Medic_hex_F : O_V_Soldier_base_F
  	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
  	};
 	class O_V_Soldier_M_hex_F : O_V_Soldier_base_F
  	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
  	};
 	class O_V_Soldier_LAT_hex_F : O_V_Soldier_base_F
  	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
  	};
 	class O_V_Soldier_JTAC_hex_F : O_V_Soldier_base_F
  	{
- 		Items[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
  	};
 };
