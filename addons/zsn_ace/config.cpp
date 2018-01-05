@@ -37,6 +37,12 @@ class CfgVehicles
 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
  		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
+	class B_CTRG_Soldier_F;
+	class B_CTRG_Soldier_urb_1_F : B_CTRG_Soldier_F
+	{
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","muzzle_snds_65_TI_blk_F"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","muzzle_snds_65_TI_blk_F"};
+	};
 	class B_Soldier_support_base_F: B_Soldier_base_F{};
 	class B_support_Mort_F: B_Soldier_support_base_F
 	{
