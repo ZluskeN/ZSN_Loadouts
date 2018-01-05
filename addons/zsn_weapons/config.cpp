@@ -2810,9 +2810,7 @@ class CfgVehicles
 		weapons[] = {"ZSN_arifle_MXC_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
 		respawnWeapons[] = {"ZSN_arifle_MXC_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-
 		respawnMagazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		
 	};
 	class B_CTRG_Soldier_urb_1_F : B_CTRG_Soldier_F
 	{
