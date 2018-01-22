@@ -128,6 +128,12 @@ class CfgVehicles
 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
+	class ZSN_I_Soldier_recon_base;
+	class ZSN_I_recon_exp_F: ZSN_I_Soldier_recon_base
+	{
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_Clacker","ACE_DefusalKit"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_Clacker","ACE_DefusalKit"};
+	};
 	class I_officer_F: I_Soldier_base_F{};
 	class I_Story_Officer_01_F: I_Officer_F
 	{
@@ -205,12 +211,12 @@ class CfgVehicles
  	};
 	class ZSN_B_soldierU_exp_F : ZSN_B_Soldier_Urban_base
 	{
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
 	};
 	class ZSN_B_engineer_U_F : ZSN_B_Soldier_Urban_base
 	{
-		Items[] = {"FirstAidKit","FirstAidKit","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
+		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
+ 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","ACE_Clacker","ACE_DefusalKit","muzzle_snds_65_TI_blk_F"};
 	};
 };
