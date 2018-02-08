@@ -1104,7 +1104,8 @@ class cfgWeapons
 			};
 		};
 	};
-	class ZSN_B_Patrol_Soldier_Marksman_weapon_F: srifle_EBR_F
+	class srifle_DMR_03_multicam_F;
+	class ZSN_B_Patrol_Soldier_Marksman_weapon_F: srifle_DMR_03_multicam_F
 	{
 		class LinkedItems
 		{
@@ -1121,7 +1122,7 @@ class cfgWeapons
 			class LinkedItemsUnder
 			{
 				slot = "UnderBarrelSlot";
-				item = "bipod_01_F_blk";
+				item = "bipod_01_F_mtp";
 			};
 			class LinkedItemsMuzzle
 			{
@@ -1194,8 +1195,8 @@ class cfgWeapons
 			};
 		};
 	};
-	class LMG_Zafir_F;
-	class ZSN_B_Patrol_Soldier_HeavyGunner_weapon_F: LMG_Zafir_F
+	class MMG_02_camo_F;
+	class ZSN_B_Patrol_Soldier_HeavyGunner_weapon_F: MMG_02_camo_F
 	{
 		class LinkedItems
 		{
@@ -1208,6 +1209,11 @@ class cfgWeapons
 			{
 				slot = "CowsSlot";
 				item = "optic_Holosight";
+			};
+			class LinkedItemsUnder
+			{
+				slot = "UnderBarrelSlot";
+				item = "bipod_01_F_mtp";
 			};
 		};
 	};
@@ -3084,8 +3090,8 @@ class CfgVehicles
 		displayName = "Missile Specialist (AT)";
 		backpack = "B_AssaultPack_mcamo_AT";
 		uniformClass = "U_B_CTRG_Soldier_urb_3_F";
-		weapons[] = {"ZSN_arifle_MX_Black_Holo_pointer_F","launch_Titan_short_F","ZSN_hgun_ACPC2_flight_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_MX_Black_Holo_pointer_F","launch_Titan_short_F","ZSN_hgun_ACPC2_flight_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_MX_Black_Holo_pointer_F","launch_B_Titan_short_tna_F","ZSN_hgun_ACPC2_flight_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_MX_Black_Holo_pointer_F","launch_B_Titan_short_tna_F","ZSN_hgun_ACPC2_flight_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","Titan_AT","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","Titan_AT","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		linkedItems[] = {"V_PlateCarrier1_blk","H_HelmetB_light_black","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_blk_F","G_Balaclava_TI_blk_F"};
@@ -3492,8 +3498,8 @@ class CfgVehicles
 	{
 		weapons[] = {"ZSN_B_Patrol_Soldier_HeavyGunner_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
 		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_HeavyGunner_weapon_F","hgun_ACPC2_snds_F","Throw","Put","Binocular"};
-		magazines[] = {"150Rnd_762x54_Box","150Rnd_762x54_Box","150Rnd_762x54_Box","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnMagazines[] = {"150Rnd_762x54_Box","150Rnd_762x54_Box","150Rnd_762x54_Box","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
+		magazines[] = {"130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
+		respawnMagazines[] = {"130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 	};
 	class B_Patrol_Soldier_A_F: B_Soldier_A_F
 	{
@@ -3504,8 +3510,8 @@ class CfgVehicles
 	};
 	class B_Patrol_Soldier_AT_F: B_soldier_AT_F
 	{
-		weapons[] = {"ZSN_B_Patrol_Soldier_Specialist_weapon_F","hgun_ACPC2_snds_F","launch_B_Titan_short_F","Throw","Put","Binocular"};
-		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Specialist_weapon_F","hgun_ACPC2_snds_F","launch_B_Titan_short_F","Throw","Put","Binocular"};
+		weapons[] = {"ZSN_B_Patrol_Soldier_Specialist_weapon_F","hgun_ACPC2_snds_F","launch_I_Titan_short_F","Throw","Put","Binocular"};
+		respawnWeapons[] = {"ZSN_B_Patrol_Soldier_Specialist_weapon_F","hgun_ACPC2_snds_F","launch_I_Titan_short_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","Titan_AP","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","Titan_AP","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 	};

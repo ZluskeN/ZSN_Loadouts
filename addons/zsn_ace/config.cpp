@@ -13,7 +13,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","A3_Characters_F_Orange"};
+		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","A3_Characters_F_Orange","ZSN_Loadouts"};
 	};
 };
 class CfgVehicles
@@ -41,16 +41,6 @@ class CfgVehicles
 	{
  		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","muzzle_snds_65_TI_blk_F"};
  		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs","muzzle_snds_65_TI_blk_F"};
-	};
-	class ZSN_B_Urban_Sharpshooter_F: ZSN_B_Soldier_Urban_base
-	{
- 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
-	};
-	class ZSN_B_Urban_HeavyGunner_F: ZSN_B_Soldier_Urban_base
-	{
- 		Items[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
- 		RespawnItems[] = {"FirstAidKit","FirstAidKit","ACE_Chemlight_Shield","ACE_EarPlugs"};
 	};
 	class B_Soldier_support_base_F: B_Soldier_base_F{};
 	class B_support_Mort_F: B_Soldier_support_base_F
