@@ -4114,8 +4114,8 @@ class CfgVehicles
 	};
 	class O_soldierU_M_F: O_Soldier_Urban_base
 	{
-		weapons[] = {"srifle_DMR_01_DMS_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"srifle_DMR_01_DMS_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put","Rangefinder"};
+		weapons[] = {"srifle_DMR_01_DMS_BI_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put","Rangefinder"};
+		respawnWeapons[] = {"srifle_DMR_01_DMS_BI_F","hgun_Pistol_heavy_02_Yorris_F","Throw","Put","Rangefinder"};
 		magazines[] = {"10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 	};
