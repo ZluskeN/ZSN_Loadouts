@@ -3988,7 +3988,11 @@ class CfgVehicles
 		magazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 		respawnMagazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
 	};
-	class O_Officer_F: O_Soldier_base_F{};
+	class O_Officer_F: O_Soldier_base_F
+	{
+		weapons[] = {"arifle_Katiba_C_ACO_F","hgun_Pistol_heavy_02_F","Throw","Put"};
+		respawnWeapons[] = {"arifle_Katiba_C_ACO_F","hgun_Pistol_heavy_02_F","Throw","Put"};
+	};
 	class O_T_Officer_F: O_Officer_F
 	{
 		weapons[] = {"arifle_CTAR_blk_ACO_F","hgun_Pistol_heavy_02_F","Throw","Put"};
