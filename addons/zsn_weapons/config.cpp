@@ -2859,7 +2859,8 @@ class CfgVehicles
 		weapons[] = {"ZSN_arifle_SPAR_01_GL_snd_Holo_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Laserdesignator"};
 		respawnWeapons[] = {"ZSN_arifle_SPAR_01_GL_snd_Holo_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Laserdesignator"};
 	};
-	class B_ghillie_base_F;
+	class B_Soldier_sniper_base_F : B_Soldier_base_F {};
+	class B_ghillie_base_F : B_Soldier_sniper_base_F {};
 	class B_ghillie_lsh_F : B_ghillie_base_F
 	{
 		weapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_snds_F","Throw","Put","Rangefinder"};
@@ -2870,6 +2871,7 @@ class CfgVehicles
 		weapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
 		respawnWeapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
 	};
+	class B_sniper_F : B_Soldier_sniper_base_F {};
 	class B_T_sniper_F : B_sniper_F
 	{
 		weapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
