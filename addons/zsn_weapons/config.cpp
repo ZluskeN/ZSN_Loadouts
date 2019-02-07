@@ -1623,7 +1623,7 @@ class CfgVehicles
 			delete _xx_5Rnd_127x108_Mag;
 			class _xx_7Rnd_408_mag
 			{
-				weapon = "7Rnd_408_mag";
+				magazine = "7Rnd_408_mag";
 				count = 8;
 			};
 		};
