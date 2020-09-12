@@ -813,6 +813,11 @@ class CfgVehicles
 		linkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_blk","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
 		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_blk","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
 	};
+	class O_Pathfinder_F: O_Soldier_recon_base
+	{
+		linkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+	};
 	class ZSN_O_Urban_helipilot_F: O_helipilot_F
 	{
 		author = "ZluskeN";
@@ -894,12 +899,6 @@ class CfgVehicles
 	{
 		linkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		respawnLinkedItems[] = {"V_HarnessO_gry","H_HelmetCrew_B","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-	};
-	class O_Soldier_recon_base;
-	class O_Pathfinder_F: O_Soldier_recon_base
-	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
 	};
 	class Heli_Light_02_base_F;
 	class O_Heli_Light_02_v2_F: Heli_Light_02_base_F
