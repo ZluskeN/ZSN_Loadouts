@@ -3603,7 +3603,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class B_Kitbag_cbr_Bandit_2_F
+	class B_Kitbag_cbr_Bandit_2_F: B_Kitbag_cbr
 	{
 		class TransportMagazines
 		{
