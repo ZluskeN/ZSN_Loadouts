@@ -16,6 +16,29 @@ class CfgPatches
 		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","A3_Characters_F_Orange","A3_Characters_F_Tank_Uniforms","A3_Characters_F_Tank","A3_Armor_F_Tank_AFV_Wheeled_01","A3_Armor_F_Tank_MBT_04","A3_Characters_F_Enoch","cba_jr"};
 	};
 };
+class Extended_InitPost_EventHandlers
+{
+	class CAManBase
+	{
+		class zsn_fixMagazines
+		{
+			init = "_this call zsn_fnc_fixMagazines";
+		};
+	};
+};
+class CfgFunctions
+{
+	class ZSN
+	{
+		class Functions
+		{
+			class fixMagazines
+			{
+				file = "addons\zsn_weapons\functions\fn_fixmagazines.sqf";
+			};
+		};
+	};
+};
 class CfgMagazineWells {    
 	class CBA_57x28_FN57 {
         ZSN_mags[] = {"ZSN_20Rnd_570x28_Mag"};
@@ -31,7 +54,7 @@ class cfgMagazines {
 	{
 		ammo = "B_570x28_Ball";
         count = 20;
-		initSpeed = 640;
+		initSpeed = 600;
 		descriptionShort = "Caliber: 5.7x28 mm<br />Rounds: 20<br />Used in: P57";
 		displayName = "5.7 mm 20Rnd Mag";
 	};
@@ -2611,11 +2634,6 @@ class CfgVehicles
 				magazine = "200Rnd_65x39_cased_Box";
 				count = 4;	
 			};
-			class _xx_30Rnd_9x21_Mag
-			{
-				magazine = "30Rnd_9x21_Mag";
-				count = 6;	
-			};
 		};
 	};
 	class Box_Syndicate_Wps_F : ReammoBox_F
@@ -2633,11 +2651,6 @@ class CfgVehicles
 			{
 				magazine = "30Rnd_65x39_caseless_green";
 				count = 6;	
-			};
-			class _xx_30Rnd_9x21_Mag
-			{
-				magazine = "30Rnd_9x21_Mag";
-				count = 2;	
 			};
 		};
 		class TransportWeapons
@@ -2940,36 +2953,35 @@ class CfgVehicles
 	{
 		class TransportWeapons
 		{
+			delete _xx_hgun_P07_F;
 			class _xx_hgun_Rook40_F
 			{
 				weapon = "hgun_Rook40_F";
 				count = 6;
 			};
-			delete _xx_hgun_P07_F;
+			delete _xx_SMG_05_F;
 			class _xx_hgun_PDW2000_F
 			{
 				weapon = "hgun_PDW2000_F";
-				count = 3;
-			};
-			delete _xx_SMG_05_F;
-			class _xx_ZSN_arifle_SPAR_01_blk_holo_F
-			{
-				weapon = "ZSN_arifle_SPAR_01_blk_holo_F";
-				count = 3;
+				count = 6;
 			};
 		};
 		class TransportMagazines
 		{
+			delete _xx_30Rnd_9x21_Mag_SMG_02;
 			class _xx_30Rnd_9x21_Mag
 			{
 				magazine = "30Rnd_9x21_Mag";
-				count = 12;
+				count = 24;
 			};
-			delete _xx_30Rnd_9x21_Mag_SMG_02;
-			class _xx_30Rnd_556x45_Stanag
+		};
+		class TransportItems
+		{
+			delete _xx_acc_flashlight;
+			class _xx_optic_yorris
 			{
-				magazine = "30Rnd_556x45_Stanag";
-				count = 12;
+				name = "optic_yorris";
+				count = 2;
 			};
 		};
 	};
@@ -3605,31 +3617,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class B_Kitbag_cbr;
-	class B_Kitbag_cbr_Para_5_F: B_Kitbag_cbr
-	{
-		class TransportMagazines
-		{
-			delete _xx_30Rnd_545x39_Mag_F;
-			class _xx_30Rnd_65x39_caseless_green
-			{
-				magazine = "30Rnd_65x39_caseless_green";
-				count = 4;
-			};
-		};
-	};
-	class B_Kitbag_cbr_Bandit_2_F: B_Kitbag_cbr
-	{
-		class TransportMagazines
-		{
-			delete _xx_30Rnd_545x39_Mag_F;
-			class _xx_30Rnd_65x39_caseless_green
-			{
-				magazine = "30Rnd_65x39_caseless_green";
-				count = 4;
-			};
-		};
-	};
 	class B_FieldPack_cbr;
 	class B_FieldPack_cb_Bandit_3_F: B_FieldPack_cbr
 	{
@@ -3690,10 +3677,10 @@ class CfgVehicles
 	class B_GEN_Soldier_base_F : B_Soldier_F{};
 	class B_GEN_Soldier_F : B_GEN_Soldier_base_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_blk_holo_F","hgun_Rook40_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_holo_F","hgun_Rook40_F","Throw","Put"};
-		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","SmokeShell"};
-		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","SmokeShell"};
+		weapons[] = {"hgun_PDW2000_F","hgun_Rook40_F","Throw","Put"};
+		respawnWeapons[] = {"hgun_PDW2000_F","hgun_Rook40_F","Throw","Put"};
+		magazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","SmokeShell"};
+		respawnMagazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","SmokeShell"};
 	};
 	class B_GEN_Commander_F : B_GEN_Soldier_base_F
 	{
@@ -4262,19 +4249,21 @@ class CfgVehicles
 	};
 	class B_ghillie_base_F : B_Soldier_sniper_base_F 
 	{
+		weapons[] = {"srifle_LRR_camo_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
+		respawnWeapons[] = {"srifle_LRR_camo_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ClaymoreDirectionalMine_Remote_Mag","APERSTripMine_Wire_Mag","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ClaymoreDirectionalMine_Remote_Mag","APERSTripMine_Wire_Mag","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
-	class B_ghillie_lsh_F : B_ghillie_base_F 
-	{
-		weapons[] = {"srifle_LRR_camo_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"srifle_LRR_camo_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
-	};
-	class B_T_ghillie_tna_F : B_ghillie_base_F
-	{
-		weapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
-	};
+//	class B_ghillie_ard_F : B_ghillie_base_F 
+//	{
+//		weapons[] = {"srifle_LRR_camo_LRPS_F","hgun_P07_Snds_F","Throw","Put","Rangefinder"};
+//		respawnWeapons[] = {"srifle_LRR_camo_LRPS_F","hgun_P07_Snds_F","Throw","Put","Rangefinder"};
+//	};
+//	class B_ghillie_sard_F : B_ghillie_base_F
+//	{
+//		weapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_Snds_F","Throw","Put","Rangefinder"};
+//		respawnWeapons[] = {"srifle_LRR_tna_LRPS_F","hgun_P07_Snds_F","Throw","Put","Rangefinder"};
+//	};
 	class B_Story_SF_Captain_F: B_Soldier_base_F
 	{
 		faction = "BLU_CTRG_F";
@@ -5270,6 +5259,7 @@ class CfgVehicles
 		linkedItems[] = {"V_TacVest_oli","H_Booniehat_eaf","G_Bandanna_oli","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
 		respawnLinkedItems[] = {"V_TacVest_oli","H_Booniehat_eaf","G_Bandanna_oli","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
 	};
+	class B_T_ghillie_tna_F;
 	class ZSN_I_E_ghillie_F: B_T_ghillie_tna_F
 	{
 		_generalMacro = "I_E_Soldier_base_F";
@@ -5751,8 +5741,8 @@ class CfgVehicles
 	class I_C_Soldier_base_F : I_G_Soldier_base_F{};
 	class I_C_Soldier_Para_1_F : I_C_Soldier_base_F
 	{
-		weapons[] = {"arifle_Katiba_F","Throw","Put"};
-		respawnWeapons[] = {"arifle_Katiba_F","Throw","Put"};
+		weapons[] = {"arifle_Katiba_C_F","Throw","Put"};
+		respawnWeapons[] = {"arifle_Katiba_C_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","HandGrenade","HandGrenade"};
 	};
@@ -5770,26 +5760,12 @@ class CfgVehicles
 		magazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 		respawnMagazines[] = {"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag"};
 	};
-	class I_C_Soldier_Para_5_F : I_C_Soldier_base_F
-	{
-		weapons[] = {"arifle_Katiba_C_F","launch_RPG7_F","Throw","Put"};
-		respawnWeapons[] = {"arifle_Katiba_C_F","launch_RPG7_F","Throw","Put"};
-		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","RPG7_F"};
-		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","RPG7_F"};
-	};
 	class I_C_Soldier_Para_6_F : I_C_Soldier_base_F
 	{
 		weapons[] = {"arifle_Katiba_GL_F","Throw","Put"};
 		respawnWeapons[] = {"arifle_Katiba_GL_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell"};
-	};
-	class I_C_Soldier_Bandit_2_F : I_C_Soldier_base_F
-	{
-		weapons[] = {"arifle_Katiba_C_F","launch_RPG7_F","Throw","Put"};
-		respawnWeapons[] = {"arifle_Katiba_C_F","launch_RPG7_F","Throw","Put"};
-		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","RPG7_F"};
-		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","RPG7_F"};
 	};
 	class I_C_Soldier_Bandit_3_F : I_C_Soldier_base_F
 	{
