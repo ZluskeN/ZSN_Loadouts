@@ -8718,7 +8718,7 @@ class cfggroups
 					class Unit2
 					{
 						side = 1;
-						vehicle = "ZSN_B_CTRG_Soldier_ard_F";
+						vehicle = "ZSN_B_CTRG_Soldier_M_ard_F";
 						rank = "PRIVATE";
 						position[] = {-5,-5,0};
 					};
