@@ -24,6 +24,17 @@ class CfgVehicles
 	class B_Soldier_base_F;
 	class B_Soldier_02_f;
 	class B_Soldier_03_f;
+	class B_Soldier_05_f;
+	class B_Pilot_F: B_Soldier_05_f
+	{
+		linkedItems[] = {"H_PilotHelmetFighter_I","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"H_PilotHelmetFighter_I","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
+	class B_Fighter_Pilot_F: B_Pilot_F
+	{
+		linkedItems[] = {"H_PilotHelmetFighter_B","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"H_PilotHelmetFighter_B","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
 	class B_crew_F: B_Soldier_03_f
 	{
 		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_I","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
@@ -357,6 +368,12 @@ class CfgVehicles
 		linkedItems[] = {"V_PlateCarrierIA1_dgtl","H_HelmetHBK_headset_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
 		respawnLinkedItems[] = {"V_PlateCarrierIA1_dgtl","H_HelmetHBK_headset_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
 	};
+	class I_Soldier_04_F;
+	class I_pilot_F: I_Soldier_04_F
+	{
+		linkedItems[] = {"H_PilotHelmetFighter_O","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"H_PilotHelmetFighter_O","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
 	class I_E_Soldier_base_F;
 	class I_E_RadioOperator_F: I_E_Soldier_base_F
 	{
@@ -679,6 +696,18 @@ class CfgVehicles
 	class O_pilot_F: O_helipilot_F
 	{
 		uniformClass = "U_O_PilotCoveralls";
+		linkedItems[] = {"H_HelmetSpecO_ocamo","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"H_HelmetSpecO_ocamo","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
+	class O_T_pilot_F: O_Pilot_F
+	{
+		linkedItems[] = {"H_HelmetSpecO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"H_HelmetSpecO_ghex_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
+	class O_Fighter_Pilot_F: O_Pilot_F
+	{
+		linkedItems[] = {"H_HelmetSpecO_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"H_HelmetSpecO_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 	class O_soldier_UAV_F : O_Soldier_base_F
 	{
@@ -790,33 +819,71 @@ class CfgVehicles
 	};
 	class O_Soldier_recon_base: O_Soldier_base_F
 	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		linkedItems[] = {"V_HarnessO_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		respawnLinkedItems[] = {"V_HarnessO_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
 	};
 	class O_recon_JTAC_F: O_Soldier_recon_base
 	{
-		linkedItems[] = {"V_HarnessOGL_brn","H_HelmetLeaderO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
-		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_HelmetLeaderO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		linkedItems[] = {"V_HarnessOGL_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+	};
+	class O_T_recon_JTAC_F: O_recon_JTAC_F
+	{
+		linkedItems[] = {"H_MilCap_ghex_F","V_HarnessOGL_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+		respawnLinkedItems[] = {"H_MilCap_ghex_F","V_HarnessOGL_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
 	class O_recon_M_F: O_Soldier_recon_base
 	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_blk","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_blk","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		linkedItems[] = {"V_TacVest_khk","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		respawnLinkedItems[] = {"V_TacVest_khk","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+	};
+	class O_T_recon_M_F: O_recon_M_F
+	{
+		linkedItems[] = {"H_MilCap_ghex_F","V_TacVest_oli","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+		respawnLinkedItems[] = {"H_MilCap_ghex_F","V_TacVest_oli","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
 	class O_recon_TL_F: O_Soldier_recon_base
 	{
-		linkedItems[] = {"V_HarnessOGL_brn","H_HelmetLeaderO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
-		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_HelmetLeaderO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		linkedItems[] = {"V_HarnessOGL_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		respawnLinkedItems[] = {"V_HarnessOGL_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+	};
+	class O_T_recon_TL_F: O_recon_TL_F
+	{
+		linkedItems[] = {"H_MilCap_ghex_F","V_HarnessOGL_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+		respawnLinkedItems[] = {"H_MilCap_ghex_F","V_HarnessOGL_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
 	class O_recon_LAT_F: O_Soldier_recon_base
 	{
-		linkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_blk","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
-		respawnLinkedItems[] = {"V_TacVest_khk","H_HelmetSpecO_blk","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		linkedItems[] = {"V_TacVest_khk","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		respawnLinkedItems[] = {"V_TacVest_khk","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+	};
+	class O_T_recon_LAT_F: O_recon_LAT_F
+	{
+		linkedItems[] = {"H_MilCap_ghex_F","V_TacVest_oli","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+		respawnLinkedItems[] = {"H_MilCap_ghex_F","V_TacVest_oli","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
 	class O_Pathfinder_F: O_Soldier_recon_base
 	{
-		linkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
-		respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetSpecO_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		linkedItems[] = {"V_HarnessO_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+		respawnLinkedItems[] = {"V_HarnessO_brn","H_MilCap_ocamo","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_hex_F"};
+	};
+	class O_Recon_exp_F;
+	class O_T_Recon_exp_F: O_Recon_exp_F
+	{
+		linkedItems[] = {"H_MilCap_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+		respawnLinkedItems[] = {"H_MilCap_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+	};
+	class O_recon_medic_F;
+	class O_T_Recon_Medic_F: O_recon_medic_F
+	{
+		linkedItems[] = {"H_MilCap_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+		respawnLinkedItems[] = {"H_MilCap_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+	};
+	class O_recon_F;
+	class O_T_recon_F: O_recon_F
+	{
+		linkedItems[] = {"H_MilCap_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
+		respawnLinkedItems[] = {"H_MilCap_ghex_F","V_HarnessO_ghex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","O_NVGoggles_ghex_F"};
 	};
 	class ZSN_O_Urban_helipilot_F: O_helipilot_F
 	{
