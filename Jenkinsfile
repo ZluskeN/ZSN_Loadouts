@@ -18,11 +18,13 @@ pipeline {
                     bat 'copy %ZLUSKEN_PUBLIC_KEY% Keys'
                 }
 
+                bat 'mklink /J a3 %A3_DATA%\\a3'
                 bat 'build.bat' 
                 archiveArtifacts artifacts: '@zsn_loadouts/**/*'
             }
             post {
                 always {
+                    bat 'rmdir a3 > nul || exit /b 0'
                     bat 'subst p: /d > nul || exit /b 0'
                     sendNotificationToDiscord()
                 }
