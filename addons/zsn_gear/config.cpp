@@ -237,29 +237,19 @@ class CfgVehicles
 	};
 	class B_CTRG_soldier_GL_LAT_F : B_Soldier_base_F
 	{
-		linkedItems[] = {"V_PlateCarrierH_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
-		respawnLinkedItems[] = {"V_PlateCarrierH_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
+		linkedItems[] = {"V_PlateCarrierH_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
+		respawnLinkedItems[] = {"V_PlateCarrierH_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 	};
 	class B_CTRG_soldier_AR_A_F: B_Soldier_base_F
 	{
-		linkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
-		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
+		linkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
+		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 	};
 	class B_CTRG_Sharphooter_F: B_Soldier_base_F
 	{
 		faction = "BLU_CTRG_F";
-		linkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
-		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
-	};
-	class B_CTRG_soldier_engineer_exp_F : B_Soldier_02_f
-	{
-		linkedItems[] = {"V_PlateCarrierL_CTRG","H_Cap_khaki_specops_UK","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
-		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_Cap_khaki_specops_UK","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
-	};
-	class B_CTRG_soldier_M_medic_F : B_Soldier_03_f
-	{
-		linkedItems[] = {"V_PlateCarrierH_CTRG","H_Watchcap_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
-		respawnLinkedItems[] = {"V_PlateCarrierH_CTRG","H_Watchcap_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGogglesB_gry_F"};
+		linkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
+		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 	};
 	class I_Soldier_base_F: SoldierGB
 	{
