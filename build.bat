@@ -15,11 +15,11 @@ for /F "Tokens=2* skip=2" %%A In ('REG QUERY "HKCU\SOFTWARE\Bohemia Interactive\
 if not defined DSSIGNFILEPATH echo "Arma 3 Tools does not seem to be installed, signing will be disabled"
 
 REM Build pbo files using pboproject and check for errors
-pboproject +Clean -Engine=Arma3 -Key -Noisy -P +Mod="%modpath%\@zsn_loadouts" -Z P:\addons
-if %errorlevel% neq 0 (
-	type "temp\*.log"
-	exit /b 1
-)
+REM pboproject +Clean -Engine=Arma3 -Key -Noisy -P +Mod="%modpath%\@zsn_loadouts" -Z P:\addons
+REM if %errorlevel% neq 0 (
+REM 	type "temp\*.log"
+REM 	exit /b 1
+REM )
 
 if defined DSSIGNFILEPATH (
 	mkdir @zsn_loadouts\Keys > nul 2> nul
