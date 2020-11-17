@@ -16,14 +16,11 @@ class CfgPatches
 		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","A3_Characters_F_Orange","A3_Characters_F_Tank_Uniforms","A3_Characters_F_Tank","A3_Armor_F_Tank_AFV_Wheeled_01","A3_Armor_F_Tank_MBT_04","A3_Characters_F_Enoch","cba_jr"};
 	};
 };
-class Extended_InitPost_EventHandlers
+class Extended_PostInit_EventHandlers
 {
-	class CAManBase
+	class zsn_fixMagazines
 	{
-		class zsn_fixMagazines
-		{
-			init = "_this call zsn_fnc_fixMagazines";
-		};
+		init = "_this call zsn_fnc_fixMagazines";
 	};
 };
 class CfgFunctions
