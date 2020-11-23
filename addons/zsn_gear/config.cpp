@@ -247,7 +247,6 @@ class CfgVehicles
 	};
 	class B_CTRG_Sharphooter_F: B_Soldier_base_F
 	{
-		faction = "BLU_CTRG_F";
 		linkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 	};
