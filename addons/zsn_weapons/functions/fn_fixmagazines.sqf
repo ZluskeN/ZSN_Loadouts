@@ -10,6 +10,13 @@ if (isServer) then {
 					_x addmagazine "ZSN_20Rnd_570x28_Mag";
 				};
 			};
-		} forEach allUnits;;
+			if (primaryWeapon _x == "B_Patrol_Soldier_Leader_weapon_F") then {
+				_x addPrimaryWeaponItem "muzzle_snds_M";
+			};
+			if (primaryWeapon _x == "B_Patrol_Soldier_MachineGunner_weapon_F") then {
+				_x addPrimaryWeaponItem "muzzle_snds_H_MG_blk_F";
+				_x addPrimaryWeaponItem "optic_Holosight_khk_F";
+			};
+		} forEach allUnits;
 	}];
 };

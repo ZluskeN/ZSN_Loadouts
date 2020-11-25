@@ -1563,6 +1563,11 @@ class cfgWeapons
 				slot = "UnderBarrelSlot";
 				item = "bipod_01_F_mtp";
 			};
+			class LinkedItemsMuzzle
+			{
+				slot = "MuzzleSlot";
+				item = "muzzle_snds_338_green";
+			};
 		};
 	};
 	class B_Patrol_Soldier_Carrier_weapon_F: arifle_SPAR_01_snd_F
