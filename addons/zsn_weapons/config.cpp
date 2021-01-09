@@ -18,11 +18,14 @@ class CfgPatches
 		magazines[] = {};
 	};
 };
-class Extended_PostInit_EventHandlers
+class Extended_InitPost_EventHandlers
 {
-	class zsn_fixMagazines
+	class CAManBase
 	{
-		init = "_this call zsn_fnc_fixMagazines";
+		class zsn_fixMagazines
+		{
+			init = "_this select 0 call zsn_fnc_fixMagazines";
+		};
 	};
 };
 class CfgFunctions
