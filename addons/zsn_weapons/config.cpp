@@ -24,7 +24,7 @@ class Extended_InitPost_EventHandlers
 	{
 		class zsn_fixMagazines
 		{
-			init = "_this select 0 call zsn_fnc_fixMagazines";
+			init = "if (isServer) then {_this RemoteExecCall ['zsn_fnc_fixMagazines', _this select 0, true]};";
 		};
 	};
 };
