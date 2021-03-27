@@ -1,7 +1,0 @@
-///<'zsn_weapons.pbo' properties via Mikero's dos tools, dll version 6.44>///
-prefix=addons\zsn_gear
-Mikero=DePbo.dll.7.85
-version=20111720
-//Pbo Type is: Arma Addon
-//Sha: '32808C0B0BBEE84A024097742B4058A36542D339'
-//////</properties>//////

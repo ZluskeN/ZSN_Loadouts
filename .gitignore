@@ -6,9 +6,6 @@ ehthumbs_vista.db
 # Folder config file
 Desktop.ini
 
-# A3 data
-/a3/
-
 # Windows shortcuts
 *.lnk
 
@@ -22,3 +19,6 @@ Desktop.ini
 *.bikey
 *.biprivatekey
 *.bisign
+
+# hemtt releases folder
+releases/
