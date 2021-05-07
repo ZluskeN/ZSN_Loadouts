@@ -16,8 +16,125 @@ class CfgPatches
 		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","A3_Characters_F_Orange","A3_Characters_F_Tank_Uniforms","A3_Characters_F_Tank","A3_Characters_F_Enoch"};
 	};
 };
+class cfgFactionClasses
+{
+	class BLU_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_mtp_F";
+	};
+	class BLU_T_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_tropic_F";
+	};
+	class BLU_W_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_wdl_F";
+	};
+	class BLU_CTRG_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_black_F";
+	};
+	class OPF_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_hex_F";
+	};
+	class OPF_T_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_ghex_F";
+	};
+	class IND_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_digi_F";
+	};
+	class IND_E_F
+	{
+		backpack_tf_faction_radio = "B_RadioBag_01_eaf_F";
+	};
+};
 class CfgVehicles
 {
+	class B_RadioBag_01_base_F;
+	class B_RadioBag_01_digi_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_guer_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_eaf_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_guer_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_ghex_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_east_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_hex_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_east_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_oucamo_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_east_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_mtp_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_tropic_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_wdl_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
+	class B_RadioBag_01_black_F: B_RadioBag_01_base_F
+	{
+		tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
+	};
 	class SoldierWB;
 	class SoldierEB;
 	class SoldierGB;
@@ -82,13 +199,13 @@ class CfgVehicles
 	};
 	class B_W_RadioOperator_F: B_W_Soldier_F
 	{
-		linkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+		linkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB_plain_wdl","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+		respawnLinkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB_plain_wdl","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class B_W_Soldier_CBRN_F: B_W_Soldier_F
 	{
-		linkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ChemicalDetector_01_watch_F","NVGoggles_OPFOR"};
-		respawnLinkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ChemicalDetector_01_watch_F","NVGoggles_OPFOR"};
+		linkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB_plain_wdl","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ChemicalDetector_01_watch_F","ItemRadio","NVGoggles_OPFOR"};
+		respawnLinkedItems[] = {"V_PlateCarrier1_wdl","H_HelmetB_plain_wdl","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ChemicalDetector_01_watch_F","ItemRadio","NVGoggles_OPFOR"};
 	};
 	class B_Soldier_A_F;
 	class B_W_Soldier_A_F: B_Soldier_A_F
@@ -364,6 +481,16 @@ class CfgVehicles
 		respawnLinkedItems[] = {"H_PilotHelmetFighter_O","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 	class I_E_Soldier_base_F;
+	class I_E_Scientist_F: I_E_Soldier_base_F
+	{
+		linkedItems[] = {"V_Chestrig_blk","G_RegulatorMask_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"V_Chestrig_blk","G_RegulatorMask_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
+	class I_E_Scientist_Unarmed_F: I_E_Soldier_base_F
+	{
+		linkedItems[] = {"V_Chestrig_blk","G_RegulatorMask_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"V_Chestrig_blk","G_RegulatorMask_F","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
 	class I_E_RadioOperator_F: I_E_Soldier_base_F
 	{
 		linkedItems[] = {"V_CarrierRigKBT_01_light_EAF_F","H_HelmetSpecB_blk","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
@@ -466,8 +593,8 @@ class CfgVehicles
 	};
 	class I_E_Soldier_CBRN_F: I_E_Soldier_base_F
 	{
-		linkedItems[] = {"V_CarrierRigKBT_01_light_EAF_F","H_HelmetB_black","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
-		respawnLinkedItems[] = {"V_CarrierRigKBT_01_light_EAF_F","H_HelmetB_black","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
+		linkedItems[] = {"V_CarrierRigKBT_01_light_EAF_F","H_HelmetB_black","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ChemicalDetector_01_watch_F","ItemRadio","NVGoggles_INDEP"};
+		respawnLinkedItems[] = {"V_CarrierRigKBT_01_light_EAF_F","H_HelmetB_black","G_AirPurifyingRespirator_01_F","ItemMap","ItemCompass","ChemicalDetector_01_watch_F","ItemRadio","NVGoggles_INDEP"};
 	};
 	class I_E_Soldier_Pathfinder_F: I_E_Soldier_base_F
 	{
