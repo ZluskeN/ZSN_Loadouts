@@ -168,15 +168,15 @@ class CfgVehicles
 	class B_ION_soldier_UAV_01_lxWS: B_soldier_UAV_F
 	{
 		editorPreview = "\lxws\editorpreviews_f_lxws\Data\CfgVehicles\B_ION_soldier_UAV_02_lxWS.jpg";
-		weapons[] = {"SMG_01_Hamr_lxWS","hgun_Rook40_F","Throw","Put"};
-		respawnweapons[] = {"SMG_01_Hamr_lxWS","hgun_Rook40_F","Throw","Put"};
-		magazines[] = {"30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
-		respawnmagazines[] = {"30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+		weapons[] = {"hgun_PDW2000_Holo_snds_F","hgun_Rook40_F","Throw","Put"};
+		respawnweapons[] = {"hgun_PDW2000_Holo_snds_F","hgun_Rook40_F","Throw","Put"};
+		magazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+		respawnmagazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 	};
 	class B_ION_soldier_UAV_02_lxWS: B_ION_soldier_UAV_01_lxWS
 	{
-		weapons[] = {"SMG_01_Hamr_lxWS","hgun_Rook40_F","Throw","Put"};
-		respawnWeapons[] = {"SMG_01_Hamr_lxWS","hgun_Rook40_F","Throw","Put"};
+		weapons[] = {"hgun_PDW2000_Holo_snds_F","hgun_Rook40_F","Throw","Put"};
+		respawnWeapons[] = {"hgun_PDW2000_Holo_snds_F","hgun_Rook40_F","Throw","Put"};
 	};
 	class B_officer_F;
 	class B_UN_officer_lxWS: B_officer_F
@@ -226,8 +226,8 @@ class CfgVehicles
 	class B_crew_F;
 	class B_ION_crew_lxWS: B_crew_F
 	{
-		weapons[] = {"hgun_PDW2000_F","hgun_Rook40_F","Throw","Put"};
-		respawnweapons[] = {"hgun_PDW2000_F","hgun_Rook40_F","Throw","Put"};
+		weapons[] = {"hgun_PDW2000_r1_lxWS","hgun_Rook40_F","Throw","Put"};
+		respawnweapons[] = {"hgun_PDW2000_r1_lxWS","hgun_Rook40_F","Throw","Put"};
 		magazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
