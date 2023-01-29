@@ -319,6 +319,22 @@ class cfgWeapons
 			};
 		};
 	};
+	class ZSN_arifle_SPAR_01_khk_Holo_FL_F: arifle_SPAR_01_khk_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_Holosight_khk_F";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_flashlight";
+				slot = "PointerSlot";
+			};
+		};
+	};
 	class ZSN_arifle_SPAR_01_khk_Hamr_pointer_F: arifle_SPAR_01_khk_F
 	{
 		class LinkedItems
@@ -403,6 +419,43 @@ class cfgWeapons
 		};
 	};
 	class arifle_SPAR_01_blk_F;
+	class ZSN_arifle_SPAR_01_blk_Hamr_pointer_F: arifle_SPAR_01_blk_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_Hamr";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+		};
+	};
+	class ZSN_arifle_SPAR_01_blk_hamr_pointer_snds_F: arifle_SPAR_01_blk_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_Hamr";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsAcc
+			{
+				slot = "PointerSlot";
+				item = "acc_pointer_IR";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_M";
+				slot = "MuzzleSlot";
+			};
+		};
+	};
 	class ZSN_arifle_SPAR_01_blk_ACO_F: arifle_SPAR_01_blk_F
 	{
 		class LinkedItems
@@ -411,6 +464,27 @@ class cfgWeapons
 			{
 				item = "optic_Aco";
 				slot = "CowsSlot";
+			};
+		};
+	};
+	class ZSN_arifle_SPAR_01_blk_ACO_pointer_snds_F: arifle_SPAR_01_blk_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_Aco";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsAcc
+			{
+				slot = "PointerSlot";
+				item = "acc_pointer_IR";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_M";
+				slot = "MuzzleSlot";
 			};
 		};
 	};
@@ -545,6 +619,27 @@ class cfgWeapons
 			};
 		};
 	};
+	class ZSN_arifle_SPAR_01_GL_blk_Holo_pointer_snds_F: arifle_SPAR_01_GL_blk_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_Holosight_blk_F";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_m";
+				slot = "MuzzleSlot";
+			};
+		};
+	};
 	class arifle_SPAR_03_blk_F;
 	class ZSN_arifle_SPAR_03_blk_Hamr_LP_BI_F: arifle_SPAR_03_blk_F
 	{
@@ -564,6 +659,32 @@ class cfgWeapons
 			{
 				item = "bipod_01_F_blk";
 				slot = "UnderBarrelSlot";
+			};
+		};
+	};
+	class ZSN_arifle_SPAR_03_blk_MOS_LP_BI_snds_F: arifle_SPAR_03_blk_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_SOS";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+			class LinkedItemsUnder
+			{
+				item = "bipod_01_F_blk";
+				slot = "UnderBarrelSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_B";
+				slot = "MuzzleSlot";
 			};
 		};
 	};
@@ -1332,6 +1453,27 @@ class cfgWeapons
 			{
 				item = "optic_holosight_smg_blk_f";
 				slot = "CowsSlot";
+			};
+		};
+	};
+	class ZSN_SMG_03C_TR_black_ACO_LP_snds_F: SMG_03C_TR_black
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_holosight_smg_blk_f";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_570";
+				slot = "MuzzleSlot";
 			};
 		};
 	};
@@ -3849,8 +3991,7 @@ class CfgVehicles
 	{
 		class EventHandlers;
 	};
-	class B_GEN_Soldier_base_F: B_Soldier_F{};
-	class B_GEN_Soldier_F: B_GEN_Soldier_base_F
+	class B_GEN_Soldier_base_F: B_Soldier_F
 	{
 		weapons[] = {"hgun_PDW2000_F","hgun_Rook40_F","Throw","Put"};
 		respawnWeapons[] = {"hgun_PDW2000_F","hgun_Rook40_F","Throw","Put"};
@@ -3880,8 +4021,8 @@ class CfgVehicles
 	};
 	class B_T_Soldier_F: B_Soldier_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 	};
@@ -3904,6 +4045,8 @@ class CfgVehicles
 		backpack = "B_RadioBag_01_mtp_F";
 		displayName = "Radio Operator";
 		role = "RadioOperator";
+		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -3912,6 +4055,8 @@ class CfgVehicles
 		backpack = "B_RadioBag_01_tropic_F";
 		displayName = "Radio Operator";
 		role = "RadioOperator";
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -3961,10 +4106,10 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		uniformClass = "U_B_CBRN_Suit_01_Tropic_F";
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_FL_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_FL_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_holo_FL_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_holo_FL_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		class EventHandlers: EventHandlers 
 		{
 			init = "_unit = _this select 0; (backpackContainer _unit) setObjectTexture [1, 'a3\supplies_f_enoch\bags\data\b_cur_01_co.paa']; (backpackContainer _unit) setObjectTexture [2, 'a3\supplies_f_enoch\bags\data\b_cur_01_co.paa']; _unit linkItem 'G_AirPurifyingRespirator_01_nofilter_F';";
@@ -3979,8 +4124,8 @@ class CfgVehicles
 	};
 	class B_T_Soldier_GL_F: B_Soldier_GL_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_GL_khk_ACO_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_GL_khk_ACO_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_01_GL_blk_ACO_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_GL_blk_ACO_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","HandGrenade","HandGrenade","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","HandGrenade","HandGrenade","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 	};
@@ -4000,10 +4145,10 @@ class CfgVehicles
 	};
 	class B_T_Soldier_AR_F: B_soldier_AR_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_02_khk_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_02_khk_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","150Rnd_556x45_Drum_Mag_F","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_LMG_03_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_LMG_03_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"200Rnd_556x45_Box_Red_F","200Rnd_556x45_Box_Red_F","200Rnd_556x45_Box_Red_F","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"200Rnd_556x45_Box_Red_F","200Rnd_556x45_Box_Red_F","200Rnd_556x45_Box_Red_F","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_Soldier_AR_F: B_soldier_AR_F
 	{
@@ -4021,8 +4166,8 @@ class CfgVehicles
 	};
 	class B_T_Soldier_SL_F: B_Soldier_SL_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_Hamr_pointer_F","hgun_P07_khk_F","Throw","Put","Binocular"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_Hamr_pointer_F","hgun_P07_khk_F","Throw","Put","Binocular"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_Hamr_pointer_F","hgun_P07_blk_F","Throw","Put","Binocular"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_Hamr_pointer_F","hgun_P07_blk_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
@@ -4042,8 +4187,8 @@ class CfgVehicles
 	};
 	class B_T_Soldier_TL_F: B_Soldier_TL_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_GL_khk_Hamr_pointer_F","hgun_P07_khk_F","Throw","Put","Binocular"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_GL_khk_Hamr_pointer_F","hgun_P07_khk_F","Throw","Put","Binocular"};
+		weapons[] = {"ZSN_arifle_SPAR_01_GL_blk_Hamr_pointer_F","hgun_P07_blk_F","Throw","Put","Binocular"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_GL_blk_Hamr_pointer_F","hgun_P07_blk_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Red","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 	};
@@ -4063,8 +4208,8 @@ class CfgVehicles
 	};
 	class B_T_soldier_M_F: B_soldier_M_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_03_khk_Hamr_LP_BI_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_03_khk_Hamr_LP_BI_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_03_blk_Hamr_LP_BI_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_03_blk_Hamr_LP_BI_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4084,8 +4229,8 @@ class CfgVehicles
 	};
 	class B_T_Soldier_LAT_F: B_soldier_LAT_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","launch_NLAW_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","launch_NLAW_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","launch_NLAW_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","launch_NLAW_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","NLAW_F","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","NLAW_F","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4105,8 +4250,8 @@ class CfgVehicles
 	};
 	class B_T_soldier_LAT2_F: B_Soldier_base_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","launch_MRAWS_olive_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","launch_MRAWS_olive_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","launch_MRAWS_olive_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","launch_MRAWS_olive_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MRAWS_HEAT_F","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MRAWS_HEAT_F","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4126,8 +4271,8 @@ class CfgVehicles
 	};
 	class B_T_medic_F: B_medic_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_pointer_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_pointer_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
@@ -4147,8 +4292,8 @@ class CfgVehicles
 	};
 	class B_T_soldier_repair_F: B_soldier_repair_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
@@ -4168,10 +4313,10 @@ class CfgVehicles
 	};
 	class B_T_soldier_exp_F: B_soldier_exp_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_soldier_exp_F: B_soldier_exp_F
 	{
@@ -4189,8 +4334,8 @@ class CfgVehicles
 	};
 	class B_T_Soldier_A_F: B_Soldier_A_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4210,10 +4355,10 @@ class CfgVehicles
 	};
 	class B_T_soldier_AT_F: B_soldier_AT_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","launch_B_Titan_short_tna_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","launch_B_Titan_short_tna_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AT","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AT","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","launch_B_Titan_short_tna_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","launch_B_Titan_short_tna_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AT","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AT","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_soldier_AT_F: B_soldier_AT_F
 	{
@@ -4231,10 +4376,10 @@ class CfgVehicles
 	};
 	class B_T_soldier_AA_F: B_soldier_AA_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","launch_B_Titan_tna_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","launch_B_Titan_tna_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AA","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AA","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","launch_B_Titan_tna_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","launch_B_Titan_tna_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AA","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AA","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_soldier_AA_F: B_soldier_AA_F
 	{
@@ -4252,10 +4397,10 @@ class CfgVehicles
 	};
 	class B_T_engineer_F: B_engineer_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_engineer_F: B_engineer_F
 	{
@@ -4273,10 +4418,10 @@ class CfgVehicles
 	};
 	class B_T_Crew_F: B_crew_F
 	{
-		weapons[] = {"SMG_03C_TR_khaki","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"SMG_03C_TR_khaki","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"arifle_SPAR_01_blk_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"arifle_SPAR_01_blk_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_Crew_F: B_crew_F
 	{
@@ -4294,10 +4439,10 @@ class CfgVehicles
 	};
 	class B_T_Officer_F: B_Officer_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_ACO_F","hgun_ACPC2_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_ACO_F","hgun_ACPC2_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_aco_F","hgun_ACPC2_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_aco_F","hgun_ACPC2_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_Officer_F: B_Officer_F
 	{
@@ -4336,10 +4481,10 @@ class CfgVehicles
 	};
 	class B_T_Helicrew_F: B_Helicrew_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_Helicrew_F: B_Helicrew_F
 	{
@@ -4365,8 +4510,8 @@ class CfgVehicles
 	};
 	class B_T_recon_F: B_recon_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_snd_ACO_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Binocular"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_snd_ACO_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Binocular"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_ACO_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Binocular"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_ACO_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Binocular"};
 		magazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4379,8 +4524,8 @@ class CfgVehicles
 	};
 	class B_T_recon_LAT_F: B_recon_LAT_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_snd_ACO_pointer_snds_F","launch_NLAW_F","hgun_P07_khk_Snds_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_snd_ACO_pointer_snds_F","launch_NLAW_F","hgun_P07_khk_Snds_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_ACO_pointer_snds_F","launch_NLAW_F","hgun_P07_blk_Snds_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_ACO_pointer_snds_F","launch_NLAW_F","hgun_P07_blk_Snds_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","NLAW_F","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","NLAW_F","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4393,8 +4538,8 @@ class CfgVehicles
 	};
 	class B_T_recon_exp_F: B_recon_exp_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_snd_ACO_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_snd_ACO_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_ACO_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_ACO_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","APERSMine_Range_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4407,8 +4552,8 @@ class CfgVehicles
 	};
 	class B_T_recon_medic_F: B_recon_medic_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_ACO_LP_snds_F","hgun_P07_khk_Snds_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_ACO_LP_snds_F","hgun_P07_khk_Snds_F","Throw","Put"};
+		weapons[] = {"ZSN_SMG_03C_TR_black_ACO_LP_snds_F","hgun_P07_blk_Snds_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_SMG_03C_TR_black_ACO_LP_snds_F","hgun_P07_blk_Snds_F","Throw","Put"};
 		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4421,8 +4566,8 @@ class CfgVehicles
 	};
 	class B_T_recon_TL_F: B_recon_TL_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_snd_Hamr_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_snd_Hamr_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_hamr_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Rangefinder"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_hamr_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand_Tracer_red","30Rnd_556x45_Stanag_Sand_Tracer_red","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand_Tracer_red","30Rnd_556x45_Stanag_Sand_Tracer_red","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
@@ -4435,8 +4580,8 @@ class CfgVehicles
 	};
 	class B_T_recon_M_F: B_recon_M_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_03_snd_MOS_LP_BI_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_03_snd_MOS_LP_BI_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Rangefinder"};
+		weapons[] = {"ZSN_arifle_SPAR_03_blk_MOS_LP_BI_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Rangefinder"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_03_blk_MOS_LP_BI_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Rangefinder"};
 		magazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -4449,8 +4594,8 @@ class CfgVehicles
 	};
 	class B_T_recon_JTAC_F: B_recon_JTAC_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_GL_snd_Holo_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_GL_snd_Holo_pointer_snds_F","hgun_P07_khk_Snds_F","Throw","Put","Laserdesignator"};
+		weapons[] = {"ZSN_arifle_SPAR_01_GL_blk_Holo_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Laserdesignator"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_GL_blk_Holo_pointer_snds_F","hgun_P07_blk_Snds_F","Throw","Put","Laserdesignator"};
 		magazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","B_IR_Grenade","B_IR_Grenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","Laserbatteries","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","MiniGrenade","MiniGrenade","B_IR_Grenade","B_IR_Grenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","Laserbatteries","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 	};
@@ -4469,8 +4614,8 @@ class CfgVehicles
 	};
 	class B_T_spotter_F: B_spotter_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_snd_Hamr_pointer_F","hgun_P07_khk_Snds_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_snd_Hamr_pointer_F","hgun_P07_khk_Snds_F","Throw","Put","Laserdesignator"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Hamr_pointer_F","hgun_P07_blk_Snds_F","Throw","Put","Laserdesignator"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Hamr_pointer_F","hgun_P07_blk_Snds_F","Throw","Put","Laserdesignator"};
 		magazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ClaymoreDirectionalMine_Remote_Mag","APERSTripMine_Wire_Mag","Laserbatteries","MiniGrenade","MiniGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ClaymoreDirectionalMine_Remote_Mag","APERSTripMine_Wire_Mag","Laserbatteries","MiniGrenade","MiniGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
 	};
@@ -5138,10 +5283,10 @@ class CfgVehicles
 	};
 	class B_T_Support_MG_F: B_support_MG_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_Support_MG_F: B_support_MG_F
 	{
@@ -5159,10 +5304,10 @@ class CfgVehicles
 	};
 	class B_T_support_GMG_F: B_support_GMG_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnweapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnweapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_support_GMG_F: B_support_GMG_F
 	{
@@ -5180,10 +5325,10 @@ class CfgVehicles
 	};
 	class B_T_support_Mort_F: B_support_Mort_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnweapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnweapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_support_Mort_F: B_support_Mort_F
 	{
@@ -5195,8 +5340,8 @@ class CfgVehicles
 	class B_Soldier_AAR_F;
 	class B_T_Soldier_AAR_F: B_soldier_AAR_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put","Rangefinder"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -5217,10 +5362,10 @@ class CfgVehicles
 	};
 	class B_T_support_AMG_F: B_support_AMG_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnweapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnweapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_support_AMG_F: B_support_AMG_F
 	{
@@ -5238,10 +5383,10 @@ class CfgVehicles
 	};
 	class B_T_support_AMort_F: B_support_AMort_F
 	{
-		weapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnweapons[] = {"ZSN_SMG_03C_TR_khaki_Holo_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		magazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-		respawnMagazines[] = {"50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","50Rnd_570x28_SMG_03","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnweapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
 	class B_W_support_AMort_F: B_support_AMort_F
 	{
@@ -5260,8 +5405,8 @@ class CfgVehicles
 	class B_soldier_AAT_F: B_Soldier_support_base_F{};
 	class B_T_Soldier_AAT_F: B_soldier_AAT_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put","Rangefinder"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -5275,8 +5420,8 @@ class CfgVehicles
 	class B_soldier_AAA_F: B_soldier_AAT_F{};
 	class B_T_Soldier_AAA_F: B_soldier_AAA_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put","Rangefinder"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
@@ -5290,16 +5435,16 @@ class CfgVehicles
 	class B_soldier_PG_F: B_Soldier_base_F{};
 	class B_T_Soldier_PG_F: B_soldier_PG_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 	};
 	class B_soldier_UAV_F: B_Soldier_base_F{};
 	class B_T_Soldier_UAV_F: B_soldier_UAV_F
 	{
-		weapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_SPAR_01_khk_ACO_pointer_F","hgun_P07_khk_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_SPAR_01_blk_Holo_pointer_F","hgun_P07_blk_F","Throw","Put"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 	};
@@ -6310,6 +6455,13 @@ class CfgVehicles
 		respawnMagazines[] = {"30Rnd_9x21_Mag_SMG_02","MiniGrenade"};
 	};
 	class I_L_Soldier_Base_F;
+	class I_L_Looter_Pistol_F: I_L_Soldier_Base_F
+	{
+		weapons[] = {"hgun_ACPC2_F","Throw","Put"};
+		respawnweapons[] = {"hgun_ACPC2_F","Throw","Put"};
+		magazines[] = {"9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag"};
+		respawnMagazines[] = {"9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag"};
+	};
 	class I_L_Looter_SMG_F: I_L_Soldier_Base_F
 	{
 		weapons[] = {"arifle_AKS_F","Throw","Put"};
@@ -6326,10 +6478,10 @@ class CfgVehicles
 	};
 	class I_L_Criminal_SMG_F: I_L_Soldier_Base_F
 	{
-		weapons[] = {"SMG_05_F","hgun_Pistol_heavy_02_F","Throw","Put"};
-		respawnWeapons[] = {"SMG_05_F","hgun_Pistol_heavy_02_F","Throw","Put"};
-		magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder"};
-		respawnMagazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder"};
+		weapons[] = {"SMG_05_F","hgun_ACPC2_F","Throw","Put"};
+		respawnWeapons[] = {"SMG_05_F","hgun_ACPC2_F","Throw","Put"};
+		magazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag"};
+		respawnMagazines[] = {"30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag"};
 	};
 	class I_C_Soldier_base_F: I_G_Soldier_base_F{};
 	class I_C_Soldier_Para_1_F: I_C_Soldier_base_F
@@ -6345,6 +6497,13 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_Katiba_F","hgun_Pistol_01_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","10Rnd_9x21_Mag","10Rnd_9x21_Mag","10Rnd_9x21_Mag","HandGrenade","HandGrenade"};
+	};
+	class B_G_Captain_Ivan_F: I_C_Soldier_Para_2_F
+	{
+		weapons[] = {"arifle_AKM_F","hgun_ACPC2_F","Throw","Put"};
+		respawnWeapons[] = {"arifle_AKM_F","hgun_ACPC2_F","Throw","Put"};
+		magazines[] = {"30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_blue","Chemlight_blue"};
+		respawnMagazines[] = {"30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","30Rnd_762x39_Mag_F","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_blue","Chemlight_blue"};
 	};
 	class I_C_Soldier_Para_4_F: I_C_Soldier_base_F
 	{
@@ -6922,9 +7081,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 2;
 			};
 		};
@@ -7011,9 +7170,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 2;
 			};
 		};
@@ -7100,9 +7259,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 2;
 			};
 		};
@@ -7487,9 +7646,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_snd_F
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
 			};
 		};
@@ -7576,9 +7735,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_snd_F
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
 			};
 		};
@@ -7753,9 +7912,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_snd_F
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "arifle_SPAR_01_snd_F";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
 			};
 		};
@@ -8033,9 +8192,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 2;
 			};
 		};
@@ -8293,9 +8452,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_khk_F;
@@ -8402,9 +8561,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_khk_F;
@@ -8511,9 +8670,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_khk_F;
@@ -8723,9 +8882,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_khk_F;
-			class _xx_SMG_03C_TR_khaki
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "SMG_03C_TR_khaki";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
 			};
 		};
@@ -8742,9 +8901,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_30Rnd_65x39_caseless_khaki_mag;
-			class _xx_50Rnd_570x28_SMG_03
+			class _xx_30Rnd_556x45_Stanag
 			{
-				magazine = "50Rnd_570x28_SMG_03";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 4;
 			};
 		};
@@ -8755,9 +8914,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_khk_F;
-			class _xx_SMG_03C_TR_khaki
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "SMG_03C_TR_khaki";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
 			};
 		};
@@ -8774,9 +8933,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_30Rnd_65x39_caseless_khaki_mag;
-			class _xx_50Rnd_570x28_SMG_03
+			class _xx_30Rnd_556x45_Stanag
 			{
-				magazine = "50Rnd_570x28_SMG_03";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 4;
 			};
 		};
@@ -8787,9 +8946,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_khk_F;
-			class _xx_SMG_03C_TR_khaki
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "SMG_03C_TR_khaki";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
 			};
 		};
@@ -8806,9 +8965,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_30Rnd_65x39_caseless_khaki_mag;
-			class _xx_50Rnd_570x28_SMG_03
+			class _xx_30Rnd_556x45_Stanag
 			{
-				magazine = "50Rnd_570x28_SMG_03";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 4;
 			};
 		};
@@ -8819,9 +8978,9 @@ class CfgVehicles
 		class transportweapons
 		{
 			delete _xx_arifle_MXC_khk_F;
-			class _xx_SMG_03C_TR_khaki
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "SMG_03C_TR_khaki";
+				weapon = "arifle_SPAR_01_blk_F";
 				count = 2;
 			};
 		};
@@ -8838,9 +8997,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_30Rnd_65x39_caseless_khaki_mag;
-			class _xx_50Rnd_570x28_SMG_03
+			class _xx_30Rnd_556x45_Stanag
 			{
-				magazine = "50Rnd_570x28_SMG_03";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 4;
 			};
 		};
