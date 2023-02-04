@@ -1,0 +1,813 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, AddEquipment">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,-38.027527,-109.968277,61.972473,-59.968277,0.000000,"Start"};
+item1[] = {"",7,210,8.500002,-41.500008,16.499998,-33.499992,0.000000,""};
+item2[] = {"West__02",4,218,-400.000000,0.000000,-300.000000,50.000000,0.000000,"West" \n "#02"};
+item3[] = {"West__01",4,218,-525.000000,0.000000,-425.000000,50.000000,0.000000,"West" \n "#01"};
+item4[] = {"East__02",4,218,325.000000,0.000000,425.000000,50.000000,0.000000,"East" \n "#02"};
+item5[] = {"East__01",4,218,450.000000,0.000000,550.000000,50.000000,0.000000,"East" \n "#01"};
+item6[] = {"End",1,250,-40.000000,80.000000,50.000000,130.000000,0.000000,"End"};
+item7[] = {"Add_Equipment",2,250,-400.000000,75.000000,-300.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item8[] = {"Add_Equipment_1",2,250,-525.000000,75.000000,-425.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item9[] = {"Add_Equipment_2",2,250,450.000000,75.000000,550.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item10[] = {"Add_Equipment_3",2,250,325.000000,75.000000,425.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item11[] = {"",7,210,-354.000000,-41.500000,-346.000000,-33.500000,0.000000,""};
+item12[] = {"",7,210,-479.000000,-41.500000,-471.000000,-33.500000,0.000000,""};
+item13[] = {"",7,210,365.999969,-41.500000,384.000031,-33.500000,0.000000,""};
+item14[] = {"",7,210,490.999939,-41.500000,509.000031,-33.500000,0.000000,""};
+item15[] = {"",7,210,-354.000000,170.999985,-346.000000,179.000000,0.000000,""};
+item16[] = {"",7,210,-479.000000,170.999985,-471.000000,179.000000,0.000000,""};
+item17[] = {"_",8,218,-40.000000,150.000000,50.000000,200.000000,0.000000,""};
+item18[] = {"",7,210,365.999969,171.000000,384.000031,179.000000,0.000000,""};
+item19[] = {"",7,210,490.999939,171.000000,509.000031,179.000000,0.000000,""};
+item20[] = {"West__03",4,218,-275.000000,0.000000,-175.000000,50.000000,0.000000,"West" \n "#03"};
+item21[] = {"Add_Equipment_4",2,250,-275.000000,75.000000,-175.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item22[] = {"",7,210,-229.000000,-41.499992,-221.000000,-33.500008,0.000000,""};
+item23[] = {"",7,210,-229.000000,170.999985,-221.000000,179.000000,0.000000,""};
+item24[] = {"East__03",4,218,200.000000,0.000000,300.000000,50.000000,0.000000,"East" \n "#03"};
+item25[] = {"Add_Equipment_5",2,250,200.000000,75.000000,300.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item26[] = {"",7,210,240.999939,-41.500000,259.000061,-33.500000,0.000000,""};
+item27[] = {"",7,210,240.999939,171.000000,259.000061,179.000000,0.000000,""};
+item28[] = {"West__04",4,218,-150.000000,0.000000,-50.000000,50.000000,0.000000,"West" \n "#04"};
+item29[] = {"",7,210,-103.999992,-41.500008,-96.000008,-33.499992,0.000000,""};
+item30[] = {"Add_Equipment_6",3,4346,-150.000000,75.000000,-50.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item31[] = {"",7,210,-104.000008,171.000015,-95.999992,179.000000,0.000000,""};
+item32[] = {"",7,210,116.000000,-41.500000,134.000000,-33.500000,0.000000,""};
+item33[] = {"",7,210,116.000000,170.999985,134.000000,179.000000,0.000000,""};
+item34[] = {"Add_Equipment_7",2,250,75.000000,75.000000,175.000000,125.000000,0.000000,"Add" \n "Equipment"};
+item35[] = {"East__04",4,218,75.000000,0.000000,175.000000,50.000000,0.000000,"East" \n "#04"};
+link0[] = {0,1};
+link1[] = {1,29};
+link2[] = {1,32};
+link3[] = {2,7};
+link4[] = {3,8};
+link5[] = {4,10};
+link6[] = {5,9};
+link7[] = {7,15};
+link8[] = {8,16};
+link9[] = {9,19};
+link10[] = {10,18};
+link11[] = {11,2};
+link12[] = {11,12};
+link13[] = {12,3};
+link14[] = {13,4};
+link15[] = {13,14};
+link16[] = {14,5};
+link17[] = {15,23};
+link18[] = {16,15};
+link19[] = {17,6};
+link20[] = {18,27};
+link21[] = {19,18};
+link22[] = {20,21};
+link23[] = {21,23};
+link24[] = {22,11};
+link25[] = {22,20};
+link26[] = {23,31};
+link27[] = {24,25};
+link28[] = {25,27};
+link29[] = {26,13};
+link30[] = {26,24};
+link31[] = {27,33};
+link32[] = {28,30};
+link33[] = {29,22};
+link34[] = {29,28};
+link35[] = {30,31};
+link36[] = {31,17};
+link37[] = {32,26};
+link38[] = {32,35};
+link39[] = {33,17};
+link40[] = {34,33};
+link41[] = {35,34};
+globals[] = {0.000000,0,0,0,0,640,480,1,96,6316128,1,-545.289429,508.936890,690.918823,-355.290466,609,678,1};
+window[] = {0,-1,-1,-1,-1,902,52,1492,52,1,627};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "AddEquipment";
+        class States
+        {
+                /*%FSM<STATE "Start">*/
+                class Start
+                {
+                        name = "Start";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"// Basic definitions" \n
+                         "BIS_EG_NEW_LOADOUT = format [""<t size='1.5' align='center' color='#FFB300'>%1</t>"",localize ""STR_A3_EndGame_NewLoadout""];" \n
+                         "BIS_EG_NEW_LOADOUTS = format [""<t size='1.5' align='center' color='#FFB300'>%1</t>"",localize ""STR_A3_EndGame_NewLoadouts""];" \n
+                         "BIS_EG_NEW_WEAPONS = format [""<t size='1.5' align='center' color='#FFB300'>%1</t>"",""New weapons available:""]; // TODO - localize" \n
+                         "BIS_EG_NEW_EQUIP = format [""<t size='1.5' align='center' color='#FFB300'>%1</t>"",""New equipment available:""]; // TODO - localize" \n
+                         "BIS_EG_NEW_VEHICLE = format [""<t size='1.5' align='center' color='#FFB300'>%1</t>"",""New vehicle available:""]; // TODO - localize" \n
+                         "BIS_EG_NEW_VEHICLES = format [""<t size='1.5' align='center' color='#FFB300'>%1</t>"",""New vehicles available:""]; // TODO - localize" \n
+                         "BIS_EG_NEW_LOADOUT_PICTURE = ""<img image='\a3\Ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa' align='center' size='2.5'/>"";" \n
+                         "BIS_EG_NEW_VEHICLE_PICTURE = ""<img image='\a3\Ui_f\data\GUI\Cfg\Hints\Firing_ca.paa' align='center' size='2.5'/>"";" \n
+                         "BIS_BR = ""<br />"";" \n
+                         "BIS_MARK = ""   -"";" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "West__03">*/
+                                class West__03
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="Add_Equipment_4";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[WEST]] call BIS_fnc_moduleHvtObjectivesInstance == 3)" \n
+                                         "and" \n
+                                         "!(BIS_west03_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "West__02">*/
+                                class West__02
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="Add_Equipment";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[WEST]] call BIS_fnc_moduleHvtObjectivesInstance == 2)" \n
+                                         "and" \n
+                                         "!(BIS_west02_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "West__01">*/
+                                class West__01
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Add_Equipment_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[WEST]] call BIS_fnc_moduleHvtObjectivesInstance == 1)" \n
+                                         "and" \n
+                                         "!(BIS_west01_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East__04">*/
+                                class East__04
+                                {
+                                        itemno = 35;
+                                        priority = 0.000000;
+                                        to="Add_Equipment_7";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[EAST]] call BIS_fnc_moduleHvtObjectivesInstance == 4)" \n
+                                         "and" \n
+                                         "!(BIS_east04_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East__03">*/
+                                class East__03
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="Add_Equipment_5";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[EAST]] call BIS_fnc_moduleHvtObjectivesInstance == 3)" \n
+                                         "and" \n
+                                         "!(BIS_east03_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East__02">*/
+                                class East__02
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Add_Equipment_3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[EAST]] call BIS_fnc_moduleHvtObjectivesInstance == 2)" \n
+                                         "and" \n
+                                         "!(BIS_east02_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East__01">*/
+                                class East__01
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Add_Equipment_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[EAST]] call BIS_fnc_moduleHvtObjectivesInstance == 1)" \n
+                                         "and" \n
+                                         "!(BIS_east01_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "West__04">*/
+                                class West__04
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="Add_Equipment_6";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"([""GetSideCompletedObjectivesCount"",[WEST]] call BIS_fnc_moduleHvtObjectivesInstance == 4)" \n
+                                         "and" \n
+                                         "!(BIS_west04_reward)" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment">*/
+                class Add_Equipment
+                {
+                        name = "Add_Equipment";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"BIS_west02_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "_engineer = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_b_engineer_f0""];" \n
+                         "_sniper = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""STR_b_sniper_f0""];" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_LOADOUTS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_engineer +" \n
+                         "		BIS_BR +" \n
+                         "		_sniper" \n
+                         " " \n
+                         "	),""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "[west,""B_Engineer""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Engineer1""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Sharpshooter""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Sharpshooter1""] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment_1">*/
+                class Add_Equipment_1
+                {
+                        name = "Add_Equipment_1";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"BIS_west01_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "_autorifleman = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_b_soldier_ar_f0""];" \n
+                         "_grenadier = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_b_soldier_gl_f0""];" \n
+                         "_arifle_AKM_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'arifle_AKM_F' >> 'DisplayName')];" \n
+                         "_arifle_m4a1_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'arifle_m4a1_F' >> 'DisplayName')];" \n
+                         "_arifle_SPAR_03_blk_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'arifle_SPAR_03_blk_F' >> 'DisplayName')];" \n
+                         "_arifle_MXM = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'arifle_MX_khk_F' >> 'DisplayName')];" \n
+                         "" \n
+                         "" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_LOADOUTS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_autorifleman + " \n
+                         "		BIS_BR +" \n
+                         "		_grenadier +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_WEAPONS +" \n
+                         "		//BIS_BR +" \n
+                         "		//_arifle_m4a1_F+" \n
+                         "		BIS_BR +" \n
+                         "		_arifle_SPAR_03_blk_F + " \n
+                         "		BIS_BR +" \n
+                         "		_arifle_AKM_F +" \n
+                         "		BIS_BR +" \n
+                         "		_arifle_MXM" \n
+                         "" \n
+                         "	),""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "//[west,""B_Rifleman1""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Rifleman2""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Rifleman3""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Rifleman4""] call bis_fnc_addrespawninventory;" \n
+                         "[west,[""B_Autorifleman"",2]] call bis_fnc_addrespawninventory;" \n
+                         "[west,[""B_Autorifleman1"",2]] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "[west,""B_Grenadier"",3] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Grenadier1"",3] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment_2">*/
+                class Add_Equipment_2
+                {
+                        name = "Add_Equipment_2";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"BIS_east01_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "_autorifleman = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_b_soldier_ar_f0""];" \n
+                         "_grenadier = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_b_soldier_gl_f0""];" \n
+                         "_arifle_AKM_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'arifle_AKM_F' >> 'DisplayName')];" \n
+                         "_arifle_Katiba_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'arifle_katiba_F' >> 'DisplayName')];" \n
+                         "" \n
+                         "" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_LOADOUTS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_autorifleman + " \n
+                         "		BIS_BR +" \n
+                         "		_grenadier +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_WEAPONS +" \n
+                         "		BIS_BR +" \n
+                         "		_arifle_AKM_F +" \n
+                         "		BIS_BR +" \n
+                         "		_arifle_Katiba_F " \n
+                         "		" \n
+                         "" \n
+                         "		),""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "[east,""O_Rifleman1""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Rifleman2""] call bis_fnc_addrespawninventory;" \n
+                         "[east,[""O_Autorifleman"",2]] call bis_fnc_addrespawninventory;" \n
+                         "[east,[""O_Autorifleman1"",2]] call bis_fnc_addrespawninventory;" \n
+                         "[east,[""O_Grenadier"",3]] call bis_fnc_addrespawninventory;" \n
+                         "[east,[""O_Grenadier1"",3]] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         "" \n
+                         "" \n
+                         "//_UAVOperator = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_a3_b_soldier_uav_f0""];" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment_3">*/
+                class Add_Equipment_3
+                {
+                        name = "Add_Equipment_3";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"BIS_east02_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "_engineer = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_b_engineer_f0""];" \n
+                         "_sniper = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""STR_b_sniper_f0""];" \n
+                         "" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_LOADOUTS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_engineer +" \n
+                         "		BIS_BR +" \n
+                         "		_sniper" \n
+                         "	),""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "[east,""O_Engineer""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Engineer1""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Sharpshooter""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Sharpshooter1""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Sharpshooter2""] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment_4">*/
+                class Add_Equipment_4
+                {
+                        name = "Add_Equipment_4";
+                        itemno = 21;
+                        init = /*%FSM<STATEINIT""">*/"BIS_west03_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "//_heavyGunner = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""STR_a3_cfgvehicles_b_heavygunner_f0""];" \n
+                         "_LMG_03_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'LMG_03_F' >> 'DisplayName')];" \n
+                         "_MMG_02_black_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'MMG_02_black_F' >> 'DisplayName')];" \n
+                         "" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_WEAPONS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_LMG_03_F +" \n
+                         "	   BIS_BR +" \n
+                         "      _MMG_02_black_F" \n
+                         "" \n
+                         "	),""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "[west,[""B_HeavyGunner"",1]] call bis_fnc_addrespawninventory;" \n
+                         "[west,[""B_Autorifleman2"",1]] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment_5">*/
+                class Add_Equipment_5
+                {
+                        name = "Add_Equipment_5";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/"BIS_east03_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "//_heavyGunner = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""STR_a3_cfgvehicles_b_heavygunner_f0""];" \n
+                         "_LMG_03_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'LMG_03_F' >> 'DisplayName')];" \n
+                         "_MMG_01_hex_F = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'MMG_01_hex_F' >> 'DisplayName')];" \n
+                         "" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_WEAPONS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_LMG_03_F +" \n
+                         "	  BIS_BR +" \n
+                         "    _MMG_01_hex_F" \n
+                         "" \n
+                         "	),""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "[east,[""O_HeavyGunner"",1]] call bis_fnc_addrespawninventory;" \n
+                         "[east,[""O_Autorifleman2"",1]] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment_6">*/
+                class Add_Equipment_6
+                {
+                        name = "Add_Equipment_6";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/"BIS_west04_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "_UAVOperator = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_a3_b_soldier_uav_f0""];" \n
+                         "_muzzle_snds_338_black = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_338_black' >> 'DisplayName')];" \n
+                         "_muzzle_snds_b = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_B' >> 'DisplayName')];" \n
+                         "_muzzle_snds_H = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_H' >> 'DisplayName')];" \n
+                         "_muzzle_snds_M = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_M' >> 'DisplayName')];" \n
+                         "_muzzle_snds_58_blk_f = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_58_blk_f' >> 'DisplayName')];" \n
+                         "_muzzle_snds_93mmg = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_93mmg' >> 'DisplayName')];" \n
+                         "" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_LOADOUTS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_UAVOperator +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_EQUIP+" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_338_black+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_b+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_H+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_M+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_58_blk_f" \n
+                         "" \n
+                         "" \n
+                         "		" \n
+                         "	),""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "[west,""B_Rifleman""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Rifleman3""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Rifleman4""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Autorifleman""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Autorifleman1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Grenadier""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Grenadier1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Engineer""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_Sharpshooter1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[west,""B_HeavyGunner""] call BIS_fnc_removeRespawnInventory;" \n
+                         "" \n
+                         "[west,""B_UAVOperatorS""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_RiflemanS""] call bis_fnc_addrespawninventory;" \n
+                         "//[west,""B_Rifleman1S""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Rifleman3S""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Rifleman4S""] call bis_fnc_addrespawninventory;" \n
+                         "[west,[""B_AutoriflemanS"",2]] call bis_fnc_addrespawninventory;" \n
+                         "[west,[""B_Autorifleman1S"",2]] call bis_fnc_addrespawninventory;" \n
+                         "//[west,[""B_Autorifleman2S"",1]] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_GrenadierS""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Grenadier1S""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_EngineerS""] call bis_fnc_addrespawninventory;" \n
+                         "[west,""B_Sharpshooter1S""] call bis_fnc_addrespawninventory;" \n
+                         "[west,[""B_HeavyGunnerS"",1]] call bis_fnc_addrespawninventory;" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Add_Equipment_7">*/
+                class Add_Equipment_7
+                {
+                        name = "Add_Equipment_7";
+                        itemno = 34;
+                        init = /*%FSM<STATEINIT""">*/"BIS_east04_reward = true;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "" \n
+                         "// Classes" \n
+                         "_UAVOperator = format [""<t align='left' size='1.25'>%1 %2</t>"",BIS_MARK, localize ""str_a3_b_soldier_uav_f0""];" \n
+                         "_muzzle_snds_338_black = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_338_black' >> 'DisplayName')];" \n
+                         "_muzzle_snds_b = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_B' >> 'DisplayName')];" \n
+                         "_muzzle_snds_H = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_H' >> 'DisplayName')];" \n
+                         "_muzzle_snds_M = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_M' >> 'DisplayName')];" \n
+                         "_muzzle_snds_58_blk_f = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_58_blk_f' >> 'DisplayName')];" \n
+                         "_muzzle_snds_93mmg = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_93mmg' >> 'DisplayName')];" \n
+                         "" \n
+                         "sleep 2.5;" \n
+                         "" \n
+                         "// HINT NOTIFICATION" \n
+                         "[parseText" \n
+                         "	(" \n
+                         "		BIS_EG_NEW_LOADOUTS +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_LOADOUT_PICTURE +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		_UAVOperator+" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		BIS_EG_NEW_EQUIP+" \n
+                         "		BIS_BR +" \n
+                         "		BIS_BR +" \n
+                         "		//_muzzle_snds_338_black+" \n
+                         "		//BIS_BR +" \n
+                         "		_muzzle_snds_b+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_H+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_M+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_58_blk_f+" \n
+                         "		BIS_BR +" \n
+                         "		_muzzle_snds_93mmg" \n
+                         "" \n
+                         "	),""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "[east,""O_Rifleman1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Rifleman""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Autorifleman""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Autorifleman1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Grenadier""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Grenadier1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Engineer1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Sharpshooter1""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_Sharpshooter2""] call BIS_fnc_removeRespawnInventory;" \n
+                         "[east,""O_HeavyGunner""] call BIS_fnc_removeRespawnInventory;" \n
+                         "" \n
+                         "//[east,""O_UAVOperator""] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "[east,""O_RiflemanS""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Rifleman1S""] call bis_fnc_addrespawninventory;" \n
+                         "[east,[""O_AUTORifleman1S"",2]] call bis_fnc_addrespawninventory;" \n
+                         "//[east,[""O_AUTORifleman2S"",2]] call bis_fnc_addrespawninventory;" \n
+                         "[east,[""O_HeavyGunnerS"",1]] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Sharpshooter1S""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Sharpshooter2S""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_GrenadierS""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Grenadier1S""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_Engineer1S""] call bis_fnc_addrespawninventory;" \n
+                         "[east,""O_UAVoperatorS""] call bis_fnc_addrespawninventory;" \n
+                         "" \n
+                         "sleep 10;" \n
+                         "["""",""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
+                         "" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Start";
+        finalStates[] =
+        {
+                "End",
+        };
+};
+/*%FSM</COMPILE>*/

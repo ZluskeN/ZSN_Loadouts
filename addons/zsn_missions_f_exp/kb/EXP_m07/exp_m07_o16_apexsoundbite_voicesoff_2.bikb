@@ -1,0 +1,18 @@
+class Sentences
+{
+	class exp_m07_o16_apexsoundbite_voicesoff_2_MIL_0
+	{
+		textPlain = "$STR_A3_exp_m07_o16_apexsoundbite_voicesoff_2_MIL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\o16_ApexSoundBite_VoicesOff_2\exp_m07_o16_apexsoundbite_voicesoff_2_MIL_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

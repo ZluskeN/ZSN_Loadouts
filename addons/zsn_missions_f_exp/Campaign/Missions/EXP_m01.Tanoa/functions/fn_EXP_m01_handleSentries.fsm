@@ -1,0 +1,115 @@
+/*%FSM<COMPILE "D:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Handle Sentries">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Handle_Sentries",0,250,25.000000,1275.000000,125.000000,1325.000000,0.000000,"Handle Sentries"};
+item1[] = {"Guards_engaged",4,218,25.000000,1350.000000,125.000000,1400.000000,0.000000,"Guards" \n "engaged"};
+item2[] = {"Reinforce",1,250,25.000000,1425.000000,125.000000,1475.000000,0.000000,"Reinforce"};
+item3[] = {"Attacked",4,218,150.000000,1275.000000,250.000000,1325.000000,0.000000,"Attacked"};
+item4[] = {"Defend",2,250,150.000000,1350.000000,250.000000,1400.000000,0.000000,"Defend"};
+link0[] = {0,1};
+link1[] = {0,3};
+link2[] = {1,2};
+link3[] = {3,4};
+link4[] = {4,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,6,6316128,1,-296.666718,484.985168,1660.769531,1093.927734,1219,884,1};
+window[] = {2,-1,-1,-1,-1,905,26,1420,26,3,1237};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Handle Sentries";
+        class States
+        {
+                /*%FSM<STATE "Handle_Sentries">*/
+                class Handle_Sentries
+                {
+                        name = "Handle_Sentries";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"// Detect if guards fire their weapons" \n
+                         "{_x addEventHandler [""Fired"", {BIS_deploySentries = true}]} forEach BIS_firstUnits;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Attacked">*/
+                                class Attacked
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{behaviour _x == ""COMBAT""} count BIS_sentryUnits > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Guards_engaged">*/
+                                class Guards_engaged
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Reinforce";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"// Sentries were deployed" \n
+                                         "BIS_deploySentries" \n
+                                         "||" \n
+                                         "// Guards were engaged" \n
+                                         "{behaviour _x == ""COMBAT""} count BIS_firstUnits > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Reinforce">*/
+                class Reinforce
+                {
+                        name = "Reinforce";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"// Reinforce the outpost" \n
+                         "{_x setBehaviour ""AWARE""} forEach BIS_sentryUnits;" \n
+                         "private _wp = BIS_sentryGroup addWaypoint [markerPos ""BIS_first"", 0];" \n
+                         "_wp setWaypointType ""GUARD"";" \n
+                         "BIS_sentryGroup setCurrentWaypoint _wp;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Defend">*/
+                class Defend
+                {
+                        name = "Defend";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Defend themselves" \n
+                         "{_x setBehaviour ""COMBAT""} forEach BIS_sentryUnits;" \n
+                         "private _wp = BIS_sentryGroup addWaypoint [position vehicle leader BIS_sentryGroup, 0];" \n
+                         "_wp setWaypointType ""GUARD"";" \n
+                         "BIS_sentryGroup setCurrentWaypoint _wp;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Guards_engaged">*/
+                                class Guards_engaged
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Reinforce";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"// Sentries were deployed" \n
+                                         "BIS_deploySentries" \n
+                                         "||" \n
+                                         "// Guards were engaged" \n
+                                         "{behaviour _x == ""COMBAT""} count BIS_firstUnits > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Handle_Sentries";
+        finalStates[] =
+        {
+                "Reinforce",
+        };
+};
+/*%FSM</COMPILE>*/

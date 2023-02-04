@@ -1,0 +1,35 @@
+class Sentences
+{
+	class exp_m04_sp_43_attruck_RIK_0
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_43_attruck_RIK_0";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\43_atTruck\exp_m04_sp_43_attruck_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_sp_43_attruck_KNX_0
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_43_attruck_KNX_0";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\43_atTruck\exp_m04_sp_43_attruck_KNX_0.ogg"};
+		actor = "BIS_r2_1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_sp_43_attruck_RIK_1
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_43_attruck_RIK_1";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\43_atTruck\exp_m04_sp_43_attruck_RIK_1.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

@@ -1,0 +1,1362 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, missionFlow">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,-40.000000,-850.000000,50.000000,-800.000000,0.000000,"Start"};
+item1[] = {"Mission_start",2,250,-40.000000,-710.000000,50.000000,-660.000000,0.000000,"Mission" \n "start"};
+item2[] = {"FOB_taken",4,218,-40.000000,-640.000000,50.000000,-590.000000,0.000000,"FOB taken"};
+item3[] = {"__rd_Timeout",4,218,70.000000,-290.000000,160.000000,-240.000000,4.000000,"3rd" \n "Timeout"};
+item4[] = {"__nd_Intel_taken",4,218,-40.000000,-220.000000,50.000000,-170.000000,3.000000,"2nd Intel" \n "taken"};
+item5[] = {"Mission_started",4,218,-40.000000,-780.000000,50.000000,-730.000000,1.000000,"Mission" \n "started"};
+item6[] = {"",7,210,221.000000,-409.000000,229.000000,-401.000000,0.000000,""};
+item7[] = {"Intel_tasks",2,250,-40.000000,-430.000000,50.000000,-380.000000,0.000000,"Intel" \n "tasks"};
+item8[] = {"__st_Intel_taken",4,218,-40.000000,-360.000000,50.000000,-310.000000,2.000000,"1st Intel" \n "taken"};
+item9[] = {"",7,210,221.000000,-269.000000,229.000000,-261.000000,0.000000,""};
+item10[] = {"Confirm",2,250,-40.000000,-150.000000,50.000000,-100.000000,0.000000,"Confirm"};
+item11[] = {"Taken",4,218,-40.000000,60.000000,50.000000,110.000000,0.000000,"Taken"};
+item12[] = {"Upload",2,250,-40.000000,130.000000,50.000000,180.000000,0.000000,"Upload"};
+item13[] = {"__th_Timeout",4,218,70.000000,-10.000000,160.000000,40.000000,0.000000,"4th" \n "Timeout"};
+item14[] = {"Schematics_uploa",4,218,-40.000000,340.000000,50.000000,390.000000,0.000000,"Schematics" \n "uploaded"};
+item15[] = {"Upload_finished",2,250,-40.000000,410.000000,50.000000,460.000000,0.000000,"Upload finished," \n "send gunship"};
+item16[] = {"__nd_Timeout",4,218,70.000000,-430.000000,160.000000,-380.000000,4.000000,"2nd" \n "Timeout"};
+item17[] = {"WIN_01",1,250,-40.000000,900.000000,50.000000,950.000000,0.000000,"WIN 01"};
+item18[] = {"Confirm_1",2,250,-40.000000,-290.000000,50.000000,-240.000000,0.000000,"Confirm"};
+item19[] = {"WIN_03",1,250,70.000000,900.000000,160.000000,950.000000,0.000000,"WIN 03"};
+item20[] = {"FAIL_01",1,250,180.000000,900.000000,270.000000,950.000000,0.000000,"FAIL 01"};
+item21[] = {"__th_Timeout",4,218,70.000000,130.000000,160.000000,180.000000,0.000000,"5th" \n "Timeout"};
+item22[] = {"",7,210,1.000000,501.000000,9.000000,509.000000,0.000000,""};
+item23[] = {"Third_missile_fi",4,218,-150.000000,550.000000,-60.000000,600.000000,3.000000,"Third" \n "missile" \n "fired"};
+item24[] = {"Set_timer",2,250,-150.000000,620.000000,-60.000000,670.000000,0.000000,"Set timer"};
+item25[] = {"Gunship_down",4,218,-40.000000,830.000000,50.000000,880.000000,4.000000,"Gunship" \n "down"};
+item26[] = {"Missed",4,218,-150.000000,690.000000,-60.000000,740.000000,0.000000,"Missed"};
+item27[] = {"Scared__fly_away",2,250,-150.000000,760.000000,-60.000000,810.000000,0.000000,"Scared," \n "fly away"};
+item28[] = {"Away",4,218,-150.000000,830.000000,-60.000000,880.000000,0.000000,"Away"};
+item29[] = {"",7,210,-109.000053,501.000000,-100.999947,509.000000,0.000000,""};
+item30[] = {"Gunship_RTB",2,250,70.000000,620.000000,160.000000,670.000000,0.000000,"Gunship RTB"};
+item31[] = {"__th_timeout",4,218,70.000000,550.000000,160.000000,600.000000,2.000000,"6th" \n "timeout"};
+item32[] = {"",7,210,111.000000,501.000000,119.000000,509.000000,0.000000,""};
+item33[] = {"__st_Timeout",4,218,70.000000,-710.000000,160.000000,-660.000000,0.000000,"1st" \n "Timeout"};
+item34[] = {"",7,210,221.000000,151.000000,229.000000,159.000000,0.000000,""};
+item35[] = {"",7,210,221.000000,11.000000,229.000000,19.000000,0.000000,""};
+item36[] = {"",7,210,221.000000,-689.000000,229.000000,-681.000000,0.000000,""};
+item37[] = {"",7,210,1.000000,781.000000,9.000000,789.000000,0.000000,""};
+item38[] = {"",7,210,1.000000,641.000000,9.000000,649.000000,0.000000,""};
+item39[] = {"",7,210,221.000000,431.000000,229.000000,439.000000,0.000000,""};
+item40[] = {"Leaving_AO",4,218,70.000000,410.000000,160.000000,460.000000,1.000000,"Leaving AO"};
+item41[] = {"Send_reinforceme",2,250,-40.000000,-570.000000,50.000000,-520.000000,0.000000,"Send" \n "reinforcements"};
+item42[] = {"Arrived",4,218,-40.000000,-500.000000,50.000000,-450.000000,0.000000,"Arrived"};
+item43[] = {"Left_FOB",4,218,70.000000,-570.000000,160.000000,-520.000000,0.000000,"Left FOB"};
+item44[] = {"",7,210,221.000000,-549.000000,229.000000,-541.000000,0.000000,""};
+item45[] = {"Away",4,218,70.000000,830.000000,160.000000,880.000000,0.000000,"Away"};
+item46[] = {"Upload_started",4,218,-40.000000,200.000000,50.000000,250.000000,0.000000,"Upload" \n "started"};
+item47[] = {"Start_upload__send",2,250,-40.000000,270.000000,50.000000,320.000000,0.000000,"Start upload," \n "send enemies"};
+item48[] = {"Left_FOB",4,218,70.000000,270.000000,160.000000,320.000000,0.000000,"Left FOB"};
+item49[] = {"",7,210,221.000000,291.000000,229.000000,299.000000,0.000000,""};
+item50[] = {"Timeout",4,218,-40.000000,-80.000000,50.000000,-30.000000,0.000000,"Timeout"};
+item51[] = {"Reveal_Schematic",2,250,-40.000000,-10.000000,50.000000,40.000000,0.000000,"Reveal" \n "Schematics"};
+item52[] = {"Leaving_AO",4,218,70.000000,-150.000000,160.000000,-100.000000,1.000000,"Leaving AO"};
+item53[] = {"",7,210,221.000000,-129.000000,229.000000,-121.000000,0.000000,""};
+item54[] = {"WIN_02",1,250,-150.000000,900.000000,-60.000000,950.000000,0.000000,"WIN 02"};
+link0[] = {0,5};
+link1[] = {1,2};
+link2[] = {1,33};
+link3[] = {2,41};
+link4[] = {3,9};
+link5[] = {4,10};
+link6[] = {5,1};
+link7[] = {6,9};
+link8[] = {7,8};
+link9[] = {7,16};
+link10[] = {8,18};
+link11[] = {9,53};
+link12[] = {10,50};
+link13[] = {10,52};
+link14[] = {11,12};
+link15[] = {12,21};
+link16[] = {12,46};
+link17[] = {13,35};
+link18[] = {14,15};
+link19[] = {15,22};
+link20[] = {15,40};
+link21[] = {16,6};
+link22[] = {18,3};
+link23[] = {18,4};
+link24[] = {21,34};
+link25[] = {22,29};
+link26[] = {22,32};
+link27[] = {22,38};
+link28[] = {23,24};
+link29[] = {24,26};
+link30[] = {24,38};
+link31[] = {25,17};
+link32[] = {26,27};
+link33[] = {27,28};
+link34[] = {27,37};
+link35[] = {28,54};
+link36[] = {29,23};
+link37[] = {30,38};
+link38[] = {30,45};
+link39[] = {31,30};
+link40[] = {32,31};
+link41[] = {33,36};
+link42[] = {34,49};
+link43[] = {35,34};
+link44[] = {36,44};
+link45[] = {37,25};
+link46[] = {38,37};
+link47[] = {39,20};
+link48[] = {40,39};
+link49[] = {41,42};
+link50[] = {41,43};
+link51[] = {42,7};
+link52[] = {43,44};
+link53[] = {44,6};
+link54[] = {45,19};
+link55[] = {46,47};
+link56[] = {47,14};
+link57[] = {47,48};
+link58[] = {48,49};
+link59[] = {49,39};
+link60[] = {50,51};
+link61[] = {51,11};
+link62[] = {51,13};
+link63[] = {52,53};
+link64[] = {53,35};
+globals[] = {0.000000,0,0,0,0,640,480,1,420,6316128,1,-361.555634,401.551758,569.620667,24.931065,1408,1005,1};
+window[] = {2,-1,-1,-1,-1,985,225,1665,225,3,1426};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "missionFlow";
+  class States
+  {
+    /*%FSM<STATE "Start">*/
+    class Start
+    {
+      name = "Start";
+      itemno = 0;
+      init = /*%FSM<STATEINIT""">*/"// Variables" \n
+       "	BIS_Alarm = false;" \n
+       "	BIS_FOB = false;" \n
+       "	BIS_Intel01Created = false;" \n
+       "	BIS_Intel02Created = false;" \n
+       "	BIS_Intel01Taken= false;" \n
+       "	BIS_Intel02Taken = false;" \n
+       "	BIS_CharlieReady = false;" \n
+       "	BIS_CharlieCalled = false;" \n
+       "	BIS_SchematicsRevealed = false;" \n
+       "	BIS_SchematicsTaken = false;" \n
+       "	BIS_TerminalStart = false;" \n
+       "	BIS_UploadStarted = false;" \n
+       "	BIS_SchematicsUploaded = false;" \n
+       "	BIS_SendGunship = false;" \n
+       "	BIS_GunshipDown = false;" \n
+       "	BIS_GunshipScared = false;" \n
+       "	BIS_GunshipRTB = false;" \n
+       "	BIS_IncomingMissiles = 0;" \n
+       "	BIS_LeavingAO = false;" \n
+       "" \n
+       "// Setting mission phase to display Phase midget properly" \n
+       "	BIS_Phase = 0;" \n
+       "" \n
+       "// Lock and hide units/objects for objective 02 and schematics" \n
+       "	{_x hideObject true; _x enableSimulation false} forEach " \n
+       "		[" \n
+       "		BIS_Intel02_01," \n
+       "		BIS_Intel02_02," \n
+       "		BIS_Intel02_03," \n
+       "		BIS_Intel02_04," \n
+       "		BIS_Schematics_01," \n
+       "		BIS_Schematics_02," \n
+       "		BIS_Schematics_03," \n
+       "		BIS_Schematics_04," \n
+       "		BIS_Scientist," \n
+       "		BIS_Intel02Objective," \n
+       "		BIS_Schematics" \n
+       "		];" \n
+       "" \n
+       "	BIS_Garage = nearestObject [(getMarkerPos ""BIS_mrkIntel01""),""Land_Warehouse_03_F""];" \n
+       "" \n
+       "	BIS_Warehouse = nearestObject [(getMarkerPos ""BIS_mrkIntel02""),""Land_i_Shed_Ind_F""];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_1"",1];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_2"",1];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_3"",1];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_4"",1];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_5"",1];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_6"",1];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_7"",1];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_8"",1];" \n
+       "" \n
+       "	BIS_House = nearestObject [(getMarkerPos ""BIS_mrkSchematics""),""Land_House_Small_02_F""];" \n
+       "	BIS_House setVariable [""bis_disabled_Door_1"",1];" \n
+       "	BIS_House setVariable [""bis_disabled_Door_2"",1];" \n
+       "" \n
+       "// Add fire eventHandler to switch AI to combat" \n
+       "{_x addEventHandler [""Fired"",{BIS_Alarm = true; {_x setBehaviour ""Combat""} forEach (BIS_FOBUnits); {_x removeAllEventHandlers ""Fired""} forEach (units BIS_grpBravo) + [player]}]} forEach (units BIS_grpBravo) + [player];" \n
+       "" \n
+       "// Damage the FOB sheds so missile from gunship will destroy them if hit" \n
+       "	BIS_Shed01 = nearestObject [(getMarkerPos ""BIS_mrkShed01""),""Land_Shed_05_F""];" \n
+       "	BIS_Shed02 = nearestObject [(getMarkerPos ""BIS_mrkShed02""),""Land_Shed_01_F""];" \n
+       "	BIS_Shed03 = nearestObject [(getMarkerPos ""BIS_mrkShed03""),""Land_Shed_03_F""];" \n
+       "" \n
+       "// Open doors of the hotel" \n
+       "	BIS_Hotel = nearestObject [(getMarkerPos ""BIS_mrkHotel""),""Land_Hotel_01_F""];" \n
+       "	BIS_Hotel animate [""Door_11_rot"",1];" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Mission_started">*/
+        class Mission_started
+        {
+          itemno = 5;
+          priority = 1.000000;
+          to="Mission_start";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(isNil ""BIS_missionStarted"")" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Mission_start">*/
+    class Mission_start
+    {
+      name = "Mission_start";
+      itemno = 1;
+      init = /*%FSM<STATEINIT""">*/"_t1 = time;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "sleep 2;" \n
+       "" \n
+       "// Initial conversation" \n
+       "	""01_Prologue"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "	sleep 2;" \n
+       "" \n
+       "// Music" \n
+       "	0 fadeMusic 0;" \n
+       "	// playMusic ""AmbientTrack01_F_EPB"";" \n
+       "	playMusic ""AmbientTrack01a_F_EXP"";" \n
+       "	5 fadeMusic 0.5;" \n
+       "" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "__st_Timeout">*/
+        class __st_Timeout
+        {
+          itemno = 33;
+          priority = 0.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time > _t1 + 600) or" \n
+           "(BIS_LeavingAO)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "FOB_taken">*/
+        class FOB_taken
+        {
+          itemno = 2;
+          priority = 0.000000;
+          to="Send_reinforceme";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// BIS_FOB" \n
+           "{alive _x} count (BIS_FOBUnits) == 0" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Intel_tasks">*/
+    class Intel_tasks
+    {
+      name = "Intel_tasks";
+      itemno = 7;
+      init = /*%FSM<STATEINIT""">*/"_t2 = time;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Close doors" \n
+       "	sleep 1;" \n
+       "	BIS_Heli animateDoor [""Door_L"",0,false];" \n
+       "	BIS_Heli animateDoor [""Door_R"",0,false];" \n
+       "	BIS_Heli lock true;" \n
+       "" \n
+       "// Join player" \n
+       "	sleep 1;" \n
+       "	[BIS_A2, BIS_A3, BIS_A4] join (BIS_grpPlayer);" \n
+       "" \n
+       "// Let Charlie move west" \n
+       "	BIS_grpCharlie copyWaypoints BIS_grpWPCharlie;" \n
+       "" \n
+       "// Succeed task, show marker on ammo crate" \n
+       "	[""BIS_tskReinforcements"", ""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "	""BIS_mrkAmmo"" setMarkerPos (getPos BIS_AmmoBox);" \n
+       "	""BIS_mrkAmmo"" setMarkerAlpha 1;" \n
+       "" \n
+       "// Conversation" \n
+       "	""15_Reinforcements"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Set Phase II - Intel part" \n
+       "	BIS_Phase = 1;" \n
+       "	_null = 1 execVM ""Scripts\SetPhase.sqf"";" \n
+       "" \n
+       "// New task" \n
+       "	sleep 2;" \n
+       "	""BIS_tskIntel01"" call BIS_fnc_missionTasks;" \n
+       "	BIS_Intel01Created = true;" \n
+       "" \n
+       "// Save" \n
+       "	sleep 7;" \n
+       "	saveGame;" \n
+       "" \n
+       "	sleep 5;" \n
+       "// Music" \n
+       "	// playMusic ""EventTrack02_F_EPA"";" \n
+       "	playMusic ""LeadTrack01_F_EXP"";" \n
+       "" \n
+       "	sleep 39;" \n
+       "	5 fadeMusic 0;" \n
+       "" \n
+       "};" \n
+       "" \n
+       "// Execute the script to allow taking and uploading intel/schematics" \n
+       "	// [] execVM ""Scripts\DownloadObject.sqf"";" \n
+       "	// BIS_Intel01Objective setVariable [""BIS_usable"", true];" \n
+       "" \n
+       "// Open doors of the garage" \n
+       "	BIS_Garage animate [""Door_5_rot"",1];" \n
+       "	BIS_Garage animate [""Door_4_rot"",1];" \n
+       "" \n
+       "// Enable saveGame" \n
+       "	enableSaving [true,false];" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "__nd_Timeout">*/
+        class __nd_Timeout
+        {
+          itemno = 16;
+          priority = 4.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time > _t2 + 1200) or" \n
+           "(BIS_LeavingAO)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "__st_Intel_taken">*/
+        class __st_Intel_taken
+        {
+          itemno = 8;
+          priority = 2.000000;
+          to="Confirm_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// BIS_Intel01Taken" \n
+           "// BIS_Intel01Objective getVariable [""BIS_used"", false];" \n
+           "" \n
+           "BIS_Intel01Taken" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Confirm">*/
+    class Confirm
+    {
+      name = "Confirm";
+      itemno = 10;
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Succeed task" \n
+       "	sleep 0.5;" \n
+       "	[""BIS_tskIntel02"", ""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "	""BIS_mrkIntel02"" setMarkerAlpha 1;" \n
+       "	""25_Intel02Taken"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Savegame" \n
+       "	sleep 2.5;" \n
+       "	saveGame;" \n
+       "" \n
+       "// Music" \n
+       "	// sleep 2.5;" \n
+       "	// playMusic ""EventTrack02a_F_EPA"";" \n
+       "" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Leaving_AO">*/
+        class Leaving_AO
+        {
+          itemno = 52;
+          priority = 1.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"BIS_LeavingAO" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Timeout">*/
+        class Timeout
+        {
+          itemno = 50;
+          priority = 0.000000;
+          to="Reveal_Schematic";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 90" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Upload">*/
+    class Upload
+    {
+      name = "Upload";
+      itemno = 12;
+      init = /*%FSM<STATEINIT""">*/"_t5 = time;" \n
+       "" \n
+       "// Set variable" \n
+       "	BIS_SchematicsTaken = true;" \n
+       "" \n
+       "// Place terminal to FOB" \n
+       "	BIS_Terminal setPos (getMarkerPos ""BIS_mrkTerminal"");" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Hide Schematics" \n
+       "	sleep 0.25;" \n
+       "	BIS_Schematics hideObject true;" \n
+       "" \n
+       "// Task succeed + task to upload" \n
+       "	[""BIS_tskSchematics"", ""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "	""BIS_mrkSchematics"" setMarkerAlpha 1;" \n
+       "	""BIS_tskUpload"" call BIS_fnc_missionTasks;" \n
+       "" \n
+       "// Conversation" \n
+       "	""45_SchematicsTaken"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Take lead of remains of Charlie" \n
+       "	sleep 1;" \n
+       "	[BIS_C2,BIS_C3,BIS_C4] join BIS_grpPlayer;" \n
+       "" \n
+       "// Disable autocombat for player's AI to make the movement through forest (and under mortar fire) less painful" \n
+       "	{_x disableAI ""autocombat""} forEach (units group player);" \n
+       "" \n
+       "// Savegame" \n
+       "	sleep 7.5;" \n
+       "	saveGame;" \n
+       "" \n
+       "// Music" \n
+       "	sleep 2.5;" \n
+       "	// playMusic ""BackgroundTrack01_F_EPB"";" \n
+       "	playMusic ""LeadTrack01c_F_EXP"";" \n
+       "" \n
+       "	sleep 36;" \n
+       "	10 fadeMusic 0;" \n
+       "" \n
+       "};" \n
+       "" \n
+       "// Send search teams to intercept player, let them switch on lights for easier identification in the darkness" \n
+       "	[] spawn {" \n
+       "" \n
+       "	BIS_grpStalkers01 enableGunLights ""ForceOn""; " \n
+       "	BIS_grpStalkers02 enableGunLights ""ForceOn""; " \n
+       "	BIS_grpStalkers03 enableGunLights ""ForceOn""; " \n
+       "	BIS_grpStalkers04 enableGunLights ""ForceOn""; " \n
+       "	BIS_grpStalkers05 enableGunLights ""ForceOn""; " \n
+       "" \n
+       "	{_x setPosATL [(getPos _x select 0), (getPos _x select 1), 0]; _x hideObject false; _x enableSimulation true; _x allowDamage true} forEach " \n
+       "		(units BIS_grpStalkers01 + " \n
+       "		units BIS_grpStalkers02 + " \n
+       "		units BIS_grpStalkers03 +" \n
+       "		units BIS_grpStalkers04 +" \n
+       "		units BIS_grpStalkers05);" \n
+       "" \n
+       "	sleep 10;" \n
+       "	_null = [BIS_grpStalkers01,BIS_grpPlayer,15,0,{BIS_Player distance BIS_Terminal < 300},0] execVM ""Scripts\Stalk.sqf"";" \n
+       "	_null = [BIS_grpStalkers05,BIS_grpPlayer,15,0,{BIS_Player distance BIS_Terminal < 300},0] execVM ""Scripts\Stalk.sqf"";" \n
+       "	sleep (20 + (random 20));" \n
+       "	_null = [BIS_grpStalkers02,BIS_grpPlayer,15,0,{BIS_Player distance BIS_Terminal < 300},0] execVM ""Scripts\Stalk.sqf"";" \n
+       "	sleep (20 + (random 20));" \n
+       "	_null = [BIS_grpStalkers03,BIS_grpPlayer,15,0,{BIS_Player distance BIS_Terminal < 300},0] execVM ""Scripts\Stalk.sqf"";" \n
+       "	sleep (20 + (random 20));" \n
+       "	_null = [BIS_grpStalkers04,BIS_grpPlayer,15,0,{BIS_Player distance BIS_Terminal < 300},0] execVM ""Scripts\Stalk.sqf"";" \n
+       "	};" \n
+       "" \n
+       "// Mortar fire" \n
+       "	[] spawn {" \n
+       "" \n
+       "	WaitUntil {BIS_Player distance (getMarkerPos ""BIS_mrkSchematics"") > 250};" \n
+       "" \n
+       "	_bombardment = [BIS_Player,""Sh_82mm_AMOS"",200,30,[5,15],{BIS_Player distance BIS_Terminal < 350},50,nil,nil,[""shell1""]] execVM ""Scripts\FireSupportVirtual.sqf"";" \n
+       "" \n
+       "	// sleep 15;" \n
+       "	// ""46_Bombardment"" call BIS_fnc_missionConversations;" \n
+       "	};" \n
+       "" \n
+       "// CSAT near FOB" \n
+       "	{_x setPosATL [(getPos _x select 0), (getPos _x select 1), 0]; _x hideObject false; _x enableSimulation true; _x allowDamage true} forEach " \n
+       " (units BIS_grpLSV + [BIS_LSVGuard]);" \n
+       "" \n
+       "	BIS_CSAT_LSV hideObject false;" \n
+       "	BIS_CSAT_LSV enableSimulation true;" \n
+       "	BIS_CSAT_LSV setPosATL [(getPos BIS_CSAT_LSV select 0), (getPos BIS_CSAT_LSV select 1), 0];" \n
+       "" \n
+       "// Make the Schematics uploadable" \n
+       "	// BIS_Terminal setVariable [""BIS_usable"", true];" \n
+       "	// BIS_Terminal setVariable [""BIS_upload"", true];" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Upload_started">*/
+        class Upload_started
+        {
+          itemno = 46;
+          priority = 0.000000;
+          to="Start_upload__send";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// player distance BIS_Terminal < 5" \n
+           "// BIS_Terminal getVariable [""BIS_used"", false];" \n
+           "" \n
+           "BIS_TerminalStart" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "__th_Timeout">*/
+        class __th_Timeout
+        {
+          itemno = 21;
+          priority = 0.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time > _t5 + 1200) or" \n
+           "(BIS_LeavingAO)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Upload_finished">*/
+    class Upload_finished
+    {
+      name = "Upload_finished";
+      itemno = 15;
+      init = /*%FSM<STATEINIT""">*/"_t6 = time;" \n
+       "" \n
+       "// Handling Gunship's damage, weapons and revealing player" \n
+       "	execVM ""Scripts\IncomingMissiles.sqf"";" \n
+       "	execVM ""Scripts\Gunship.sqf"";" \n
+       "" \n
+       "// Set varialbe" \n
+       "	BIS_SchematicsUploaded = true;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Succeed task" \n
+       "	sleep 0.5;" \n
+       "	[""BIS_tskUpload"", ""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "" \n
+       "// Conversation" \n
+       "	""55_SchematicsUploaded"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Handle gunship" \n
+       "	BIS_Gunship enableSimulation true;" \n
+       "	BIS_Gunship setVelocity [0,0,0];" \n
+       "	BIS_Gunship forceSpeed 50; " \n
+       "	BIS_IncomingMissiles = 0;" \n
+       "	BIS_Gunship addEventHandler [""IncomingMissile"", {BIS_IncomingMissiles = BIS_IncomingMissiles +1}];" \n
+       "	BIS_sendGunship = true;" \n
+       "" \n
+       "// New task, unhide the marker" \n
+       "	""BIS_tskGunship"" call BIS_fnc_missionTasks;" \n
+       "" \n
+       "// Damage the sheds so they will be destroyed by the missile for sure" \n
+       "	BIS_Shed01 setDamage 0.975;" \n
+       "	BIS_Shed02 setDamage 0.975;" \n
+       "	BIS_Shed03 setDamage 0.975;" \n
+       "" \n
+       "};" \n
+       "" \n
+       "// Music for gunship part" \n
+       "	[] spawn {" \n
+       "" \n
+       "	waitUntil {BIS_sendGunship};" \n
+       "" \n
+       "	sleep 7.5;" \n
+       "	2.5 fadeMusic 0;" \n
+       "	sleep 3;" \n
+       "	// playMusic ""LeadTrack04_F_EPC"";" \n
+       "	playMusic ""LeadTrack03_F_EXP"";" \n
+       "	5 fadeMusic 0.35;" \n
+       "" \n
+       "	waitUntil {player knowsAbout BIS_Gunship > 1};" \n
+       "" \n
+       "	15 fadeMusic 0;" \n
+       "" \n
+       "	sleep 16;" \n
+       "	playMusic """";" \n
+       "	2.5 fadeMusic 0.5;" \n
+       "" \n
+       "	};" \n
+       "" \n
+       "// Guship fires missile at upload position" \n
+       "	[] spawn {" \n
+       "" \n
+       "	BIS_Gunship setCombatMode ""BLUE"";" \n
+       "" \n
+       "	waitUntil {BIS_Gunship distance BIS_Terminal < 1750};" \n
+       "" \n
+       "	BIS_Laser = ""LaserTargetE"" createVehicle [12676.1,6574.89,50];" \n
+       "" \n
+       "	sleep 1;" \n
+       "" \n
+       "	// Make gunship fire at the laser with missile" \n
+       "	BIS_Gunship fireAtTarget [BIS_Laser,""missiles_SCALPEL""];" \n
+       "" \n
+       "	sleep 1.5;" \n
+       "" \n
+       "	// Change the position of the laser target, random of 2 predefined positions" \n
+       "	BIS_random = (random 100);" \n
+       "	If (BIS_random > 50) Then {BIS_Laser setPosATL [12636.8,6647.72,0]} Else {BIS_Laser setPosATL [12650.5,6612.1,0.360455]};" \n
+       "" \n
+       "	sleep 5;" \n
+       "	deleteVehicle BIS_Laser;" \n
+       "	BIS_Gunship removeMagazine ""8Rnd_LG_scalpel""; " \n
+       "	BIS_Gunship setCombatMode ""RED"";" \n
+       "	};" \n
+       "" \n
+       "// Enable saveGame" \n
+       "	enableSaving [true,false];" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Gunship_down">*/
+        class Gunship_down
+        {
+          itemno = 25;
+          priority = 4.000000;
+          to="WIN_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(({alive _x} count (units BIS_grpGunship) == 0) and" \n
+           "((getPosATL BIS_Gunship select 2 < 75) or" \n
+           "(getPosASL BIS_Gunship select 2 < 75))) or" \n
+           "(damage BIS_Gunship == 1)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Third_missile_fi">*/
+        class Third_missile_fi
+        {
+          itemno = 23;
+          priority = 3.000000;
+          to="Set_timer";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(BIS_IncomingMissiles == 3)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "__th_timeout">*/
+        class __th_timeout
+        {
+          itemno = 31;
+          priority = 2.000000;
+          to="Gunship_RTB";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t6 + 300" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Leaving_AO">*/
+        class Leaving_AO
+        {
+          itemno = 40;
+          priority = 1.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"BIS_LeavingAO" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "WIN_01">*/
+    class WIN_01
+    {
+      name = "WIN_01";
+      itemno = 17;
+      init = /*%FSM<STATEINIT""">*/"// Cancel task + conversation" \n
+       "	[] spawn {" \n
+       "" \n
+       "	[""BIS_tskGunship"",""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "	""60_GunshipDown"" spawn BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Kill remainig enemy AI" \n
+       "" \n
+       "	{_x setDamage 1} forEach " \n
+       "		(units BIS_grpFinalWave01 +" \n
+       "		units BIS_grpFinalWave02 + " \n
+       "		units BIS_grpFinalWave03);" \n
+       "" \n
+       "	sleep 10;" \n
+       "" \n
+       "	""Win01"" call BIS_fnc_endMission;" \n
+       "	};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Confirm_1">*/
+    class Confirm_1
+    {
+      name = "Confirm_1";
+      itemno = 18;
+      init = /*%FSM<STATEINIT""">*/"_t3 = time;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Succeed task and play conversation" \n
+       "	sleep 0.5;" \n
+       "	[""BIS_tskIntel01"", ""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "	""BIS_mrkIntel01"" setMarkerAlpha 1;" \n
+       "	""20_Intel01Taken"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Kill Charlie leader so player can take command in the future" \n
+       "	BIS_C1 setDamage 1;" \n
+       "" \n
+       "// New task" \n
+       "	sleep 1;" \n
+       "	""BIS_tskIntel02"" call BIS_fnc_missionTasks;" \n
+       "	BIS_Intel02Created = true;" \n
+       "" \n
+       "// Savegame" \n
+       "	sleep 7;" \n
+       "	saveGame;" \n
+       "" \n
+       "// Unhide intel 02 units, unlock and open door in the warehouse" \n
+       "	{_x setPosATL [(getPos _x select 0), (getPos _x select 1), 0]; _x hideObject false; _x enableSimulation true; _x allowDamage true} forEach " \n
+       "		[" \n
+       "		BIS_Intel02_01," \n
+       "		BIS_Intel02_02," \n
+       "		BIS_Intel02_03," \n
+       "		BIS_Intel02_04" \n
+       "		];" \n
+       "" \n
+       "	{_x setPosATL [(getPos _x select 0), (getPos _x select 1), 0]; _x hideObject false; _x enableSimulation true; _x allowDamage true} forEach " \n
+       "		(units BIS_grpIntelTeam02);" \n
+       "" \n
+       "	BIS_Intel02Objective hideObject false;" \n
+       "" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_1"",0];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_2"",0];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_3"",0];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_4"",0];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_5"",0];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_6"",0];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_7"",0];" \n
+       "	BIS_Warehouse setVariable [""bis_disabled_Door_8"",0];" \n
+       "" \n
+       "	sleep 2.5;" \n
+       "	BIS_Warehouse animate [""Door_1_rot"",1];" \n
+       "	BIS_Warehouse animate [""Door_5_rot"",1];" \n
+       "	BIS_Warehouse animate [""Door_6_rot"",1];" \n
+       "" \n
+       "};" \n
+       "" \n
+       "// Enable intel 02 to be taken" \n
+       "	// BIS_Intel02Objective setVariable [""BIS_usable"", true];" \n
+       "	BIS_Intel02Objective enableSimulation false;" \n
+       "" \n
+       "// Set Bravo to defensive positions properly" \n
+       "	If (alive BIS_B1) Then {" \n
+       "	BIS_B1 setPos (getMarkerPos ""BIS_posA"");" \n
+       "	BIS_B1 setDir 45;" \n
+       "	BIS_B1 setFormDir 45;" \n
+       "	};" \n
+       "" \n
+       "	If (alive BIS_B2) Then {" \n
+       "	BIS_B2 setPos (getMarkerPos ""BIS_posB"");" \n
+       "	BIS_B2 setDir 75;" \n
+       "	BIS_B2 setFormDir 75;" \n
+       "	};" \n
+       "" \n
+       "	If (alive BIS_B3) Then {" \n
+       "	BIS_B3 setPos (getMarkerPos ""BIS_posC"");" \n
+       "	BIS_B3 setDir 300;" \n
+       "	BIS_B3 setFormDir 300;" \n
+       "	};" \n
+       "" \n
+       "	If (alive BIS_B4) Then {" \n
+       "	BIS_B4 setPos (getMarkerPos ""BIS_posD"");" \n
+       "	BIS_B4 setDir 350;" \n
+       "	BIS_B4 setFormDir 350;" \n
+       "	};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "__rd_Timeout">*/
+        class __rd_Timeout
+        {
+          itemno = 3;
+          priority = 4.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time > _t3 + 1200) or" \n
+           "(BIS_LeavingAO)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "__nd_Intel_taken">*/
+        class __nd_Intel_taken
+        {
+          itemno = 4;
+          priority = 3.000000;
+          to="Confirm";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// BIS_Intel02Taken" \n
+           "// BIS_Intel02Objective getVariable [""BIS_used"", false];" \n
+           "" \n
+           "BIS_Intel02Taken" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "WIN_03">*/
+    class WIN_03
+    {
+      name = "WIN_03";
+      itemno = 19;
+      init = /*%FSM<STATEINIT""">*/"// Cancel task + conversation" \n
+       "	[] spawn {" \n
+       "" \n
+       "	[""BIS_tskGunship"",""Canceled""] call BIS_fnc_missionTasks;" \n
+       "	""62_GunshipRTB"" spawn BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Kill remainig enemy AI" \n
+       "" \n
+       "	{_x setDamage 1} forEach " \n
+       "		(units BIS_grpFinalWave01 +" \n
+       "		units BIS_grpFinalWave02 + " \n
+       "		units BIS_grpFinalWave03);" \n
+       "" \n
+       "	sleep 12;" \n
+       "" \n
+       "	""Win03"" call BIS_fnc_endMission;" \n
+       "	};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "FAIL_01">*/
+    class FAIL_01
+    {
+      name = "FAIL_01";
+      itemno = 20;
+      init = /*%FSM<STATEINIT""">*/"// Fail disobeying orders" \n
+       "	[""Fail01"",false] call BIS_fnc_endMission;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Set_timer">*/
+    class Set_timer
+    {
+      name = "Set_timer";
+      itemno = 24;
+      init = /*%FSM<STATEINIT""">*/"// Set timer" \n
+       "	_tMissile = time;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Gunship_down">*/
+        class Gunship_down
+        {
+          itemno = 25;
+          priority = 4.000000;
+          to="WIN_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(({alive _x} count (units BIS_grpGunship) == 0) and" \n
+           "((getPosATL BIS_Gunship select 2 < 75) or" \n
+           "(getPosASL BIS_Gunship select 2 < 75))) or" \n
+           "(damage BIS_Gunship == 1)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Missed">*/
+        class Missed
+        {
+          itemno = 26;
+          priority = 0.000000;
+          to="Scared__fly_away";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time > _tMissile + 10) and" \n
+           "(canMove BIS_Gunship)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Scared__fly_away">*/
+    class Scared__fly_away
+    {
+      name = "Scared__fly_away";
+      itemno = 27;
+      init = /*%FSM<STATEINIT""">*/"// Send gunship away" \n
+       "	BIS_grpGunship copyWaypoints BIS_grpGunshipFlee;" \n
+       "	BIS_Gunship forceSpeed 150;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Gunship_down">*/
+        class Gunship_down
+        {
+          itemno = 25;
+          priority = 4.000000;
+          to="WIN_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(({alive _x} count (units BIS_grpGunship) == 0) and" \n
+           "((getPosATL BIS_Gunship select 2 < 75) or" \n
+           "(getPosASL BIS_Gunship select 2 < 75))) or" \n
+           "(damage BIS_Gunship == 1)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Away">*/
+        class Away
+        {
+          itemno = 28;
+          priority = 0.000000;
+          to="WIN_02";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(BIS_Gunship distance (getMarkerPos ""BIS_mrkTerminal"") > 1750) and" \n
+           "(canMove BIS_Gunship)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Gunship_RTB">*/
+    class Gunship_RTB
+    {
+      name = "Gunship_RTB";
+      itemno = 30;
+      init = /*%FSM<STATEINIT""">*/"// Send gunship back" \n
+       "	BIS_grpGunship copyWaypoints BIS_grpGunshipFlee;" \n
+       "	BIS_Gunship forceSpeed 150;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Gunship_down">*/
+        class Gunship_down
+        {
+          itemno = 25;
+          priority = 4.000000;
+          to="WIN_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(({alive _x} count (units BIS_grpGunship) == 0) and" \n
+           "((getPosATL BIS_Gunship select 2 < 75) or" \n
+           "(getPosASL BIS_Gunship select 2 < 75))) or" \n
+           "(damage BIS_Gunship == 1)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Away">*/
+        class Away
+        {
+          itemno = 45;
+          priority = 0.000000;
+          to="WIN_03";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(BIS_Gunship distance (getMarkerPos ""BIS_mrkTerminal"") > 1750) and" \n
+           "(canMove BIS_Gunship)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Send_reinforceme">*/
+    class Send_reinforceme
+    {
+      name = "Send_reinforceme";
+      itemno = 41;
+      init = /*%FSM<STATEINIT""">*/"BIS_FOB = true;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Captured flight" \n
+       "	[BIS_heli, HeliFLight] spawn BIS_fnc_unitPlay;" \n
+       "	sleep 1;" \n
+       "	BIS_Heli setSlingload BIS_Ammobox;" \n
+       "" \n
+       "// Succeed task" \n
+       "	sleep 5;" \n
+       "	[""BIS_tskFOB"", ""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "	""BIS_mrkCTRG"" setMarkerAlpha 1;" \n
+       "" \n
+       "// Conversations" \n
+       "	""05_FOBTaken"" call BIS_fnc_missionConversations;" \n
+       "	""BIS_tskReinforcements"" call BIS_fnc_missionTasks;" \n
+       "" \n
+       "// Split Bravo and send them to defensive positions" \n
+       "	{_x setUnitPos ""Middle""} forEach (units BIS_grpBravo); " \n
+       "	{[_x] join grpNull} forEach (units BIS_grpBravo);" \n
+       "	BIS_B1 doMove (getMarkerPos ""BIS_posA"");" \n
+       "	BIS_B2 doMove (getMarkerPos ""BIS_posB"");" \n
+       "	BIS_B3 doMove (getMarkerPos ""BIS_posC"");" \n
+       "	BIS_B4 doMove (getMarkerPos ""BIS_posD"");" \n
+       "};" \n
+       "" \n
+       "// Drop ammo, open doors and open gear and inform player" \n
+       "	[] spawn {" \n
+       "	WaitUntil {getPosATL bis_heli select 2 < 20};" \n
+       "	""10_MindYourHeads"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "	WaitUntil {getPosATL bis_heli select 2 < 10};" \n
+       "	BIS_heli setslingload objNull;" \n
+       "" \n
+       "	WaitUntil {getPosATL BIS_Heli select 2 < 7};" \n
+       "" \n
+       "	BIS_Heli animateDoor [""Door_L"",1,false];" \n
+       "	BIS_Heli animateDoor [""Door_R"",1,false];" \n
+       "" \n
+       "	WaitUntil {getPosATL bis_heli select 2 < 5};" \n
+       "	BIS_heli action [""LandGear"", bis_heli];" \n
+       "" \n
+       "	WaitUntil {isTouchingGround BIS_Heli};" \n
+       "	{unassignVehicle _x} forEach (units BIS_grpAlpha + units BIS_grpCharlie);" \n
+       "	{_x leaveVehicle BIS_Heli} forEach [BIS_grpAlpha, BIS_grpCharlie];" \n
+       "" \n
+       "	// place marker on the ammobox - used in Gunship task" \n
+       "	""BIS_mrkAmmo"" setMarkerPos (getPos BIS_ammoBox);" \n
+       "};" \n
+       "" \n
+       "// Enable damage on Syndikat Jeep" \n
+       "	BIS_Jeep allowDamage true;" \n
+       "" \n
+       "// Disable saveGame" \n
+       "	enableSaving [false,false];" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Left_FOB">*/
+        class Left_FOB
+        {
+          itemno = 43;
+          priority = 0.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(player distance (getMarkerPos ""BIS_mrkFOB"")) > 250" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Arrived">*/
+        class Arrived
+        {
+          itemno = 42;
+          priority = 0.000000;
+          to="Intel_tasks";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"({vehicle _x == _x} count (units BIS_grpAlpha)) == ({alive _x} count (units BIS_grpAlpha)) and" \n
+           "({vehicle _x == _x} count (units BIS_grpCharlie)) == ({alive _x} count (units BIS_grpCharlie))" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Start_upload__send">*/
+    class Start_upload__send
+    {
+      name = "Start_upload__send";
+      itemno = 47;
+      init = /*%FSM<STATEINIT""">*/"_tUpload = time;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Unhide enemies" \n
+       "	{_x setPosATL [(getPos _x select 0), (getPos _x select 1), 0]; _x hideObject false; _x enableSimulation true; _x allowDamage true} forEach " \n
+       "		(units BIS_grpFinalWave01 +" \n
+       "		units BIS_grpFinalWave02 + " \n
+       "		units BIS_grpFinalWave03);" \n
+       "" \n
+       "	sleep 0.25;" \n
+       "// Disable saveGame + make one" \n
+       "	enableSaving [false,true];" \n
+       "" \n
+       "// Conversation, start upload process" \n
+       "	sleep 0.25;" \n
+       "	_null = [] execVM ""Scripts\Upload.sqf"";" \n
+       "	""50_UploadStarted"" spawn BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Set variable" \n
+       "	BIS_UploadStarted = true;" \n
+       "" \n
+       "/*" \n
+       "// Music" \n
+       "	sleep 2.5;" \n
+       "	1 fadeMusic 0;" \n
+       "" \n
+       "	sleep 1;" \n
+       "" \n
+       "	playMusic """";" \n
+       "" \n
+       "	sleep 1;" \n
+       "	playMusic ""LeadTrack03_F_EPA"";" \n
+       "" \n
+       "	5 fadeMusic 0.5;" \n
+       "" \n
+       "	sleep 45;" \n
+       "	10 fadeMusic 0;" \n
+       "*/" \n
+       "" \n
+       "};" \n
+       "" \n
+       "// Enable autocombat for player's AI" \n
+       "	{_x enableAI ""autocombat""} forEach (units group player);" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Left_FOB">*/
+        class Left_FOB
+        {
+          itemno = 48;
+          priority = 0.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(player distance (getMarkerPos ""BIS_mrkFOB"")) > 125" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Schematics_uploa">*/
+        class Schematics_uploa
+        {
+          itemno = 14;
+          priority = 0.000000;
+          to="Upload_finished";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"// time > _tUpload + 120" \n
+           "BIS_SchematicsUploaded" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Reveal_Schematic">*/
+    class Reveal_Schematic
+    {
+      name = "Reveal_Schematic";
+      itemno = 51;
+      init = /*%FSM<STATEINIT""">*/"_t4 = time;" \n
+       "" \n
+       "[] spawn {" \n
+       "" \n
+       "// Reveal conversation" \n
+       "	sleep 1;" \n
+       "	""30_SchematicsRevealed"" call BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Set variable" \n
+       "	BIS_SchematicsRevealed = true;" \n
+       "" \n
+       "// New task" \n
+       "	sleep 1;" \n
+       "	""BIS_tskSchematics"" call BIS_fnc_missionTasks;" \n
+       "" \n
+       "// Set Phase" \n
+       "	BIS_Phase = 2;" \n
+       "	_null = 2 execVM ""Scripts\SetPhase.sqf"";" \n
+       "" \n
+       "// Handle Charlie team" \n
+       "	_null = [] execFSM ""Scripts\Charlie.fsm"";" \n
+       "" \n
+       "// Music" \n
+       "	sleep 2.5;" \n
+       "	0 fadeMusic 0;" \n
+       "	5 fadeMusic 0.5;" \n
+       "	// playMusic ""LeadTrack03_F"";" \n
+       "	playMusic [""LeadTrack01_F_EXP"",107];" \n
+       "" \n
+       "};" \n
+       "" \n
+       "// Waituntil player is near the camp, then let the officer 'execute' the scientist" \n
+       "" \n
+       "	[] spawn {" \n
+       "" \n
+       "	WaitUntil {({_x distance BIS_Scientist < 125} count (units BIS_grpPlayer) > 0) or ({_x distance BIS_Scientist < 100} count (units BIS_grpCharlie) > 0)};" \n
+       "" \n
+       "	BIS_Schematics_03 forceWeaponFire [(handgunWeapon BIS_Schematics_03), ""Single""];" \n
+       "	sleep 0.75;" \n
+       "	BIS_Schematics_03 forceWeaponFire [(handgunWeapon BIS_Schematics_03), ""Single""];" \n
+       "	sleep 1.35;" \n
+       "	BIS_Schematics_03 forceWeaponFire [(handgunWeapon BIS_Schematics_03), ""Single""];" \n
+       "	};" \n
+       "" \n
+       "// Unhide units, unlock doors of the schematics building" \n
+       "	{_x setPosATL [(getPos _x select 0), (getPos _x select 1), 0]; _x hideObject false; _x enableSimulation true; _x allowDamage true} forEach " \n
+       "		[" \n
+       "			BIS_Schematics_01," \n
+       "			BIS_Schematics_02," \n
+       "			BIS_Schematics_03," \n
+       "			BIS_Schematics_04," \n
+       "			BIS_Scientist" \n
+       "		];" \n
+       "" \n
+       "	BIS_Schematics hideObject false;" \n
+       "" \n
+       "	[] spawn {" \n
+       "" \n
+       "	BIS_House setVariable [""bis_disabled_Door_2"",0];" \n
+       "" \n
+       "	sleep 2.5;" \n
+       "	BIS_House animate [""Door_2_rot"",1];" \n
+       "" \n
+       "};" \n
+       "" \n
+       "// Make Schematics acquireable - add action when player is nearby" \n
+       "	_SchematicsAction = player addAction [localize ""STR_A3_endgame_misc_pickup"", {BIS_SchematicsTaken = true; removeAllActions player}, nil, 10, true, true, """", ""(player distance BIS_Schematics < 3) and ((cursorObject == BIS_Schematics) or (cursorObject == BIS_Table))""];" \n
+       "" \n
+       "// Handle scientist's death - already at the start of this seqence" \n
+       "[] spawn {" \n
+       "" \n
+       "	sleep 5;" \n
+       "" \n
+       "	BIS_Scientist setDamage 1; " \n
+       "	sleep 3; " \n
+       "	BIS_Scientist switchMove ""Acts_ExecutionVictim_KillTerminal""; " \n
+       "	sleep 0.5; " \n
+       "	BIS_Scientist setPos (getPos BIS_VictimPos);" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "__th_Timeout">*/
+        class __th_Timeout
+        {
+          itemno = 13;
+          priority = 0.000000;
+          to="FAIL_01";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time > _t4 + 1200) or" \n
+           "(BIS_LeavingAO)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Taken">*/
+        class Taken
+        {
+          itemno = 11;
+          priority = 0.000000;
+          to="Upload";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"BIS_SchematicsTaken" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "WIN_02">*/
+    class WIN_02
+    {
+      name = "WIN_02";
+      itemno = 54;
+      init = /*%FSM<STATEINIT""">*/"// Cancel task + conversation" \n
+       "	[] spawn {" \n
+       "" \n
+       "	[""BIS_tskGunship"",""Canceled""] call BIS_fnc_missionTasks;" \n
+       "	""61_GunshipFled"" spawn BIS_fnc_missionConversations;" \n
+       "" \n
+       "// Kill remainig enemy AI" \n
+       "" \n
+       "	{_x setDamage 1} forEach " \n
+       "		(units BIS_grpFinalWave01 +" \n
+       "		units BIS_grpFinalWave02 + " \n
+       "		units BIS_grpFinalWave03);" \n
+       "" \n
+       "	sleep 10;" \n
+       "" \n
+       "	""Win02"" call BIS_fnc_endMission;" \n
+       "	};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "WIN_01",
+    "WIN_03",
+    "FAIL_01",
+    "WIN_02",
+  };
+};
+/*%FSM</COMPILE>*/

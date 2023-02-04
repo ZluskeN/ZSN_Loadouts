@@ -1,0 +1,45 @@
+dev = "Vasek";
+author = $STR_A3_Bohemia_Interactive;
+onLoadName = $STR_A3_Showcase_EndGame_Mission_Name;
+briefingName = $STR_A3_Showcase_EndGame_Mission_Name;
+onLoadMission = $STR_A3_Showcase_EndGame_Showcase_Summary_text;
+overviewText = $STR_A3_Showcase_EndGame_Showcase_Summary_text;
+overviewPicture = "a3\Missions_F_Exp\data\img\Showcase_EndGame_overview_CA.paa";
+doneKeys[] = {"BIS_Showcase_EndGame.Tanoa_done"};
+
+class CfgDebriefing
+{
+	class Win01
+	{
+                description = $STR_A3_showcase_endgame_end01;
+                subtitle = "";
+		backgroundPicture = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class Win02 : Win01
+	{
+                description = $STR_A3_showcase_endgame_end02;
+                subtitle = "";
+	};
+	class Win03 : Win01
+	{
+                description = $STR_A3_showcase_endgame_end03;
+                subtitle = "";
+	};
+	class Fail01 : Win01
+	{
+                description = "";
+                subtitle = $STR_A3_showcase_endgame_end04;
+	};
+};
+
+class CfgCommunicationMenu
+{
+	class Charlie
+	{
+		text = $STR_A3_showcase_endgame_notificationraider;
+		expression = "BIS_CharlieCalled = true";
+		icon = "\A3\Ui_f\data\GUI\Cfg\CommunicationMenu\attack_ca.paa";
+	};
+};

@@ -1,0 +1,68 @@
+class Sentences
+{
+	class exp_m02_84_2_newintel_comment_TRK_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_2_newintel_comment_TRK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_2_NewIntel_Comment\exp_m02_84_2_newintel_comment_TRK_0.ogg"};
+		actor = "BIS_support3";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_2_newintel_comment_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_2_newintel_comment_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_2_NewIntel_Comment\exp_m02_84_2_newintel_comment_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_2_newintel_comment_GRM_1
+	{
+		textPlain = "$STR_A3_exp_m02_84_2_newintel_comment_GRM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_2_NewIntel_Comment\exp_m02_84_2_newintel_comment_GRM_1.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_2_newintel_comment_SAL_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_2_newintel_comment_SAL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_2_NewIntel_Comment\exp_m02_84_2_newintel_comment_SAL_0.ogg"};
+		actor = "BIS_support2";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_2_newintel_comment_GRM_2
+	{
+		textPlain = "$STR_A3_exp_m02_84_2_newintel_comment_GRM_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_2_NewIntel_Comment\exp_m02_84_2_newintel_comment_GRM_2.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_2_newintel_comment_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_2_newintel_comment_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_2_NewIntel_Comment\exp_m02_84_2_newintel_comment_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

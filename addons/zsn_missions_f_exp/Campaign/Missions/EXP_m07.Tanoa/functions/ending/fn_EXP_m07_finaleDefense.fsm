@@ -1,0 +1,583 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, Finale Defense">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Finale_Defense",0,250,-75.000000,600.000000,25.000000,650.000000,0.000000,"Finale Defense"};
+item1[] = {"Time_passed",4,218,-75.000000,675.000000,25.000000,725.000000,0.000000,"Time passed"};
+item2[] = {"Roof_attack",2,250,-75.000000,750.000000,25.000000,800.000000,0.000000,"Roof attack"};
+item3[] = {"All_dead",4,218,-75.000000,825.000000,25.000000,875.000000,0.000000,"All dead"};
+item4[] = {"Friendly_reinfor",2,250,-75.000000,900.000000,25.000000,950.000000,0.000000,"Friendly" \n "reinforcements"};
+item5[] = {"Arrived",4,218,-75.000000,975.000000,25.000000,1025.000000,0.000000,"Arrived"};
+item6[] = {"First_code_enter",2,250,-75.000000,1050.000000,25.000000,1100.000000,0.000000,"First code" \n "entered"};
+item7[] = {"Device_disarmed",4,218,-75.000000,1275.000000,25.000000,1325.000000,0.000000,"Device" \n "disarmed"};
+item8[] = {"Ensure_players_are",2,250,-75.000000,1350.000000,25.000000,1400.000000,0.000000,"Ensure players" \n "are in AO"};
+item9[] = {"In_AO",4,218,-75.000000,1425.000000,25.000000,1475.000000,0.000000,"In AO"};
+item10[] = {"Second_wave",2,250,-75.000000,1500.000000,25.000000,1550.000000,0.000000,"Second wave"};
+item11[] = {"QRF_approach",4,218,-75.000000,1575.000000,25.000000,1625.000000,0.000000,"QRF" \n "approach"};
+item12[] = {"Incoming",2,250,-75.000000,1650.000000,25.000000,1700.000000,0.000000,"Incoming"};
+item13[] = {"QRF_engaged",4,218,-75.000000,1725.000000,25.000000,1775.000000,0.000000,"QRF engaged"};
+item14[] = {"Send_LSVs",2,250,-75.000000,1800.000000,25.000000,1850.000000,0.000000,"Send LSVs"};
+item15[] = {"Enter_second",4,218,-75.000000,1125.000000,25.000000,1175.000000,0.000000,"Enter second"};
+item16[] = {"Entering_second",2,250,-75.000000,1200.000000,25.000000,1250.000000,0.000000,"Entering" \n "second code"};
+item17[] = {"LSV_approach",4,218,-200.000000,1800.000000,-100.000000,1850.000000,0.000000,"LSV approach"};
+item18[] = {"Suppress",2,250,-200.000000,1875.000000,-100.000000,1925.000000,0.000000,"Suppress"};
+item19[] = {"Almost_all_dead",4,218,-75.000000,1875.000000,25.000000,1925.000000,0.000000,"Almost all" \n "dead"};
+item20[] = {"Secure",1,250,-75.000000,1950.000000,25.000000,2000.000000,0.000000,"Secure"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {5,6};
+link6[] = {6,15};
+link7[] = {7,8};
+link8[] = {8,9};
+link9[] = {9,10};
+link10[] = {10,11};
+link11[] = {11,12};
+link12[] = {12,13};
+link13[] = {13,14};
+link14[] = {14,17};
+link15[] = {14,19};
+link16[] = {15,16};
+link17[] = {16,7};
+link18[] = {17,18};
+link19[] = {18,19};
+link20[] = {19,20};
+globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-445.658875,437.788910,1289.097534,520.497986,1200,1044,1};
+window[] = {2,-1,-1,-1,-1,1165,286,1680,286,3,1218};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Finale Defense";
+        class States
+        {
+                /*%FSM<STATE "Finale_Defense">*/
+                class Finale_Defense
+                {
+                        name = "Finale_Defense";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"// Kill remaining Syndikat" \n
+                         "{if (alive _x && { (_x call BIS_fnc_objectSide) == RESISTANCE && { vehicle _x distance BIS_intel_device > 50 } }) then {_x setDamage 1}} forEach allUnits;" \n
+                         "" \n
+                         "// Create task to protect Miller" \n
+                         "[" \n
+                         "	WEST," \n
+                         "	[""BIS_task_protectMiller"", ""BIS_task_device""]," \n
+                         "	[localize ""STR_A3_exp_m07_taskmillertext"", localize ""STR_A3_exp_m07_taskmillertitle"", """"]," \n
+                         "	[BIS_intel_device, true]," \n
+                         "	true," \n
+                         "	0," \n
+                         "	true," \n
+                         "	""defend""" \n
+                         "]" \n
+                         "call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "// Send Miller" \n
+                         "[] spawn BIS_fnc_EXP_m07_sendMiller;" \n
+                         "" \n
+                         "// Maximum of 5 ground Viper units" \n
+                         "private _pool = +BIS_viper1;" \n
+                         "private _units = [];" \n
+                         "" \n
+                         "for ""_i"" from 1 to 5 do {" \n
+                         "	private _unit = _pool call BIS_fnc_selectRandom;" \n
+                         "	_pool = _pool - [_unit];" \n
+                         "	_units = _units + [_unit];" \n
+                         "};" \n
+                         "" \n
+                         "if (count allPlayers < 4) then {" \n
+                         "	// One less if there aren't 4 players" \n
+                         "	_units = _units - [(_units call BIS_fnc_selectRandom)];" \n
+                         "};" \n
+                         "" \n
+                         "// Delete units that weren't chosen, update variable" \n
+                         "{if (!(_x in _units)) then {deleteVehicle _x}} forEach BIS_viper1;" \n
+                         "BIS_viper1 = _units;" \n
+                         "" \n
+                         "// Send to attack" \n
+                         "{" \n
+                         "	_x setPosASL (_x getVariable ""BIS_alt"");" \n
+                         "	_x hideObjectGlobal false;" \n
+                         "	_x enableSimulationGlobal true;" \n
+                         "	_x allowDamage true;" \n
+                         "	_x setCaptive false;" \n
+                         "} forEach BIS_viper1;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         """75_DisarmDevice"" spawn BIS_fnc_missionConversations;" \n
+                         "" \n
+                         "private _time = time + (90 + random 60);" \n
+                         "private _limit = round ((count BIS_viper1) / 2);"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Time_passed">*/
+                                class Time_passed
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Roof_attack";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time >= _time" \n
+                                         "||" \n
+                                         "{alive _x} count BIS_viper1 <= _limit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Roof_attack">*/
+                class Roof_attack
+                {
+                        name = "Roof_attack";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"private _count = count allPlayers;" \n
+                         "private _attackers = BIS_viper1;" \n
+                         "" \n
+                         "if (_count < 3) then {" \n
+                         "	// Delete roof units" \n
+                         "	{deleteVehicle _x} forEach BIS_viper2;" \n
+                         "	BIS_viper2 = [];" \n
+                         "} else {" \n
+                         "	// Only spawn roof units if there are 3 or more players" \n
+                         "	private _pool = +BIS_viper2;" \n
+                         "	private _units = [];" \n
+                         "	" \n
+                         "	// Select first roof unit" \n
+                         "	private _unit = _pool call BIS_fnc_selectRandom;" \n
+                         "	_units = _units + [_unit];" \n
+                         "	_pool = _pool - [_unit];" \n
+                         "	" \n
+                         "	if (_count == 4) then {" \n
+                         "		// Spawn both roof units if there are 4 players" \n
+                         "		if (_unit in [BIS_viper2_1, BIS_viper2_3]) then {" \n
+                         "			// Remove necessary unit from pool to create spacing" \n
+                         "			_pool = _pool - [BIS_viper2_2];" \n
+                         "			deleteVehicle BIS_viper2_2;" \n
+                         "		} else {" \n
+                         "			if (_unit == BIS_viper2_2) then {" \n
+                         "				// Ensure the spacing is preserved" \n
+                         "				_pool = _pool - [BIS_viper2_1, BIS_viper2_3];" \n
+                         "				{deleteVehicle _x} forEach [BIS_viper2_1, BIS_viper2_2];" \n
+                         "			};" \n
+                         "		};" \n
+                         "		" \n
+                         "		// Select second roof unit" \n
+                         "		_units = _units + [(_pool call BIS_fnc_selectRandom)];" \n
+                         "	};" \n
+                         "	" \n
+                         "	// Delete remaining units, reassign variable" \n
+                         "	{if (!(_x in _units)) then {deleteVehicle _x}} forEach _pool;" \n
+                         "	BIS_viper2 = _units;" \n
+                         "	" \n
+                         "	_units spawn {" \n
+                         "		scriptName format [""BIS_fnc_EXP_m07_finaleDefense: roof attack - %1"", _this];" \n
+                         "		" \n
+                         "		// Send units" \n
+                         "		{" \n
+                         "			_x spawn BIS_fnc_EXP_m07_viperRoof;" \n
+                         "			sleep (3 + random 5);" \n
+                         "		} forEach _this;" \n
+                         "	};" \n
+                         "	" \n
+                         "	// Add to array" \n
+                         "	_attackers = _attackers + BIS_viper2;" \n
+                         "};" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""BIS_Fnc_EXP_m07_finaleDefense: Support Team arrives"";" \n
+                         "	" \n
+                         "	sleep (2 + random 2);" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""85_SupportTeamArrives"" spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "All_dead">*/
+                                class All_dead
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Friendly_reinfor";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count _attackers == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Friendly_reinfor">*/
+                class Friendly_reinfor
+                {
+                        name = "Friendly_reinfor";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Send VTOLs" \n
+                         "[] spawn BIS_fnc_EXP_m07_sendVTOLs;" \n
+                         "" \n
+                         "// Send reinforcements" \n
+                         "[] call BIS_fnc_EXP_m07_sendReinf;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleDefense: everyone inbound"";" \n
+                         "	" \n
+                         "	sleep (2 + random 2);" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""90_WatchYourFire"" spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Arrived">*/
+                                class Arrived
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="First_code_enter";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{triggerActivated _x} count [BIS_reinfTrig1, BIS_reinfTrig2] > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "First_code_enter">*/
+                class First_code_enter
+                {
+                        name = "First_code_enter";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"// Detect when animation is finished" \n
+                         "private _animEH = BIS_miller addEventHandler [" \n
+                         "	""AnimDone""," \n
+                         "	{" \n
+                         "		params [""_unit"", ""_anim""];" \n
+                         "		" \n
+                         "		if (_anim == ""acts_millerDisarming_deskOut"") then {" \n
+                         "			// Remove event handler" \n
+                         "			_unit removeEventHandler [""AnimDone"", _unit getVariable ""BIS_animEH""];" \n
+                         "			_unit setVariable [""BIS_animEH"", nil];" \n
+                         "			" \n
+                         "			// Enable AI" \n
+                         "			{_unit enableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""];" \n
+                         "			_unit disableAI ""PATH"";" \n
+                         "			" \n
+                         "			// Move out of animation" \n
+                         "			_unit switchMove """";" \n
+                         "			" \n
+                         "			// Defend Device" \n
+                         "			_unit setBehaviour ""COMBAT"";" \n
+                         "			_unit setUnitPos ""MIDDLE"";" \n
+                         "			_unit doWatch [13766.2,12278.6,0];" \n
+                         "		};" \n
+                         "	}" \n
+                         "];" \n
+                         "" \n
+                         "// Store event handler" \n
+                         "BIS_miller setVariable [""BIS_animEH"", _animEH];" \n
+                         "" \n
+                         "// Exit loop" \n
+                         "BIS_miller playMove ""acts_millerDisarming_deskOut"";" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleDefense: first code entered"";" \n
+                         "	" \n
+                         "	sleep 3;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""95_DeviceDisarmed"" call BIS_fnc_missionConversations;" \n
+                         "	" \n
+                         "	// Let Device be disarmed" \n
+                         "	BIS_disarmDevice = true;" \n
+                         "	publicVariable ""BIS_disarmDevice"";" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Enter_second">*/
+                                class Enter_second
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Entering_second";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_disarmDevice"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Ensure_players_are">*/
+                class Ensure_players_are
+                {
+                        name = "Ensure_players_are";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"// Update task" \n
+                         "[""BIS_disarm"", ""SUCCEEDED""] call BIS_fnc_missionTasks;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         """96_BothKeysEntered_A"" spawn BIS_fnc_missionConversations;" \n
+                         "" \n
+                         "// Execute checklist" \n
+                         "[" \n
+                         "	{true}," \n
+                         "	{" \n
+                         "		private _list = list BIS_defendAO;" \n
+                         "		if (isNil ""_list"") then {_list = []};" \n
+                         "		" \n
+                         "		// Make sure player is near the Device" \n
+                         "		vehicle _player in _list" \n
+                         "	}," \n
+                         "	// Start second wave when all are ready" \n
+                         "	{BIS_secondWave = true}" \n
+                         "] call BIS_fnc_EXP_camp_playerChecklist;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "In_AO">*/
+                                class In_AO
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Second_wave";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_secondWave"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Second_wave">*/
+                class Second_wave
+                {
+                        name = "Second_wave";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"// Add task" \n
+                         """BIS_viper"" call BIS_fnc_missionTasks;" \n
+                         "" \n
+                         "// Send QRF" \n
+                         "{" \n
+                         "	_x setPosASL (_x getVariable ""BIS_alt"");" \n
+                         "	_x hideObjectGlobal false;" \n
+                         "	_x enableSimulationGlobal true;" \n
+                         "	_x allowDamage true;" \n
+                         "	_x setCaptive false;" \n
+                         "} forEach BIS_viper3;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleDefense: second wave"";" \n
+                         "	" \n
+                         "	// Ensure they're unloaded (prevent VTOL from freaking out)" \n
+                         "	waitUntil {BIS_fakeUnloaded};" \n
+                         "	" \n
+                         "	// Delete fake Viper" \n
+                         "	{if (alive _x) then {deleteVehicle _x}} forEach BIS_viperFake;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "QRF_approach">*/
+                                class QRF_approach
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="Incoming";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{" \n
+                                         "	_x distance BIS_intel_device <= 160" \n
+                                         "	||" \n
+                                         "	!(alive _x)" \n
+                                         "} count BIS_viper3 > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Incoming">*/
+                class Incoming
+                {
+                        name = "Incoming";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"// Play music" \n
+                         "[[""LeadTrack01_F"", 0.2], ""BIS_fnc_EXP_m07_playMusic""] call BIS_fnc_MP;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         """96_BothKeysEntered_B"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "QRF_engaged">*/
+                                class QRF_engaged
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="Send_LSVs";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{!(alive _x)} count BIS_viper3 >= 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Send_LSVs">*/
+                class Send_LSVs
+                {
+                        name = "Send_LSVs";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"// Send the LSVs" \n
+                         "[] spawn BIS_fnc_EXP_m07_sendLSVs;" \n
+                         "" \n
+                         "private _units = BIS_viper3 + BIS_viper4;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Almost_all_dead">*/
+                                class Almost_all_dead
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Secure";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive (gunner BIS_LSV1))" \n
+                                         "&&" \n
+                                         "{ {alive _x} count _units <= 4 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "LSV_approach">*/
+                                class LSV_approach
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="Suppress";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_LSV1 distance BIS_intel_device <= 135"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Entering_second">*/
+                class Entering_second
+                {
+                        name = "Entering_second";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"// Set state" \n
+                         "[""BIS_task_protectMiller"", ""Succeeded"", true] call BIS_fnc_taskSetState;" \n
+                         "" \n
+                         "// Add task" \n
+                         """BIS_disarm"" call BIS_fnc_missionTasks;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Device_disarmed">*/
+                                class Device_disarmed
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Ensure_players_are";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_deviceDisarmed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Suppress">*/
+                class Suppress
+                {
+                        name = "Suppress";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"// Make the LSV suppress the target" \n
+                         "[] spawn BIS_fnc_EXP_m07_suppress;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Almost_all_dead">*/
+                                class Almost_all_dead
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Secure";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive (gunner BIS_LSV1))" \n
+                                         "&&" \n
+                                         "{ {alive _x} count _units <= 4 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Secure">*/
+                class Secure
+                {
+                        name = "Secure";
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/"// Register that the attack was defeated" \n
+                         "BIS_deviceSecured = true;" \n
+                         "" \n
+                         "// Grab fleeing position" \n
+                         "private _fleePos = markerPos ""BIS_viperFlee"";" \n
+                         "" \n
+                         "// Make all surviving Viper retreat" \n
+                         "{" \n
+                         "	private _unit = _x;" \n
+                         "	" \n
+                         "	if (alive _unit) then {" \n
+                         "		// Separate into its own group" \n
+                         "		private _group = createGroup EAST;" \n
+                         "		[_unit] joinSilent _group;" \n
+                         "		_unit allowFleeing 0;" \n
+                         "		" \n
+                         "		private _vehicle = vehicle _unit;" \n
+                         "		if (_vehicle != _unit) then {" \n
+                         "			// Leave vehicle" \n
+                         "			_group leaveVehicle _vehicle;" \n
+                         "			unassignVehicle _unit;" \n
+                         "			doGetOut _unit;" \n
+                         "			[_unit] orderGetIn false;" \n
+                         "		};" \n
+                         "		" \n
+                         "		// Stop forced doMove" \n
+                         "		if (!(unitReady _unit)) then {_unit doMove (getPosATL _unit)};" \n
+                         "		" \n
+                         "		// Ensure unit can move but doesn't engage" \n
+                         "		{_unit enableAI _x} forEach [""MOVE"", ""PATH""];" \n
+                         "		{_unit disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "		_unit setCombatMode ""BLUE"";" \n
+                         "		_unit setBehaviour ""AWARE"";" \n
+                         "		_unit setUnitPos ""UP"";" \n
+                         "		" \n
+                         "		// Flee" \n
+                         "		private _wp = _group addWaypoint [_fleePos, 0];" \n
+                         "		_wp setWaypointStatements [""true"", ""if (isServer) then {deleteVehicle this}""];" \n
+                         "		_wp setWaypointSpeed ""FULL"";" \n
+                         "		_wp setWaypointType ""MOVE"";" \n
+                         "		_group setCurrentWaypoint _wp;" \n
+                         "	};" \n
+                         "} forEach _units;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Finale_Defense";
+        finalStates[] =
+        {
+                "Secure",
+        };
+};
+/*%FSM</COMPILE>*/

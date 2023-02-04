@@ -1,0 +1,68 @@
+class Sentences
+{
+	class showcase_endgame_55_schematicsuploaded_RIK_0
+	{
+		textPlain = "$STR_A3_showcase_endgame_55_schematicsuploaded_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\showcase_endgame\55_SchematicsUploaded\showcase_endgame_55_schematicsuploaded_RIK_0.ogg"};
+		actor = "BIS_Player";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_endgame_55_schematicsuploaded_COM_0
+	{
+		textPlain = "$STR_A3_showcase_endgame_55_schematicsuploaded_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\showcase_endgame\55_SchematicsUploaded\showcase_endgame_55_schematicsuploaded_COM_0.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_endgame_55_schematicsuploaded_COM_1
+	{
+		textPlain = "$STR_A3_showcase_endgame_55_schematicsuploaded_COM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\showcase_endgame\55_SchematicsUploaded\showcase_endgame_55_schematicsuploaded_COM_1.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_endgame_55_schematicsuploaded_COM_2
+	{
+		textPlain = "$STR_A3_showcase_endgame_55_schematicsuploaded_COM_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\showcase_endgame\55_SchematicsUploaded\showcase_endgame_55_schematicsuploaded_COM_2.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_endgame_55_schematicsuploaded_COM_3
+	{
+		textPlain = "$STR_A3_showcase_endgame_55_schematicsuploaded_COM_3";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\showcase_endgame\55_SchematicsUploaded\showcase_endgame_55_schematicsuploaded_COM_3.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_endgame_55_schematicsuploaded_COM_4
+	{
+		textPlain = "$STR_A3_showcase_endgame_55_schematicsuploaded_COM_4";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\showcase_endgame\55_SchematicsUploaded\showcase_endgame_55_schematicsuploaded_COM_4.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

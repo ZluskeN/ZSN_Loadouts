@@ -1,0 +1,18 @@
+class Sentences
+{
+	class exp_m04_x05_spotted_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m04_x05_spotted_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04\x05_Spotted\exp_m04_x05_spotted_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

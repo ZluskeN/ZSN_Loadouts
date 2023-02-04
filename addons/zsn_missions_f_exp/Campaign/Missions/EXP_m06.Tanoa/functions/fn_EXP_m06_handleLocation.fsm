@@ -1,0 +1,181 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, Handle Location">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Handle_Location",0,250,-75.000000,-125.000000,25.000000,-75.000000,0.000000,"Handle Location"};
+item1[] = {"Attacked",4,218,-75.000000,-50.000000,25.000000,0.000000,0.000000,"Attacked"};
+item2[] = {"Alerted",2,250,-75.000000,25.000000,25.000000,75.000000,0.000000,"Alerted"};
+item3[] = {"Most_dead",4,218,-200.000000,25.000000,-100.000000,75.000000,0.000000,"Most dead"};
+item4[] = {"Handle_straggler",2,250,-200.000000,100.000000,-100.000000,150.000000,0.000000,"Handle" \n "stragglers"};
+item5[] = {"Captured",4,218,-75.000000,100.000000,25.000000,150.000000,0.000000,"Captured"};
+item6[] = {"Success",1,250,-75.000000,175.000000,25.000000,225.000000,0.000000,"Success"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,5};
+link4[] = {3,4};
+link5[] = {4,5};
+link6[] = {5,6};
+globals[] = {0.000000,0,0,0,0,640,480,1,8,6316128,1,-300.000000,300.000000,379.425110,-262.329834,661,707,1};
+window[] = {0,-1,-1,-1,-1,1165,286,1680,286,1,679};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Handle Location";
+        class States
+        {
+                /*%FSM<STATE "Handle_Location">*/
+                class Handle_Location
+                {
+                        name = "Handle_Location";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [" \n
+                         "	""_units""," \n
+                         "	""_varAlert""," \n
+                         "	""_varClear""," \n
+                         "	""_trigPlayers""," \n
+                         "	""_trigCapture""," \n
+                         "	""_task""," \n
+                         "	""_respawnMarker""," \n
+                         "	""_respawnName""" \n
+                         "];" \n
+                         "" \n
+                         "private _limit = 2;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Attacked">*/
+                                class Attacked
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Alerted";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{" \n
+                                         "	!(alive _x)" \n
+                                         "	||" \n
+                                         "	behaviour _x == ""COMBAT""" \n
+                                         "} count _units > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Alerted">*/
+                class Alerted
+                {
+                        name = "Alerted";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"// Ensure global alert is issued" \n
+                         "BIS_enemyAttacked = true;" \n
+                         "" \n
+                         "// Trigger alert variable" \n
+                         "missionNamespace setVariable [_varAlert, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Captured">*/
+                                class Captured
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Success";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{!(triggerActivated _x)} count [_trigPlayers, _trigCapture] == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Most_dead">*/
+                                class Most_dead
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Handle_straggler";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count _units <= _limit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Handle_straggler">*/
+                class Handle_straggler
+                {
+                        name = "Handle_straggler";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_units spawn {" \n
+                         "	scriptName format [""BIS_fnc_EXP_m06_handleLocation: handle straggers - %1"", _this];" \n
+                         "	" \n
+                         "	sleep 60;" \n
+                         "	" \n
+                         "	// Kill stragglers" \n
+                         "	{if (alive _x) then {_x setDamage 1}} forEach _this;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Captured">*/
+                                class Captured
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Success";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{!(triggerActivated _x)} count [_trigPlayers, _trigCapture] == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Success">*/
+                class Success
+                {
+                        name = "Success";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"[_respawnMarker, _respawnName, _task, _varClear] spawn {" \n
+                         "	scriptName format [""BIS_fnc_EXP_m06_handleLocation: success - %1"", _this];" \n
+                         "	" \n
+                         "	params [" \n
+                         "		""_respawnMarker""," \n
+                         "		""_respawnName""," \n
+                         "		""_task""," \n
+                         "		""_varClear""" \n
+                         "	];" \n
+                         "	" \n
+                         "	sleep 5;" \n
+                         "	" \n
+                         "	// Add respawn position" \n
+                         "	private _respawn = [" \n
+                         "		WEST," \n
+                         "		markerPos _respawnMarker," \n
+                         "		_respawnName" \n
+                         "	] call BIS_fnc_addRespawnPosition;" \n
+                         "	" \n
+                         "	BIS_respawns = BIS_respawns + [_respawn];" \n
+                         "	" \n
+                         "	// Set capture variable" \n
+                         "	missionNamespace setVariable [_varClear, true];" \n
+                         "	" \n
+                         "	// Succeed task" \n
+                         "	waitUntil {count BIS_tasks == 10 && { _task call BIS_fnc_taskExists }};	" \n
+                         "	[""BIS_CTI"", [_task, ""SUCCEEDED""]] call BIS_fnc_missionTasks;" \n
+                         "	" \n
+                         "	// Add Ticket" \n
+                         "	1 call BIS_fnc_EXP_camp_addTickets;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Handle_Location";
+        finalStates[] =
+        {
+                "Success",
+        };
+};
+/*%FSM</COMPILE>*/

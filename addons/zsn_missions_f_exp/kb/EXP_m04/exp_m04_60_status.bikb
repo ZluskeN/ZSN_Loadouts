@@ -1,0 +1,48 @@
+class Sentences
+{
+	class exp_m04_60_status_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m04_60_status_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04\60_Status\exp_m04_60_status_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_60_status_TRK_0
+	{
+		textPlain = "$STR_A3_exp_m04_60_status_TRK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04\60_Status\exp_m04_60_status_TRK_0.ogg"};
+		actor = "BIS_support3";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_60_status_SAL_0
+	{
+		textPlain = "$STR_A3_exp_m04_60_status_SAL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04\60_Status\exp_m04_60_status_SAL_0.ogg"};
+		actor = "BIS_support2";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_60_status_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m04_60_status_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04\60_Status\exp_m04_60_status_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

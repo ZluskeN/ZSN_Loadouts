@@ -1,0 +1,98 @@
+class Sentences
+{
+	class exp_m07_b25_warlockplan_MIL_0
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_MIL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_MIL_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_LIA_0
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_LIA_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_LIA_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_MIL_1
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_MIL_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_MIL_1.ogg"};
+		actor = "BIS_miller";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_MIL_2
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_MIL_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_MIL_2.ogg"};
+		actor = "BIS_miller";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_LIA_1
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_LIA_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_LIA_1.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_MIL_3
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_MIL_3";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_MIL_3.ogg"};
+		actor = "BIS_miller";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_LIA_2
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_LIA_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_LIA_2.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_COM_0
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_COM_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_b25_warlockplan_MIL_4
+	{
+		textPlain = "$STR_A3_exp_m07_b25_warlockplan_MIL_4";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\b25_WarlockPlan\exp_m07_b25_warlockplan_MIL_4.ogg"};
+		actor = "BIS_miller";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

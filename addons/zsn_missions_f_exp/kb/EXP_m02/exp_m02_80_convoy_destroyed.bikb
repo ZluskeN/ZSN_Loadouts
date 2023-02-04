@@ -1,0 +1,108 @@
+class Sentences
+{
+	class exp_m02_80_convoy_destroyed_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_RIK_1
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_RIK_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_RIK_1.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_COM_0
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_COM_0.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_RIK_2
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_RIK_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_RIK_2.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_RIK_3
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_RIK_3";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_RIK_3.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_TRK_0
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_TRK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_TRK_0.ogg"};
+		actor = "BIS_support3";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_SAL_0
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_SAL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_SAL_0.ogg"};
+		actor = "BIS_support2";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_RIK_4
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_RIK_4";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_RIK_4.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_80_convoy_destroyed_COM_1
+	{
+		textPlain = "$STR_A3_exp_m02_80_convoy_destroyed_COM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\80_Convoy_Destroyed\exp_m02_80_convoy_destroyed_COM_1.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

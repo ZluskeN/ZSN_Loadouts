@@ -1,0 +1,1060 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, Start Manager">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start_Manager",0,250,0.000000,450.000000,100.000000,500.000000,0.000000,"Start Manager"};
+item1[] = {"Rendezvoused",4,218,0.000000,525.000000,100.000000,575.000000,0.000000,"Rendezvoused"};
+item2[] = {"Eliminate_patrol",2,250,0.000000,600.000000,100.000000,650.000000,0.000000,"Eliminate patrol"};
+item3[] = {"Skipped_Miller",4,218,-125.000000,525.000000,-25.000000,575.000000,0.000000,"Skipped" \n "Miller"};
+item4[] = {"Skip_to_patrol",2,250,-125.000000,600.000000,-25.000000,650.000000,0.000000,"Skip to patrol"};
+item5[] = {"",7,210,-79.000000,471.000000,-70.999992,479.000000,0.000000,""};
+item6[] = {"Spot_drone",2,250,0.000000,975.000000,100.000000,1025.000000,0.000000,"Spot drone"};
+item7[] = {"Attacked_patrol",4,218,-250.000000,525.000000,-150.000000,575.000000,0.000000,"Attacked" \n "patrol"};
+item8[] = {"Patrol_dead",4,218,0.000000,900.000000,100.000000,950.000000,0.000000,"Patrol dead"};
+item9[] = {"Moving_out",8,218,0.000000,675.000000,100.000000,725.000000,0.000000,"Moving out"};
+item10[] = {"Investigate",2,250,0.000000,1125.000000,100.000000,1175.000000,0.000000,"Investigate"};
+item11[] = {"Drone_spotted",4,218,0.000000,1050.000000,100.000000,1100.000000,0.000000,"Drone spotted"};
+item12[] = {"Moving_to_patrol",2,250,0.000000,750.000000,100.000000,800.000000,0.000000,"Moving to" \n "patrol"};
+item13[] = {"",7,210,46.000000,1196.000000,54.000000,1204.000000,0.000000,""};
+item14[] = {"Skipped_patrol",4,218,200.000000,850.000000,300.000000,900.000000,0.000000,"Skipped" \n "patrol"};
+item15[] = {"Skipped_drone",4,218,75.000000,1200.000000,175.000000,1250.000000,0.000000,"Skipped" \n "drone"};
+item16[] = {"Skipping_patrol",4,218,-125.000000,900.000000,-25.000000,950.000000,0.000000,"Skipping" \n "patrol"};
+item17[] = {"",7,210,46.000000,821.000000,54.000000,829.000000,0.000000,""};
+item18[] = {"Start_countdown",2,250,-125.000000,975.000000,-25.000000,1025.000000,0.000000,"Start countdown"};
+item19[] = {"Returned",4,218,-250.000000,900.000000,-150.000000,950.000000,0.000000,"Returned"};
+item20[] = {"",7,210,46.000000,871.000000,54.000000,879.000000,0.000000,""};
+item21[] = {"",7,210,-79.000000,871.000000,-71.000000,878.999939,0.000000,""};
+item22[] = {"Skip_to_CTI",1,250,200.000000,1200.000000,300.000000,1250.000000,0.000000,"Skip to CTI"};
+item23[] = {"",7,210,-203.999969,871.000000,-196.000031,879.000000,0.000000,""};
+item24[] = {"Reset",2,250,-250.000000,975.000000,-150.000000,1025.000000,0.000000,"Reset"};
+item25[] = {"",7,210,-79.000008,1046.000000,-70.999992,1054.000000,0.000000,""};
+item26[] = {"",7,210,-204.000000,1046.000000,-196.000000,1054.000000,0.000000,""};
+item27[] = {"",7,210,-278.999969,1046.000000,-271.000000,1054.000000,0.000000,""};
+item28[] = {"",7,210,-279.000000,821.000061,-271.000000,829.000000,0.000000,""};
+item29[] = {"",7,210,46.000000,1221.000000,54.000000,1229.000000,0.000000,""};
+item30[] = {"Connected",4,218,0.000000,1250.000000,100.000000,1300.000000,0.000000,"Connected"};
+item31[] = {"Terminate",1,250,0.000000,1325.000000,100.000000,1375.000000,0.000000,"Terminate"};
+item32[] = {"",7,210,-203.999985,1221.000000,-196.000015,1229.000000,0.000000,""};
+item33[] = {"Skipping_drone",4,218,-250.000000,1250.000000,-150.000000,1300.000000,0.000000,"Skipping" \n "drone"};
+item34[] = {"Start_countdown_1",2,250,-250.000000,1325.000000,-150.000000,1375.000000,0.000000,"Start countdown"};
+item35[] = {"",7,210,-329.000000,1221.000000,-321.000000,1229.000000,0.000000,""};
+item36[] = {"Returned",4,218,-375.000000,1250.000000,-275.000000,1300.000000,0.000000,"Returned"};
+item37[] = {"Reset_1",2,250,-375.000000,1325.000000,-275.000000,1375.000000,0.000000,"Reset"};
+item38[] = {"",7,210,-79.000008,1221.000000,-70.999992,1229.000000,0.000000,""};
+item39[] = {"Close",4,218,-125.000000,1250.000000,-25.000000,1300.000000,0.000000,"Close"};
+item40[] = {"Connect",2,250,-125.000000,1325.000000,-25.000000,1375.000000,0.000000,"Connect"};
+item41[] = {"",7,210,-79.000008,1396.000000,-70.999992,1404.000000,0.000000,""};
+item42[] = {"",7,210,-204.000000,1396.000000,-196.000000,1404.000000,0.000000,""};
+item43[] = {"",7,210,-329.000000,1396.000000,-321.000000,1404.000000,0.000000,""};
+item44[] = {"",7,210,-404.000000,1396.000000,-396.000000,1404.000000,0.000000,""};
+item45[] = {"",7,210,-404.000000,1196.000000,-396.000000,1204.000000,0.000000,""};
+item46[] = {"",7,210,321.000000,821.000000,329.000000,829.000000,0.000000,""};
+item47[] = {"",7,210,321.000000,1271.000000,329.000000,1279.000000,0.000000,""};
+link0[] = {0,1};
+link1[] = {0,5};
+link2[] = {1,2};
+link3[] = {2,9};
+link4[] = {3,4};
+link5[] = {4,9};
+link6[] = {5,3};
+link7[] = {5,7};
+link8[] = {6,11};
+link9[] = {7,4};
+link10[] = {8,6};
+link11[] = {9,12};
+link12[] = {10,13};
+link13[] = {11,10};
+link14[] = {12,17};
+link15[] = {13,29};
+link16[] = {14,22};
+link17[] = {15,22};
+link18[] = {16,18};
+link19[] = {17,20};
+link20[] = {17,46};
+link21[] = {18,25};
+link22[] = {19,24};
+link23[] = {20,8};
+link24[] = {20,14};
+link25[] = {20,21};
+link26[] = {21,16};
+link27[] = {21,23};
+link28[] = {23,19};
+link29[] = {24,26};
+link30[] = {25,26};
+link31[] = {26,27};
+link32[] = {27,28};
+link33[] = {28,17};
+link34[] = {29,15};
+link35[] = {29,30};
+link36[] = {29,38};
+link37[] = {30,31};
+link38[] = {32,33};
+link39[] = {32,35};
+link40[] = {33,34};
+link41[] = {34,42};
+link42[] = {35,36};
+link43[] = {36,37};
+link44[] = {37,43};
+link45[] = {38,32};
+link46[] = {38,39};
+link47[] = {39,40};
+link48[] = {40,41};
+link49[] = {41,42};
+link50[] = {42,43};
+link51[] = {43,44};
+link52[] = {44,45};
+link53[] = {45,13};
+link54[] = {46,47};
+link55[] = {47,30};
+globals[] = {0.000000,0,0,0,0,640,480,1,87,6316128,1,-448.078613,404.116974,1385.884277,396.237762,899,1044,1};
+window[] = {2,-1,-1,-1,-1,931,52,1446,52,3,917};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Start Manager";
+        class States
+        {
+                /*%FSM<STATE "Start_Manager">*/
+                class Start_Manager
+                {
+                        name = "Start_Manager";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Skipped_Miller">*/
+                                class Skipped_Miller
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Skip_to_patrol";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{triggerActivated _x} count BIS_patrolAO > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Attacked_patrol">*/
+                                class Attacked_patrol
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Skip_to_patrol";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_patrolAttacked"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Rendezvoused">*/
+                                class Rendezvoused
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Eliminate_patrol";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{(vehicle _x) distance BIS_miller <= 5} count allPlayers > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Eliminate_patrol">*/
+                class Eliminate_patrol
+                {
+                        name = "Eliminate_patrol";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"// Update tasks" \n
+                         "[""BIS_miller"", ""SUCCEEDED""] call BIS_fnc_missionTasks;" \n
+                         """BIS_patrol"" call BIS_fnc_missionTasks;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         "private _conversationScript = [""03_Patrol""] spawn BIS_fnc_missionConversations;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Moving_out">*/
+                                class Moving_out
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Moving_to_patrol";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Skip_to_patrol">*/
+                class Skip_to_patrol
+                {
+                        name = "Skip_to_patrol";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Update tasks" \n
+                         "[""BIS_miller"", ""CANCELED""] call BIS_fnc_missionTasks;" \n
+                         """BIS_patrol"" call BIS_fnc_missionTasks;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         "private _conversationScript = [""x01_Skipped_Miller""] spawn BIS_fnc_missionConversations;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Moving_out">*/
+                                class Moving_out
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Moving_to_patrol";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Spot_drone">*/
+                class Spot_drone
+                {
+                        name = "Spot_drone";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"[] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m06_startManager: spot drone"";" \n
+                         "	" \n
+                         "	sleep 3;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	private _conversationScript = [""10_Patrol_Dead""] spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Drone_spotted">*/
+                                class Drone_spotted
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="Investigate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_investigate"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Investigate">*/
+                class Investigate
+                {
+                        name = "Investigate";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"// Update tasks" \n
+                         "[""BIS_patrol"", ""SUCCEEDED""] call BIS_fnc_missionTasks;" \n
+                         """BIS_drone"" call BIS_fnc_missionTasks;" \n
+                         "" \n
+                         "_skipping = false;" \n
+                         "_warned = false;" \n
+                         "private _close = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Connected">*/
+                                class Connected
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_dronesRevealed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Close">*/
+                                class Close
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Connect";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_close)" \n
+                                         "&&" \n
+                                         "{ {(vehicle _x) distance BIS_keyUGV <= 5} count (call BIS_fnc_listPlayers) > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipping_drone">*/
+                                class Skipping_drone
+                                {
+                                        itemno = 33;
+                                        priority = 0.000000;
+                                        to="Start_countdown_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_skipping)" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _players = call BIS_fnc_listPlayers;" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if all players are skipping" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] > 0" \n
+                                         "	} count _players == count _players" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Returned">*/
+                                class Returned
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="Reset_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_skipping" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if at least 1 player has returned" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] == 0" \n
+                                         "	} count (call BIS_fnc_listPlayers) > 0" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipped_drone">*/
+                                class Skipped_drone
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Skip_to_CTI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_enemyAttacked" \n
+                                         "||" \n
+                                         "(" \n
+                                         "	_skipping" \n
+                                         "	&&" \n
+                                         "	{ time >= _timeOut }" \n
+                                         ")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Moving_to_patrol">*/
+                class Moving_to_patrol
+                {
+                        name = "Moving_to_patrol";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"private _skipping = false;" \n
+                         "private _warned = false;" \n
+                         "private _patrolDead = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Skipped_patrol">*/
+                                class Skipped_patrol
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="Skip_to_CTI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_enemyAttacked" \n
+                                         "||" \n
+                                         "(" \n
+                                         "	_skipping" \n
+                                         "	&&" \n
+                                         "	{ time >= _timeOut }" \n
+                                         ")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipping_patrol">*/
+                                class Skipping_patrol
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="Start_countdown";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_skipping)" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _players = call BIS_fnc_listPlayers;" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if all players are skipping" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] > 0" \n
+                                         "	} count _players == count _players" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Returned">*/
+                                class Returned
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Reset";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_skipping" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if at least 1 player has returned" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] == 0" \n
+                                         "	} count (call BIS_fnc_listPlayers) > 0" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Connected">*/
+                                class Connected
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_dronesRevealed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Patrol_dead">*/
+                                class Patrol_dead
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="Spot_drone";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count BIS_droneGuards == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Start_countdown">*/
+                class Start_countdown
+                {
+                        name = "Start_countdown";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"private _timeOut = time + 10;" \n
+                         "_skipping = true;" \n
+                         "" \n
+                         "if (!(_warned)) then {" \n
+                         "	_warned = true;" \n
+                         "	private _conversationScript = [""x05_Skipping_Patrol""] spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Skipped_patrol">*/
+                                class Skipped_patrol
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="Skip_to_CTI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_enemyAttacked" \n
+                                         "||" \n
+                                         "(" \n
+                                         "	_skipping" \n
+                                         "	&&" \n
+                                         "	{ time >= _timeOut }" \n
+                                         ")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipping_patrol">*/
+                                class Skipping_patrol
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="Start_countdown";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_skipping)" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _players = call BIS_fnc_listPlayers;" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if all players are skipping" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] > 0" \n
+                                         "	} count _players == count _players" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Returned">*/
+                                class Returned
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Reset";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_skipping" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if at least 1 player has returned" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] == 0" \n
+                                         "	} count (call BIS_fnc_listPlayers) > 0" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Connected">*/
+                                class Connected
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_dronesRevealed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Patrol_dead">*/
+                                class Patrol_dead
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="Spot_drone";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count BIS_droneGuards == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Skip_to_CTI">*/
+                class Skip_to_CTI
+                {
+                        name = "Skip_to_CTI";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"// Register that players skipped the drone" \n
+                         "BIS_droneSkipped = true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Reset">*/
+                class Reset
+                {
+                        name = "Reset";
+                        itemno = 24;
+                        init = /*%FSM<STATEINIT""">*/"_skipping = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Skipped_patrol">*/
+                                class Skipped_patrol
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="Skip_to_CTI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_enemyAttacked" \n
+                                         "||" \n
+                                         "(" \n
+                                         "	_skipping" \n
+                                         "	&&" \n
+                                         "	{ time >= _timeOut }" \n
+                                         ")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipping_patrol">*/
+                                class Skipping_patrol
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="Start_countdown";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_skipping)" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _players = call BIS_fnc_listPlayers;" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if all players are skipping" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] > 0" \n
+                                         "	} count _players == count _players" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Returned">*/
+                                class Returned
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Reset";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_skipping" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if at least 1 player has returned" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] == 0" \n
+                                         "	} count (call BIS_fnc_listPlayers) > 0" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Connected">*/
+                                class Connected
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_dronesRevealed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Patrol_dead">*/
+                                class Patrol_dead
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="Spot_drone";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count BIS_droneGuards == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Terminate">*/
+                class Terminate
+                {
+                        name = "Terminate";
+                        itemno = 31;
+                        init = /*%FSM<STATEINIT""">*/"// Cancel patrol task if it isn't already complete" \n
+                         "if ({alive _x} count BIS_droneGuards > 0) then {[""BIS_patrol"", ""CANCELED""] call BIS_fnc_missionTasks};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Start_countdown_1">*/
+                class Start_countdown_1
+                {
+                        name = "Start_countdown_1";
+                        itemno = 34;
+                        init = /*%FSM<STATEINIT""">*/"private _timeOut = time + 10;" \n
+                         "_skipping = true;" \n
+                         "" \n
+                         "if (!(_warned)) then {" \n
+                         "	_warned = true;" \n
+                         "	private _conversationScript = [""x10_Skipping_Drone""] spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Connected">*/
+                                class Connected
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_dronesRevealed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Close">*/
+                                class Close
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Connect";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_close)" \n
+                                         "&&" \n
+                                         "{ {(vehicle _x) distance BIS_keyUGV <= 5} count (call BIS_fnc_listPlayers) > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipping_drone">*/
+                                class Skipping_drone
+                                {
+                                        itemno = 33;
+                                        priority = 0.000000;
+                                        to="Start_countdown_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_skipping)" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _players = call BIS_fnc_listPlayers;" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if all players are skipping" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] > 0" \n
+                                         "	} count _players == count _players" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Returned">*/
+                                class Returned
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="Reset_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_skipping" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if at least 1 player has returned" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] == 0" \n
+                                         "	} count (call BIS_fnc_listPlayers) > 0" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipped_drone">*/
+                                class Skipped_drone
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Skip_to_CTI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_enemyAttacked" \n
+                                         "||" \n
+                                         "(" \n
+                                         "	_skipping" \n
+                                         "	&&" \n
+                                         "	{ time >= _timeOut }" \n
+                                         ")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Reset_1">*/
+                class Reset_1
+                {
+                        name = "Reset_1";
+                        itemno = 37;
+                        init = /*%FSM<STATEINIT""">*/"_skipping = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Connected">*/
+                                class Connected
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_dronesRevealed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Close">*/
+                                class Close
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Connect";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_close)" \n
+                                         "&&" \n
+                                         "{ {(vehicle _x) distance BIS_keyUGV <= 5} count (call BIS_fnc_listPlayers) > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipping_drone">*/
+                                class Skipping_drone
+                                {
+                                        itemno = 33;
+                                        priority = 0.000000;
+                                        to="Start_countdown_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_skipping)" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _players = call BIS_fnc_listPlayers;" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if all players are skipping" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] > 0" \n
+                                         "	} count _players == count _players" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Returned">*/
+                                class Returned
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="Reset_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_skipping" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if at least 1 player has returned" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] == 0" \n
+                                         "	} count (call BIS_fnc_listPlayers) > 0" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipped_drone">*/
+                                class Skipped_drone
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Skip_to_CTI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_enemyAttacked" \n
+                                         "||" \n
+                                         "(" \n
+                                         "	_skipping" \n
+                                         "	&&" \n
+                                         "	{ time >= _timeOut }" \n
+                                         ")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Connect">*/
+                class Connect
+                {
+                        name = "Connect";
+                        itemno = 40;
+                        init = /*%FSM<STATEINIT""">*/"_close = true;" \n
+                         "" \n
+                         "// Register that players were given the information" \n
+                         "BIS_droneInfo = true;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         "private _conversationScript = [""15_Drone_Connect""] spawn BIS_fnc_missionConversations;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Connected">*/
+                                class Connected
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_dronesRevealed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Close">*/
+                                class Close
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Connect";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_close)" \n
+                                         "&&" \n
+                                         "{ {(vehicle _x) distance BIS_keyUGV <= 5} count (call BIS_fnc_listPlayers) > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipping_drone">*/
+                                class Skipping_drone
+                                {
+                                        itemno = 33;
+                                        priority = 0.000000;
+                                        to="Start_countdown_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_skipping)" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _players = call BIS_fnc_listPlayers;" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if all players are skipping" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] > 0" \n
+                                         "	} count _players == count _players" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Returned">*/
+                                class Returned
+                                {
+                                        itemno = 36;
+                                        priority = 0.000000;
+                                        to="Reset_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_skipping" \n
+                                         "&&" \n
+                                         "{" \n
+                                         "	private _units = [];" \n
+                                         "	" \n
+                                         "	// Combine all trigger lists" \n
+                                         "	{" \n
+                                         "		private _list = list _x;" \n
+                                         "		if (!(isNil {_list})) then {_units = _units + _list};" \n
+                                         "	} forEach BIS_droneAO;" \n
+                                         "	" \n
+                                         "	// Check if at least 1 player has returned" \n
+                                         "	{" \n
+                                         "		private _player = _x;" \n
+                                         "		{_x in _units} count [vehicle _player, _player] == 0" \n
+                                         "	} count (call BIS_fnc_listPlayers) > 0" \n
+                                         "}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Skipped_drone">*/
+                                class Skipped_drone
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Skip_to_CTI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_enemyAttacked" \n
+                                         "||" \n
+                                         "(" \n
+                                         "	_skipping" \n
+                                         "	&&" \n
+                                         "	{ time >= _timeOut }" \n
+                                         ")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Start_Manager";
+        finalStates[] =
+        {
+                "Skip_to_CTI",
+                "Terminate",
+        };
+};
+/*%FSM</COMPILE>*/

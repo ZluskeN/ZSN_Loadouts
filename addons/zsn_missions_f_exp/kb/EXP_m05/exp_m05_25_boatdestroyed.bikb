@@ -1,0 +1,68 @@
+class Sentences
+{
+	class exp_m05_25_boatdestroyed_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m05_25_boatdestroyed_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m05\25_BoatDestroyed\exp_m05_25_boatdestroyed_RIK_0.ogg"};
+		actor = "BIS_ai_1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m05_25_boatdestroyed_MIL_0
+	{
+		textPlain = "$STR_A3_exp_m05_25_boatdestroyed_MIL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m05\25_BoatDestroyed\exp_m05_25_boatdestroyed_MIL_0.ogg"};
+		actor = "BIS_miller";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m05_25_boatdestroyed_COM_0
+	{
+		textPlain = "$STR_A3_exp_m05_25_boatdestroyed_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m05\25_BoatDestroyed\exp_m05_25_boatdestroyed_COM_0.ogg"};
+		actor = "BIS_hq";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m05_25_boatdestroyed_RIK_1
+	{
+		textPlain = "$STR_A3_exp_m05_25_boatdestroyed_RIK_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m05\25_BoatDestroyed\exp_m05_25_boatdestroyed_RIK_1.ogg"};
+		actor = "BIS_ai_1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m05_25_boatdestroyed_COM_1
+	{
+		textPlain = "$STR_A3_exp_m05_25_boatdestroyed_COM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m05\25_BoatDestroyed\exp_m05_25_boatdestroyed_COM_1.ogg"};
+		actor = "BIS_hq";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m05_25_boatdestroyed_RIK_2
+	{
+		textPlain = "$STR_A3_exp_m05_25_boatdestroyed_RIK_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m05\25_BoatDestroyed\exp_m05_25_boatdestroyed_RIK_2.ogg"};
+		actor = "BIS_ai_1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

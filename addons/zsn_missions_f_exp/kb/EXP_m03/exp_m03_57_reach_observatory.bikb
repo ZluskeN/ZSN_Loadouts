@@ -1,0 +1,68 @@
+class Sentences
+{
+	class exp_m03_57_reach_observatory_TRK_0
+	{
+		textPlain = "$STR_A3_exp_m03_57_reach_observatory_TRK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\57_reach_observatory\exp_m03_57_reach_observatory_TRK_0.ogg"};
+		actor = "BIS_support3";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_57_reach_observatory_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m03_57_reach_observatory_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\57_reach_observatory\exp_m03_57_reach_observatory_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_57_reach_observatory_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m03_57_reach_observatory_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\57_reach_observatory\exp_m03_57_reach_observatory_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_57_reach_observatory_SAL_0
+	{
+		textPlain = "$STR_A3_exp_m03_57_reach_observatory_SAL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\57_reach_observatory\exp_m03_57_reach_observatory_SAL_0.ogg"};
+		actor = "BIS_support2";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_57_reach_observatory_RIK_1
+	{
+		textPlain = "$STR_A3_exp_m03_57_reach_observatory_RIK_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\57_reach_observatory\exp_m03_57_reach_observatory_RIK_1.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_57_reach_observatory_RIK_2
+	{
+		textPlain = "$STR_A3_exp_m03_57_reach_observatory_RIK_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\57_reach_observatory\exp_m03_57_reach_observatory_RIK_2.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

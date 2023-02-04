@@ -1,0 +1,18 @@
+class Sentences
+{
+	class exp_m07_x05_devicedisarmed_MIL_0
+	{
+		textPlain = "$STR_A3_exp_m07_x05_devicedisarmed_MIL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\x05_DeviceDisarmed\exp_m07_x05_devicedisarmed_MIL_0.ogg"};
+		actor = "BIS_miller";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

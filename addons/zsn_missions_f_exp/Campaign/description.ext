@@ -1,0 +1,37 @@
+class Campaign
+{
+	name = $STR_A3_CoopCampaignName;
+	firstBattle = Missions;
+
+	briefingName = $STR_A3_CoopCampaignName;
+	author = $STR_A3_Bohemia_Interactive;
+	overviewPicture = "a3\missions_f_exp\data\img\exp_overview_co.paa";
+	overviewText = $STR_A3_CoopCampaignOverview;
+
+	class MissionDefault
+	{
+		lives = -1;
+
+		lost = ;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+	};
+
+	class Missions
+	{
+		name = "The Beginning";
+		cutscene = ;
+		firstMission = ;
+		end1 = ;
+		end2 = ;
+		end3 = ;
+		end4 = ;
+		end5 = ;
+		end6 = ;
+		lost = ;
+	};
+};

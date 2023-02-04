@@ -1,0 +1,62 @@
+class Sentences
+{
+	class exp_m04_sp_31_findraider2_RIK_0
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_31_findraider2_RIK_0";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\31_FindRaider2\exp_m04_sp_31_findraider2_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_sp_31_findraider2_RIK_1
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_31_findraider2_RIK_1";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\31_FindRaider2\exp_m04_sp_31_findraider2_RIK_1.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_sp_31_findraider2_GRM_0
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_31_findraider2_GRM_0";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\31_FindRaider2\exp_m04_sp_31_findraider2_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_sp_31_findraider2_RIK_2
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_31_findraider2_RIK_2";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\31_FindRaider2\exp_m04_sp_31_findraider2_RIK_2.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_sp_31_findraider2_RIK_3
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_31_findraider2_RIK_3";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\31_FindRaider2\exp_m04_sp_31_findraider2_RIK_3.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m04_sp_31_findraider2_RIK_4
+	{
+		text	= "";	textPlain = "$STR_A3_exp_m04_sp_31_findraider2_RIK_4";
+		speech[] = {"\a3\dubbing_f_exp\exp_m04_sp\31_FindRaider2\exp_m04_sp_31_findraider2_RIK_4.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

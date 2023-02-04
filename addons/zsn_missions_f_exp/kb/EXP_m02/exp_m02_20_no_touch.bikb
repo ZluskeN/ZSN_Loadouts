@@ -1,0 +1,28 @@
+class Sentences
+{
+	class exp_m02_20_no_touch_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m02_20_no_touch_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\20_No_Touch\exp_m02_20_no_touch_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_20_no_touch_GRM_1
+	{
+		textPlain = "$STR_A3_exp_m02_20_no_touch_GRM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\20_No_Touch\exp_m02_20_no_touch_GRM_1.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

@@ -1,0 +1,71 @@
+#include "\a3\missions_f_exp\campaign\commondescription.ext"
+onRespawnMenu = "\a3\missions_f_exp\campaign\scripts\handlerespawnmenu.sqf";
+
+// per mission configuration of limited respawn tickets (default: 3)
+maxRespawnTickets = 3;
+
+class CfgBriefing
+{
+};
+
+dev = "Zipper";
+briefingName = "$STR_A3_exp_m01_missionname";
+onLoadName = "$STR_A3_exp_m01_missionname";
+onLoadMission = "$STR_A3_exp_m01_missionoverview";
+overviewText = "$STR_A3_exp_m01_missionoverview";
+overviewPicture = "a3\missions_f_exp\data\img\exp_m01_overview_co.paa";
+
+onPauseScript[] = {"BIS_fnc_EXP_m01_handlePause"};
+
+doneKeys[] = {"BIS_EXP_m01.Tanoa_done"};
+
+// Disable framework respawn
+enablePlayerAddRespawn = 0;
+
+class CfgFunctions
+{
+	class BIS
+	{
+		class EXP_m01
+		{
+			file = "functions";
+
+			class EXP_m01_addRespawn			{};
+			class EXP_m01_defend				{};
+			class EXP_m01_destroyElectronics	{};
+			class EXP_m01_endingClient			{};
+			class EXP_m01_endingServer			{};
+			class EXP_m01_finalSetup			{};
+			class EXP_m01_firstDefend			{};
+			class EXP_m01_forceFlashlights		{};
+			class EXP_m01_forceRespawn			{};
+			class EXP_m01_handleAccuracy		{};
+			class EXP_m01_handlePause			{};
+			class EXP_m01_handleQRF				{ext = ".fsm";};
+			class EXP_m01_handleSentries		{ext = ".fsm";};
+			class EXP_m01_handleSpotting		{};
+			class EXP_m01_handleTower			{ext = ".fsm";};
+			class EXP_m01_PoliceMan				{ext = ".fsm";};
+			class EXP_m01_hideUnits				{};
+			class EXP_m01_intro 				{};
+			class EXP_m01_playMusic				{};
+			class EXP_m01_playSound				{};
+			class EXP_m01_radioMusic			{};
+			class EXP_m01_rescueCop				{};
+			class EXP_m01_secondSetup			{};
+			class EXP_m01_sendConvoy			{};
+			class EXP_m01_spotUnits				{};
+			class EXP_m01_supportAttack			{};
+			class EXP_m01_supportMove			{};
+		};
+	};
+};
+
+class CfgDebriefing
+{
+	class END1
+	{
+		description = "$STR_A3_exp_m01_debriefing";
+		showScore = 0;
+	};
+};

@@ -1,0 +1,592 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, Finale Events">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Finale_Events",0,250,-75.000000,175.000000,25.000000,225.000000,0.000000,"Finale" \n "Events"};
+item1[] = {"A",4,218,-200.000000,175.000000,-100.000000,225.000000,0.000000,"A"};
+item2[] = {"B",4,218,-75.000000,250.000000,25.000000,300.000000,0.000000,"B"};
+item3[] = {"C",4,218,50.000000,175.000000,150.000000,225.000000,0.000000,"C"};
+item4[] = {"Codes_secured",2,250,50.000000,250.000000,150.000000,300.000000,0.000000,"Codes secured"};
+item5[] = {"HQ_informed",4,218,50.000000,325.000000,150.000000,375.000000,0.000000,"HQ informed"};
+item6[] = {"Support_Team_ready",2,250,50.000000,400.000000,150.000000,450.000000,0.000000,"Support Team" \n "ready to blow"};
+item7[] = {"Moving_away",4,218,50.000000,475.000000,150.000000,525.000000,0.000000,"Moving away"};
+item8[] = {"Viper_lurking",2,250,50.000000,550.000000,150.000000,600.000000,0.000000,"Viper lurking"};
+item9[] = {"Players_on_the_a",4,218,50.000000,625.000000,150.000000,675.000000,0.000000,"Players on" \n "the alert"};
+item10[] = {"Destroy_generato",2,250,50.000000,700.000000,150.000000,750.000000,0.000000,"Destroy generator"};
+item11[] = {"Continuing",4,218,50.000000,775.000000,150.000000,825.000000,0.000000,"Continuing"};
+item12[] = {"Falcon_inbound",2,250,50.000000,850.000000,150.000000,900.000000,0.000000,"Falcon inbound"};
+item13[] = {"Codes_secured_1",2,250,-200.000000,250.000000,-100.000000,300.000000,0.000000,"Codes secured"};
+item14[] = {"Support_Team_in",4,218,-200.000000,325.000000,-100.000000,375.000000,0.000000,"Support Team" \n "in position"};
+item15[] = {"Support_Team_ready_1",2,250,-200.000000,400.000000,-100.000000,450.000000,0.000000,"Support Team" \n "ready to blow"};
+item16[] = {"HQ_update",4,218,-200.000000,475.000000,-100.000000,525.000000,0.000000,"HQ update"};
+item17[] = {"Viper_lurking_1",2,250,-200.000000,550.000000,-100.000000,600.000000,0.000000,"Viper lurking"};
+item18[] = {"Support_Team_det",4,218,-200.000000,625.000000,-100.000000,675.000000,0.000000,"Support Team" \n "detonate"};
+item19[] = {"Destroy_generato_1",2,250,-200.000000,700.000000,-100.000000,750.000000,0.000000,"Destroy generator"};
+item20[] = {"Nearing_Device",4,218,-200.000000,775.000000,-100.000000,825.000000,0.000000,"Nearing" \n "Device"};
+item21[] = {"Falcon_inbound_1",2,250,-200.000000,850.000000,-100.000000,900.000000,0.000000,"Falcon inbound"};
+item22[] = {"Falcon_arrived",4,218,-200.000000,925.000000,-100.000000,975.000000,0.000000,"Falcon" \n "arrived"};
+item23[] = {"Announce_arrival",1,250,-75.000000,1075.000000,25.000000,1125.000000,0.000000,"Announce" \n "arrival"};
+item24[] = {"Falcon_arrived",4,218,50.000000,925.000000,150.000000,975.000000,0.000000,"Falcon arrived"};
+item25[] = {"Codes_secured_2",2,250,-75.000000,325.000000,25.000000,375.000000,0.000000,"Codes secured"};
+item26[] = {"HQ_informed",4,218,-75.000000,400.000000,25.000000,450.000000,0.000000,"HQ informed"};
+item27[] = {"Support_Team_ready_2",2,250,-75.000000,475.000000,25.000000,525.000000,0.000000,"Support Team" \n "ready to blow"};
+item28[] = {"Moving_away",4,218,-75.000000,550.000000,25.000000,600.000000,0.000000,"Moving away"};
+item29[] = {"Viper_lurking_2",2,250,-75.000000,625.000000,25.000000,675.000000,0.000000,"Viper lurking"};
+item30[] = {"Players_on_the_a",4,218,-75.000000,700.000000,25.000000,750.000000,0.000000,"Players on" \n "the alert"};
+item31[] = {"Destroy_generato_2",2,250,-75.000000,775.000000,25.000000,825.000000,0.000000,"Destroy generator"};
+item32[] = {"Nearing_Device",4,218,-75.000000,850.000000,25.000000,900.000000,0.000000,"Nearing" \n "Device"};
+item33[] = {"Falcon_inbound_2",2,250,-75.000000,925.000000,25.000000,975.000000,0.000000,"Falcon inbound"};
+item34[] = {"Falcon_arrived",4,218,-75.000000,1000.000000,25.000000,1050.000000,0.000000,"Falcon arrived"};
+item35[] = {"",7,210,-154.000000,1096.000000,-145.999985,1104.000000,0.000000,""};
+item36[] = {"",7,210,96.000000,1096.000000,104.000000,1104.000000,0.000000,""};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {0,3};
+link3[] = {1,13};
+link4[] = {2,25};
+link5[] = {3,4};
+link6[] = {4,5};
+link7[] = {5,6};
+link8[] = {6,7};
+link9[] = {7,8};
+link10[] = {8,9};
+link11[] = {9,10};
+link12[] = {10,11};
+link13[] = {11,12};
+link14[] = {12,24};
+link15[] = {13,14};
+link16[] = {14,15};
+link17[] = {15,16};
+link18[] = {16,17};
+link19[] = {17,18};
+link20[] = {18,19};
+link21[] = {19,20};
+link22[] = {20,21};
+link23[] = {21,22};
+link24[] = {22,35};
+link25[] = {24,36};
+link26[] = {25,26};
+link27[] = {26,27};
+link28[] = {27,28};
+link29[] = {28,29};
+link30[] = {29,30};
+link31[] = {30,31};
+link32[] = {31,32};
+link33[] = {32,33};
+link34[] = {33,34};
+link35[] = {34,23};
+link36[] = {35,23};
+link37[] = {36,23};
+globals[] = {0.000000,0,0,0,0,640,480,1,48,6316128,1,-615.279419,596.992798,1168.868652,115.069977,1201,1044,1};
+window[] = {2,-1,-1,-1,-1,1009,130,1524,130,3,1219};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Finale Events";
+        class States
+        {
+                /*%FSM<STATE "Finale_Events">*/
+                class Finale_Events
+                {
+                        name = "Finale_Events";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"private _boss = BIS_boss call BIS_fnc_getBossIntel;" \n
+                         "private _dest = BIS_intel_device;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "B">*/
+                                class B
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="Codes_secured_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_boss == BIS_intel_2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "C">*/
+                                class C
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Codes_secured";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_boss == BIS_intel_3"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "A">*/
+                                class A
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Codes_secured_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_boss == BIS_intel_1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Codes_secured">*/
+                class Codes_secured
+                {
+                        name = "Codes_secured";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "private _conv = ""45_MoveToDevice"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "HQ_informed">*/
+                                class HQ_informed
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Support_Team_ready";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Support_Team_ready">*/
+                class Support_Team_ready
+                {
+                        name = "Support_Team_ready";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "_conv = ""50_SupportTeamStatus"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Moving_away">*/
+                                class Moving_away
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Viper_lurking";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Viper_lurking">*/
+                class Viper_lurking
+                {
+                        name = "Viper_lurking";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "_conv = ""55_ViperReveal"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Players_on_the_a">*/
+                                class Players_on_the_a
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Destroy_generato";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Destroy_generato">*/
+                class Destroy_generato
+                {
+                        name = "Destroy_generato";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"// Destroy the generator" \n
+                         "[] spawn BIS_fnc_EXP_m07_destroyGenerator;" \n
+                         "" \n
+                         "private _script = [] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleEvents: destroy generator"";" \n
+                         "	" \n
+                         "	sleep 4;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""60_SupportTeam"" call BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continuing">*/
+                                class Continuing
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="Falcon_inbound";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _script"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Falcon_inbound">*/
+                class Falcon_inbound
+                {
+                        name = "Falcon_inbound";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"// Send Falcon" \n
+                         "[] spawn BIS_fnc_EXP_m07_sendFalcon;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         "_conv = ""63_MillerTeam"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Falcon_arrived">*/
+                                class Falcon_arrived
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="Announce_arrival";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv" \n
+                                         "&&" \n
+                                         "{ BIS_heli1 distance _dest <= 200 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Codes_secured_1">*/
+                class Codes_secured_1
+                {
+                        name = "Codes_secured_1";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "private _conv = ""45_MoveToDevice"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Support_Team_in">*/
+                                class Support_Team_in
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="Support_Team_ready_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv" \n
+                                         "&&" \n
+                                         "{ {vehicle _x distance _dest <= 550} count allPlayers > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Support_Team_ready_1">*/
+                class Support_Team_ready_1
+                {
+                        name = "Support_Team_ready_1";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"private _script = [] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleEvents: Support Team ready to blow"";" \n
+                         "	" \n
+                         "	sleep (random 2);" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""50_SupportTeamStatus"" call BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "HQ_update">*/
+                                class HQ_update
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="Viper_lurking_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _script" \n
+                                         "&&" \n
+                                         "{ {vehicle _x distance _dest <= 450} count allPlayers > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Viper_lurking_1">*/
+                class Viper_lurking_1
+                {
+                        name = "Viper_lurking_1";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"_script = [] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleEvents: Viper lurking"";" \n
+                         "	" \n
+                         "	sleep (random 2);" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""55_ViperReveal"" call BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Support_Team_det">*/
+                                class Support_Team_det
+                                {
+                                        itemno = 18;
+                                        priority = 0.000000;
+                                        to="Destroy_generato_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _script" \n
+                                         "&&" \n
+                                         "{ {vehicle _x distance _dest <= 400} count allPlayers > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Destroy_generato_1">*/
+                class Destroy_generato_1
+                {
+                        name = "Destroy_generato_1";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"// Destroy the generator" \n
+                         "[] spawn BIS_fnc_EXP_m07_destroyGenerator;" \n
+                         "" \n
+                         "_script = [] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleEvents: destroy generator"";" \n
+                         "	" \n
+                         "	sleep (random 2);" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""60_SupportTeam"" call BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Nearing_Device">*/
+                                class Nearing_Device
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="Falcon_inbound_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _script" \n
+                                         "&&" \n
+                                         "{ {vehicle _x distance _dest <= 370} count allPlayers > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Falcon_inbound_1">*/
+                class Falcon_inbound_1
+                {
+                        name = "Falcon_inbound_1";
+                        itemno = 21;
+                        init = /*%FSM<STATEINIT""">*/"_script = [] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleEvents: Falcon inbound"";" \n
+                         "	" \n
+                         "	sleep (random 2);" \n
+                         "	" \n
+                         "	// Send Falcon" \n
+                         "	[] spawn BIS_fnc_EXP_m07_sendFalcon;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""63_MillerTeam"" call BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Falcon_arrived">*/
+                                class Falcon_arrived
+                                {
+                                        itemno = 22;
+                                        priority = 0.000000;
+                                        to="Announce_arrival";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _script" \n
+                                         "&&" \n
+                                         "{ BIS_heli1 distance _dest <= 200 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Announce_arrival">*/
+                class Announce_arrival
+                {
+                        name = "Announce_arrival";
+                        itemno = 23;
+                        init = /*%FSM<STATEINIT""">*/"// Register arrival" \n
+                         "BIS_falconArrived = true;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         """70_AirSupport"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Codes_secured_2">*/
+                class Codes_secured_2
+                {
+                        name = "Codes_secured_2";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "private _conv = ""45_MoveToDevice"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "HQ_informed">*/
+                                class HQ_informed
+                                {
+                                        itemno = 26;
+                                        priority = 0.000000;
+                                        to="Support_Team_ready_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Support_Team_ready_2">*/
+                class Support_Team_ready_2
+                {
+                        name = "Support_Team_ready_2";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "_conv = ""50_SupportTeamStatus"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Moving_away">*/
+                                class Moving_away
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="Viper_lurking_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Viper_lurking_2">*/
+                class Viper_lurking_2
+                {
+                        name = "Viper_lurking_2";
+                        itemno = 29;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "_conv = ""55_ViperReveal"" spawn BIS_fnc_missionConversations;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Players_on_the_a">*/
+                                class Players_on_the_a
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Destroy_generato_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _conv"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Destroy_generato_2">*/
+                class Destroy_generato_2
+                {
+                        name = "Destroy_generato_2";
+                        itemno = 31;
+                        init = /*%FSM<STATEINIT""">*/"// Destroy the generator" \n
+                         "[] spawn BIS_fnc_EXP_m07_destroyGenerator;" \n
+                         "" \n
+                         "private _script = [] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleEvents: destroy generator"";" \n
+                         "	" \n
+                         "	sleep 4;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""60_SupportTeam"" call BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Nearing_Device">*/
+                                class Nearing_Device
+                                {
+                                        itemno = 32;
+                                        priority = 0.000000;
+                                        to="Falcon_inbound_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _script" \n
+                                         "&&" \n
+                                         "{ {vehicle _x distance _dest <= 370} count allPlayers  > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Falcon_inbound_2">*/
+                class Falcon_inbound_2
+                {
+                        name = "Falcon_inbound_2";
+                        itemno = 33;
+                        init = /*%FSM<STATEINIT""">*/"_script = [] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_finaleEvents: Falcon inbound"";" \n
+                         "	" \n
+                         "	sleep (random 2);" \n
+                         "	" \n
+                         "	// Send Falcon" \n
+                         "	[] spawn BIS_fnc_EXP_m07_sendFalcon;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""63_MillerTeam"" call BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Falcon_arrived">*/
+                                class Falcon_arrived
+                                {
+                                        itemno = 34;
+                                        priority = 0.000000;
+                                        to="Announce_arrival";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _script" \n
+                                         "&&" \n
+                                         "{ BIS_heli1 distance _dest <= 200 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Finale_Events";
+        finalStates[] =
+        {
+                "Announce_arrival",
+        };
+};
+/*%FSM</COMPILE>*/

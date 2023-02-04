@@ -1,0 +1,42 @@
+// Campaign common description
+#include "\A3\Missions_F_Exp\Campaign\commonDescription.ext"
+
+onRespawnMenu = "\a3\missions_f_exp\campaign\scripts\handlerespawnmenu.sqf";
+
+// per mission configuration of limited respawn tickets (default: 3)
+maxRespawnTickets = 3;
+
+class CfgBriefing
+{
+	class introVideo
+	{
+		menuItem = "$STR_A3_exp_briefing_CTRGVideo";
+		file = "\a3\missions_f_exp\video\exp_m03_vin.ogv";
+		duration = 90; //<-- duration of the video
+		subtitles = "\a3\Missions_F_Exp\Campaign\Briefings\EXP_m03_briefing.sqf"; //<-- file with subtitles to execute
+	};
+	separator = "______________________";
+};
+
+dev = "Will";
+briefingName = "$STR_A3_EXP_m03_missionName";
+onLoadName = "$STR_A3_EXP_m03_missionName";
+onLoadMission = "$STR_A3_EXP_m03_overview";
+overviewText = "$STR_A3_EXP_m03_overview";
+overviewPicture = "a3\missions_f_exp\data\img\exp_m03_overview_co.paa";
+
+doneKeys[] = {"BIS_EXP_m03.Tanoa_done"};
+
+class CfgDebriefing
+{
+	class END1
+	{
+		description = "$STR_A3_EXP_m03_Debriefing_1_Description";
+		showScore = 0;
+	};
+	class END2
+	{
+		description = "$STR_A3_EXP_m03_Debriefing_2_Description";
+		showScore = 0;
+	};
+};

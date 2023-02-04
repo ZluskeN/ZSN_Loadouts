@@ -1,0 +1,57 @@
+dev = "Vasek";
+author = $STR_A3_Bohemia_Interactive;
+onLoadName = $STR_A3_Showcase_VTOL_missionName;
+briefingName = $STR_A3_Showcase_VTOL_missionName;
+onLoadMission = $STR_A3_Showcase_VTOL_missionOverview;
+overviewText = $STR_A3_Showcase_VTOL_missionOverview;
+overviewPicture = "a3\Missions_F_Exp\data\img\Showcase_VTOL_overview_CA.paa";
+doneKeys[] = {"BIS_Showcase_VTOL.Tanoa_done"};
+
+class CfgIdentities
+{
+	class LaoChe
+	{
+		name="Lao Che";
+		face="AsianHead_A3_05";
+		glasses="None";
+		speaker="Male01CHI";
+		pitch=1;
+	};
+};
+
+class CfgDebriefing
+{
+	class Win01
+	{
+                description = $STR_A3_Showcase_VTOL_end_01;
+                subtitle = "";
+		backgroundPicture = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class Win02 : Win01
+	{
+                description = $STR_A3_Showcase_VTOL_end_02;
+                subtitle = "";
+	};
+	class Win03 : Win01
+	{
+                description = $STR_A3_Showcase_VTOL_end_03;
+                subtitle = "";
+	};
+	class Win04 : Win01
+	{
+                description = $STR_A3_Showcase_VTOL_end_04;
+                subtitle = "";
+	};
+	class Fail01 : Win01
+	{
+                description = "";
+                subtitle = $STR_A3_Showcase_VTOL_fail_01;
+	};
+	class Fail02 : Win01
+	{
+                description = "";
+                subtitle = $STR_A3_Showcase_VTOL_fail_02;
+	};
+};

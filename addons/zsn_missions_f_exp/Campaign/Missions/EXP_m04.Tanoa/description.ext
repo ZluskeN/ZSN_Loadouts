@@ -1,0 +1,83 @@
+#include "\a3\missions_f_exp\campaign\commondescription.ext"
+
+onRespawnMenu = "\a3\missions_f_exp\campaign\scripts\handlerespawnmenu.sqf";
+
+// per mission configuration of limited respawn tickets (default: 3)
+maxRespawnTickets = 3;
+
+class CfgBriefing
+{
+	class introVideo
+	{
+		menuItem = "$STR_A3_exp_briefing_CTRGVideo";
+		file = "\a3\missions_f_exp\video\exp_m04_vin.ogv";
+		duration = 90; //<-- duration of the video
+		subtitles = "\a3\Missions_F_Exp\Campaign\Briefings\EXP_m04_briefing.sqf"; //<-- file with subtitles to execute
+	};
+	separator = "______________________";
+};
+
+dev = "Zipper";
+briefingName = "$STR_A3_EXP_m04_MissionName";
+onLoadName = "$STR_A3_EXP_m04_MissionName";
+onLoadMission = "$STR_A3_EXP_m04_Overview";
+overviewText = "$STR_A3_EXP_m04_Overview";
+overviewPicture = "a3\missions_f_exp\data\img\exp_m04_overview_co.paa";
+
+// Disable framework respawn
+enablePlayerAddRespawn = 0;
+
+doneKeys[] = {"BIS_EXP_m04.Tanoa_done"};
+
+class CfgFunctions
+{
+	class BIS
+	{
+		class EXP_m04
+		{
+			file = "functions";
+
+			class EXP_m04_addRespawn	{};
+			class EXP_m04_alert			{};
+			class EXP_m04_attack		{};
+			class EXP_m04_attackA		{};
+			class EXP_m04_attackB		{};
+			class EXP_m04_attackC		{};
+			class EXP_m04_attackD		{};
+			class EXP_m04_campAlert		{ext = ".fsm";};
+			class EXP_m04_campSetup		{};
+			class EXP_m04_feed1			{};
+			class EXP_m04_feed2			{};
+			class EXP_m04_feed3			{};
+			class EXP_m04_IFF			{};
+			class EXP_m04_intro			{};
+			class EXP_m04_playMusic		{};
+			class EXP_m04_revealPlayer	{};
+			class EXP_m04_search		{};
+			class EXP_m04_searchAlert	{ext = ".fsm";};
+			class EXP_m04_smoker		{ext = ".fsm";};
+			class EXP_m04_sniper		{};
+			class EXP_m04_handleTechnical {};
+			class EXP_m04_unlockAchievements {};
+		};
+
+		class flares
+		{
+			file = "functions\flares";
+
+			class EXP_m04_flareCreate	{};
+			class EXP_m04_flareInit		{preInit = 1;};
+			class EXP_m04_flareLight	{};
+			class EXP_m04_flareSound	{};
+		};
+	};
+};
+
+class CfgDebriefing
+{
+	class END1
+	{
+		description = "$STR_A3_EXP_m04_END1_Description";
+		showScore = 0;
+	};
+};

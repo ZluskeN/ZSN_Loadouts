@@ -1,0 +1,21 @@
+#include "\a3\missions_f_exp\campaign\classes\classes.hpp"
+#include "\a3\missions_f_exp\Lobby\headers\campaignlobbymissionheader.inc"
+
+author = $STR_A3_Bohemia_Interactive;
+respawn = 3;
+respawnDelay = 35;
+respawnTemplates[] = {"Spectator", "MenuPosition", "MenuInventory", "TicketsSpawn"};
+//respawnTemplates[] = {"TicketsSpawn"};
+respawnOnStart = -1;
+respawnDialog = 0;
+disabledAI = 1;
+briefing = 1;
+skipLobby = 1;
+debriefing = 0;
+
+class Header
+{
+	gameType = "Apex";
+	minPlayers = 1;
+	maxPlayers = 4;
+};

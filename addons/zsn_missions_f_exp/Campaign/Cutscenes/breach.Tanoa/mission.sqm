@@ -1,0 +1,935 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: missions_f_exp\Campaign\Cutscenes\breach.Tanoa\mission.sqm
+//Produced from mikero's Dos Tools Dll version 6.44
+//'now' is Sat Feb 04 18:10:16 2023 : 'file' last modified on Wed Jun 12 13:41:16 2019
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+version = 52;
+class EditorData
+{
+	moveGridStep = 1;
+	angleGridStep = 0.2617994;
+	scaleGridStep = 1;
+	autoGroupingDist = 10;
+	toggles = 10;
+	class ItemIDProvider
+	{
+		nextID = 51;
+	};
+	class Camera
+	{
+		pos[] = {5044.3184,23.198885,3009.224};
+		dir[] = {-0.62666756,-0.2521746,0.7375289};
+		up[] = {-0.1633842,0.9676198,0.1922819};
+		aside[] = {0.76214886,6.669943e-007,0.6475853};
+	};
+};
+binarizationWanted = 0;
+addons[] = {"A3_Characters_F","A3_Signs_F","A3_Weapons_F_Exp_Rifles_AKM","A3_Weapons_F_Exp","A3_Weapons_F","A3_Characters_F_Exp","A3_Structures_F_EPB_Civ_Camping","A3_Structures_F_Furniture","A3_Structures_F_Training","A3_Structures_F_Civ_Garbage"};
+class AddonsMetaData
+{
+	class List
+	{
+		items = 10;
+		class Item0
+		{
+			className = "A3_Characters_F";
+			name = "A3_Characters_F";
+		};
+		class Item1
+		{
+			className = "A3_Signs_F";
+			name = "A3_Signs_F";
+		};
+		class Item2
+		{
+			className = "A3_Weapons_F_Exp_Rifles_AKM";
+			name = "A3_Weapons_F_Exp_Rifles_AKM";
+		};
+		class Item3
+		{
+			className = "A3_Weapons_F_Exp";
+			name = "A3_Weapons_F_Exp";
+		};
+		class Item4
+		{
+			className = "A3_Weapons_F";
+			name = "A3_Weapons_F";
+		};
+		class Item5
+		{
+			className = "A3_Characters_F_Exp";
+			name = "A3_Characters_F_Exp";
+		};
+		class Item6
+		{
+			className = "A3_Structures_F_EPB_Civ_Camping";
+			name = "A3_Structures_F_EPB_Civ_Camping";
+		};
+		class Item7
+		{
+			className = "A3_Structures_F_Furniture";
+			name = "A3_Structures_F_Furniture";
+		};
+		class Item8
+		{
+			className = "A3_Structures_F_Training";
+			name = "A3_Structures_F_Training";
+		};
+		class Item9
+		{
+			className = "A3_Structures_F_Civ_Garbage";
+			name = "A3_Structures_F_Civ_Garbage";
+		};
+	};
+};
+randomSeed = 15543892;
+class ScenarioData
+{
+	author = "Zipper5";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges = 1800.0002;
+		startWeather = 0;
+		startWind = 0.35;
+		startWindDir = 270;
+		startRain = 0.25;
+		forecastWeather = 0;
+		forecastWind = 0.35;
+		forecastWaves = 0;
+		forecastRain = 0.25;
+		forecastWindDir = 270;
+		rainForced = 1;
+		lightningsForced = 1;
+		wavesForced = 1;
+		windForced = 1;
+		year = 2035;
+		month = 8;
+		day = 13;
+		hour = 21;
+		minute = 0;
+		startFogBase = 250;
+		forecastFogBase = 250;
+		startFogDecay = 0.014;
+		forecastFogDecay = 0.014;
+	};
+	class Entities
+	{
+		items = 20;
+		class Item0
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5027.361,18.318727,3023.635};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						skill = 1;
+						rank = "SERGEANT";
+						init = "{this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_supportLead";
+					};
+					id = 1;
+					type = "B_Soldier_TL_F";
+				};
+			};
+			class Attributes{};
+			id = 0;
+		};
+		class Item1
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5026.204,18.401438,3023.023};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 1;
+						rank = "SERGEANT";
+						init = "{this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_support1";
+					};
+					id = 8;
+					type = "B_soldier_M_F";
+					atlOffset = -0.020000458;
+				};
+			};
+			class Attributes{};
+			id = 2;
+			atlOffset = -0.020000458;
+		};
+		class Item2
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5028.256,18.215492,3022.835};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 1;
+						rank = "SERGEANT";
+						init = "{this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_support2";
+					};
+					id = 9;
+					type = "B_soldier_AR_F";
+				};
+			};
+			class Attributes{};
+			id = 4;
+		};
+		class Item3
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5026.877,18.260214,3021.654};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 1;
+						rank = "SERGEANT";
+						init = "{this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_support3";
+					};
+					id = 10;
+					type = "B_soldier_LAT_F";
+					atlOffset = 1.9073486e-006;
+				};
+			};
+			class Attributes{};
+			id = 6;
+			atlOffset = 1.9073486e-006;
+		};
+		class Item4
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5032.73,17.231968,3015.76};
+						angles[] = {0,5.794144,0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						isPlayer = 1;
+					};
+					id = 11;
+					type = "B_Soldier_F";
+				};
+			};
+			class Attributes{};
+			id = 12;
+		};
+		class Item5
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5020.056,18.957819,3021.513};
+				angles[] = {0,0.98850214,0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				name = "BIS_breachPos";
+			};
+			id = 15;
+			type = "RoadCone_F";
+			atlOffset = 0.0004234314;
+		};
+		class Item6
+		{
+			dataType = "Group";
+			side = "Independent";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5035.676,17.36959,3025.648};
+					};
+					side = "Independent";
+					flags = 7;
+					class Attributes
+					{
+						skill = 0.2;
+						init = "this setFace ""TanoanHead_A3_03""; {this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_enemyA";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name = "arifle_AKM_F";
+								class primaryMuzzleMag
+								{
+									name = "30Rnd_762x39_Mag_F";
+									ammoLeft = 30;
+								};
+							};
+							class uniform
+							{
+								typeName = "U_I_C_Soldier_Bandit_5_F";
+								isBackpack = 0;
+								class MagazineCargo
+								{
+									items = 1;
+									class Item0
+									{
+										name = "30Rnd_762x39_Mag_F";
+										count = 3;
+										ammoLeft = 30;
+									};
+								};
+							};
+							map = "ItemMap";
+							compass = "ItemCompass";
+							watch = "ItemWatch";
+							radio = "ItemRadio";
+							goggles = "G_Bandanna_blk";
+						};
+					};
+					id = 17;
+					type = "I_G_Soldier_F";
+					atlOffset = -1.9073486e-006;
+				};
+			};
+			class Attributes{};
+			id = 16;
+			atlOffset = -1.9073486e-006;
+		};
+		class Item7
+		{
+			dataType = "Group";
+			side = "Independent";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5036.974,17.166904,3025.313};
+					};
+					side = "Independent";
+					flags = 7;
+					class Attributes
+					{
+						skill = 0.2;
+						init = "this setFace ""TanoanHead_A3_04""; {this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_enemyB";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name = "arifle_AKM_F";
+								class primaryMuzzleMag
+								{
+									name = "30Rnd_762x39_Mag_F";
+									ammoLeft = 30;
+								};
+							};
+							class uniform
+							{
+								typeName = "U_I_C_Soldier_Bandit_2_F";
+								isBackpack = 0;
+								class MagazineCargo
+								{
+									items = 1;
+									class Item0
+									{
+										name = "30Rnd_762x39_Mag_F";
+										count = 3;
+										ammoLeft = 30;
+									};
+								};
+							};
+							map = "ItemMap";
+							compass = "ItemCompass";
+							watch = "ItemWatch";
+							radio = "ItemRadio";
+							goggles = "G_Bandanna_blk";
+						};
+					};
+					id = 19;
+					type = "I_G_Soldier_F";
+					atlOffset = -0.031999588;
+				};
+			};
+			class Attributes{};
+			id = 18;
+			atlOffset = -0.031999588;
+		};
+		class Item8
+		{
+			dataType = "Group";
+			side = "Independent";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5035.196,17.38224,3024.485};
+					};
+					side = "Independent";
+					flags = 7;
+					class Attributes
+					{
+						skill = 0.2;
+						init = "this setFace ""TanoanHead_A3_05""; {this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_enemyC";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name = "arifle_AKM_F";
+								class primaryMuzzleMag
+								{
+									name = "30Rnd_762x39_Mag_F";
+									ammoLeft = 30;
+								};
+							};
+							class uniform
+							{
+								typeName = "U_I_C_Soldier_Bandit_4_F";
+								isBackpack = 0;
+								class MagazineCargo
+								{
+									items = 1;
+									class Item0
+									{
+										name = "30Rnd_762x39_Mag_F";
+										count = 3;
+										ammoLeft = 30;
+									};
+								};
+							};
+							map = "ItemMap";
+							compass = "ItemCompass";
+							watch = "ItemWatch";
+							radio = "ItemRadio";
+							goggles = "G_Bandanna_blk";
+						};
+					};
+					id = 21;
+					type = "I_G_Soldier_F";
+					atlOffset = -0.021001816;
+				};
+			};
+			class Attributes{};
+			id = 20;
+			atlOffset = -0.021001816;
+		};
+		class Item9
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5039.073,16.72632,3018.8682};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						skill = 1;
+						rank = "CAPTAIN";
+						init = "{this disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""MOVE"", ""TARGET""]; this enableMimics false; {this setHit [_x, 0.5]} forEach [""head"", ""hands""]; this allowDamage false; this setCaptive true; this setBehaviour ""CARELESS""; this setCombatMode ""BLUE""";
+						name = "BIS_miller";
+					};
+					id = 22;
+					type = "B_Story_SF_Captain_F";
+				};
+			};
+			class Attributes{};
+			id = 23;
+		};
+		class Item10
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5022.229,18.80754,3014.357};
+				angles[] = {0,2.1670706,0};
+			};
+			side = "Empty";
+			class Attributes
+			{
+				init = "this hideObject true";
+				name = "BIS_lantern";
+			};
+			id = 36;
+			type = "Land_Camping_Light_F";
+			atlOffset = 0.23399925;
+		};
+		class Item11
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5021.679,18.573961,3013.6042};
+				angles[] = {0,4.17118,0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				name = "BIS_chairUp";
+			};
+			id = 38;
+			type = "Land_ChairWood_F";
+			atlOffset = 0.021303177;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "allowDamage";
+					expression = "_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "enableSimulation";
+					expression = "if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item12
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5021.7656,18.857838,3013.3096};
+				angles[] = {4.7241,4.69902,5.7504582};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				name = "BIS_chairDown";
+			};
+			id = 39;
+			type = "Land_ChairWood_F";
+			atlOffset = 0.1690979;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "allowDamage";
+					expression = "_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "enableSimulation";
+					expression = "if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property = "hideObject";
+					expression = "if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 1;
+						};
+					};
+				};
+				nAttributes = 3;
+			};
+		};
+		class Item13
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5023.306,21.30733,3020.1655};
+				angles[] = {0,1.0268296,0};
+			};
+			side = "Empty";
+			class Attributes{};
+			id = 42;
+			type = "Land_Shoot_House_Wall_Crouch_F";
+			atlOffset = 1.1761055;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "allowDamage";
+					expression = "_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "enableSimulation";
+					expression = "if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item14
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5026.4253,21.280668,3015.0112};
+				angles[] = {0,1.0268296,0};
+			};
+			side = "Empty";
+			class Attributes{};
+			id = 43;
+			type = "Land_Shoot_House_Wall_Crouch_F";
+			atlOffset = 1.6228065;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "allowDamage";
+					expression = "_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "enableSimulation";
+					expression = "if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item15
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5017.9575,21.421068,3018.0808};
+				angles[] = {0,1.0268296,0};
+			};
+			side = "Empty";
+			class Attributes{};
+			id = 44;
+			type = "Land_Shoot_House_Wall_Crouch_F";
+			atlOffset = 1.2068348;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "allowDamage";
+					expression = "_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "enableSimulation";
+					expression = "if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item16
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5018.8228,21.435862,3022.5};
+				angles[] = {0,5.7504935,0};
+			};
+			side = "Empty";
+			class Attributes{};
+			id = 45;
+			type = "Land_Shoot_House_Wall_Crouch_F";
+			atlOffset = 1.1697655;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "allowDamage";
+					expression = "_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "enableSimulation";
+					expression = "if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item17
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5025.4736,21.38931,3011.7588};
+				angles[] = {0,5.7504935,0};
+			};
+			side = "Empty";
+			class Attributes{};
+			id = 46;
+			type = "Land_Shoot_House_Wall_Crouch_F";
+			atlOffset = 1.847681;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "allowDamage";
+					expression = "_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "enableSimulation";
+					expression = "if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 0;
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item18
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5020.379,18.728832,3019.69};
+				angles[] = {0,2.638983,0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 47;
+			type = "Land_Garbage_square5_F";
+		};
+		class Item19
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5023.8535,18.728832,3014.359};
+				angles[] = {0,2.5680633,0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 48;
+			type = "Land_Garbage_square5_F";
+		};
+	};
+};

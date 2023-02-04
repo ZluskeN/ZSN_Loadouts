@@ -1,0 +1,218 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, Earthquakes">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Earthquakes",0,250,-75.000000,2600.000000,25.000000,2650.000000,0.000000,"Earthquakes"};
+item1[] = {"_",8,218,-75.000000,2675.000000,25.000000,2725.000000,0.000000,""};
+item2[] = {"Wait",2,250,-75.000000,2750.000000,25.000000,2800.000000,0.000000,"Wait"};
+item3[] = {"Waited",4,218,-75.000000,2825.000000,25.000000,2875.000000,0.000000,"Waited"};
+item4[] = {"Earthquake",2,250,50.000000,2825.000000,150.000000,2875.000000,0.000000,"Earthquake"};
+item5[] = {"Over",4,218,50.000000,2750.000000,150.000000,2800.000000,0.000000,"Over"};
+item6[] = {"Codes_taken",4,218,-200.000000,2750.000000,-100.000000,2800.000000,0.000000,"Codes taken"};
+item7[] = {"Wait_for_stronger",2,250,-325.000000,2750.000000,-225.000000,2800.000000,0.000000,"Wait for" \n "stronger quake"};
+item8[] = {"Triggered",4,218,-450.000000,2750.000000,-350.000000,2800.000000,0.000000,"Triggered"};
+item9[] = {"Stronger_quake",2,250,-450.000000,2675.000000,-350.000000,2725.000000,0.000000,"Stronger quake"};
+item10[] = {"Disarming_Device",4,218,50.000000,2675.000000,150.000000,2725.000000,0.000000,"Disarming" \n "Device"};
+item11[] = {"Terminate",1,250,175.000000,2675.000000,275.000000,2725.000000,0.000000,"Terminate"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,6};
+link4[] = {2,10};
+link5[] = {3,4};
+link6[] = {4,5};
+link7[] = {5,2};
+link8[] = {6,7};
+link9[] = {7,8};
+link10[] = {8,9};
+link11[] = {9,1};
+link12[] = {10,11};
+globals[] = {0.000000,0,0,0,0,640,480,1,13,6316128,1,-327.589355,253.956909,2956.818604,2433.877930,1161,1044,1};
+window[] = {2,-1,-1,-1,-1,905,26,1420,26,3,1179};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Earthquakes";
+        class States
+        {
+                /*%FSM<STATE "Earthquakes">*/
+                class Earthquakes
+                {
+                        name = "Earthquakes";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"private _quake1 = false;" \n
+                         "private _quake2 = false;" \n
+                         "private _strength = 1;" \n
+                         "private _commented = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Wait">*/
+                class Wait
+                {
+                        name = "Wait";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"private _time = time + (120 + (random 60));" \n
+                         "" \n
+                         "if (_quake1 && { !(_commented) && { !(_quake2) } }) then {" \n
+                         "	// Comment on the earthquake" \n
+                         "	_commented = true;" \n
+                         "	""x15_Shake"" spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Codes_taken">*/
+                                class Codes_taken
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="Wait_for_stronger";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil {BIS_bossDisarmCodesRetrieved}" \n
+                                         "&&" \n
+                                         "{ !(_quake2) }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Disarming_Device">*/
+                                class Disarming_Device
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_disarmDevice"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Waited">*/
+                                class Waited
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Earthquake";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time >= _time"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Earthquake">*/
+                class Earthquake
+                {
+                        name = "Earthquake";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Play an earthquake" \n
+                         "_quake1 = true;" \n
+                         "[_strength, ""BIS_fnc_earthquake""] call BIS_fnc_MP;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Over">*/
+                                class Over
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(missionNamespace getVariable [""BIS_fnc_earthquake_inprogress"", true])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Wait_for_stronger">*/
+                class Wait_for_stronger
+                {
+                        name = "Wait_for_stronger";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Triggered">*/
+                                class Triggered
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="Stronger_quake";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_strongEarthquake"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Stronger_quake">*/
+                class Stronger_quake
+                {
+                        name = "Stronger_quake";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"// Play a stronger earthquake" \n
+                         "_quake2 = true;" \n
+                         "_strength = 3;" \n
+                         "[4, ""BIS_fnc_earthquake""] call BIS_fnc_MP;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""BIS_fnc_EXP_m07_earthquakes: 2nd quake"";" \n
+                         "	" \n
+                         "	sleep 5;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "	""x20_ShakeStrong"" spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Terminate">*/
+                class Terminate
+                {
+                        name = "Terminate";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Earthquakes";
+        finalStates[] =
+        {
+                "Terminate",
+        };
+};
+/*%FSM</COMPILE>*/

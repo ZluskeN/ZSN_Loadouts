@@ -1,0 +1,313 @@
+/*%FSM<COMPILE "D:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Search Alert">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Search_Alert",0,250,-75.000000,200.000000,25.000000,250.000000,0.000000,"Search Alert"};
+item1[] = {"Alerted",4,218,-75.000000,425.000000,25.000000,475.000000,0.000000,"Alerted"};
+item2[] = {"Defend",2,250,-75.000000,500.000000,25.000000,550.000000,0.000000,"Defend"};
+item3[] = {"Already_alerted",4,218,-200.000000,725.000000,-100.000000,775.000000,1.000000,"Already alerted"};
+item4[] = {"Search_quiet",8,218,-75.000000,575.000000,25.000000,625.000000,0.000000,"Search quiet"};
+item5[] = {"Terminate",1,250,-200.000000,800.000000,-100.000000,850.000000,0.000000,"Terminate"};
+item6[] = {"Pass_the_word",2,250,-75.000000,650.000000,25.000000,700.000000,0.000000,"Pass the word"};
+item7[] = {"Word_passed",4,218,-75.000000,725.000000,25.000000,775.000000,0.000000,"Word passed"};
+item8[] = {"Alert_everyone",1,250,-75.000000,800.000000,25.000000,850.000000,0.000000,"Alert everyone"};
+item9[] = {"",7,210,-154.000000,521.000000,-145.999985,528.999939,0.000000,""};
+item10[] = {"Killed",4,218,50.000000,650.000000,150.000000,700.000000,1.000000,"Killed"};
+item11[] = {"Terminate_1",1,250,50.000000,725.000000,150.000000,775.000000,0.000000,"Terminate"};
+item12[] = {"Leader",8,218,-75.000000,275.000000,25.000000,325.000000,0.000000,"Leader"};
+item13[] = {"",7,210,96.000000,521.000000,104.000000,529.000000,0.000000,""};
+item14[] = {"Subordinate",4,218,125.000000,200.000000,225.000000,250.000000,1.000000,"Subordinate"};
+item15[] = {"",7,210,171.000000,746.000000,179.000000,754.000000,0.000000,""};
+item16[] = {"Wait_for_combat",2,250,-75.000000,350.000000,25.000000,400.000000,0.000000,"Wait for combat"};
+item17[] = {"",7,210,-154.000000,671.000000,-145.999985,679.000000,0.000000,""};
+item18[] = {"",7,210,96.000000,371.000031,104.000000,379.000000,0.000000,""};
+link0[] = {0,12};
+link1[] = {0,14};
+link2[] = {1,2};
+link3[] = {2,4};
+link4[] = {2,9};
+link5[] = {2,13};
+link6[] = {3,5};
+link7[] = {4,6};
+link8[] = {6,7};
+link9[] = {6,10};
+link10[] = {6,17};
+link11[] = {7,8};
+link12[] = {9,17};
+link13[] = {10,11};
+link14[] = {12,16};
+link15[] = {13,10};
+link16[] = {14,15};
+link17[] = {15,11};
+link18[] = {16,1};
+link19[] = {16,18};
+link20[] = {17,3};
+link21[] = {18,13};
+globals[] = {0.000000,0,0,0,0,640,480,1,27,6316128,1,-624.145386,423.907410,968.641602,57.594906,1201,884,1};
+window[] = {2,-1,-1,-1,-1,905,26,1420,26,3,1219};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Search Alert";
+        class States
+        {
+                /*%FSM<STATE "Search_Alert">*/
+                class Search_Alert
+                {
+                        name = "Search_Alert";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"private _unit = _this;" \n
+                         "private _group = group _unit;" \n
+                         "" \n
+                         "// Alert everyone if he fires" \n
+                         "private _firedEH = _unit addEventHandler [" \n
+                         "	""Fired""," \n
+                         "	{" \n
+                         "		private _unit = _this select 0;" \n
+                         "		" \n
+                         "		// Remove eventhandlers" \n
+                         "		{" \n
+                         "			if (!(isNil {_unit getVariable _x})) then {" \n
+                         "				private _type = if (_forEachIndex == 0) then {""Fired""} else {""Killed""};" \n
+                         "				_unit removeEventHandler [_type, _unit getVariable _x];" \n
+                         "				_unit setVariable [_x, nil];" \n
+                         "			};" \n
+                         "		} forEach [""BIS_firedEH"", ""BIS_killedEH""];" \n
+                         "		" \n
+                         "		// Alert the search parties" \n
+                         "		BIS_alerted = true;" \n
+                         "	}" \n
+                         "];" \n
+                         "" \n
+                         "// Remove eventhandlers when killed" \n
+                         "private _killedEH = _unit addEventHandler [" \n
+                         "	""Killed""," \n
+                         "	{" \n
+                         "		private _unit = _this select 0;" \n
+                         "		" \n
+                         "		{" \n
+                         "			if (!(isNil {_unit getVariable _x})) then {" \n
+                         "				private _type = if (_forEachIndex == 0) then {""Fired""} else {""Killed""};" \n
+                         "				_unit removeEventHandler [_type, _unit getVariable _x];" \n
+                         "				_unit setVariable [_x, nil];" \n
+                         "			};" \n
+                         "		} forEach [""BIS_firedEH"", ""BIS_killedEH""];" \n
+                         "	}" \n
+                         "];" \n
+                         "" \n
+                         "// Store eventhandlers" \n
+                         "_unit setVariable [""BIS_firedEH"", _firedEH];" \n
+                         "_unit setVariable [""BIS_killedEH"", _killedEH];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Subordinate">*/
+                                class Subordinate
+                                {
+                                        itemno = 14;
+                                        priority = 1.000000;
+                                        to="Terminate_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"leader _group != _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Leader">*/
+                                class Leader
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Wait_for_combat";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Defend">*/
+                class Defend
+                {
+                        name = "Defend";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"_unit call BIS_fnc_log;" \n
+                         "" \n
+                         "if (((getPosATL vehicle _unit) select 2) <= 1) then {" \n
+                         "	// Defend himself" \n
+                         "	private _wp = _group addWaypoint [position vehicle _unit, 0];" \n
+                         "	_wp setWaypointBehaviour ""COMBAT"";" \n
+                         "	_wp setWaypointSpeed ""FULL"";" \n
+                         "	_wp setWaypointType ""SAD"";" \n
+                         "	_group setCurrentWaypoint _wp;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Killed">*/
+                                class Killed
+                                {
+                                        itemno = 10;
+                                        priority = 1.000000;
+                                        to="Terminate_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count _units == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Already_alerted">*/
+                                class Already_alerted
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_alerted"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Search_quiet">*/
+                                class Search_quiet
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Pass_the_word";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Terminate">*/
+                class Terminate
+                {
+                        name = "Terminate";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Pass_the_word">*/
+                class Pass_the_word
+                {
+                        name = "Pass_the_word";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"// Simulate getting the word out" \n
+                         "private _time = time + 4;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Killed">*/
+                                class Killed
+                                {
+                                        itemno = 10;
+                                        priority = 1.000000;
+                                        to="Terminate_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count _units == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Already_alerted">*/
+                                class Already_alerted
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_alerted"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Word_passed">*/
+                                class Word_passed
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Alert_everyone";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time >= _time"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Alert_everyone">*/
+                class Alert_everyone
+                {
+                        name = "Alert_everyone";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"// Alert everyone" \n
+                         "BIS_alerted = true;" \n
+                         "" \n
+                         "// Switch nearby units into combat" \n
+                         "private _units = nearestObjects [position _unit, [""Man""], 50];" \n
+                         "{if (_x call BIS_fnc_objectSide == WEST) then {_units = _units - [_x]}} forEach _units;" \n
+                         "{_x setBehaviour ""COMBAT""} forEach _units;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Terminate_1">*/
+                class Terminate_1
+                {
+                        name = "Terminate_1";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Wait_for_combat">*/
+                class Wait_for_combat
+                {
+                        name = "Wait_for_combat";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"private _units = units _group;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Killed">*/
+                                class Killed
+                                {
+                                        itemno = 10;
+                                        priority = 1.000000;
+                                        to="Terminate_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count _units == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Alerted">*/
+                                class Alerted
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Defend";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{behaviour _x == ""COMBAT""} count _units > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Search_Alert";
+        finalStates[] =
+        {
+                "Terminate",
+                "Alert_everyone",
+                "Terminate_1",
+        };
+};
+/*%FSM</COMPILE>*/

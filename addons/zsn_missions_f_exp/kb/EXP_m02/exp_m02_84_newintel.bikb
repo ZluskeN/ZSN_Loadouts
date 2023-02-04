@@ -1,0 +1,98 @@
+class Sentences
+{
+	class exp_m02_84_newintel_COM_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_COM_0.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_LIA_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_LIA_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_LIA_0.ogg"};
+		actor = "BIS_LIA";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_LIA_1
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_LIA_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_LIA_1.ogg"};
+		actor = "BIS_LIA";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_COM_1
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_COM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_COM_1.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_COM_2
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_COM_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_COM_2.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_RIK_1
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_RIK_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_RIK_1.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_84_newintel_RIK_2
+	{
+		textPlain = "$STR_A3_exp_m02_84_newintel_RIK_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\84_NewIntel\exp_m02_84_newintel_RIK_2.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

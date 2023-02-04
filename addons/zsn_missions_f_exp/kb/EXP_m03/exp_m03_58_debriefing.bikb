@@ -1,0 +1,58 @@
+class Sentences
+{
+	class exp_m03_58_debriefing_COM_0
+	{
+		textPlain = "$STR_A3_exp_m03_58_debriefing_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\58_debriefing\exp_m03_58_debriefing_COM_0.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_58_debriefing_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m03_58_debriefing_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\58_debriefing\exp_m03_58_debriefing_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_58_debriefing_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m03_58_debriefing_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\58_debriefing\exp_m03_58_debriefing_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_58_debriefing_COM_1
+	{
+		textPlain = "$STR_A3_exp_m03_58_debriefing_COM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\58_debriefing\exp_m03_58_debriefing_COM_1.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m03_58_debriefing_SAL_0
+	{
+		textPlain = "$STR_A3_exp_m03_58_debriefing_SAL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\58_debriefing\exp_m03_58_debriefing_SAL_0.ogg"};
+		actor = "BIS_support2";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

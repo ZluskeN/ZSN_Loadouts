@@ -1,0 +1,18 @@
+class Sentences
+{
+	class exp_m03_x02_slow_players_PIL_0
+	{
+		textPlain = "$STR_A3_exp_m03_x02_slow_players_PIL_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m03\x02_slow_players\exp_m03_x02_slow_players_PIL_0.ogg"};
+		actor = "BIS_PIL";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

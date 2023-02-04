@@ -1,0 +1,28 @@
+class Sentences
+{
+	class exp_m07_o05_apexsoundbite_summit_COR_0
+	{
+		textPlain = "$STR_A3_exp_m07_o05_apexsoundbite_summit_COR_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\o05_ApexSoundBite_Summit\exp_m07_o05_apexsoundbite_summit_COR_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m07_o05_apexsoundbite_summit_COR_1
+	{
+		textPlain = "$STR_A3_exp_m07_o05_apexsoundbite_summit_COR_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m07\o05_ApexSoundBite_Summit\exp_m07_o05_apexsoundbite_summit_COR_1.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

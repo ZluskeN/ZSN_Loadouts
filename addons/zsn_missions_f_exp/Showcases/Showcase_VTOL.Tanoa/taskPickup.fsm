@@ -1,0 +1,260 @@
+/*%FSM<COMPILE "C:\bis\fsmeditor\scriptedFSM.cfg, taskPickup">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,-40.000000,500.000000,50.000000,550.000000,0.000000,"Start"};
+item1[] = {"All_in",4,218,-40.000000,780.000000,50.000000,830.000000,0.000000,"All in"};
+item2[] = {"TASK_SUCCEEDED",1,250,-40.000000,850.000000,50.000000,900.000000,0.000000,"TASK" \n "SUCCEEDED"};
+item3[] = {"Paratroopers_kil",4,218,70.000000,780.000000,160.000000,830.000000,10.000000,"Paratroopers" \n "killed"};
+item4[] = {"TASK_FAILED",1,250,70.000000,850.000000,160.000000,900.000000,0.000000,"TASK" \n "FAILED"};
+item5[] = {"Landed",4,218,-40.000000,640.000000,50.000000,690.000000,5.000000,"Landed"};
+item6[] = {"Get_in",2,250,-40.000000,710.000000,50.000000,760.000000,0.000000,"Get in"};
+item7[] = {"",7,210,111.000000,731.000000,119.000000,739.000000,0.000000,""};
+item8[] = {"",7,210,111.000000,611.000000,119.000000,619.000000,0.000000,""};
+item9[] = {"",7,210,0.999992,611.000000,9.000008,619.000000,0.000000,""};
+item10[] = {"",7,210,0.999992,571.000000,9.000008,579.000000,0.000000,""};
+item11[] = {"_",8,218,-150.000000,640.000000,-60.000000,690.000000,0.000000,""};
+item12[] = {"Set_timer",2,250,-150.000000,710.000000,-60.000000,760.000000,0.000000,"Set timer"};
+item13[] = {"Timeout_2sec",4,218,-260.000000,710.000000,-170.000000,760.000000,0.000000,"Timeout" \n "2sec"};
+item14[] = {"Nothing",2,250,-260.000000,640.000000,-170.000000,690.000000,0.000000,"Nothing"};
+item15[] = {"",7,210,-109.000008,611.000000,-100.999992,619.000000,0.000000,""};
+item16[] = {"",7,210,-219.000000,571.000000,-210.999985,579.000000,0.000000,""};
+link0[] = {0,10};
+link1[] = {1,2};
+link2[] = {3,4};
+link3[] = {5,6};
+link4[] = {6,1};
+link5[] = {6,7};
+link6[] = {7,3};
+link7[] = {8,7};
+link8[] = {9,5};
+link9[] = {9,8};
+link10[] = {9,15};
+link11[] = {10,9};
+link12[] = {11,12};
+link13[] = {12,13};
+link14[] = {13,14};
+link15[] = {14,16};
+link16[] = {15,11};
+link17[] = {16,10};
+globals[] = {0.000000,0,0,0,0,640,480,1,43,6316128,1,-313.698883,306.629608,919.005188,475.408447,1404,1030,1};
+window[] = {2,-1,-1,-1,-1,875,26,1466,26,3,1422};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "taskPickup";
+  class States
+  {
+    /*%FSM<STATE "Start">*/
+    class Start
+    {
+      name = "Start";
+      itemno = 0;
+      init = /*%FSM<STATEINIT""">*/"// Params" \n
+       "params" \n
+       "[" \n
+       "	[""_vtol"",objNull,[objNull]]," \n
+       "	[""_group"",grpNull,[grpNull]]," \n
+       "	[""_lz"",objNull,[objNull]]," \n
+       "	[""_task"","""",[""""]]" \n
+       "];" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Paratroopers_kil">*/
+        class Paratroopers_kil
+        {
+          itemno = 3;
+          priority = 10.000000;
+          to="TASK_FAILED";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count (units _group) == 0" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Landed">*/
+        class Landed
+        {
+          itemno = 5;
+          priority = 5.000000;
+          to="Get_in";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_vtol distance2D _lz < 100) and" \n
+           "{(isTouchingGround _vtol) and" \n
+           "{(speed _vtol < 2)}}" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          itemno = 11;
+          priority = 0.000000;
+          to="Set_timer";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "TASK_SUCCEEDED">*/
+    class TASK_SUCCEEDED
+    {
+      name = "TASK_SUCCEEDED";
+      itemno = 2;
+      init = /*%FSM<STATEINIT""">*/"[_task,""Succeeded""] call BIS_fnc_missionTasks;" \n
+       "BIS_TasksCompleted = BIS_TasksCompleted +1;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "TASK_FAILED">*/
+    class TASK_FAILED
+    {
+      name = "TASK_FAILED";
+      itemno = 4;
+      init = /*%FSM<STATEINIT""">*/"[_task,""Failed""] call BIS_fnc_missionTasks;" \n
+       """x15_ParatroopersDead"" spawn BIS_fnc_missionConversations;" \n
+       "" \n
+       "[] spawn {" \n
+       "	sleep 15;" \n
+       "	BIS_EpicFail = true;" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Get_in">*/
+    class Get_in
+    {
+      name = "Get_in";
+      itemno = 6;
+      init = /*%FSM<STATEINIT""">*/"{_x assignAsCargo _vtol} forEach (units _group);" \n
+       "(units _group) orderGetIn true;" \n
+       "_group setBehaviour ""Aware"";" \n
+       "" \n
+       """15_GetIn"" spawn BIS_fnc_missionConversations;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Paratroopers_kil">*/
+        class Paratroopers_kil
+        {
+          itemno = 3;
+          priority = 10.000000;
+          to="TASK_FAILED";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count (units _group) == 0" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "All_in">*/
+        class All_in
+        {
+          itemno = 1;
+          priority = 0.000000;
+          to="TASK_SUCCEEDED";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"({alive _x and vehicle _x != _vtol} count (units _group)) == 0" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Set_timer">*/
+    class Set_timer
+    {
+      name = "Set_timer";
+      itemno = 12;
+      init = /*%FSM<STATEINIT""">*/"_t = time;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Timeout_2sec">*/
+        class Timeout_2sec
+        {
+          itemno = 13;
+          priority = 0.000000;
+          to="Nothing";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _t + 2" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Nothing">*/
+    class Nothing
+    {
+      name = "Nothing";
+      itemno = 14;
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Paratroopers_kil">*/
+        class Paratroopers_kil
+        {
+          itemno = 3;
+          priority = 10.000000;
+          to="TASK_FAILED";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"{alive _x} count (units _group) == 0" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Landed">*/
+        class Landed
+        {
+          itemno = 5;
+          priority = 5.000000;
+          to="Get_in";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_vtol distance2D _lz < 100) and" \n
+           "{(isTouchingGround _vtol) and" \n
+           "{(speed _vtol < 2)}}" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          itemno = 11;
+          priority = 0.000000;
+          to="Set_timer";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "TASK_SUCCEEDED",
+    "TASK_FAILED",
+  };
+};
+/*%FSM</COMPILE>*/

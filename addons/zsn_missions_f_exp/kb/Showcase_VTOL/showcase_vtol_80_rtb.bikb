@@ -1,0 +1,44 @@
+class Sentences
+{
+	class showcase_vtol_80_rtb_PHQ_0
+	{
+		text = "$STR_A3_showcase_vtol_80_rtb_PHQ_0";
+		speech[] = {"\a3\dubbing_f_exp\showcase_vtol\80_RTB\showcase_vtol_80_rtb_PHQ_0.ogg"};
+		actor = "BIS_PHQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_vtol_80_rtb_PHQ_1
+	{
+		text = "$STR_A3_showcase_vtol_80_rtb_PHQ_1";
+		speech[] = {"\a3\dubbing_f_exp\showcase_vtol\80_RTB\showcase_vtol_80_rtb_PHQ_1.ogg"};
+		actor = "BIS_PHQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_vtol_80_rtb_PHQ_2
+	{
+		text = "$STR_A3_showcase_vtol_80_rtb_PHQ_2";
+		speech[] = {"\a3\dubbing_f_exp\showcase_vtol\80_RTB\showcase_vtol_80_rtb_PHQ_2.ogg"};
+		actor = "BIS_PHQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class showcase_vtol_80_rtb_PHQ_3
+	{
+		text = "$STR_A3_showcase_vtol_80_rtb_PHQ_3";
+		speech[] = {"\a3\dubbing_f_exp\showcase_vtol\80_RTB\showcase_vtol_80_rtb_PHQ_3.ogg"};
+		actor = "BIS_PHQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

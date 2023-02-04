@@ -1,0 +1,18 @@
+class Sentences
+{
+	class exp_m02_x20_ambush_backstop_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m02_x20_ambush_backstop_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\x20_Ambush_Backstop\exp_m02_x20_ambush_backstop_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

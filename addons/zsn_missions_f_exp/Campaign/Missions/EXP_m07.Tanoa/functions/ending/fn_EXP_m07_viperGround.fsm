@@ -1,0 +1,1023 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, Viper Ground">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Viper_Ground",0,250,-75.000000,175.000000,25.000000,225.000000,0.000000,"Viper Ground"};
+item1[] = {"Moving",4,218,-75.000000,250.000000,25.000000,300.000000,0.000000,"Moving"};
+item2[] = {"Moving",2,250,-75.000000,325.000000,25.000000,375.000000,0.000000,"Moving"};
+item3[] = {"Arrived",4,218,-75.000000,400.000000,25.000000,450.000000,0.000000,"Arrived"};
+item4[] = {"Hold",2,250,-75.000000,475.000000,25.000000,525.000000,0.000000,"Hold"};
+item5[] = {"Wait",2,250,-475.000000,550.000000,-375.000000,600.000000,0.000000,"Wait"};
+item6[] = {"Should_I_flank_",2,250,-600.000000,775.000000,-500.000000,825.000000,0.000000,"Should I flank?"};
+item7[] = {"Waited",4,218,-475.000000,625.000000,-375.000000,675.000000,0.000000,"Waited"};
+item8[] = {"Flank_or_push",2,250,-475.000000,700.000000,-375.000000,750.000000,0.000000,"Flank or push"};
+item9[] = {"Left_side",4,218,-475.000000,475.000000,-375.000000,525.000000,0.000000,"Left side"};
+item10[] = {"Right_side",4,218,325.000000,475.000000,425.000000,525.000000,0.000000,"Right side"};
+item11[] = {"Flank",4,218,-600.000000,700.000000,-500.000000,750.000000,1.000000,"Flank"};
+item12[] = {"Push",8,218,-350.000000,700.000000,-250.000000,750.000000,0.000000,"Push"};
+item13[] = {"Is_someone_already",2,250,-600.000000,925.000000,-500.000000,975.000000,0.000000,"Is someone" \n "already flanking?"};
+item14[] = {"Yes",4,218,-800.000000,925.000000,-700.000000,975.000000,1.000000,"Yes"};
+item15[] = {"",7,210,-679.000000,571.000000,-671.000000,579.000000,0.000000,""};
+item16[] = {"No",8,218,-600.000000,1000.000000,-500.000000,1050.000000,0.000000,"No"};
+item17[] = {"Flank_left",2,250,-600.000000,1075.000000,-500.000000,1125.000000,0.000000,"Flank left"};
+item18[] = {"Already_pushing",2,250,-350.000000,925.000000,-250.000000,975.000000,0.000000,"Already pushing?"};
+item19[] = {"Yes",4,218,-150.000000,925.000000,-50.000000,975.000000,1.000000,"Yes"};
+item20[] = {"",7,210,-179.000000,571.000000,-171.000000,579.000000,0.000000,""};
+item21[] = {"No",8,218,-350.000000,1000.000000,-250.000000,1050.000000,0.000000,"No"};
+item22[] = {"Push_left",2,250,-350.000000,1075.000000,-250.000000,1125.000000,0.000000,"Push left"};
+item23[] = {"",7,210,-554.000000,1146.000000,-546.000000,1154.000000,0.000000,""};
+item24[] = {"",7,210,-304.000000,1146.000000,-296.000000,1154.000000,0.000000,""};
+item25[] = {"Wait_1",2,250,325.000000,550.000000,425.000000,600.000000,0.000000,"Wait"};
+item26[] = {"Waited",4,218,325.000000,625.000000,425.000000,675.000000,0.000000,"Waited"};
+item27[] = {"Flank_or_push_1",2,250,325.000000,700.000000,425.000000,750.000000,0.000000,"Flank or push"};
+item28[] = {"Flank",4,218,200.000000,700.000000,300.000000,750.000000,1.000000,"Flank"};
+item29[] = {"Push",8,218,450.000000,700.000000,550.000000,750.000000,0.000000,"Push"};
+item30[] = {"Is_someone_already_1",2,250,200.000000,925.000000,300.000000,975.000000,0.000000,"Is someone" \n "already flanking?"};
+item31[] = {"Yes",4,218,0.000000,925.000000,100.000000,975.000000,1.000000,"Yes"};
+item32[] = {"",7,210,121.000000,571.000000,129.000000,579.000000,0.000000,""};
+item33[] = {"No",8,218,200.000000,1000.000000,300.000000,1050.000000,0.000000,"No"};
+item34[] = {"Flank",2,250,200.000000,1075.000000,300.000000,1125.000000,0.000000,"Flank"};
+item35[] = {"Is_someone_already_2",2,250,450.000000,925.000000,550.000000,975.000000,0.000000,"Is someone" \n "already pushing?"};
+item36[] = {"Yes",4,218,650.000000,925.000000,750.000000,975.000000,1.000000,"Yes"};
+item37[] = {"",7,210,621.000000,571.000000,629.000000,579.000000,0.000000,""};
+item38[] = {"No",8,218,450.000000,1000.000000,550.000000,1050.000000,0.000000,"No"};
+item39[] = {"Push_right",2,250,450.000000,1075.000000,550.000000,1125.000000,0.000000,"Push right"};
+item40[] = {"",7,210,496.000000,1146.000000,504.000000,1154.000000,0.000000,""};
+item41[] = {"",7,210,771.000000,1146.000000,779.000000,1154.000000,0.000000,""};
+item42[] = {"Yes",8,218,-600.000000,850.000000,-500.000000,900.000000,0.000000,"Yes"};
+item43[] = {"No",4,218,-725.000000,775.000000,-625.000000,825.000000,1.000000,"No"};
+item44[] = {"",7,210,-754.000000,571.000000,-746.000000,579.000000,0.000000,""};
+item45[] = {"Should_I_push_",2,250,-350.000000,775.000000,-250.000000,825.000000,0.000000,"Should I push?"};
+item46[] = {"Yes",8,218,-350.000000,850.000000,-250.000000,900.000000,0.000000,"Yes"};
+item47[] = {"No",4,218,-225.000000,775.000000,-125.000000,825.000000,1.000000,"No"};
+item48[] = {"",7,210,-104.000008,571.000000,-96.000000,579.000000,0.000000,""};
+item49[] = {"Should_I_flank__1",2,250,200.000000,775.000000,300.000000,825.000000,0.000000,"Should I flank?"};
+item50[] = {"Yes",8,218,200.000000,850.000000,300.000000,900.000000,0.000000,"Yes"};
+item51[] = {"No",4,218,75.000000,775.000000,175.000000,825.000000,1.000000,"No"};
+item52[] = {"",7,210,46.000000,571.000000,54.000000,579.000000,0.000000,""};
+item53[] = {"Should_I_push__1",2,250,450.000000,775.000000,550.000000,825.000000,0.000000,"Should I push?"};
+item54[] = {"Yes",8,218,450.000000,850.000000,550.000000,900.000000,0.000000,"Yes"};
+item55[] = {"No",4,218,575.000000,775.000000,675.000000,825.000000,1.000000,"No"};
+item56[] = {"",7,210,696.000000,571.000000,704.000000,579.000000,0.000000,""};
+item57[] = {"Dead_or_retreati",4,218,-75.000000,100.000000,25.000000,150.000000,2.000000,"Dead or" \n "retreating"};
+item58[] = {"",7,210,46.000000,421.000000,54.000000,429.000000,0.000000,""};
+item59[] = {"",7,210,46.000000,346.000000,54.000000,354.000000,0.000000,""};
+item60[] = {"",7,210,46.000000,120.999992,54.000000,129.000000,0.000000,""};
+item61[] = {"",7,210,546.000000,421.000000,554.000000,429.000000,0.000000,""};
+item62[] = {"",7,210,771.000000,421.000000,779.000000,429.000000,0.000000,""};
+item63[] = {"",7,210,246.000000,1146.000000,254.000000,1154.000000,0.000000,""};
+item64[] = {"",7,210,-104.000008,421.000000,-95.999992,429.000000,0.000000,""};
+item65[] = {"",7,210,-629.000000,421.000000,-621.000000,429.000000,0.000000,""};
+item66[] = {"",7,210,-103.999992,120.999992,-96.000000,129.000000,0.000000,""};
+item67[] = {"",7,210,-828.999939,1146.000000,-821.000000,1154.000000,0.000000,""};
+item68[] = {"",7,210,-829.000000,421.000000,-821.000000,429.000000,0.000000,""};
+item69[] = {"Terminate",1,250,-75.000000,25.000000,25.000000,75.000000,0.000000,"Terminate"};
+link0[] = {0,1};
+link1[] = {0,57};
+link2[] = {1,2};
+link3[] = {2,3};
+link4[] = {2,59};
+link5[] = {3,4};
+link6[] = {4,9};
+link7[] = {4,10};
+link8[] = {4,58};
+link9[] = {5,7};
+link10[] = {5,65};
+link11[] = {6,42};
+link12[] = {6,43};
+link13[] = {7,8};
+link14[] = {8,11};
+link15[] = {8,12};
+link16[] = {9,5};
+link17[] = {10,25};
+link18[] = {11,6};
+link19[] = {12,45};
+link20[] = {13,14};
+link21[] = {13,16};
+link22[] = {14,44};
+link23[] = {15,5};
+link24[] = {16,17};
+link25[] = {17,23};
+link26[] = {18,19};
+link27[] = {18,21};
+link28[] = {19,48};
+link29[] = {20,5};
+link30[] = {21,22};
+link31[] = {22,24};
+link32[] = {23,67};
+link33[] = {24,23};
+link34[] = {25,26};
+link35[] = {25,61};
+link36[] = {26,27};
+link37[] = {27,28};
+link38[] = {27,29};
+link39[] = {28,49};
+link40[] = {29,53};
+link41[] = {30,31};
+link42[] = {30,33};
+link43[] = {31,52};
+link44[] = {32,25};
+link45[] = {33,34};
+link46[] = {34,63};
+link47[] = {35,36};
+link48[] = {35,38};
+link49[] = {36,56};
+link50[] = {37,25};
+link51[] = {38,39};
+link52[] = {39,40};
+link53[] = {40,41};
+link54[] = {41,62};
+link55[] = {42,13};
+link56[] = {43,15};
+link57[] = {44,15};
+link58[] = {45,46};
+link59[] = {45,47};
+link60[] = {46,18};
+link61[] = {47,20};
+link62[] = {48,20};
+link63[] = {49,50};
+link64[] = {49,51};
+link65[] = {50,30};
+link66[] = {51,32};
+link67[] = {52,32};
+link68[] = {53,54};
+link69[] = {53,55};
+link70[] = {54,35};
+link71[] = {55,37};
+link72[] = {56,37};
+link73[] = {57,69};
+link74[] = {58,59};
+link75[] = {59,60};
+link76[] = {60,57};
+link77[] = {61,58};
+link78[] = {62,61};
+link79[] = {63,40};
+link80[] = {64,66};
+link81[] = {65,64};
+link82[] = {66,57};
+link83[] = {67,68};
+link84[] = {68,65};
+globals[] = {0.000000,0,0,0,0,640,480,1,87,6316128,1,-875.030884,344.124634,952.179810,-107.602409,1201,1044,1};
+window[] = {2,-1,-1,-1,-1,957,78,1472,78,3,1219};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Viper Ground";
+        class States
+        {
+                /*%FSM<STATE "Viper_Ground">*/
+                class Viper_Ground
+                {
+                        name = "Viper_Ground";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [""_unit""];" \n
+                         "" \n
+                         "if (isNil ""BIS_fnc_EXP_m07_viperGround_positions"") then {" \n
+                         "	// Define positions" \n
+                         "	BIS_fnc_EXP_m07_viperGround_positions = [1,2,3,4,5,6,7];" \n
+                         "	" \n
+                         "	// Define units" \n
+                         "	BIS_fnc_EXP_m07_viperGround_pushLeft = objNull;" \n
+                         "	BIS_fnc_EXP_m07_viperGround_pushRight = objNull;" \n
+                         "	BIS_fnc_EXP_m07_viperGround_flanker = objNull;" \n
+                         "};" \n
+                         "" \n
+                         "// Restock them if necessary" \n
+                         "if (count BIS_fnc_EXP_m07_viperGround_positions == 0) then {" \n
+                         "	BIS_fnc_EXP_m07_viperGround_positions = [1,2,3,4,5,6,7];" \n
+                         "};" \n
+                         "" \n
+                         "// Select random one, remove from pool" \n
+                         "private _pos = BIS_fnc_EXP_m07_viperGround_positions call BIS_fnc_selectRandom;" \n
+                         "BIS_fnc_EXP_m07_viperGround_positions = BIS_fnc_EXP_m07_viperGround_positions - [_pos];" \n
+                         "" \n
+                         "// Disable combat" \n
+                         "_unit setSpeedMode ""FULL"";" \n
+                         "_unit setCombatMode ""BLUE"";" \n
+                         "_unit setUnitPos ""UP"";" \n
+                         "{_unit disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "" \n
+                         "// Move to position" \n
+                         "private _marker = ""BIS_holdPos"" + (str _pos);" \n
+                         "private _holdPos = markerPos _marker;" \n
+                         "_unit doMove _holdPos;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Moving">*/
+                                class Moving
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Moving";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(unitReady _unit)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Moving">*/
+                class Moving
+                {
+                        name = "Moving";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Arrived">*/
+                                class Arrived
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Hold";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"unitReady _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Hold">*/
+                class Hold
+                {
+                        name = "Hold";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Allow combat" \n
+                         "_unit setBehaviour ""COMBAT"";" \n
+                         "_unit setUnitPos ""MIDDLE"";" \n
+                         "_unit setCombatMode ""YELLOW"";" \n
+                         "{_unit enableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "_unit disableAI ""PATH"";" \n
+                         "" \n
+                         "// Face correct direction" \n
+                         "private _targetPos = [_holdPos, 50, markerDir _marker] call BIS_fnc_relPos;" \n
+                         "_unit doWatch _targetPos;" \n
+                         "" \n
+                         "// Reveal all players" \n
+                         "{_unit reveal [_x, 4]} forEach allPlayers;" \n
+                         "" \n
+                         "// Reveal AI too" \n
+                         "if (_unit in BIS_viper3) then {{_unit reveal [_x, 4]} forEach [BIS_ai_1, BIS_james]};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Right_side">*/
+                                class Right_side
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="Wait_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_pos in [4,5,6]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Left_side">*/
+                                class Left_side
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_pos in [1,2,3,7]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Wait">*/
+                class Wait
+                {
+                        name = "Wait";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/"private _time = time + (5 + random 30);"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Waited">*/
+                                class Waited
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Flank_or_push";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time >= _time"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Should_I_flank_">*/
+                class Should_I_flank_
+                {
+                        name = "Should_I_flank_";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 43;
+                                        priority = 1.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(random 1) <= 0.25"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 42;
+                                        priority = 0.000000;
+                                        to="Is_someone_already";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Flank_or_push">*/
+                class Flank_or_push
+                {
+                        name = "Flank_or_push";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Flank">*/
+                                class Flank
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="Should_I_flank_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(random 1) <= 0.5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Push">*/
+                                class Push
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Should_I_push_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Is_someone_already">*/
+                class Is_someone_already
+                {
+                        name = "Is_someone_already";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 14;
+                                        priority = 1.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"private _flanker = missionNamespace getVariable [""BIS_fnc_EXP_m07_viperGround_flanker"", objNull];" \n
+                                         "!(isNull _flanker)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="Flank_left";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Flank_left">*/
+                class Flank_left
+                {
+                        name = "Flank_left";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"// Set as the flanker" \n
+                         "BIS_fnc_EXP_m07_viperGround_flanker = _unit;" \n
+                         "" \n
+                         "// Stop him from engaging" \n
+                         "_unit setBehaviour ""AWARE"";" \n
+                         "_unit setUnitPos ""UP"";" \n
+                         "_unit setCombatMode ""BLUE"";" \n
+                         "{_unit disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "_unit enableAI ""PATH"";" \n
+                         "_unit doWatch objNull;" \n
+                         "" \n
+                         "[_unit, _pos] spawn {" \n
+                         "	scriptName format [""BIS_fnc_EXP_m07_viperGround: flank - %1"", _this];" \n
+                         "	" \n
+                         "	params [""_unit"", ""_pos""];" \n
+                         "	private _start = 1;" \n
+                         "	if (_pos == 1) then {_start = 2};" \n
+                         "	" \n
+                         "	for ""_i"" from _start to 8 do {" \n
+                         "		if (alive _unit && { !(BIS_deviceSecured) }) then {" \n
+                         "			// Find marker and position" \n
+                         "			private _wpMarker = ""BIS_flankWP"" + (str _i);" \n
+                         "			private _wpPos = markerPos _wpMarker;" \n
+                         "			" \n
+                         "			// Move to position" \n
+                         "			_unit doMove _wpPos;" \n
+                         "			waitUntil {!(unitReady _unit) || !(alive _unit) || BIS_deviceSecured};" \n
+                         "			waitUntil {unitReady _unit || !(alive _unit) || BIS_deviceSecured};" \n
+                         "			" \n
+                         "			if (_i == 8 && { alive _unit && { !(BIS_deviceSecured) } }) then {" \n
+                         "				// Resume attack behavior" \n
+                         "				_unit setBehaviour ""COMBAT"";" \n
+                         "				_unit setCombatMode ""YELLOW"";" \n
+                         "				_unit setUnitPos ""MIDDLE"";" \n
+                         "				{_unit enableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "				_unit disableAI ""PATH"";" \n
+                         "				" \n
+                         "				_unit doWatch ([_wpPos, 50, markerDir _wpMarker] call BIS_fnc_relPos);" \n
+                         "				{_unit reveal [_x, 4]} forEach allPlayers;" \n
+                         "			};" \n
+                         "		};" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Already_pushing">*/
+                class Already_pushing
+                {
+                        name = "Already_pushing";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 19;
+                                        priority = 1.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"private _pusher = missionNamespace getVariable [""BIS_fnc_EXP_m07_viperGround_pushLeft"", objNull];" \n
+                                         "!(isNull _pusher)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="Push_left";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Push_left">*/
+                class Push_left
+                {
+                        name = "Push_left";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"// Set as the pusher" \n
+                         "BIS_fnc_EXP_m07_viperGround_pushLeft = _unit;" \n
+                         "" \n
+                         "// Stop him from engaging" \n
+                         "_unit setBehaviour ""AWARE"";" \n
+                         "_unit setUnitPos ""UP"";" \n
+                         "_unit setCombatMode ""BLUE"";" \n
+                         "{_unit disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "_unit enableAI ""PATH"";" \n
+                         "_unit doWatch objNull;" \n
+                         "" \n
+                         "_unit spawn {" \n
+                         "	scriptName format [""BIS_fnc_EXP_m07_viperGround: push left - %1"", _this];" \n
+                         "	" \n
+                         "	params [""_unit""];" \n
+                         "	" \n
+                         "	if (alive _unit && { !(BIS_deviceSecured) }) then {" \n
+                         "		// Push up" \n
+                         "		private _pushPos = markerPos ""BIS_pushPos1"";" \n
+                         "		_unit doMove _pushPos;" \n
+                         "		waitUntil {!(unitReady _unit) || !(alive _unit) || BIS_deviceSecured};" \n
+                         "		waitUntil {unitReady _unit || !(alive _unit) || BIS_deviceSecured};" \n
+                         "		" \n
+                         "		if (alive _unit && { !(BIS_deviceSecured) }) then {" \n
+                         "			// Resume attack behavior" \n
+                         "			_unit setBehaviour ""COMBAT"";" \n
+                         "			_unit setCombatMode ""YELLOW"";" \n
+                         "			_unit setUnitPos ""MIDDLE"";" \n
+                         "			{_unit enableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "			_unit disableAI ""PATH"";" \n
+                         "			" \n
+                         "			_unit doWatch ([_pushPos, 50, markerDir ""BIS_pushPos1""] call BIS_fnc_relPos);" \n
+                         "			{_unit reveal [_x, 4]} forEach allPlayers;" \n
+                         "		};" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Wait_1">*/
+                class Wait_1
+                {
+                        name = "Wait_1";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/"private _time = time + (5 + random 30);"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Waited">*/
+                                class Waited
+                                {
+                                        itemno = 26;
+                                        priority = 0.000000;
+                                        to="Flank_or_push_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time >= _time"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Flank_or_push_1">*/
+                class Flank_or_push_1
+                {
+                        name = "Flank_or_push_1";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Flank">*/
+                                class Flank
+                                {
+                                        itemno = 28;
+                                        priority = 1.000000;
+                                        to="Should_I_flank__1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(random 1) <= 0.5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Push">*/
+                                class Push
+                                {
+                                        itemno = 29;
+                                        priority = 0.000000;
+                                        to="Should_I_push__1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Is_someone_already_1">*/
+                class Is_someone_already_1
+                {
+                        name = "Is_someone_already_1";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 31;
+                                        priority = 1.000000;
+                                        to="Wait_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"private _flanker = missionNamespace getVariable [""BIS_fnc_EXP_m07_viperGround_flanker"", objNull];" \n
+                                         "!(isNull _flanker)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 33;
+                                        priority = 0.000000;
+                                        to="Flank";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Flank">*/
+                class Flank
+                {
+                        name = "Flank";
+                        itemno = 34;
+                        init = /*%FSM<STATEINIT""">*/"// Set as the flanker" \n
+                         "BIS_fnc_EXP_m07_viperGround_flanker = _unit;" \n
+                         "" \n
+                         "// Stop him from engaging" \n
+                         "_unit setBehaviour ""AWARE"";" \n
+                         "_unit setUnitPos ""UP"";" \n
+                         "_unit setCombatMode ""BLUE"";" \n
+                         "{_unit disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "_unit enableAI ""PATH"";" \n
+                         "_unit doWatch objNull;" \n
+                         "" \n
+                         "_unit spawn {" \n
+                         "	scriptName format [""BIS_fnc_EXP_m07_viperGround: flank - %1"", _this];" \n
+                         "	" \n
+                         "	params [""_unit""];" \n
+                         "	" \n
+                         "	for ""_i"" from 2 to 8 do {" \n
+                         "		if (alive _unit && { !(BIS_deviceSecured) }) then {" \n
+                         "			// Find marker and position" \n
+                         "			private _wpMarker = ""BIS_flankWP"" + (str _i);" \n
+                         "			private _wpPos = markerPos _wpMarker;" \n
+                         "			" \n
+                         "			// Move to position" \n
+                         "			_unit doMove _wpPos;" \n
+                         "			waitUntil {!(unitReady _unit) || !(alive _unit) || BIS_deviceSecured};" \n
+                         "			waitUntil {unitReady _unit || !(alive _unit) || BIS_deviceSecured};" \n
+                         "			" \n
+                         "			if (_i == 8 && { alive _unit && { !(BIS_deviceSecured) } }) then {" \n
+                         "				// Resume attack behavior" \n
+                         "				_unit setBehaviour ""COMBAT"";" \n
+                         "				_unit setCombatMode ""YELLOW"";" \n
+                         "				_unit setUnitPos ""MIDDLE"";" \n
+                         "				{_unit enableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "				_unit disableAI ""PATH"";" \n
+                         "				" \n
+                         "				_unit doWatch ([_wpPos, 50, markerDir _wpMarker] call BIS_fnc_relPos);" \n
+                         "				{_unit reveal [_x, 4]} forEach allPlayers;" \n
+                         "			};" \n
+                         "		};" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Is_someone_already_2">*/
+                class Is_someone_already_2
+                {
+                        name = "Is_someone_already_2";
+                        itemno = 35;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 36;
+                                        priority = 1.000000;
+                                        to="Wait_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"private _pusher = missionNamespace getVariable [""BIS_fnc_EXP_m07_viperGround_pushRight"", objNull];" \n
+                                         "!(isNull _pusher)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 38;
+                                        priority = 0.000000;
+                                        to="Push_right";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Push_right">*/
+                class Push_right
+                {
+                        name = "Push_right";
+                        itemno = 39;
+                        init = /*%FSM<STATEINIT""">*/"// Set as the pusher" \n
+                         "BIS_fnc_EXP_m07_viperGround_pushRight = _unit;" \n
+                         "" \n
+                         "// Stop him from engaging" \n
+                         "_unit setBehaviour ""AWARE"";" \n
+                         "_unit setUnitPos ""UP"";" \n
+                         "_unit setCombatMode ""BLUE"";" \n
+                         "{_unit disableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "_unit enableAI ""PATH"";" \n
+                         "_unit doWatch objNull;" \n
+                         "" \n
+                         "_unit spawn {" \n
+                         "	scriptName format [""BIS_fnc_EXP_m07_viperGround: push right - %1"", _this];" \n
+                         "	" \n
+                         "	params [""_unit""];" \n
+                         "	" \n
+                         "	if (alive _unit && { !(BIS_deviceSecured) }) then {" \n
+                         "		// Push up" \n
+                         "		private _pushPos = markerPos ""BIS_pushPos2"";" \n
+                         "		_unit doMove _pushPos;" \n
+                         "		waitUntil {!(unitReady _unit) || !(alive _unit) || BIS_deviceSecured};" \n
+                         "		waitUntil {unitReady _unit || !(alive _unit) || BIS_deviceSecured};" \n
+                         "		" \n
+                         "		if (alive _unit && { !(BIS_deviceSecured) }) then {" \n
+                         "			// Resume attack behavior" \n
+                         "			_unit setBehaviour ""COMBAT"";" \n
+                         "			_unit setCombatMode ""YELLOW"";" \n
+                         "			_unit setUnitPos ""MIDDLE"";" \n
+                         "			{_unit enableAI _x} forEach [""AUTOCOMBAT"", ""AUTOTARGET"", ""TARGET""];" \n
+                         "			_unit disableAI ""PATH"";" \n
+                         "			" \n
+                         "			_unit doWatch ([_pushPos, 50, markerDir ""BIS_pushPos2""] call BIS_fnc_relPos);" \n
+                         "			{_unit reveal [_x, 4]} forEach allPlayers;" \n
+                         "		};" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_or_retreati">*/
+                                class Dead_or_retreati
+                                {
+                                        itemno = 57;
+                                        priority = 2.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _unit)" \n
+                                         "||" \n
+                                         "BIS_deviceSecured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Should_I_push_">*/
+                class Should_I_push_
+                {
+                        name = "Should_I_push_";
+                        itemno = 45;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 47;
+                                        priority = 1.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(random 1) <= 0.25"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 46;
+                                        priority = 0.000000;
+                                        to="Already_pushing";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Should_I_flank__1">*/
+                class Should_I_flank__1
+                {
+                        name = "Should_I_flank__1";
+                        itemno = 49;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 51;
+                                        priority = 1.000000;
+                                        to="Wait_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(random 1) <= 0.25"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 50;
+                                        priority = 0.000000;
+                                        to="Is_someone_already_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Should_I_push__1">*/
+                class Should_I_push__1
+                {
+                        name = "Should_I_push__1";
+                        itemno = 53;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 55;
+                                        priority = 1.000000;
+                                        to="Wait_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(random 1) <= 0.25"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 54;
+                                        priority = 0.000000;
+                                        to="Is_someone_already_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Terminate">*/
+                class Terminate
+                {
+                        name = "Terminate";
+                        itemno = 69;
+                        init = /*%FSM<STATEINIT""">*/"// Clear variables" \n
+                         "switch (_unit) do {" \n
+                         "	case BIS_fnc_EXP_m07_viperGround_pushLeft: {BIS_fnc_EXP_m07_viperGround_pushLeft = objNull};" \n
+                         "	case BIS_fnc_EXP_m07_viperGround_pushRight: {BIS_fnc_EXP_m07_viperGround_pushRight = objNull};" \n
+                         "	case BIS_fnc_EXP_m07_viperGround_flanker: {BIS_fnc_EXP_m07_viperGround_flanker = objNull};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Viper_Ground";
+        finalStates[] =
+        {
+                "Terminate",
+        };
+};
+/*%FSM</COMPILE>*/

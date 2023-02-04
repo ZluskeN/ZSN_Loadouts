@@ -1,0 +1,18 @@
+class Sentences
+{
+	class exp_m01_55_engage_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m01_55_engage_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m01\55_Engage\exp_m01_55_engage_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

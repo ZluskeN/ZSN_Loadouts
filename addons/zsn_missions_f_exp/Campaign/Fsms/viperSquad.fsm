@@ -1,0 +1,394 @@
+/*%FSM<COMPILE "F:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Viper Squad">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"START",0,250,-75.000000,-107.979858,25.000000,-57.979858,0.000000,"START"};
+item1[] = {"valid",4,218,-70.000000,0.000000,20.000000,50.000000,0.000000,"valid"};
+item2[] = {"not_server",4,218,-180.000000,-210.000000,-90.000000,-160.000000,3.000000,"not server"};
+item3[] = {"END",1,250,-180.000000,-310.000000,-90.000000,-260.000000,0.000000,"END"};
+item4[] = {"post_init",3,250,-70.000000,100.000000,20.000000,150.000000,0.000000,"post init"};
+item5[] = {"in_combat",4,218,100.000000,300.000000,190.000000,350.000000,1.000000,"in combat"};
+item6[] = {"group_is_null",4,218,-70.000000,-210.000000,20.000000,-160.000000,2.000000,"group is null"};
+item7[] = {"END_1",1,250,-70.000000,-310.000000,20.000000,-260.000000,0.000000,"END"};
+item8[] = {"groups_has_no_un",4,218,40.000000,-210.000000,130.000000,-160.000000,1.000000,"groups has" \n "no units"};
+item9[] = {"END_2",1,250,40.000000,-310.000000,130.000000,-260.000000,0.000000,"END"};
+item10[] = {"wants_to_move",4,218,-70.000000,200.000000,20.000000,250.000000,0.000000,"wants to move"};
+item11[] = {"move",2,4346,-70.000000,300.000000,20.000000,350.000000,0.000000,"move"};
+item12[] = {"wait",2,250,100.000000,200.000000,190.000000,250.000000,0.000000,"wait"};
+item13[] = {"waypoint_complet",4,218,-248.675873,197.010101,-158.675873,247.010101,0.000000,"waypoint" \n "completed"};
+item14[] = {"finished",4,218,-250.000000,300.000000,-160.000000,350.000000,2.000000,"finished"};
+item15[] = {"END_3",1,250,-250.000000,390.000000,-160.000000,440.000000,0.000000,"END"};
+item16[] = {"_",2,250,-247.924957,99.393036,-157.924942,149.393036,0.000000,""};
+item17[] = {"",7,210,-294.029358,121.894867,-286.029419,129.894852,0.000000,""};
+item18[] = {"",7,210,-293.278503,323.887024,-285.278503,331.887024,0.000000,""};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {0,6};
+link3[] = {0,8};
+link4[] = {1,4};
+link5[] = {2,3};
+link6[] = {4,10};
+link7[] = {5,12};
+link8[] = {6,7};
+link9[] = {8,9};
+link10[] = {10,11};
+link11[] = {11,5};
+link12[] = {11,13};
+link13[] = {11,14};
+link14[] = {12,10};
+link15[] = {12,14};
+link16[] = {13,16};
+link17[] = {14,15};
+link18[] = {16,10};
+link19[] = {16,17};
+link20[] = {17,18};
+link21[] = {18,14};
+globals[] = {0.000000,0,0,0,0,640,480,1,165,6316128,1,-326.072968,216.077148,503.596619,-190.987000,722,1005,1};
+window[] = {2,-1,-1,-1,-1,904,25,1419,25,3,740};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Viper Squad";
+        class States
+        {
+                /*%FSM<STATE "START">*/
+                class START
+                {
+                        name = "START";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params" \n
+                         "[" \n
+                         "	[""_group"", grpNull, [grpNull]]," \n
+                         "	[""_minDistance"", 25.0, [0]]," \n
+                         "	[""_maxDistance"", 50.0, [0]]," \n
+                         "	[""_moveTimeout"", 10.0, [0.0]]," \n
+                         "	[""_bShowDebug"", false, [false]]" \n
+                         "];" \n
+                         "" \n
+                         "private _leader = leader _group;" \n
+                         "private _units = units _group;" \n
+                         "private _subordinates = units _group - [leader _group];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "not_server">*/
+                                class not_server
+                                {
+                                        itemno = 2;
+                                        priority = 3.000000;
+                                        to="END";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "group_is_null">*/
+                                class group_is_null
+                                {
+                                        itemno = 6;
+                                        priority = 2.000000;
+                                        to="END_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isNull _group"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "groups_has_no_un">*/
+                                class groups_has_no_un
+                                {
+                                        itemno = 8;
+                                        priority = 1.000000;
+                                        to="END_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count units _group <= 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "valid">*/
+                                class valid
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="post_init";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END">*/
+                class END
+                {
+                        name = "END";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/"""ViperSquadFSM: Attempt to run on machine which is not the server!"" call BIS_fnc_error;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "post_init">*/
+                class post_init
+                {
+                        name = "post_init";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Setup units" \n
+                         "{" \n
+                         "	// No fatigue" \n
+                         "	_x enableFatigue false;" \n
+                         "" \n
+                         "	// No fleeing" \n
+                         "	_x allowFleeing 0;" \n
+                         "" \n
+                         "	// Fired event handler" \n
+                         "	// Detecting when a unit starts firing, so we know group is in combat" \n
+                         "	// Is refreshed after a while" \n
+                         "	_x addEventHandler [""Fired""," \n
+                         "	{" \n
+                         "		if (time >= ((group (_this select 0)) getVariable [""BIS_viper_combatTimeout"", 0])) then" \n
+                         "		{" \n
+                         "			(group (_this select 0)) setVariable [""BIS_viper_combatTimeout"", time + 25.0];" \n
+                         "			[""ViperSquadFSM: %1 fired"", group (_this select 0)] call BIS_fnc_logFormat;" \n
+                         "		};" \n
+                         "	}];" \n
+                         "}" \n
+                         "forEach _units;" \n
+                         "" \n
+                         "// Log" \n
+                         """ViperSquadFSM: Post init"" call BIS_fnc_logFormat;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "wants_to_move">*/
+                                class wants_to_move
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="move";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"private _groupPlayers = [] call BIS_fnc_exp_camp_getPlayersGroup;" \n
+                                         "private _leaderPlayer = leader _groupPlayers;" \n
+                                         "" \n
+                                         "!isNull _leaderPlayer &&" \n
+                                         "{_leader distance _leaderPlayer > _maxDistance} &&" \n
+                                         "{time >= (_group getVariable [""BIS_viper_combatTimeout"", 0])}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_1">*/
+                class END_1
+                {
+                        name = "END_1";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"""ViperSquadFSM: Provided group is null!"" call BIS_fnc_error;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_2">*/
+                class END_2
+                {
+                        name = "END_2";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"""ViperSquadFSM: Provided group has no units!"" call BIS_fnc_error;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "move">*/
+                class move
+                {
+                        name = "move";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"private _groupPlayers = [] call BIS_fnc_exp_camp_getPlayersGroup;" \n
+                         "private _leaderPlayer = leader _groupPlayers;" \n
+                         "" \n
+                         "// The waypoint positions" \n
+                         "// Should be _minDistanceFromPlayer from player leader" \n
+                         "// Direction should be direct from group" \n
+                         "private _position = _leaderPlayer getRelPos [_minDistance, _leaderPlayer getRelDir _leader];" \n
+                         "" \n
+                         "// Create waypoint" \n
+                         "private _moveWaypoint = _group addWaypoint [_position, 0];" \n
+                         "" \n
+                         "_moveWaypoint setWaypointType ""MOVE"";" \n
+                         "_moveWaypoint setWaypointSpeed ""FULL"";" \n
+                         "_moveWaypoint setWaypointBehaviour ""AWARE"";" \n
+                         "_moveWaypoint setWaypointCombatMode ""RED"";" \n
+                         "_moveWaypoint setWaypointFormation ""LINE"";" \n
+                         "_moveWaypoint setWaypointStatements [""true"", ""(group this) setVariable ['BIS_supportGroup_waypointCompleted', true, false];""];" \n
+                         "" \n
+                         "// Per unit properties" \n
+                         "{" \n
+                         "	// Select stance" \n
+                         "	_x setUnitPos (selectRandom [""UP"", ""MIDDLE""]);" \n
+                         "" \n
+                         "	// Set behavior" \n
+                         "	_x setBehaviour ""AWARE"";" \n
+                         "}" \n
+                         "forEach _units;" \n
+                         "" \n
+                         "// Log" \n
+                         "[""ViperSquadFSM: Group is moving and following %1"", name _leaderPlayer] call BIS_fnc_logFormat;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "finished">*/
+                                class finished
+                                {
+                                        itemno = 14;
+                                        priority = 2.000000;
+                                        to="END_3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count units _group < 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "in_combat">*/
+                                class in_combat
+                                {
+                                        itemno = 5;
+                                        priority = 1.000000;
+                                        to="wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time < (_group getVariable [""BIS_viper_combatTimeout"", 0])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "waypoint_complet">*/
+                                class waypoint_complet
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_group getVariable [""BIS_supportGroup_waypointCompleted"", false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "wait">*/
+                class wait
+                {
+                        name = "wait";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"// Per unit properties" \n
+                         "{" \n
+                         "	// Select stance" \n
+                         "	_x setUnitPos ""MIDDLE"";" \n
+                         "" \n
+                         "	// Enable AI features" \n
+                         "	_x enableAI ""FSM"";" \n
+                         "	_x enableAI ""AUTOCOMBAT"";" \n
+                         "" \n
+                         "	// Set behavior" \n
+                         "	_x setBehaviour ""COMBAT"";" \n
+                         "}" \n
+                         "forEach _units;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "finished">*/
+                                class finished
+                                {
+                                        itemno = 14;
+                                        priority = 2.000000;
+                                        to="END_3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count units _group < 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "wants_to_move">*/
+                                class wants_to_move
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="move";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"private _groupPlayers = [] call BIS_fnc_exp_camp_getPlayersGroup;" \n
+                                         "private _leaderPlayer = leader _groupPlayers;" \n
+                                         "" \n
+                                         "!isNull _leaderPlayer &&" \n
+                                         "{_leader distance _leaderPlayer > _maxDistance} &&" \n
+                                         "{time >= (_group getVariable [""BIS_viper_combatTimeout"", 0])}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END_3">*/
+                class END_3
+                {
+                        name = "END_3";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"// Log" \n
+                         """ViperSquadFSM: Group has no more units"" call BIS_fnc_logFormat;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "_">*/
+                class _
+                {
+                        name = "_";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"_group setVariable [""BIS_supportGroup_waypointCompleted"", false];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "finished">*/
+                                class finished
+                                {
+                                        itemno = 14;
+                                        priority = 2.000000;
+                                        to="END_3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count units _group < 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "wants_to_move">*/
+                                class wants_to_move
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="move";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"private _groupPlayers = [] call BIS_fnc_exp_camp_getPlayersGroup;" \n
+                                         "private _leaderPlayer = leader _groupPlayers;" \n
+                                         "" \n
+                                         "!isNull _leaderPlayer &&" \n
+                                         "{_leader distance _leaderPlayer > _maxDistance} &&" \n
+                                         "{time >= (_group getVariable [""BIS_viper_combatTimeout"", 0])}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="START";
+        finalStates[] =
+        {
+                "END",
+                "END_1",
+                "END_2",
+                "END_3",
+        };
+};
+/*%FSM</COMPILE>*/

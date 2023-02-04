@@ -1,0 +1,148 @@
+class Sentences
+{
+	class exp_m02_25_briefing_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_1
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_1.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_TRK_0
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_TRK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_TRK_0.ogg"};
+		actor = "BIS_support3";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_2
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_2";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_2.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_3
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_3";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_3.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_COM_0
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_COM_0.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_4
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_4";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_4.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_5
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_5";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_5.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_6
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_6";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_6.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_GRM_0
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_GRM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_GRM_0.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_7
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_7";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_7.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_GRM_1
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_GRM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_GRM_1.ogg"};
+		actor = "BIS_support1";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_8
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_8";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_8.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_25_briefing_RIK_9
+	{
+		textPlain = "$STR_A3_exp_m02_25_briefing_RIK_9";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\25_Briefing\exp_m02_25_briefing_RIK_9.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

@@ -1,0 +1,48 @@
+class Sentences
+{
+	class exp_m02_05_convoy_update_COM_0
+	{
+		textPlain = "$STR_A3_exp_m02_05_convoy_update_COM_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\05_Convoy_Update\exp_m02_05_convoy_update_COM_0.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_05_convoy_update_COM_1
+	{
+		textPlain = "$STR_A3_exp_m02_05_convoy_update_COM_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\05_Convoy_Update\exp_m02_05_convoy_update_COM_1.ogg"};
+		actor = "BIS_HQ";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_05_convoy_update_RIK_0
+	{
+		textPlain = "$STR_A3_exp_m02_05_convoy_update_RIK_0";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\05_Convoy_Update\exp_m02_05_convoy_update_RIK_0.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class exp_m02_05_convoy_update_RIK_1
+	{
+		textPlain = "$STR_A3_exp_m02_05_convoy_update_RIK_1";
+ 		text = "";
+		speech[] = {"\a3\dubbing_f_exp\exp_m02\05_Convoy_Update\exp_m02_05_convoy_update_RIK_1.ogg"};
+		actor = "BIS_supportLead";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

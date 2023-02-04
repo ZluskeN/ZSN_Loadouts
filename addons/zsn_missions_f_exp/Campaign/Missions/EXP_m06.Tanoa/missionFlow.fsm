@@ -1,0 +1,624 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, Mission Flow">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,-75.000000,-325.000000,25.000000,-275.000000,0.000000,"Start"};
+item1[] = {"Client",8,218,-200.000000,-325.000000,-100.000000,-275.000000,0.000000,"Client"};
+item2[] = {"Terminate",1,250,-200.000000,-250.000000,-100.000000,-200.000000,0.000000,"Terminate"};
+item3[] = {"Server",4,218,-75.000000,-250.000000,25.000000,-200.000000,1.000000,"Server"};
+item4[] = {"Intro",2,250,-75.000000,-175.000000,25.000000,-125.000000,0.000000,"Intro"};
+item5[] = {"Intro_ended",4,218,-75.000000,-100.000000,25.000000,-50.000000,0.000000,"Intro ended"};
+item6[] = {"Rendezvous",2,250,-75.000000,-25.000000,25.000000,25.000000,0.000000,"Rendezvous"};
+item7[] = {"Capture_the_Isla",2,250,-75.000000,125.000000,25.000000,175.000000,0.000000,"Capture the Island"};
+item8[] = {"",7,210,-29.000008,196.000000,-20.999992,204.000000,0.000000,""};
+item9[] = {"",7,210,-103.999992,396.000000,-96.000000,404.000000,0.000000,""};
+item10[] = {"",7,210,-104.000000,196.000000,-96.000000,204.000000,0.000000,""};
+item11[] = {"",7,210,-29.000000,220.999939,-21.000000,229.000061,0.000000,""};
+item12[] = {"Drone_destroyed",4,218,-75.000000,250.000000,25.000000,300.000000,0.000000,"Drone" \n "destroyed"};
+item13[] = {"Keep_them_safe",2,250,-75.000000,325.000000,25.000000,375.000000,0.000000,"Keep them safe"};
+item14[] = {"",7,210,-29.000000,396.000000,-21.000000,404.000000,0.000000,""};
+item15[] = {"",7,210,171.000000,196.000000,179.000000,204.000000,0.000000,""};
+item16[] = {"",7,210,96.000000,220.999939,104.000000,229.000061,0.000000,""};
+item17[] = {"Technicals_destr",4,218,50.000000,250.000000,150.000000,300.000000,0.000000,"Technicals" \n "destroyed"};
+item18[] = {"Technicals_destr",2,250,50.000000,325.000000,150.000000,375.000000,0.000000,"Technicals" \n "destroyed"};
+item19[] = {"",7,210,96.000000,396.000000,104.000000,404.000000,0.000000,""};
+item20[] = {"",7,210,171.000000,446.000000,179.000000,454.000000,0.000000,""};
+item21[] = {"Island_captured",4,218,-75.000000,425.000000,25.000000,475.000000,0.000000,"Island captured"};
+item22[] = {"Relax__for_now",2,250,-75.000000,500.000000,25.000000,550.000000,0.000000,"Relax, for now"};
+item23[] = {"Drones_killed",4,218,-75.000000,575.000000,25.000000,625.000000,0.000000,"Drones" \n "killed"};
+item24[] = {"Self_destruct",2,250,-75.000000,650.000000,25.000000,700.000000,0.000000,"Self destruct"};
+item25[] = {"Self_destructed",4,218,-75.000000,725.000000,25.000000,775.000000,0.000000,"Self destructed"};
+item26[] = {"Rendezvous_1",2,250,-75.000000,800.000000,25.000000,850.000000,0.000000,"Rendezvous"};
+item27[] = {"At_camp",4,218,-75.000000,875.000000,25.000000,925.000000,0.000000,"At camp"};
+item28[] = {"Apex_Protocol_di",1,250,-75.000000,950.000000,25.000000,1000.000000,0.000000,"Apex Protocol" \n "discovered"};
+item29[] = {"Start_CTI",4,218,-75.000000,50.000000,25.000000,100.000000,0.000000,"Start CTI"};
+item30[] = {"Drone_skipped",4,218,-200.000000,-25.000000,-100.000000,25.000000,0.000000,"Drone skipped"};
+item31[] = {"Proceed",2,250,-200.000000,50.000000,-100.000000,100.000000,0.000000,"Proceed"};
+link0[] = {0,1};
+link1[] = {0,3};
+link2[] = {1,2};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {5,6};
+link6[] = {6,29};
+link7[] = {6,30};
+link8[] = {7,8};
+link9[] = {8,11};
+link10[] = {8,15};
+link11[] = {9,10};
+link12[] = {10,8};
+link13[] = {11,12};
+link14[] = {11,16};
+link15[] = {12,13};
+link16[] = {13,14};
+link17[] = {14,9};
+link18[] = {15,20};
+link19[] = {16,17};
+link20[] = {17,18};
+link21[] = {18,19};
+link22[] = {19,14};
+link23[] = {20,21};
+link24[] = {21,22};
+link25[] = {22,23};
+link26[] = {23,24};
+link27[] = {24,25};
+link28[] = {25,26};
+link29[] = {26,27};
+link30[] = {27,28};
+link31[] = {29,7};
+link32[] = {30,31};
+link33[] = {31,29};
+globals[] = {0.000000,0,0,0,0,640,480,1,124,6316128,1,-171.017120,103.483261,223.938782,-276.246185,388,707,1};
+window[] = {0,-1,-1,-1,-1,1139,2180,3574,260,1,406};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Mission Flow";
+        class States
+        {
+                /*%FSM<STATE "Start">*/
+                class Start
+                {
+                        name = "Start";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Server">*/
+                                class Server
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="Intro";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Client">*/
+                                class Client
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Terminate">*/
+                class Terminate
+                {
+                        name = "Terminate";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Intro">*/
+                class Intro
+                {
+                        name = "Intro";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"// Handled in BIS_fnc_EXP_m06_intro"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Intro_ended">*/
+                                class Intro_ended
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Rendezvous";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_meetUp"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Rendezvous">*/
+                class Rendezvous
+                {
+                        name = "Rendezvous";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"// Handle mission start" \n
+                         "[] call BIS_fnc_EXP_m06_startManager;" \n
+                         "" \n
+                         "// Control locations" \n
+                         "{_x spawn BIS_fnc_EXP_m06_handleLocation} forEach [" \n
+                         "	[BIS_position1Units, ""BIS_position1Alert"", ""BIS_position1Clear"", BIS_position1Players, BIS_position1Capture, ""BIS_position1"", ""BIS_position1"", localize ""STR_A3_EXP_m06_RP_Texas""],	" \n
+                         "	[BIS_position2Units, ""BIS_position2Alert"", ""BIS_position2Clear"", BIS_position2Players, BIS_position2Capture, ""BIS_position2"", ""BIS_position2"", localize ""STR_A3_EXP_m06_RP_Washington""],	" \n
+                         "	[BIS_position3Units, ""BIS_position3Alert"", ""BIS_position3Clear"", BIS_position3Players, BIS_position3Capture, ""BIS_position3"", ""BIS_position3"", localize ""STR_A3_EXP_m06_RP_Virginia""],	" \n
+                         "	[BIS_position4Units, ""BIS_position4Alert"", ""BIS_position4Clear"", BIS_position4Players, BIS_position4Capture, ""BIS_position4"", ""BIS_position4"", localize ""STR_A3_EXP_m06_RP_Nebraska""],	" \n
+                         "	[BIS_position5Units, ""BIS_position5Alert"", ""BIS_position5Clear"", BIS_position5Players, BIS_position5Capture, ""BIS_position5"", ""BIS_position5"", localize ""STR_A3_EXP_m06_RP_Montana""],	" \n
+                         "	[BIS_landingUnits, ""BIS_landingAlert"", ""BIS_landingClear"", BIS_landingPlayers, BIS_landingCapture, ""BIS_landing"", ""BIS_landing"", localize ""STR_A3_EXP_m06_RP_LandingArea""]	" \n
+                         "];" \n
+                         "" \n
+                         "// Control respawns" \n
+                         "{_x spawn BIS_fnc_EXP_m06_handleRespawn} forEach [" \n
+                         "	[""BIS_position1"", 100, ""BIS_position1Respawn"", localize ""STR_A3_EXP_m06_RP_NearTexas"", ""BIS_position1Alert""],	// ToDo: localize" \n
+                         "	[""BIS_position2"", 100, ""BIS_position2Respawn"", localize ""STR_A3_EXP_m06_RP_NearWashington"", ""BIS_position2Alert""],	// ToDo: localize" \n
+                         "	[""BIS_position3"", 100, ""BIS_position3Respawn"", localize ""STR_A3_EXP_m06_RP_NearVirginia"", ""BIS_position3Alert""],	// ToDo: localize" \n
+                         "	[""BIS_position4"", 100, ""BIS_position4Respawn"", localize ""STR_A3_EXP_m06_RP_NearNebraska"", ""BIS_position4Alert""],	// ToDo: localize" \n
+                         "	[""BIS_position5"", 100, ""BIS_position5Respawn"", localize ""STR_A3_EXP_m06_RP_NearMontana"", ""BIS_position5Alert""],	// ToDo: localize" \n
+                         "	[""BIS_landing"", 100, ""BIS_landingRespawn"", localize ""STR_A3_EXP_m06_RP_NLA"", ""BIS_landingAlert""]	// ToDo: localize" \n
+                         "];" \n
+                         "" \n
+                         "// Control technicals" \n
+                         "{_x spawn BIS_fnc_EXP_m06_handleTechnical} forEach [" \n
+                         "	[BIS_technical1, ""BIS_technical1"", ""BIS_technical1Destroyed""]," \n
+                         "	[BIS_technical2, ""BIS_technical2"", ""BIS_technical2Destroyed""]," \n
+                         "	[BIS_technical3, ""BIS_technical3"", ""BIS_technical3Destroyed""]" \n
+                         "];" \n
+                         "" \n
+                         "// Add task" \n
+                         """BIS_miller"" call BIS_fnc_missionTasks;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Drone_skipped">*/
+                                class Drone_skipped
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Proceed";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_droneSkipped"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Start_CTI">*/
+                                class Start_CTI
+                                {
+                                        itemno = 29;
+                                        priority = 0.000000;
+                                        to="Capture_the_Isla";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_CTI"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Capture_the_Isla">*/
+                class Capture_the_Isla
+                {
+                        name = "Capture_the_Isla";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"// Make Miller move" \n
+                         "[] spawn BIS_fnc_EXP_m06_millerMove;" \n
+                         "" \n
+                         "// Handle drone task" \n
+                         "if (""BIS_drone"" call BIS_fnc_taskExists) then {" \n
+                         "	if ({_x getVariable [""BIS_droneActive"", false]} count BIS_drones > 0) then {" \n
+                         "		// Players revealed drones via different drone" \n
+                         "		[""BIS_drone"", ""CANCELED""] call BIS_fnc_missionTasks;" \n
+                         "	} else {" \n
+                         "		// Players used destroyed UGV" \n
+                         "		[""BIS_drone"", ""SUCCEEDED""] call BIS_fnc_missionTasks;" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "// Add CTI tasks" \n
+                         """BIS_CTI"" spawn BIS_fnc_missionTasks;" \n
+                         "" \n
+                         "// Register state variables" \n
+                         "private _destroyed = false;" \n
+                         "private _technicals = false;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""missionFlow.fsm: mortar control"";" \n
+                         "	" \n
+                         "	sleep (30 + random 60);" \n
+                         "	" \n
+                         "	// Add mortar support" \n
+                         "	BIS_mortarActive = true;" \n
+                         "	publicVariable ""BIS_mortarActive"";" \n
+                         "	" \n
+                         "	// MISSING CONVERSATIONS" \n
+                         "	sleep (10 + random 20);" \n
+                         "	private _conversationScript = [""45_Reveal""] spawn BIS_fnc_missionConversations;" \n
+                         "	" \n
+                         "	sleep (40 + random 20);" \n
+                         "	waituntil {{vehicle _x distance BIS_miller > 75} count allplayers >0};" \n
+                         "	private _conversationScript = [""75_Corpses""] spawn BIS_fnc_missionConversations;" \n
+                         "" \n
+                         "};" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""missionFlow.fsm: civilian plane control"";" \n
+                         "	" \n
+                         "	// Wait 5 minutes" \n
+                         "	sleep 300;" \n
+                         "	" \n
+                         "	// Unhide the plane" \n
+                         "	{" \n
+                         "		_x hideObjectGlobal false;" \n
+                         "		_x enableSimulationGlobal true;" \n
+                         "	} forEach ([BIS_civPlane1] + units group driver BIS_civPlane1);" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Technicals_destr">*/
+                                class Technicals_destr
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="Technicals_destr";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_technicals)" \n
+                                         "&&" \n
+                                         "{ {!(_x)} count [BIS_technical1Destroyed, BIS_technical2Destroyed, BIS_technical3Destroyed] == 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Island_captured">*/
+                                class Island_captured
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="Relax__for_now";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"// All targets were dealt with" \n
+                                         "{!(_x)} count [" \n
+                                         "	BIS_position1Clear, BIS_position2Clear, BIS_position3Clear, BIS_position4Clear, BIS_position5Clear," \n
+                                         "	BIS_landingClear, BIS_technicalsDestroyed, BIS_technical1Destroyed, BIS_technical2Destroyed, BIS_technical3Destroyed" \n
+                                         "] == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Drone_destroyed">*/
+                                class Drone_destroyed
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Keep_them_safe";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_destroyed)" \n
+                                         "&&" \n
+                                         "{ {!(captive _x) && { !(alive _x) }} count BIS_drones > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Keep_them_safe">*/
+                class Keep_them_safe
+                {
+                        name = "Keep_them_safe";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"// Update state" \n
+                         "_destroyed = true;" \n
+                         "" \n
+                         "// Play conversation" \n
+                         "private _conversationScript = [""70_Drone_Destroyed""] spawn BIS_fnc_missionConversations;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Technicals_destr">*/
+                                class Technicals_destr
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="Technicals_destr";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_technicals)" \n
+                                         "&&" \n
+                                         "{ {!(_x)} count [BIS_technical1Destroyed, BIS_technical2Destroyed, BIS_technical3Destroyed] == 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Island_captured">*/
+                                class Island_captured
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="Relax__for_now";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"// All targets were dealt with" \n
+                                         "{!(_x)} count [" \n
+                                         "	BIS_position1Clear, BIS_position2Clear, BIS_position3Clear, BIS_position4Clear, BIS_position5Clear," \n
+                                         "	BIS_landingClear, BIS_technicalsDestroyed, BIS_technical1Destroyed, BIS_technical2Destroyed, BIS_technical3Destroyed" \n
+                                         "] == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Drone_destroyed">*/
+                                class Drone_destroyed
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Keep_them_safe";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_destroyed)" \n
+                                         "&&" \n
+                                         "{ {!(captive _x) && { !(alive _x) }} count BIS_drones > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Technicals_destr">*/
+                class Technicals_destr
+                {
+                        name = "Technicals_destr";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"// Update state" \n
+                         "_technicals = true;" \n
+                         "" \n
+                         "// Register that technicals were destroyed" \n
+                         "BIS_technicalsDestroyed = true;" \n
+                         "" \n
+                         "// Update task" \n
+                         "[""BIS_CTI"", [""BIS_technicals"", ""SUCCEEDED"", false]] call BIS_fnc_missionTasks;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Technicals_destr">*/
+                                class Technicals_destr
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="Technicals_destr";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_technicals)" \n
+                                         "&&" \n
+                                         "{ {!(_x)} count [BIS_technical1Destroyed, BIS_technical2Destroyed, BIS_technical3Destroyed] == 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Island_captured">*/
+                                class Island_captured
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="Relax__for_now";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"// All targets were dealt with" \n
+                                         "{!(_x)} count [" \n
+                                         "	BIS_position1Clear, BIS_position2Clear, BIS_position3Clear, BIS_position4Clear, BIS_position5Clear," \n
+                                         "	BIS_landingClear, BIS_technicalsDestroyed, BIS_technical1Destroyed, BIS_technical2Destroyed, BIS_technical3Destroyed" \n
+                                         "] == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Drone_destroyed">*/
+                                class Drone_destroyed
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Keep_them_safe";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_destroyed)" \n
+                                         "&&" \n
+                                         "{ {!(captive _x) && { !(alive _x) }} count BIS_drones > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Relax__for_now">*/
+                class Relax__for_now
+                {
+                        name = "Relax__for_now";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"[] spawn {" \n
+                         "	scriptName ""missionFlow.fsm: relax, for now"";" \n
+                         "	" \n
+                         "	sleep (5 + random 5);" \n
+                         "	" \n
+                         "	private _pos = markerPos ""BIS_RV"";" \n
+                         "	" \n
+                         "	if (BIS_miller distance _pos >= 50) then {" \n
+                         "		// Teleport Miller if necessary" \n
+                         "		BIS_miller setPos _pos;" \n
+                         "		" \n
+                         "		// Set correct waypoint" \n
+                         "		private _group = group BIS_miller;" \n
+                         "		private _waypoints = waypoints _group;" \n
+                         "		_group setCurrentWaypoint (_waypoints select (count _waypoints - 1));" \n
+                         "	};" \n
+                         "	" \n
+                         "	// Succeed the task" \n
+                         "	[""BIS_CTI"", ""SUCCEEDED""] call BIS_fnc_missionTasks;" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "private _conversationScript = [""80_Island_Captured""] spawn BIS_fnc_missionConversations;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Drones_killed">*/
+                                class Drones_killed
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="Self_destruct";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_destroyDrones"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Self_destruct">*/
+                class Self_destruct
+                {
+                        name = "Self_destruct";
+                        itemno = 24;
+                        init = /*%FSM<STATEINIT""">*/"// Play conversation" \n
+                         "private _conversationScript = [""85_Self_Destruct""] spawn BIS_fnc_missionConversations;" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""missionFlow.fsm: self destruct"";" \n
+                         "	" \n
+                         "	sleep 8;" \n
+                         "/*	" \n
+                         "	[" \n
+                         "		parseText ""<t align = 'left'>Design Note<br/><br/>All drones will make an audible beeping noise before they explode in future iterations, providing an additional audio warning on top of Miller telling players to get away.</t>""," \n
+                         "		""hint""" \n
+                         "	] call BIS_fnc_MP;" \n
+                         "*/" \n
+                         "	// Make remaining drones self destruct" \n
+                         "	{" \n
+                         "		if (alive _x) then {" \n
+                         "			_x spawn BIS_fnc_EXP_m06_destroyDrone;" \n
+                         "			sleep (0.5 + random 2);" \n
+                         "		};" \n
+                         "	} forEach (BIS_drones + [BIS_keyUGV]);" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Self_destructed">*/
+                                class Self_destructed
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="Rendezvous_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{alive _x} count BIS_drones == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Rendezvous_1">*/
+                class Rendezvous_1
+                {
+                        name = "Rendezvous_1";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"[] spawn {" \n
+                         "	scriptName ""missionFlow.fsm: rendezvous"";" \n
+                         "	" \n
+                         "	sleep (3 + random 5);" \n
+                         "	" \n
+                         "	// Play conversation" \n
+                         "private _conversationScript = [""90_Rendezvous""] spawn BIS_fnc_missionConversations;	" \n
+                         "	// Wait to RV" \n
+                         "	waitUntil {BIS_RV};" \n
+                         "	" \n
+                         "	// Add task" \n
+                         "	""BIS_RV"" call BIS_fnc_missionTasks;" \n
+                         "};" \n
+                         "" \n
+                         "// Store destination for following condition" \n
+                         "private _dest = markerPos ""BIS_RV"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "At_camp">*/
+                                class At_camp
+                                {
+                                        itemno = 27;
+                                        priority = 0.000000;
+                                        to="Apex_Protocol_di";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_RV" \n
+                                         "&&" \n
+                                         "{ {isPlayer _x} count (list BIS_endingTrig) > 0 }"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Apex_Protocol_di">*/
+                class Apex_Protocol_di
+                {
+                        name = "Apex_Protocol_di";
+                        itemno = 28;
+                        init = /*%FSM<STATEINIT""">*/"// Start ending sequence" \n
+                         "[] spawn BIS_fnc_EXP_m06_endingServer;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Proceed">*/
+                class Proceed
+                {
+                        name = "Proceed";
+                        itemno = 31;
+                        init = /*%FSM<STATEINIT""">*/"// Update tasks" \n
+                         "[""BIS_patrol"", ""CANCELED""] call BIS_fnc_missionTasks;" \n
+                         "if (""BIS_drone"" call BIS_fnc_taskExists) then {[""BIS_drone"", ""CANCELED""] call BIS_fnc_missionTasks};" \n
+                         "" \n
+                         "[] spawn {" \n
+                         "	scriptName ""missionFlow.fsm: proceed"";" \n
+                         "	" \n
+                         "	if ({alive _x} count BIS_droneGuards > 0) then {" \n
+                         "		// Miller has to deal with the drone guards himself" \n
+                         "		""x15_Skipped"" call BIS_fnc_missionConversations;" \n
+                         "		waitUntil {{alive _x} count BIS_droneGuards == 0};" \n
+                         "	};" \n
+                         "	" \n
+                         "	// Still give them the info" \n
+                         "	""x20_Drone_Info"" spawn BIS_fnc_missionConversations;" \n
+                         "};" \n
+                         "" \n
+                         "// Immediately switch to CTI" \n
+                         "BIS_CTI = true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Start_CTI">*/
+                                class Start_CTI
+                                {
+                                        itemno = 29;
+                                        priority = 0.000000;
+                                        to="Capture_the_Isla";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BIS_CTI"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Start";
+        finalStates[] =
+        {
+                "Terminate",
+                "Apex_Protocol_di",
+        };
+};
+/*%FSM</COMPILE>*/

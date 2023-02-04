@@ -1,0 +1,7 @@
+///<'missions_f_exp.pbo' properties via Mikero's dos tools, dll version 6.44>///
+prefix=a3\missions_f_exp
+product=Arma 3
+version=144315
+//Pbo Type is: Arma Addon
+//Sha: 'B83DC695AB5C04707AF263C7A2E81E509FAA953B'
+//////</properties>//////
