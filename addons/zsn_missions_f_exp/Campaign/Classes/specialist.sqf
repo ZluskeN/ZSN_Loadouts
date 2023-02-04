@@ -17,7 +17,7 @@ this addVest "V_PlateCarrier1_rgr";
 this addItemToVest "FirstAidKit";
 for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
 this addItemToVest "SmokeShell";
-for "_i" from 1 to 3 do {this addItemToVest "16Rnd_9x21_Mag";};
+for "_i" from 1 to 3 do {this addItemToVest "ZSN_20Rnd_570x28_Mag";};
 for "_i" from 1 to 4 do {this addItemToVest "30Rnd_9x21_Mag";};
 this addBackpack "B_AssaultPack_rgr";
 this addItemToBackpack "NLAW_F";
@@ -31,7 +31,7 @@ this addPrimaryWeaponItem "acc_pointer_IR";
 this addPrimaryWeaponItem "optic_Aco_smg";
 this addWeapon "launch_NLAW_F";
 this addWeapon "hgun_P07_khk_F";
-this addHandgunItem "muzzle_snds_L";
+this addHandgunItem "muzzle_snds_570";
 
 comment "Add items";
 this linkItem "ItemMap";

@@ -38,16 +38,16 @@ switch (typeOf _unit) do {
 		_vest = "V_PlateCarrier2_rgr_noflag_F";
 		
 		_primary = [
-			"arifle_SPAR_01_khk_F",
-			["30Rnd_556x45_Stanag", 6],
+			"arifle_MX_khk_F",
+			["30Rnd_65x39_caseless_mag", 6],
 			["optic_ERCO_khk_F", "acc_pointer_IR"],
-			"muzzle_snds_M"
+			"muzzle_snds_65_TI_blk_F"
 		];
 		
 		_handgun = [
 			"hgun_P07_khk_F",
-			["16Rnd_9x21_Mag", 3],
-			"muzzle_snds_L"
+			["ZSN_20Rnd_570x28_Mag", 3],
+			"muzzle_snds_570"
 		];
 	};
 	
@@ -62,16 +62,16 @@ switch (typeOf _unit) do {
 		_headgear = "H_Watchcap_khk";
 		
 		_primary = [
-			"arifle_SPAR_01_khk_F",
-			["30Rnd_556x45_Stanag", 6],
+			"arifle_MX_khk_F",
+			["30Rnd_65x39_caseless_khaki_mag", 6],
 			["optic_ERCO_khk_F", "acc_pointer_IR"],
-			"muzzle_snds_M"
+			"muzzle_snds_65_TI_blk_F"
 		];
 		
 		_handgun = [
 			"hgun_P07_khk_F",
-			["16Rnd_9x21_Mag", 3],
-			"muzzle_snds_L"
+			["ZSN_20Rnd_570x28_Mag", 3],
+			"muzzle_snds_570"
 		];
 	};
 	
@@ -86,16 +86,16 @@ switch (typeOf _unit) do {
 		_headgear = "H_Cap_oli_hs";
 		
 		_primary = [
-			"arifle_SPAR_03_khk_F",
-			["20Rnd_762x51_Mag", 6],
+			"arifle_MXM_khk_F",
+			["30Rnd_65x39_caseless_khaki_mag", 4],
 			["optic_AMS_khk", "acc_pointer_IR", "bipod_01_F_khk"],
-			"muzzle_snds_B"
+			"muzzle_snds_65_TI_blk_F"
 		];
 		
 		_handgun = [
 			"hgun_P07_khk_F",
-			["16Rnd_9x21_Mag", 3],
-			"muzzle_snds_L"
+			["ZSN_20Rnd_570x28_Mag", 3],
+			"muzzle_snds_570"
 		];
 	};
 	
@@ -112,16 +112,16 @@ switch (typeOf _unit) do {
 		_backpack = ["B_AssaultPack_rgr"];
 		
 		_primary = [
-			"arifle_SPAR_02_khk_F",
-			["150Rnd_556x45_Drum_Mag_F", 2],
+			"arifle_MX_SW_khk_F",
+			["100Rnd_65x39_caseless_khaki_mag", 3],
 			["optic_ERCO_khk_F", "acc_pointer_IR", "bipod_01_F_khk"],
-			"muzzle_snds_M"
+			"muzzle_snds_65_TI_blk_F"
 		];
 		
 		_handgun = [
 			"hgun_P07_khk_F",
-			["16Rnd_9x21_Mag", 3],
-			"muzzle_snds_L"
+			["ZSN_20Rnd_570x28_Mag", 3],
+			"muzzle_snds_570"
 		];
 	};
 	
@@ -138,10 +138,10 @@ switch (typeOf _unit) do {
 		_backpack = ["B_AssaultPack_rgr"];
 		
 		_primary = [
-			"arifle_SPAR_01_khk_F",
-			["30Rnd_556x45_Stanag", 6],
+			"arifle_MX_khk_F",
+			["30Rnd_65x39_caseless_khaki_mag", 6],
 			["optic_ERCO_khk_F", "acc_pointer_IR"],
-			"muzzle_snds_M"
+			"muzzle_snds_65_TI_blk_F"
 		];
 		
 		_secondary = [
@@ -151,8 +151,8 @@ switch (typeOf _unit) do {
 		
 		_handgun = [
 			"hgun_P07_khk_F",
-			["16Rnd_9x21_Mag", 3],
-			"muzzle_snds_L"
+			["ZSN_20Rnd_570x28_Mag", 3],
+			"muzzle_snds_570"
 		];
 	};
 };

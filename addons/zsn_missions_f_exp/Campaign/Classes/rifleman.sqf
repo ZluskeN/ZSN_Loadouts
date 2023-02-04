@@ -19,7 +19,7 @@ for "_i" from 1 to 3 do {this addItemToVest "30Rnd_65x39_caseless_khaki_mag";};
 for "_i" from 1 to 4 do {this addItemToVest "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
 this addItemToVest "SmokeShell";
-for "_i" from 1 to 3 do {this addItemToVest "16Rnd_9x21_Mag";};
+for "_i" from 1 to 3 do {this addItemToVest "ZSN_20Rnd_570x28_Mag";};
 this addHeadgear "H_Cap_oli_hs";
 this addGoggles "G_Tactical_Black";
 
@@ -29,7 +29,7 @@ this addPrimaryWeaponItem "muzzle_snds_H_khk_F";
 this addPrimaryWeaponItem "acc_pointer_IR";
 this addPrimaryWeaponItem "optic_Hamr_khk_F";
 this addWeapon "hgun_P07_khk_F";
-this addHandgunItem "muzzle_snds_L";
+this addHandgunItem "muzzle_snds_570";
 
 comment "Add items";
 this linkItem "ItemMap";
