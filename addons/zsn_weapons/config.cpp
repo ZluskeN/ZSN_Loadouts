@@ -2865,6 +2865,12 @@ class CfgVehicles
 				magazine = "200Rnd_65x39_cased_Box";
 				count = 4;
 			};
+			delete _xx_30Rnd_762x39_AK12_Mag_F;
+			class _xx_30Rnd_65x39_caseless_green
+			{
+				magazine = "30Rnd_65x39_caseless_green";
+				count = 24;
+			};
 		};
 	};
 	class Box_Syndicate_Wps_F: ReammoBox_F
