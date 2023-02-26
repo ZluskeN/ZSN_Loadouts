@@ -1,6 +1,0 @@
-#define _PARAMTYPE
-#define _SUB
-#include "\a3\Missions_F_Curator\MPScenarios\MP_ZGM_m11.Altis\description.ext"
-
-onLoadName = $STR_A3_MasterTanoaO_loadName;
-overviewPicture = \a3\Missions_F_exp\data\img\mp_zgm_m14_east_overview_ca.paa;
