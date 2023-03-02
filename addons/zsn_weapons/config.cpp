@@ -50,6 +50,20 @@ class CfgMagazineWells
 };
 class cfgMagazines
 {
+	class 150Rnd_762x51_Box;
+	class 150Rnd_762x54_Box: 150Rnd_762x51_Box
+	{
+		ammo = "B_762x51_Tracer_Green";
+		count = 100;
+		descriptionShort = "Caliber: 7.62x51 mm Tracer - Green<br/>Rounds: 100<br />Used in: Zafir";
+		displayName = "7.62 mm 100Rnd Box";
+		mass = 33;
+	};
+	class 150Rnd_762x54_Box_Tracer: 150Rnd_762x54_Box
+	{
+		descriptionShort = "Caliber: 7.62x51 mm Tracer - Green<br/>Rounds: 100<br />Used in: Zafir";
+		displayName = "7.62 mm 100Rnd Tracer (Green) Box";
+	};
 	class 30Rnd_9x21_Mag;
 	class 16Rnd_9x21_Mag: 30Rnd_9x21_Mag
 	{
@@ -91,6 +105,11 @@ class cfgWeapons
 			uniformClass = "ZSN_I_E_ghillie_F";
 			uniformModel = "-";
 		};
+	};
+	class Rifle_Long_Base_F;
+	class LMG_Zafir_F: Rifle_Long_Base_F
+	{
+		descriptionShort = "Light Machine Gun<br />Caliber: 7.62x51 mm";
 	};
 	class Pistol;
 	class Pistol_Base_F: Pistol
@@ -2474,6 +2493,45 @@ class CfgVehicles
 			};
 		};
 	};
+	class I_EAF_supplyCrate_F: I_supplyCrate_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_100Rnd_65x39_caseless_black_mag;
+			class _xx_200Rnd_556x45_Box_F
+			{
+				magazine = "200Rnd_556x45_Box_F";
+				count = 6;
+			};
+			delete _xx_11Rnd_45ACP_Mag;
+			class _xx_ZSN_20Rnd_570x28_Mag
+			{
+				magazine = "ZSN_20Rnd_570x28_Mag";
+				count = 6;
+			};
+			delete _xx_30Rnd_65x39_caseless_msbs_mag;
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "30Rnd_556x45_Stanag";
+				count = 24;
+			};
+		};
+		class TransportWeapons
+		{
+			delete _xx_arifle_MSBS65_F;
+			class _xx_arifle_Mk20_F
+			{
+				weapon = "arifle_Mk20_F";
+				count = 2;
+			};
+			delete _xx_arifle_MSBS65_GL_F;
+			class _xx_arifle_Mk20_GL_F
+			{
+				weapon = "arifle_Mk20_GL_F";
+				count = 2;
+			};
+		};
+	};
 	class FIA_Box_Base_F;
 	class Box_FIA_Wps_F: FIA_Box_Base_F
 	{
@@ -2795,6 +2853,16 @@ class CfgVehicles
 				magazine = "30Rnd_65x39_caseless_msbs_mag";
 				count = 8;
 			};
+			class _xx_6Rnd_12Gauge_Pellets
+			{
+				magazine = "6Rnd_12Gauge_Pellets";
+				count = 4;
+			};
+			class _xx_6Rnd_12Gauge_Slug
+			{
+				magazine = "6Rnd_12Gauge_Slug";
+				count = 4;
+			};
 		};
 		class TransportWeapons
 		{
@@ -2802,12 +2870,12 @@ class CfgVehicles
 			class _xx_arifle_MSBS65_sand_F
 			{
 				weapon = "arifle_MSBS65_sand_F";
-				count = 4;
+				count = 6;
 			};
 			delete _xx_arifle_Mk20_F;
-			class _xx_arifle_MSBS65_Mark_sand_F
+			class _xx_arifle_MSBS65_UBS_sand_F
 			{
-				weapon = "arifle_MSBS65_Mark_sand_F";
+				weapon = "arifle_MSBS65_UBS_sand_F";
 				count = 2;
 			};
 			delete _xx_arifle_Mk20_GL_F;
@@ -2826,6 +2894,71 @@ class CfgVehicles
 			class _xx_SMG_01_F
 			{
 				weapon = "SMG_01_F";
+				count = 1;
+			};
+		};
+	};
+	class Box_EAF_Wps_F: Box_IND_Wps_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_11Rnd_45ACP_Mag;
+			class _xx_ZSN_20Rnd_570x28_Mag
+			{
+				magazine = "ZSN_20Rnd_570x28_Mag";
+				count = 1;
+			};
+			delete _xx_200Rnd_65x39_cased_Box_Red;
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "200Rnd_556x45_Box_Red_F";
+				count = 2;
+			};
+			delete _xx_30Rnd_65x39_caseless_msbs_mag_Tracer;
+			class _xx_30Rnd_556x45_Stanag_Tracer_Red
+			{
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
+				count = 10;
+			};
+			delete _xx_6Rnd_12Gauge_Pellets;
+			delete _xx_6Rnd_12Gauge_Slug;
+		};
+		class TransportWeapons
+		{
+			delete _xx_arifle_MSBS65_F;
+			class _xx_arifle_Mk20_F
+			{
+				weapon = "arifle_Mk20_F";
+				count = 4;
+			};
+			delete _xx_arifle_MSBS65_UBS_F;
+			class _xx_arifle_Mk20C_F
+			{
+				weapon = "arifle_Mk20C_F";
+				count = 2;
+			};
+			delete _xx_arifle_MSBS65_GL_F;
+			class _xx_arifle_Mk20_GL_F
+			{
+				weapon = "arifle_Mk20_GL_F";
+				count = 2;
+			};
+			delete _xx_hgun_Pistol_heavy_01_green_F;
+			class _xx_hgun_P07_blk_F
+			{
+				weapon = "hgun_P07_blk_F";
+				count = 1;
+			};
+			delete _xx_LMG_Mk200_black_BI_F;
+			class _xx_LMG_03_F
+			{
+				weapon = "LMG_03_F";
+				count = 2;
+			};
+			delete _xx_SMG_03_black;
+			class _xx_SMG_03C_TR_camo
+			{
+				weapon = "SMG_03C_TR_camo";
 				count = 1;
 			};
 		};
@@ -2853,6 +2986,42 @@ class CfgVehicles
 				count = 24;
 			};
 			delete _xx_20Rnd_762x51_Mag;
+			class _xx_6Rnd_12Gauge_Pellets
+			{
+				magazine = "6Rnd_12Gauge_Pellets";
+				count = 8;
+			};
+			class _xx_6Rnd_12Gauge_Slug
+			{
+				magazine = "6Rnd_12Gauge_Slug";
+				count = 8;
+			};
+		};
+	};
+	class Box_EAF_Ammo_F: Box_IND_Ammo_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_100Rnd_65x39_caseless_black_mag;
+			class _xx_200Rnd_556x45_Box_F
+			{
+				magazine = "200Rnd_556x45_Box_F";
+				count = 6;
+			};
+			delete _xx_11Rnd_45ACP_Mag;
+			class _xx_ZSN_20Rnd_570x28_Mag
+			{
+				magazine = "ZSN_20Rnd_570x28_Mag";
+				count = 12;
+			};
+			delete _xx_30Rnd_65x39_caseless_msbs_mag;
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "30Rnd_556x45_Stanag";
+				count = 24;
+			};
+			delete _xx_6Rnd_12Gauge_Pellets;
+			delete _xx_6Rnd_12Gauge_Slug;
 		};
 	};
 	class Box_Syndicate_Ammo_F: ReammoBox_F
@@ -3146,7 +3315,13 @@ class CfgVehicles
 		class TransportItems
 		{
 			delete _xx_muzzle_snds_L;
-			delete _xx_muzzle_snds_h;
+			delete _xx_muzzle_snds_M;
+			delete _xx_muzzle_snds_B;
+			class _xx_muzzle_snds_H
+			{
+				name = "muzzle_snds_H";
+				count = 5;
+			};
 			class _xx_muzzle_snds_H_MG_blk_F
 			{
 				name = "muzzle_snds_H_MG_blk_F";
@@ -3158,11 +3333,17 @@ class CfgVehicles
 	{
 		class TransportItems
 		{
+			delete _xx_muzzle_snds_acp;
 			delete _xx_muzzle_snds_H;
 			class _xx_muzzle_snds_M
 			{
 				name = "muzzle_snds_M";
 				count = 8;
+			};
+			class _xx_muzzle_snds_570
+			{
+				name = "muzzle_snds_570";
+				count = 5;
 			};
 		};
 	};
@@ -3186,6 +3367,46 @@ class CfgVehicles
 		};
 	};
 	class Box_NATO_Equip_F: ReammoBox_F{};
+	class Box_AAF_Equip_F: Box_NATO_Equip_F
+	{
+		class TransportItems
+		{
+			class _xx_H_HelmetHBK_chops_F
+			{
+				name = "H_HelmetHBK_chops_F";
+				count = 10;
+			};
+			class _xx_H_HelmetHBK_ear_F
+			{
+				name = "H_HelmetHBK_ear_F";
+				count = 10;
+			};
+			class _xx_H_HelmetHBK_headset_F
+			{
+				name = "H_HelmetHBK_headset_F";
+				count = 10;
+			};
+		};
+	};
+	class Box_EAF_Equip_F: Box_AAF_Equip_F
+	{
+		class TransportItems
+		{
+			delete _xx_H_HelmetHBK_chops_F;
+			class _xx_H_HelmetB_black
+			{
+				name = "H_HelmetB_black";
+				count = 10;
+			};
+			delete _xx_H_HelmetHBK_ear_F;
+			class _xx_H_HelmetSpecB_blk
+			{
+				name = "H_HelmetSpecB_blk";
+				count = 10;
+			};
+			delete _xx_H_HelmetHBK_headset_F;
+		};
+	};
 	class Box_GEN_Equip_F: Box_NATO_Equip_F
 	{
 		class TransportWeapons
