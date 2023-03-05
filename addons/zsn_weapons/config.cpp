@@ -4828,6 +4828,8 @@ class CfgVehicles
 	};
 	class B_Recon_Sharpshooter_F: B_Soldier_recon_base
 	{
+		weapons[] = {"srifle_DMR_02_sniper_AMS_LP_S_F","hgun_P07_khk_snds_F","Throw","Put","Binocular"};
+		respawnWeapons[] = {"srifle_DMR_02_sniper_AMS_LP_S_F","hgun_P07_khk_snds_F","Throw","Put","Binocular"};
 		magazines[] = {"10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","MiniGrenade","MiniGrenade"};
 		respawnMagazines[] = {"10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","10Rnd_338_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","MiniGrenade","MiniGrenade"};
 	};
