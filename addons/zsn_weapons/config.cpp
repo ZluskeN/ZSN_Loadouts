@@ -5718,6 +5718,8 @@ class CfgVehicles
 	};
 	class B_HeavyGunner_F: B_Soldier_base_F
 	{
+		weapons[] = {"MMG_02_sand_RCO_LP_F","hgun_P07_khk_F","Throw","Put"};
+		respawnWeapons[] = {"MMG_02_sand_RCO_LP_F","hgun_P07_khk_F","Throw","Put"};
 		magazines[] = {"130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
