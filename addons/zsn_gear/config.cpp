@@ -352,21 +352,6 @@ class CfgVehicles
 		linkedItems[] = {"V_TacVest_oli","H_CrewHelmetHeli_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
 		respawnLinkedItems[] = {"V_TacVest_oli","H_CrewHelmetHeli_O","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_tna_F"};
 	};
-	class B_CTRG_soldier_GL_LAT_F : B_Soldier_base_F
-	{
-		linkedItems[] = {"V_PlateCarrierH_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-		respawnLinkedItems[] = {"V_PlateCarrierH_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-	};
-	class B_CTRG_soldier_AR_A_F: B_Soldier_base_F
-	{
-		linkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-	};
-	class B_CTRG_Sharphooter_F: B_Soldier_base_F
-	{
-		linkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-		respawnLinkedItems[] = {"V_PlateCarrierL_CTRG","H_HelmetHBK_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-	};
 	class I_Soldier_base_F: SoldierGB
 	{
 		linkedItems[] = {"V_PlateCarrierIA1_dgtl","H_HelmetHBK_headset_F","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_INDEP"};
