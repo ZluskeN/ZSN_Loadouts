@@ -991,28 +991,6 @@ class cfgWeapons
 			};
 		};
 	};
-	class srifle_DMR_01_F;
-	class ZSN_srifle_DMR_01_KHS_LP_BI_F: srifle_DMR_01_F
-	{
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item = "optic_khs_blk";
-				slot = "CowsSlot";
-			};
-			class LinkedItemsAcc
-			{
-				item = "acc_pointer_IR";
-				slot = "PointerSlot";
-			};
-			class LinkedItemsUnder
-			{
-				item = "bipod_02_f_blk";
-				slot = "UnderBarrelSlot";
-			};
-		};
-	};
 	class srifle_DMR_02_F;
 	class ZSN_srifle_DMR_02_AMS_LP_BI_F: srifle_DMR_02_F
 	{
@@ -1901,15 +1879,15 @@ class cfgWeapons
 			};
 		};
 	};
-	class arifle_MSBS65_GL_camo_F;
-	class ZSN_arifle_MSBS65_GL_camo_F: arifle_MSBS65_GL_camo_F
+	class arifle_MSBS65_GL_F;
+	class ZSN_arifle_MSBS65_GL_F: arifle_MSBS65_GL_F
 	{
 		class LinkedItems
 		{
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "optic_aco_grn";
+				item = "optic_aco";
 			};
 		};
 	};
@@ -6609,8 +6587,8 @@ class CfgVehicles
 	};
 	class I_G_Soldier_TL_F: I_G_Soldier_base_F
 	{
-		weapons[] = {"ZSN_arifle_MSBS65_GL_camo_F","hgun_Pistol_heavy_01_green_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_MSBS65_GL_camo_F","hgun_Pistol_heavy_01_green_F","Throw","Put"};
+		weapons[] = {"ZSN_arifle_MSBS65_GL_F","hgun_Pistol_heavy_01_green_F","Throw","Put"};
+		respawnWeapons[] = {"ZSN_arifle_MSBS65_GL_F","hgun_Pistol_heavy_01_green_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag_Tracer","30Rnd_65x39_caseless_msbs_mag_Tracer","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","SmokeShell","SmokeShellGreen","Chemlight_blue","Chemlight_blue","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell"};
 		respawnmagazines[] = {"30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag_Tracer","30Rnd_65x39_caseless_msbs_mag_Tracer","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","MiniGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","SmokeShell","SmokeShellGreen","Chemlight_blue","Chemlight_blue","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell"};
 	};
