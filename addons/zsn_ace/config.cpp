@@ -18,6 +18,52 @@ class CfgPatches
 };
 class CfgVehicles
 {
+	class ReammoBox_F;
+	class B_supplyCrate_F: ReammoBox_F
+	{
+		class TransportMagazines
+		{
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+				count = 24;
+			};
+		};
+	};
+	class NATO_Box_Base;
+	class Box_NATO_Ammo_F: NATO_Box_Base
+	{
+		class TransportMagazines
+		{
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+				count = 24;
+			};
+		};
+	};
+	class Box_NATO_Wps_F: NATO_Box_Base
+	{
+		class TransportMagazines
+		{
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+				count = 8;
+			};
+		};
+	};
+	class Box_T_NATO_Wps_F: Box_NATO_Wps_F
+	{
+		class TransportMagazines
+		{
+			class _xx_30Rnd_556x45_Stanag
+			{
+				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
+				count = 8;
+			};
+		};
+	};
 	class SoldierWB;
 	class SoldierEB;
 	class SoldierGB;

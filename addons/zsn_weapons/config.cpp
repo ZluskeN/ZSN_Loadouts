@@ -2601,6 +2601,18 @@ class CfgVehicles
 			};
 		};
 	};
+	class Box_FIA_Support_F: FIA_Box_Base_F
+	{
+		class TransportItems
+		{
+			delete _xx_optic_ACO_grn;
+			class _xx_optic_ACO
+			{
+				name = "optic_ACO";
+				count = 5;
+			};
+		};
+	};
 	class NATO_Box_Base: ReammoBox_F{};
 	class Box_NATO_WpsSpecial_F: NATO_Box_Base
 	{
@@ -4911,8 +4923,8 @@ class CfgVehicles
 	class B_Story_SF_Captain_F: B_Soldier_base_F
 	{
 		faction = "BLU_CTRG_F";
-		weapons[] = {"ZSN_arifle_MX_ERCO_pointer_F","hgun_P07_F","Throw","Put"};
-		respawnWeapons[] = {"ZSN_arifle_MX_ERCO_pointer_F","hgun_P07_F","Throw","Put"};
+		weapons[] = {"arifle_MX_ACO_pointer_F","hgun_P07_F","Throw","Put"};
+		respawnWeapons[] = {"arifle_MX_ACO_pointer_F","hgun_P07_F","Throw","Put"};
 		magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
 	};
@@ -5805,6 +5817,11 @@ class CfgVehicles
 	{
 		magazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","30Rnd_556x45_Stanag_Sand","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
+	};
+	class B_RangeMaster_F: B_Soldier_base_F
+	{
+		vehicleClass = "MenStory";
+		editorSubcategory = "EdSubcat_Personnel_Story";
 	};
 	class I_Soldier_Base_F: SoldierGB
 	{
@@ -9647,7 +9664,7 @@ class cfggroups
 			class SpecOps
 			{
 				name = "Special Forces";
-				class ZSN_BI_ViperTeam
+				class ZSN_B_CTRG_InfTeam_Light
 				{
 					class Unit0
 					{
@@ -9659,37 +9676,142 @@ class cfggroups
 					class Unit1
 					{
 						side = 1;
-						vehicle = "ZSN_B_CTRG_Soldier_JTAC_ard_F";
+						vehicle = "ZSN_B_CTRG_soldier_AR_ard_F";
 						rank = "CORPORAL";
 						position[] = {5,-5,0};
 					};
 					class Unit2
 					{
 						side = 1;
-						vehicle = "ZSN_B_CTRG_Soldier_M_ard_F";
+						vehicle = "ZSN_B_CTRG_soldier_ard_F";
 						rank = "PRIVATE";
 						position[] = {-5,-5,0};
 					};
 					class Unit3
 					{
 						side = 1;
-						vehicle = "ZSN_B_CTRG_Soldier_Exp_ard_F";
+						vehicle = "ZSN_B_CTRG_soldier_LAT2_ard_F";
+						rank = "PRIVATE";
+						position[] = {10,-10,0};
+					};
+					name = "CTRG-13 Team (Light)";
+					side = 1;
+					faction = "BLU_CTRG_F";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
+				};
+				class ZSN_CTRG_InfSentry
+				{
+					class Unit0
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_JTAC_ard_F";
+						rank = "CORPORAL";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_ard_F";
+						rank = "PRIVATE";
+						position[] = {5,-5,0};
+					};
+					name = "CTRG-13 Sentry";
+					side = 1;
+					faction = "BLU_CTRG_F";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
+				};
+				class ZSN_CTRG_InfSquad
+				{
+					class Unit0
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_TL_ard_F";
+						rank = "SERGEANT";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_M_ard_F";
+						rank = "CORPORAL";
+						position[] = {5,-5,0};
+					};
+					class Unit2
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_Medic_ard_F";
+						rank = "PRIVATE";
+						position[] = {-5,-5,0};
+					};
+					class Unit3
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_ard_F";
 						rank = "PRIVATE";
 						position[] = {10,-10,0};
 					};
 					class Unit4
 					{
 						side = 1;
-						vehicle = "ZSN_B_CTRG_Soldier_LAT2_ard_F";
-						rank = "PRIVATE";
+						vehicle = "ZSN_B_CTRG_Soldier_LAT_ard_F";
+						rank = "SERGEANT";
 						position[] = {-10,-10,0};
 					};
 					class Unit5
 					{
 						side = 1;
-						vehicle = "ZSN_B_CTRG_Soldier_Medic_ard_F";
-						rank = "PRIVATE";
+						vehicle = "ZSN_B_CTRG_Soldier_JTAC_ard_F";
+						rank = "CORPORAL";
 						position[] = {15,-15,0};
+					};
+					class Unit6
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_Exp_ard_F";
+						rank = "PRIVATE";
+						position[] = {-15,-15,0};
+					};
+					class Unit7
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_AR_ard_F";
+						rank = "PRIVATE";
+						position[] = {20,-20,0};
+					};
+					name = "CTRG-13 Squad";
+					side = 1;
+					faction = "BLU_CTRG_F";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
+				};
+				class ZSN_CTRG_InfTeam
+				{
+					class Unit0
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_TL_ard_F";
+						rank = "SERGEANT";
+						position[] = {0,0,0};
+					};
+					class Unit1
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_AR_ard_F";
+						rank = "CORPORAL";
+						position[] = {5,-5,0};
+					};
+					class Unit2
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_ard_F";
+						rank = "PRIVATE";
+						position[] = {-5,-5,0};
+					};
+					class Unit3
+					{
+						side = 1;
+						vehicle = "ZSN_B_CTRG_Soldier_LAT_ard_F";
+						rank = "PRIVATE";
+						position[] = {10,-10,0};
 					};
 					name = "CTRG-13 Team";
 					side = 1;
@@ -9700,7 +9822,7 @@ class cfggroups
 			class Motorized
 			{
 				name = "Motorized Infantry";
-				class ZSN_B_MotInf_CTRGAssaultTeam
+				class ZSN_CTRG_MotInf_AssaultTeam
 				{
 					class Unit0
 					{
@@ -9751,12 +9873,12 @@ class cfggroups
 						rank = "PRIVATE";
 						position[] = {-15,-15,0};
 					};
-					name = "Motorized CTRG-13 Assault";
+					name = "CTRG-13 Assault Team";
 					side = 1;
 					faction = "BLU_CTRG_F";
 					icon = "\A3\ui_f\data\map\markers\nato\b_motor_inf.paa";
 				};
-				class ZSN_B_MotInf_CTRGReconTeam
+				class ZSN_CTRG_MotInf_ReconTeam
 				{
 					class Unit0
 					{
@@ -9807,7 +9929,7 @@ class cfggroups
 						rank = "PRIVATE";
 						position[] = {-15,-15,0};
 					};
-					name = "Motorized CTRG-13 Recon";
+					name = "CTRG-13 Recon Squad";
 					side = 1;
 					faction = "BLU_CTRG_F";
 					icon = "\A3\ui_f\data\map\markers\nato\b_motor_inf.paa";

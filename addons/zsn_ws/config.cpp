@@ -150,6 +150,58 @@ class cfgWeapons
 };
 class CfgVehicles
 {
+	class FIA_Box_Base_F;
+	class Box_FIA_Wps_F: FIA_Box_Base_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_30Rnd_556x45_Stanag;
+			class _xx_35Rnd_556x45_Velko_reload_tracer_red_lxWS
+			{
+				magazine = "35Rnd_556x45_Velko_reload_tracer_red_lxWS";
+				count = 40;
+			};
+		};
+		class TransportWeapons
+		{
+			delete _xx_arifle_TRG20_F;
+			class _xx_arifle_Velko_lxWS
+			{
+				weapon = "arifle_Velko_lxWS";
+				count = 10;
+			};
+			delete _xx_arifle_TRG21_F;
+			class _xx_arifle_VelkoR5_lxWS
+			{
+				weapon = "arifle_VelkoR5_lxWS";
+				count = 2;
+			};
+			delete _xx_arifle_TRG21_GL_F;
+			class _xx_arifle_VelkoR5_GL_lxWS
+			{
+				weapon = "arifle_VelkoR5_GL_lxWS";
+				count = 2;
+			};
+		};
+	};
+	class Box_FIA_Ammo_F: FIA_Box_Base_F
+	{
+		class TransportMagazines
+		{
+			delete _xx_30Rnd_556x45_Stanag;
+			class _xx_150Rnd_762x54_Box
+			{
+				magazine = "35Rnd_556x45_Velko_reload_tracer_red_lxWS";
+				count = 24;
+			};
+			delete _xx_30Rnd_556x45_Stanag_Tracer_Yellow;
+			class _xx_35Rnd_556x45_Velko_tracer_red_lxWS
+			{
+				magazine = "35Rnd_556x45_Velko_tracer_red_lxWS";
+				count = 6;
+			};
+		};
+	};
 	class B_Carryall_oli;
 	class G_Carryall_Ammo: B_Carryall_oli
 	{
