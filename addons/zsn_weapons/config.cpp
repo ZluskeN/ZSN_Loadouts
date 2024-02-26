@@ -3505,13 +3505,13 @@ class CfgVehicles
 			class _xx_150Rnd_556x45_Drum_Mag_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_F";
-				count = 6;
+				count = 4;
 			};
 			delete _xx_100Rnd_65x39_caseless_mag_Tracer;
 			class _xx_150Rnd_556x45_Drum_Mag_Tracer_F
 			{
 				magazine = "150Rnd_556x45_Drum_Mag_Tracer_F";
-				count = 4;
+				count = 2;
 			};
 		};
 	};
@@ -3630,7 +3630,7 @@ class CfgVehicles
 			class _xx_1Rnd_HE_Grenade_shell
 			{
 				magazine = "1Rnd_HE_Grenade_shell";
-				count = 3;
+				count = 6;
 			};
 		};
 	};
@@ -3826,11 +3826,6 @@ class CfgVehicles
 	{
 		class TransportMagazines
 		{
-			class _xx_30Rnd_556x45_Stanag
-			{
-				magazine = "30Rnd_556x45_Stanag";
-				count = 1;
-			};
 			delete _xx_100Rnd_65x39_caseless_mag;
 			class _xx_150Rnd_556x45_Drum_Mag_F
 			{
@@ -3868,7 +3863,7 @@ class CfgVehicles
 			class _xx_200Rnd_556x45_Box_Red_F
 			{
 				magazine = "200Rnd_556x45_Box_Red_F";
-				count = 2;
+				count = 1;
 			};
 			delete _xx_150Rnd_556x45_Drum_Mag_Tracer_F;
 			class _xx_200Rnd_556x45_Box_Tracer_Red_F
@@ -3952,6 +3947,24 @@ class CfgVehicles
 			};
 		};
 	};
+	class B_FieldPack_ocamo_AAR: B_Carryall_ocamo
+	{
+		class TransportMagazines
+		{
+			delete _xx_150Rnd_762x54_Box;
+			class _xx_75rnd_762x39_AK12_Mag_F
+			{
+				count = 8;
+				magazine = "75rnd_762x39_AK12_Mag_F ";
+			};
+			delete _xx_150Rnd_762x54_Box_Tracer;
+			class _xx_75rnd_762x39_AK12_Mag_Tracer_F
+			{
+				count = 4;
+				magazine = "75rnd_762x39_AK12_Mag_Tracer_F ";
+			};
+		};
+	};
 	class B_Carryall_oucamo;
 	class B_Carryall_oucamo_AAR: B_Carryall_oucamo
 	{
@@ -4001,6 +4014,24 @@ class CfgVehicles
 			{
 				magazine = "30Rnd_762x39_AK12_Mag_F";
 				count = 6;
+			};
+		};
+	};
+	class B_FieldPack_oucamo_AAR: B_Carryall_oucamo
+	{
+		class TransportMagazines
+		{
+			delete _xx_150Rnd_762x54_Box;
+			class _xx_75rnd_762x39_AK12_Mag_F
+			{
+				count = 8;
+				magazine = "75rnd_762x39_AK12_Mag_F ";
+			};
+			delete _xx_150Rnd_762x54_Box_Tracer;
+			class _xx_75rnd_762x39_AK12_Mag_Tracer_F
+			{
+				count = 4;
+				magazine = "75rnd_762x39_AK12_Mag_Tracer_F";
 			};
 		};
 	};
@@ -5642,6 +5673,7 @@ class CfgVehicles
 	class B_Soldier_AAR_F;
 	class B_T_Soldier_AAR_F: B_soldier_AAR_F
 	{
+		backpack = "ZSN_B_Kitbag_rgr_AAR";
 		weapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
 		respawnWeapons[] = {"ZSN_arifle_SPAR_02_blk_ACO_pointer_F","hgun_P07_blk_F","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
