@@ -16,6 +16,36 @@ class CfgPatches
 		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","A3_Characters_F_Orange","ZSN_Loadouts"};
 	};
 };
+class cfgMagazines
+{
+	class ACE_30Rnd_556x45_Stanag_M995_AP_mag;
+	class ZSN_30Rnd_556x45_Stanag_Sand_M995_AP_mag: ACE_30Rnd_556x45_Stanag_M995_AP_mag
+	{
+		author = "ZluskeN";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"a3\weapons_f_exp\rifles\spar_01\data\arifle_spar_01_snd_f_01_co.paa"};
+		picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_556x45_Stanag_Sand_CA.paa";
+		displayName = "5.56 mm 30Rnd Sand Mag (M995 AP)";
+	};
+	class 150Rnd_556x45_Drum_Mag_F;
+	class ZSN_150Rnd_556x45_Drum_M995_AP_mag: 150Rnd_556x45_Drum_Mag_F
+	{
+		author = "ZluskeN";
+		ammo = "ACE_556x45_Ball_M995_AP";
+		descriptionShort = "Caliber: 5.56x45 mm NATO (M995 AP)<br />Rounds: 30";
+		displayName = "5.56 mm 30Rnd Mag (M995 AP)";
+		displayNameShort = "5.56 mm AP";
+		initSpeed = 875;
+	};
+	class ZSN_150Rnd_556x45_Drum_Sand_M995_AP_mag: ZSN_150Rnd_556x45_Drum_M995_AP_mag
+	{
+		author = "ZluskeN";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"a3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_snd_F_02_co.paa"};
+		picture = "\a3\Weapons_F_Exp\MagazineProxies\data\UI\icon_150Rnd_556x45_Drum_Sand_Mag_F_CA.paa";
+		displayName = "5.56 mm 150Rnd Sand Mag (M995 AP)";
+	};
+};
 class CfgVehicles
 {
 	class ReammoBox_F;
