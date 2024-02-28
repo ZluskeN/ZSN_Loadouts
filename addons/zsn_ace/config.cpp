@@ -16,6 +16,17 @@ class CfgPatches
 		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_Mark","A3_Characters_F_Exp","A3_Characters_F_Jets","A3_Characters_F_Patrol","A3_Characters_F_Orange","ZSN_Loadouts"};
 	};
 };
+class CfgMagazineWells
+{
+	class CBA_556x45_STANAG
+	{
+		ZSN_mags[] = {"ZSN_30Rnd_556x45_Stanag_Sand_M995_AP_mag"};
+	};
+	class CBA_556x45_STANAG_2D_XL
+	{
+		ZSN_mags[] = {"ZSN_150Rnd_556x45_Drum_M995_AP_mag","ZSN_150Rnd_556x45_Drum_Sand_M995_AP_mag"};
+	};
+};
 class cfgMagazines
 {
 	class ACE_30Rnd_556x45_Stanag_M995_AP_mag;
