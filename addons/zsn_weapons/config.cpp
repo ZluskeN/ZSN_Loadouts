@@ -36,7 +36,7 @@ class CfgFunctions
 		{
 			class fixMagazines
 			{
-				file = "addons\zsn_weapons\functions\fn_fixmagazines.sqf";
+				file = "zsn_weapons\functions\fn_fixmagazines.sqf";
 			};
 		};
 	};
@@ -3220,21 +3220,21 @@ class CfgVehicles
 		class TransportWeapons
 		{
 			delete _xx_arifle_MX_khk_F;
-			class _xx_arifle_SPAR_01_khk_F
+			class _xx_arifle_SPAR_02_blk_F
 			{
-				weapon = "arifle_SPAR_01_khk_F";
+				weapon = "arifle_SPAR_02_blk_F";
 				count = 6;
 			};
 			delete _xx_arifle_MX_GL_khk_F;
-			class _xx_arifle_SPAR_01_GL_khk_F
+			class _xx_arifle_SPAR_01_GL_blk_F
 			{
-				weapon = "arifle_SPAR_01_GL_khk_F";
+				weapon = "arifle_SPAR_01_GL_blk_F";
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_khk_F;
-			class _xx_arifle_SPAR_02_khk_F
+			class _xx_LMG_03_F
 			{
-				weapon = "arifle_SPAR_02_khk_F";
+				weapon = "LMG_03_F";
 				count = 2;
 			};
 			delete _xx_hgun_Pistol_heavy_01_F;
@@ -3244,20 +3244,26 @@ class CfgVehicles
 				count = 1;
 			};
 			delete _xx_SMG_01_F;
-			class _xx_SMG_03C_TR_khaki
+			class _xx_arifle_SPAR_01_blk_F
 			{
-				weapon = "SMG_03C_TR_khaki";
+				weapon = "arifle_SPAR_01_blk_F";
+				count = 1;
+			};
+			delete _xx_hgun_P07_khk_F;
+			class _xx_hgun_P07_blk_F
+			{
+				weapon = "hgun_P07_blk_F";
 				count = 1;
 			};
 			delete _xx_arifle_MXC_khk_F;
 		};
 		class TransportMagazines
 		{
-			delete _xx_30Rnd_65x39_caseless_mag;
+			delete _xx_30Rnd_65x39_caseless_khaki_mag;
 			class _xx_30Rnd_556x45_Stanag
 			{
 				magazine = "30Rnd_556x45_Stanag";
-				count = 8;
+				count = 9;
 			};
 			delete _xx_11Rnd_45ACP_Mag;
 			class _xx_9Rnd_45ACP_Mag
@@ -3265,17 +3271,11 @@ class CfgVehicles
 				magazine = "9Rnd_45ACP_Mag";
 				count = 1;
 			};
-			delete _xx_100Rnd_65x39_caseless_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			delete _xx_100Rnd_65x39_caseless_khaki_mag;
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 2;
-			};
-			delete _xx_30Rnd_45ACP_Mag_SMG_01;
-			class _xx_50Rnd_570x28_SMG_03
-			{
-				magazine = "50Rnd_570x28_SMG_03";
-				count = 1;
 			};
 			delete _xx_16Rnd_9x21_Mag;
 			class _xx_ZSN_20Rnd_570x28_Mag
@@ -3283,6 +3283,7 @@ class CfgVehicles
 				magazine = "ZSN_20Rnd_570x28_Mag";
 				count = 1;
 			};
+			delete _xx_30Rnd_45ACP_Mag_SMG_01;
 		};
 	};
 	class IG_supplyCrate_F: ReammoBox_F
@@ -7433,9 +7434,9 @@ class CfgVehicles
 				count = 16;
 			};
 			delete _xx_100Rnd_65x39_caseless_khaki_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 4;
 			};
 			delete _xx_16Rnd_9x21_Mag;
@@ -7522,9 +7523,9 @@ class CfgVehicles
 				count = 16;
 			};
 			delete _xx_100Rnd_65x39_caseless_khaki_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 4;
 			};
 			delete _xx_16Rnd_9x21_Mag;
@@ -7611,9 +7612,9 @@ class CfgVehicles
 				count = 16;
 			};
 			delete _xx_100Rnd_65x39_caseless_khaki_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 4;
 			};
 			delete _xx_16Rnd_9x21_Mag;
@@ -8544,9 +8545,9 @@ class CfgVehicles
 				count = 12;
 			};
 			delete _xx_100Rnd_65x39_caseless_khaki_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 4;
 			};
 			class _xx_HandGrenade
@@ -8795,9 +8796,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_khk_F;
-			class _xx_arifle_SPAR_02_khk_F
+			class _xx_LMG_03_F
 			{
-				weapon = "arifle_SPAR_02_khk_F";
+				weapon = "LMG_03_F";
 				count = 1;
 			};
 		};
@@ -8810,9 +8811,9 @@ class CfgVehicles
 				count = 24;
 			};
 			delete _xx_100Rnd_65x39_caseless_khaki_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 8;
 			};
 			class _xx_HandGrenade
@@ -8904,9 +8905,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_khk_F;
-			class _xx_arifle_SPAR_02_khk_F
+			class _xx_LMG_03_F
 			{
-				weapon = "arifle_SPAR_02_khk_F";
+				weapon = "LMG_03_F";
 				count = 1;
 			};
 		};
@@ -8919,9 +8920,9 @@ class CfgVehicles
 				count = 24;
 			};
 			delete _xx_100Rnd_65x39_caseless_khaki_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 8;
 			};
 			class _xx_HandGrenade
@@ -9013,9 +9014,9 @@ class CfgVehicles
 				count = 2;
 			};
 			delete _xx_arifle_MX_SW_khk_F;
-			class _xx_arifle_SPAR_02_khk_F
+			class _xx_LMG_03_F
 			{
-				weapon = "arifle_SPAR_02_khk_F";
+				weapon = "LMG_03_F";
 				count = 1;
 			};
 		};
@@ -9028,9 +9029,9 @@ class CfgVehicles
 				count = 24;
 			};
 			delete _xx_100Rnd_65x39_caseless_khaki_mag;
-			class _xx_150Rnd_556x45_Drum_Mag_F
+			class _xx_200Rnd_556x45_Box_Red_F
 			{
-				magazine = "150Rnd_556x45_Drum_Mag_F";
+				magazine = "200Rnd_556x45_Box_Red_F";
 				count = 8;
 			};
 			class _xx_HandGrenade

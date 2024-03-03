@@ -26,6 +26,10 @@ class CfgMagazineWells
 	{
 		ZSN_mags[] = {"ZSN_150Rnd_556x45_Drum_M995_AP_mag","ZSN_150Rnd_556x45_Drum_Sand_M995_AP_mag"};
 	};
+	class CBA_556x45_MINIMI
+	{
+		ZSN_mags[] = {"ZSN_200Rnd_556x45_M995_AP_Box"};
+	};
 };
 class cfgMagazines
 {
@@ -111,6 +115,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 8;
 			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 2;
+			};
 		};
 	};
 	class B_Carryall_mcamo;
@@ -146,6 +155,18 @@ class CfgVehicles
 			{
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 6;
+			};
+		};
+	};
+	class B_Kitbag_rgr_AAR;
+	class ZSN_B_Kitbag_rgr_AAR: B_Kitbag_rgr_AAR
+	{
+		class TransportMagazines
+		{
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 1;
 			};
 		};
 	};
@@ -420,6 +441,7 @@ class CfgVehicles
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
+	class B_soldier_AT_F;
 	class B_T_soldier_AT_F: B_soldier_AT_F
 	{
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AT","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
@@ -441,6 +463,7 @@ class CfgVehicles
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AA","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","Titan_AA","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
+	class B_engineer_F;
 	class B_T_engineer_F: B_engineer_F
 	{
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_green"};
@@ -521,7 +544,6 @@ class CfgVehicles
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
-	class B_support_Mort_F: B_Soldier_support_base_F{};
 	class B_T_support_Mort_F: B_support_Mort_F
 	{
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
@@ -555,7 +577,6 @@ class CfgVehicles
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};
-	class B_support_AMort_F: B_Soldier_support_base_F{};
 	class B_T_support_AMort_F: B_support_AMort_F
 	{
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","ZSN_20Rnd_570x28_Mag","HandGrenade","HandGrenade","B_IR_Grenade","B_IR_Grenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
@@ -711,6 +732,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
 			};
+			class _xx_150Rnd_556x45_Drum_Mag_F
+			{
+				magazine = "ZSN_150Rnd_556x45_Drum_M995_AP_mag";
+				count = 4;
+			};
 		};
 	};
 	class B_MRAP_01_F;
@@ -722,6 +748,11 @@ class CfgVehicles
 			{
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
+			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 4;
 			};
 		};
 	};
@@ -735,6 +766,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
 			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 4;
+			};
 		};
 	};
 	class B_MRAP_01_hmg_F;
@@ -747,6 +783,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
 			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 4;
+			};
 		};
 	};
 	class LSV_01_base_F: Car_F
@@ -757,6 +798,11 @@ class CfgVehicles
 			{
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
+			};
+			class _xx_150Rnd_556x45_Drum_Mag_F
+			{
+				magazine = "ZSN_150Rnd_556x45_Drum_M995_AP_mag";
+				count = 4;
 			};
 		};
 	};
@@ -770,6 +816,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
 			};
+			class _xx_150Rnd_556x45_Drum_Mag_F
+			{
+				magazine = "ZSN_150Rnd_556x45_Drum_M995_AP_mag";
+				count = 4;
+			};
 		};
 	};
 	class LSV_01_AT_base_F;
@@ -781,6 +832,11 @@ class CfgVehicles
 			{
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
+			};
+			class _xx_150Rnd_556x45_Drum_Mag_F
+			{
+				magazine = "ZSN_150Rnd_556x45_Drum_M995_AP_mag";
+				count = 4;
 			};
 		};
 	};
@@ -794,6 +850,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 16;
 			};
+			class _xx_150Rnd_556x45_Drum_Mag_F
+			{
+				magazine = "ZSN_150Rnd_556x45_Drum_M995_AP_mag";
+				count = 4;
+			};
 		};
 	};
 	class Wheeled_APC_F;
@@ -805,6 +866,11 @@ class CfgVehicles
 			{
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 12;
+			};
+			class _xx_150Rnd_556x45_Drum_Mag_F
+			{
+				magazine = "ZSN_150Rnd_556x45_Drum_M995_AP_mag";
+				count = 4;
 			};
 		};
 	};
@@ -818,6 +884,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 12;
 			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 4;
+			};
 		};
 	};
 	class Tank_F;
@@ -829,6 +900,11 @@ class CfgVehicles
 			{
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 24;
+			};
+			class _xx_150Rnd_556x45_Drum_Mag_F
+			{
+				magazine = "ZSN_150Rnd_556x45_Drum_M995_AP_mag";
+				count = 8;
 			};
 		};
 	};
@@ -842,6 +918,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 24;
 			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 8;
+			};
 		};
 	};
 	class B_APC_Tracked_01_CRV_F;
@@ -854,6 +935,11 @@ class CfgVehicles
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 24;
 			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 8;
+			};
 		};
 	};
 	class B_APC_Tracked_01_rcws_F;
@@ -865,6 +951,11 @@ class CfgVehicles
 			{
 				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
 				count = 24;
+			};
+			class _xx_200Rnd_556x45_Box_Red_F
+			{
+				magazine = "ZSN_200Rnd_556x45_M995_AP_Box";
+				count = 8;
 			};
 		};
 	};
